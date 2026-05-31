@@ -19,7 +19,9 @@ import {
   DollarSign, 
   SlidersHorizontal,
   ThumbsUp,
-  Award
+  Award,
+  Volume2,
+  VolumeX
 } from "lucide-react";
 
 import { propertiesData, statItems, lifestyleItems } from "./data";
@@ -464,6 +466,9 @@ export default function App() {
 
   // Lifestyle horiz slider
   const sliderRef = useRef<HTMLDivElement>(null);
+  const heroVideoRef = useRef<HTMLVideoElement>(null);
+  const [heroMuted, setHeroMuted] = useState(true);
+  const [loopFade, setLoopFade] = useState(false);
   const scrollSlider = (direction: "left" | "right") => {
     if (sliderRef.current) {
       const scrollAmount = 360;
@@ -602,17 +607,52 @@ export default function App() {
             <section className="relative h-screen flex items-center justify-center overflow-hidden">
               <div className="absolute inset-0 z-0">
                 <video
+                  ref={heroVideoRef}
                   autoPlay
-                  muted
-                  loop
+                  muted={heroMuted}
                   playsInline
                   className="w-full h-full object-cover brightness-[0.80] contrast-[1.05]"
+                  onTimeUpdate={() => {
+                    const v = heroVideoRef.current;
+                    if (!v || !v.duration) return;
+                    const remaining = v.duration - v.currentTime;
+                    if (remaining < 0.6 && !loopFade) {
+                      setLoopFade(true);
+                      setTimeout(() => {
+                        v.currentTime = 0;
+                        v.play();
+                        setTimeout(() => setLoopFade(false), 400);
+                      }, 350);
+                    }
+                  }}
                 >
                   <source src="/hero-bg.mp4" type="video/mp4" />
                 </video>
+                {/* Dark-blur loop seam mask */}
+                <div
+                  className="absolute inset-0 z-10 backdrop-blur-sm bg-black/70 pointer-events-none"
+                  style={{ opacity: loopFade ? 1 : 0, transition: "opacity 0.35s ease" }}
+                />
                 <div className="absolute inset-0 bg-black/15 z-10" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/10 to-black/35 z-10" />
               </div>
+
+              {/* Sound toggle button */}
+              <button
+                onClick={() => {
+                  const v = heroVideoRef.current;
+                  if (!v) return;
+                  const next = !heroMuted;
+                  setHeroMuted(next);
+                  v.muted = next;
+                  if (!next) v.play();
+                }}
+                className="absolute top-24 right-5 z-30 flex items-center gap-1.5 bg-black/40 hover:bg-black/60 backdrop-blur-sm text-white/80 hover:text-white border border-white/20 px-3 py-2 transition-all cursor-pointer"
+                title={heroMuted ? "Unmute video" : "Mute video"}
+              >
+                {heroMuted ? <VolumeX size={14} /> : <Volume2 size={14} />}
+                <span className="text-[9px] font-bold tracking-widest uppercase">{heroMuted ? "Sound Off" : "Sound On"}</span>
+              </button>
 
               <div className="relative z-20 max-w-4xl mx-auto text-center px-4 pt-16 flex flex-col items-center">
                 <span className="text-[#C9A96E] text-[10px] sm:text-xs font-semibold tracking-[0.5em] uppercase mb-4 block">
