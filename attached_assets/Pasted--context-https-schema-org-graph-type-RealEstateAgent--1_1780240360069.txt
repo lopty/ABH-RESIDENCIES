@@ -1,0 +1,58 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "RealEstateAgent",
+      "@id": "https://residenceabudhabi.com/#organization",
+      "name": "Residence Abu Dhabi",
+      "url": "https://residenceabudhabi.com",
+      "logo": "https://residenceabudhabi.com/images/logo.png",
+      "description": "Premium real estate advisory specialising in luxury properties in Abu Dhabi, UAE. Experts in Al Maryah Island, Jumeirah Residences, and off-plan investments.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Al Maryah Island",
+        "addressRegion": "Abu Dhabi",
+        "addressCountry": "AE"
+      },
+      "areaServed": {
+        "@type": "City",
+        "name": "Abu Dhabi",
+        "sameAs": "https://www.wikidata.org/wiki/Q216"
+      },
+      "telephone": "+971-XX-XXX-XXXX",
+      "email": "info@residenceabudhabi.com",
+      "sameAs": [
+        "https://www.linkedin.com/company/residence-abu-dhabi",
+        "https://www.instagram.com/abresidencies",
+        "https://www.facebook.com/abresidencies"
+      ],
+      "priceRange": "AED 3,000,000 - AED 50,000,000",
+      "openingHours": "Mo-Sa 09:00-18:00",
+      "knowsAbout": [
+        "Luxury real estate Abu Dhabi",
+        "Off-plan properties Abu Dhabi",
+        "Al Maryah Island properties",
+        "Jumeirah Residences Abu Dhabi",
+        "Property investment UAE",
+        "Abu Dhabi real estate market"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://residenceabudhabi.com/#website",
+      "url": "https://residenceabudhabi.com",
+      "name": "Residence Abu Dhabi",
+      "publisher": {
+        "@id": "https://residenceabudhabi.com/#organization"
+      },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://residenceabudhabi.com/search?q={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
+      }
+    }
+  ]
+}
