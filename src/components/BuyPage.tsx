@@ -153,7 +153,7 @@ export default function BuyPage({
                     : "bg-white hover:bg-gray-50 text-gray-500 border border-[#EAE6DF]"
                 }`}
               >
-                {tab}S
+                {tab === "All" ? "All" : `${tab}s`}
               </button>
             ))}
           </div>

@@ -308,37 +308,27 @@ export default function App() {
   }, []);
 
   // Sync Search Filters (for homepage or buy pages)
-  const filterCatalog = (type: string, location: string, budgetRange: string, tab: string) => {
+  // Live filtering: runs whenever any filter value changes
+  useEffect(() => {
     let result = propertiesData;
-
-    if (type) {
-      result = result.filter(p => p.type.toLowerCase() === type.toLowerCase());
+    if (searchType) {
+      result = result.filter(p => p.type.toLowerCase() === searchType.toLowerCase());
     }
-    if (location) {
-      result = result.filter(p => p.area.toLowerCase() === location.toLowerCase());
+    if (searchLocation) {
+      result = result.filter(p => p.area.toLowerCase() === searchLocation.toLowerCase());
     }
-    if (budgetRange) {
-      if (budgetRange === "Under AED 5M") {
-        result = result.filter(p => p.priceNumeric < 5000000);
-      } else if (budgetRange === "AED 5M - 10M") {
-        result = result.filter(p => p.priceNumeric >= 5000000 && p.priceNumeric <= 10000000);
-      } else if (budgetRange === "Over AED 10M") {
-        result = result.filter(p => p.priceNumeric > 10000000);
-      }
+    if (searchBudget === "Under AED 5M") {
+      result = result.filter(p => p.priceNumeric < 5000000);
+    } else if (searchBudget === "AED 5M - 10M") {
+      result = result.filter(p => p.priceNumeric >= 5000000 && p.priceNumeric <= 10000000);
+    } else if (searchBudget === "Over AED 10M") {
+      result = result.filter(p => p.priceNumeric > 10000000);
     }
-
-    if (tab !== "All") {
-      result = result.filter(p => p.type.toLowerCase() === tab.toLowerCase());
-    }
-
     setFilteredProperties(result);
-  };
+  }, [searchType, searchLocation, searchBudget]);
 
   const handleCatalogSearch = (e: FormEvent) => {
     e.preventDefault();
-    filterCatalog(searchType, searchLocation, searchBudget, "All");
-    setActiveTab("All");
-    // Route directly to Properties list to present results!
     navigate("/buy");
   };
 
@@ -346,13 +336,18 @@ export default function App() {
     setSearchType("");
     setSearchLocation("");
     setSearchBudget("");
-    setFilteredProperties(propertiesData);
     setActiveTab("All");
   };
 
+  // Keep tab highlight in sync when type dropdown changes directly
+  useEffect(() => {
+    const valid = ["Apartment", "Penthouse", "Villa", "Mansion"];
+    setActiveTab(valid.includes(searchType) ? searchType : "All");
+  }, [searchType]);
+
+  // Tabs set the type filter directly — keeps everything in sync
   const handleTabChange = (tabName: string) => {
-    setActiveTab(tabName);
-    filterCatalog(searchType, searchLocation, searchBudget, tabName);
+    setSearchType(tabName === "All" ? "" : tabName);
   };
 
   // WhatsApp helper
@@ -688,6 +683,7 @@ export default function App() {
                       <option value="Al Reem Island">Al Reem Island</option>
                       <option value="Ramhan Island">Ramhan Island</option>
                       <option value="Al Maryah Island">Al Maryah Island</option>
+                      <option value="Al Raha Beach">Al Raha Beach</option>
                     </select>
                   </div>
 
