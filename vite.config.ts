@@ -22,6 +22,16 @@ export default defineConfig(() => {
           target: 'http://localhost:3001',
           changeOrigin: true,
         },
+        '/sitemap.xml': {
+          target: 'http://localhost:3001',
+          changeOrigin: true,
+          rewrite: () => '/api/sitemap',
+        },
+        '/uploads': {
+          target: 'http://localhost:3001',
+          changeOrigin: true,
+          rewrite: (path) => '/public' + path,
+        },
       },
     },
   };

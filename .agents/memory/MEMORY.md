@@ -1,0 +1,2 @@
+- [AB Residencies Architecture](ab-residencies-arch.md) — Full-stack setup: Vite SPA + Express API server on port 3001, proxied via Vite. Neon PostgreSQL via @neondatabase/serverless.
+- [AI Blog Engine](ai-blog-engine.md) — Daily article cron at 04:00 UTC (08:00 GST), 6 article types, Tavily news search + GPT-4o rewriting, stored as HTML in DB.
