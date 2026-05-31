@@ -129,15 +129,15 @@ export default function InterestPopup({ pageName }: InterestPopupProps) {
                   Phone Number <span className="text-[#C9A96E]">*</span>
                 </label>
                 <div className="flex gap-2">
-                  <div className="flex items-center border border-[#EAE6DF] px-3 bg-[#F8F6F2] text-xs text-gray-600 shrink-0">
+                  <div className="flex items-center border border-[#EAE6DF] px-3 bg-[#F8F6F2] text-xs text-gray-600 shrink-0 select-none">
                     +971
                   </div>
                   <input
                     type="tel"
-                    placeholder="Enter your phone number"
+                    placeholder="55 000 0000"
                     value={form.phone}
                     onChange={(e) => setForm({ ...form, phone: e.target.value })}
-                    className={`flex-1 text-sm py-3 px-4 border ${
+                    className={`min-w-0 flex-1 py-3 px-4 border ${
                       errors.phone ? "border-red-400" : "border-[#EAE6DF]"
                     } focus:border-[#C9A96E] focus:outline-none rounded-none bg-white text-gray-900`}
                   />

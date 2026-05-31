@@ -151,8 +151,42 @@ export default function App() {
   const [searchType, setSearchType] = useState<string>("");
   const [searchLocation, setSearchLocation] = useState<string>("");
   const [searchBudget, setSearchBudget] = useState<string>("");
+  const [allProperties, setAllProperties] = useState<Property[]>(propertiesData);
+  const allPropertiesRef = useRef<Property[]>(propertiesData);
   const [filteredProperties, setFilteredProperties] = useState<Property[]>(propertiesData);
   const [activeTab, setActiveTab] = useState<string>("All");
+
+  // Fetch properties from DB on mount; fall back to static if DB is empty
+  useEffect(() => {
+    (async () => {
+      try {
+        const r = await fetch("/api/properties");
+        if (r.ok) {
+          const data = await r.json();
+          if (Array.isArray(data) && data.length > 0) {
+            const mapped: Property[] = data.map((p: any) => ({
+              id: p.id,
+              name: p.name,
+              location: p.location,
+              price: p.price,
+              priceNumeric: p.price_numeric || 0,
+              type: p.type,
+              area: p.area,
+              badge: p.badge,
+              image: p.image_url || "",
+              bedrooms: p.bedrooms || 1,
+              bathrooms: p.bathrooms || 1,
+              sizeSqFt: p.size_sqft || 0,
+              description: p.description || "",
+            }));
+            allPropertiesRef.current = mapped;
+            setAllProperties(mapped);
+            setFilteredProperties(mapped);
+          }
+        }
+      } catch (_) {}
+    })();
+  }, []);
 
   // Dynamic SEO injecting useEffect (satisfies SEO optimization objectives)
   useEffect(() => {
@@ -310,9 +344,9 @@ export default function App() {
   }, []);
 
   // Sync Search Filters (for homepage or buy pages)
-  // Live filtering: runs whenever any filter value changes
+  // Uses ref so allProperties stays out of the dependency array (avoids stale-closure warning)
   useEffect(() => {
-    let result = propertiesData;
+    let result = allPropertiesRef.current;
     if (searchType) {
       result = result.filter(p => p.type.toLowerCase() === searchType.toLowerCase());
     }
@@ -457,7 +491,7 @@ export default function App() {
   };
 
   const handleTargetSelectionFromPage = (propId: string) => {
-    const match = propertiesData.find(p => p.id === propId);
+    const match = allProperties.find(p => p.id === propId);
     if (match) {
       setSelectedProperty(match);
       handleResetPropertyInquiry();
@@ -858,12 +892,12 @@ export default function App() {
                     onClick={() => navigate("/buy")}
                     className="text-xs font-bold tracking-widest uppercase text-[#1C2B4A] hover:text-[#C9A96E] border-b border-[#C9A96E] pb-0.5 mt-4 md:mt-0 select-none cursor-pointer"
                   >
-                    VIEW ENTIRE CATALOG ({propertiesData.length} units) →
+                    VIEW ENTIRE CATALOG ({allProperties.length} units) →
                   </button>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                  {propertiesData.slice(0, 3).map((property) => (
+                  {allProperties.slice(0, 3).map((property) => (
                     <article 
                       key={property.id}
                       onClick={() => handleTargetSelectionFromPage(property.id)}

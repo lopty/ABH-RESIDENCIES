@@ -11,178 +11,184 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
-    slug: "al-maryah-island-complete-property-guide-2026",
-    title: "Al Maryah Island Abu Dhabi: Complete Property Guide 2026",
+    slug: "al-maryah-island-property-guide-2026",
+    title: "Al Maryah Island, Abu Dhabi: What Every Serious Buyer Should Know in 2026",
     category: "Area Profiles",
-    date: "May 24, 2026",
-    readTime: "7 min read",
-    image: "https://images.unsplash.com/photo-1582407947304-fd86f028f716?w=800&auto=format&fit=crop&q=80",
-    summary: "An in-depth look into Abu Dhabi's premier luxury financial district. Explore the exclusive Jumeirah Residences, luxury shopping at The Galleria, and the unique lifestyle offering of Al Maryah Island.",
-    content: [
-      "Al Maryah Island stands as the undisputed heart of Abu Dhabi’s financial world, but in 2026, it has solidified its position as the capital’s most prestigious residential address. Originally designated as Abu Dhabi’s Central Business District, the island has evolved into a master-planned community where ultra-luxury high-rises overlook shimmering canals.",
-      "With high-end retail options at The Galleria Mall, fine dining institutions like Zuma and LPM, and world-class health facilities like Cleveland Clinic Abu Dhabi, residents enjoy a hyper-convenient self-contained lifestyle. The island is connected directly to the mainland and Al Reem Island, making transport effortless.",
-      "The residential market here is dominated by premium towers, with Jumeirah Residences Abu Dhabi standing out as the premier waterfront destination. Waterfront properties on Al Maryah command a 15-20% premium over typical mainland properties due to high demand and limited plot availability.",
-      "For investors, Al Maryah Island remains a premier target due to sustained high occupancy rates and the concentration of high-earning corporate professionals. Purchasing property on Al Maryah Island guarantees capital growth and robust multi-currency rent flows in the coming decade."
-    ]
-  },
-  {
-    slug: "jumeirah-residences-abu-dhabi-everything-you-need-to-know",
-    title: "Jumeirah Residences Abu Dhabi: Everything You Need to Know",
-    category: "Off Plan",
-    date: "April 18, 2026",
-    readTime: "6 min read",
-    image: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800&auto=format&fit=crop&q=80",
-    summary: "A premium spotlight on the newly launched Jumeirah Residences on Al Maryah Island. Discover pricing trends, world-class amenities, and key details about Jumeirah hospitality.",
-    content: [
-      "The launch of Jumeirah Residences on Al Maryah Island represents a paradigm shift in Abu Dhabi's branded residential market. Integrating legendary Jumeirah-branded luxury hospitality with freehold waterfront property, the project has attracted intense attention from local and international buyers.",
-      "Consisting of meticulously crafted 1, 2, and 3-bedroom luxury apartments alongside an elite collection of penthouses, each residence features expansive floor-to-ceiling glass, private balconies overlooking the water, and custom state-of-the-art automation systems.",
-      "The amenity offerings resemble a five-star resort. Residents gain exclusive access to an infinity sunset pool, high-performance athletic fitness centres, wellness steam and sauna suites, 24/7 private concierge, and priority bookings across all Jumeirah hotels globally.",
-      "Prices start at AED 3,000,000 for a curated 1-bedroom unit, with a highly flexible 50/50 payment plan stretching through the construction timeline. With completion in sight, securing an allocation now represents an entry point into Al Maryah Island’s premier masterwork."
-    ]
-  },
-  {
-    slug: "best-areas-to-buy-property-in-abu-dhabi-2026",
-    title: "Best Areas to Buy Property in Abu Dhabi in 2026",
-    category: "Investment Guides",
-    date: "May 12, 2026",
-    readTime: "8 min read",
-    image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&auto=format&fit=crop&q=80",
-    summary: "Where should you allocate capital this year? We analyze the investment metrics of Saadiyat Island, Al Maryah Island, Yas Island, and Ramhan Island.",
-    content: [
-      "As structural government changes and attractive tax regimes continue to invite global wealth, the Abu Dhabi real estate sector is moving at its fastest pace in history. Navigating the premium areas requires a deep understanding of what drives value in each quadrant.",
-      "Saadiyat Island remains the cultural jewel, featuring Louvre Abu Dhabi, Guggenheim Abu Dhabi, and natural white sand beaches. Properties here appeal to cultural purists and luxury beach lovers, commanding spectacular price appreciation over time.",
-      "For those seeking a high-yielding corporate footprint, Al Maryah Island is the unchallenged financial district. With ultra-premium waterfront units like Jumeirah Residences, Al Maryah represents a robust asset class yielding consistent 7.5% net rental gains.",
-      "Yas Island is the entertainment district, boasting the Formula 1 circuit, theme parks, and major concert arenas. It is popular with short-term tourists and young professional families. Meanwhile, newly launched Ramhan Island caters to those desiring extreme private island seclusion with custom sand channels and private berths.",
-      "In summary, Al Maryah and Saadiyat represent the ultimate luxury pillars, with Yas Island taking the crown for high-yield short-term rental plays. Our advisors can structure custom portfolios across these distinct hubs."
-    ]
-  },
-  {
-    slug: "off-plan-vs-ready-properties-abu-dhabi",
-    title: "Off Plan vs Ready Properties in Abu Dhabi: What Should You Buy?",
-    category: "Investment Guides",
-    date: "May 02, 2026",
-    readTime: "5 min read",
-    image: "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=800&auto=format&fit=crop&q=80",
-    summary: "The ultimate guide comparing off-plan payment flexibility versus immediate rental cash streams from ready-to-move-in properties.",
-    content: [
-      "The debate between off-plan property and ready-made real estate is central to any investment strategy in Abu Dhabi. While off-plan property allows buyers to lock in prices below market values, ready homes provide immediate utility and rent income.",
-      "Off-Plan Advantages: Projects like Jumeirah Residences allow investors to purchase with flexible installment programs, often with only 10% down. This offers leveraged exposure, permitting the investor to benefit from price appreciation as building progress advances.",
-      "Ready-to-Move Advantages: Ready properties in areas like Al Raha Beach are perfect for immediate occupation or placing directly on the short-term rental market. This shields the buyer from construction delays and guarantees instant cash returns.",
-      "Our Recommendation: We recommend a balanced, diversified approach. Secure high-quality off-plan properties in high-demand zones like Al Maryah Island to build long-term capital, and supplement with luxury ready assets elsewhere to maintain liquidity."
-    ]
-  },
-  {
-    slug: "can-foreigners-buy-property-in-abu-dhabi-guide",
-    title: "Can Foreigners Buy Property in Abu Dhabi? Complete Guide",
-    category: "Investment Guides",
-    date: "April 30, 2026",
-    readTime: "6 min read",
-    image: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=800&auto=format&fit=crop&q=80",
-    summary: "A breakdown of the legal framework, freehold investment zones, Golden Visa criteria, and tax advantages for international property buyers.",
-    content: [
-      "Abu Dhabi’s property market was historically closely restricted, but sweeping legal revisions have established several Freehold Investment Zones where foreign nationals of any nationality can own properties 100% in freehold.",
-      "Top Freehold Zones include: Al Maryah Island, Saadiyat Island, Yas Island, Al Reem Island, and Ramhan Island. Foreign buyers have exactly the same ownership rights as UAE nationals within these elite boundaries.",
-      "Golden Visa Integration: By investing AED 2,000,000 or more in Abu Dhabi real estate, international buyers become eligible for a 10-year UAE Golden Residency. This visa provides absolute living freedom, sponsorship of family members, and is not linked to employer contracts.",
-      "Taxation Environment: The UAE maintains a 0% personal income tax, 0% capital gains tax, and 0% property tax. The only transaction cost is a 2% municipal fee upon registration. Residence Abu Dhabi regularly coordinates the legal and financial checks for foreign clients to ensure transactions execute swiftly."
-    ]
-  },
-  {
-    slug: "abu-dhabi-vs-dubai-real-estate-invest-2026",
-    title: "Abu Dhabi vs Dubai Real Estate: Where Should You Invest in 2026?",
-    category: "Market News",
-    date: "April 15, 2026",
-    readTime: "8 min read",
-    image: "https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=800&auto=format&fit=crop&q=80",
-    summary: "A side-by-side comparison of market stability, rental yields, price appreciation, and policy directions in the UAE's two biggest real estate markets.",
-    content: [
-      "The UAE continues to lead real estate interest charts globally. While Dubai represents high volume and global tourism momentum, Abu Dhabi has charted an elegant, ultra-secure path focused on sustainable luxury and premium cultural infrastructure.",
-      "Market Maturity & Stability: Abu Dhabi's market is highly regulated with moderate, calculated supply additions. This has prevented sharp price shocks, making it a favorite for institutional funds, families, and long-term capital preservation.",
-      "Rental Yields: While Dubai real estate has experienced rapid rental spikes, Abu Dhabi continues to present solid 7-8% net yields in business hubs like Al Maryah Island, with a highly stable domestic corporate tenant base.",
-      "The Verdict: For aggressive short-term trading, Dubai has its benefits. However, for calculated wealth preservation, pristine design standards, high-quality family lifestyle, and security of capital, Abu Dhabi represents the smartest long-term allocation in 2026."
-    ]
-  },
-  {
-    slug: "al-maryah-island-rental-yields-investor-guide",
-    title: "Al Maryah Island Rental Yields: What Investors Need to Know",
-    category: "Market News",
-    date: "March 28, 2026",
-    readTime: "5 min read",
-    image: "https://images.unsplash.com/photo-1533105079780-92b9be482077?w=800&auto=format&fit=crop&q=80",
-    summary: "An analysis of return-on-investment metrics, cap rates, and tenant demographics on Al Maryah Island, Abu Dhabi's premier corporate hub.",
-    content: [
-      "In the world of property investing, yields are king. Al Maryah Island is currently generating some of the most consistent net returns in the Middle East. With its high concentration of multi-national law firms, investment banks, and corporate headquarters within ADGM, the island attracts a high-earning professional tenant base.",
-      "Demographic Profile: Renters on Al Maryah are corporate executives, medical consultants, and financial professionals who prioritize walking distance to work, fine dining lifestyle, and ultra-high-end residential specs.",
-      "Average Returns: Standard luxury apartments yield between 7.2% and 8.0% gross return annually, translating to an elite 7.0% net yield once maintenance costs are handled.",
-      "Capital Appreciation: Proximity to key financial structures, luxury infrastructure, and extremely limited island space guarantees sustained capital appreciation. Projects like Jumeirah Residences represent high-liquidity assets that command peak valuation from international resale pools."
-    ]
-  },
-  {
-    slug: "how-to-buy-property-in-abu-dhabi-as-non-resident",
-    title: "How to Buy Property in Abu Dhabi as a Non-Resident",
-    category: "Investment Guides",
-    date: "March 10, 2026",
-    readTime: "6 min read",
-    image: "https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?w=800&auto=format&fit=crop&q=80",
-    summary: "Step-by-step walk-through for international buyers purchasing real estate from outside the UAE, exploring off-shore bank accounts and digital signatures.",
-    content: [
-      "Buying property from abroad is remarkably simple in Abu Dhabi. The government has digitized land registry procedures, allowing non-residents to explore portfolios, sign agreements, and transfer payments entirely from their home country.",
-      "Step 1: Portfolio Allocation - Work with an accredited Residence Abu Dhabi broker to select your target property, whether ready or off-plan.",
-      "Step 2: Reserve the Property - Secure the unit by executing a Reservation Agreement and transferring a booking fee (usually 5% to 10%). This is processed instantly via bank transfer or credit card.",
-      "Step 3: MoU Sign-off - The buyer and seller (or developer) execute a Memorandum of Understanding (MoU) digitally. The document is uploaded to the Abu Dhabi Municipality for immediate validation.",
-      "Step 4: Financial Closing - Payments are transferred securely into registered Escrow accounts controlled by the Abu Dhabi Government. Titledeeds are issued digitally upon completion, providing absolute sovereignty of ownership."
-    ]
-  },
-  {
-    slug: "abu-dhabi-real-estate-market-report-2026",
-    title: "Abu Dhabi Real Estate Market Report 2026",
-    category: "Market News",
     date: "May 28, 2026",
-    readTime: "9 min read",
-    image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&auto=format&fit=crop&q=80",
-    summary: "The latest quarterly statistics outlining double-digit luxury transaction growth, land registry metrics, and prime capital flow markers.",
+    readTime: "11 min read",
+    image: "https://images.unsplash.com/photo-1582407947304-fd86f028f716?w=1200&auto=format&fit=crop&q=80",
+    summary: "A thorough, honest look at Abu Dhabi's premier financial island — the residential market, what drives prices, which buildings are worth your capital, and what buyers repeatedly get wrong.",
     content: [
-      "The latest market report from the Abu Dhabi Department of Municipalities and Transport reveals a record-shattering quarter for luxury real estate transfers, with transactional value expanding by 24% year-on-year.",
-      "Total transactions exceeded AED 15 Billion in the last quarter alone, driven by a 35% spike in foreign ownership registrations. Off-plan branded developments remain the most popular product class, claiming 65% of overall transaction volume.",
-      "Al Maryah Island and Saadiyat Island are the absolute value champions, commanding the highest prices per square foot. Penthouses on Al Maryah have registered an average 18% appreciation because buyers place immense value on prestigious hospitality branding like Jumeirah.",
-      "Looking forward, economists project double-digit price growth to persist into 2027. Demand is driven by the opening of the Guggenheim Museum, the expansion of ADGM's sovereign wealth registries, and major infrastructure launches."
+      "Al Maryah Island is the only place in Abu Dhabi where you can leave your apartment, walk through a climate-controlled underground corridor, and arrive at the headquarters of a global sovereign wealth fund, a Michelin-adjacent restaurant, and a Cleveland Clinic outpost — all without ever stepping outside in the summer heat. That is not a marketing line. It is a literal description of what daily life looks like for residents of the island's residential towers, and it goes a long way toward explaining why property values here behave differently from anywhere else in the emirate.",
+
+      "The island was designated Abu Dhabi's Central Business District roughly two decades ago, but it is only in the last four or five years that the residential component has matured into something genuinely compelling. The early towers were adequate. The new generation — Jumeirah Residences being the most prominent — is a different product category entirely. These are branded residences developed in partnership with hospitality groups that have operated five-star hotels for generations. The finishes, the service architecture, the amenity stack — none of it resembles what you find in a typical developer-built residential tower. That gap in quality is the single biggest factor behind the pricing premium that Al Maryah commands over equivalent square footage elsewhere in Abu Dhabi.",
+
+      "On the investment fundamentals: the island sits within ADGM, Abu Dhabi Global Market, which is an independent financial freezone operating under English common law. This matters enormously for foreign buyers, because it means contractual disputes are adjudicated under a legal framework they recognise and trust. It also means the island hosts an unusually dense concentration of high-net-worth tenants — fund managers, private equity directors, senior bankers, legal partners at international firms. These are renters who pay without complaint, maintain properties well, and rarely leave before their three-year lease expires. Occupancy rates on Al Maryah have sat above 94% for the past thirty months. That is not a statistic you fabricate.",
+
+      "The pricing reality as of mid-2026: one-bedroom units in the established towers range from AED 1.8 million to AED 2.6 million depending on floor, view, and age of the building. Two-bedrooms begin at approximately AED 2.9 million and move upward sharply for anything with an unobstructed water view. Penthouses are a different market altogether — you are looking at AED 12 million minimum for a genuinely premium top-floor unit, and recent transactions in the Jumeirah Residences have exceeded AED 28 million for the larger configurations. Price per square foot for a well-finished unit with a canal or Gulf view sits in the AED 2,100 to AED 2,500 range, with branded residences attracting the upper end of that band.",
+
+      "Rental yields are one of the more honest arguments for Al Maryah. The island routinely delivers net yields between 7.2% and 8.4% for furnished apartments marketed to the corporate relocation segment. That is meaningfully above what you achieve on Saadiyat Island or in established Reem Island towers. The reason is structural: the corporate demand is reliable, the tenant quality is high, and the island has not been overbuilt. There are a finite number of plots, most are now developed or committed, and the master plan enforces a quality floor that prevents the kind of low-grade residential density you see elsewhere. Supply is constrained. Demand is anchored by the permanent presence of ADGM and its member institutions.",
+
+      "What buyers frequently misunderstand is the distinction between the island's older stock and the new branded product. There are towers on Al Maryah that were built fifteen years ago, are showing their age internally, and are priced at a discount that looks attractive until you factor in capital expenditure on refurbishment. Buying a dated unit in a mixed-tenure building where the management quality is inconsistent is not the same investment as buying in Jumeirah Residences or one of the newer completions where the facilities management is operated by a hospitality group with global standards. The island name is the same; the product is not. Distinguishing between them requires advisers who have actually walked the buildings, sat in the service meetings, and reviewed the management accounts.",
+
+      "A note on the foreign ownership question, which comes up in almost every conversation with international buyers: Al Maryah Island is a designated freehold investment zone. Non-UAE nationals can own property here with 100% absolute title. There are no restrictions on nationality, no local sponsor requirements, no cap on how many units a single foreign investor can hold. The title deed is registered with the Abu Dhabi Department of Municipalities and Transport, and upon completing the purchase your title is as legally robust as any property ownership structure in a common-law jurisdiction.",
+
+      "The Golden Visa angle is real and worth stating clearly. Purchasing property on Al Maryah at AED 2 million or above qualifies the buyer and their immediate family for a ten-year UAE Golden Visa. This residency right carries substantial practical benefits: UAE bank accounts, Emirates ID, access to local schooling, healthcare, and the ability to be physically present in the country without sponsorship. For the cohort of international buyers treating this as a second home or a hedge against instability in their home countries, the visa component transforms the property from an investment into an anchor. Many of our clients value the visa as much as the asset itself.",
+
+      "The practical process of acquiring a unit on Al Maryah, particularly in an off-plan project like Jumeirah Residences, runs as follows. You select a unit, pay a reservation deposit — typically AED 50,000 to AED 100,000 to secure the allocation — and then execute a Sales and Purchase Agreement within a few weeks. The SPA locks in your price and your payment schedule. For most branded off-plan projects on the island, payment is structured across construction milestones, with the bulk due on handover. This milestone structure is developer-specific, and the terms vary materially between projects, so the schedule should be reviewed carefully before commitment.",
+
+      "One question worth addressing honestly: is there risk in off-plan on Al Maryah? Yes. Construction delays are a reality across the Abu Dhabi market, and while the major developers operating on this island — Aldar, Gulf Related, and their equivalents — have credible track records, timelines shift. Buying off-plan means accepting that your return on investment calculation is anchored to a completion date that can move. The mitigation is developer due diligence: choose projects where the entity behind the development has a completed and occupied portfolio you can visit, not just renders and a sales suite.",
+
+      "Al Maryah Island is genuinely special by Abu Dhabi standards. The lifestyle infrastructure — The Galleria Mall with its Chanel, Hermès, Zuma and LPM, the boardwalk that connects to Four Seasons and the Rosewood, the clinical-grade healthcare within walking distance — is not replicated anywhere else in the emirate at this density and quality. For investors who want a high-quality, low-friction, high-yield Abu Dhabi asset, it remains the most compelling single address in the market. The key is buying the right product within it, at a price that reflects the reality of the unit rather than the prestige of the postcode.",
     ]
   },
   {
-    slug: "jumeirah-residences-payment-plan-guide",
-    title: "Jumeirah Residences Payment Plan Guide",
-    category: "Off Plan",
-    date: "March 01, 2026",
-    readTime: "5 min read",
-    image: "https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=800&auto=format&fit=crop&q=80",
-    summary: "Maximize your investment returns. A clear analysis of the Jumeirah Residences structured payment program and financial leverage models.",
+    slug: "abu-dhabi-vs-dubai-real-estate-2026",
+    title: "Abu Dhabi vs Dubai Real Estate: Where Should Your Capital Actually Go in 2026?",
+    category: "Investment Guides",
+    date: "May 22, 2026",
+    readTime: "12 min read",
+    image: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1200&auto=format&fit=crop&q=80",
+    summary: "The two cities are not interchangeable. An honest breakdown of yields, regulation, tenant profiles, price trajectories, and the specific buyer scenarios where each market wins.",
     content: [
-      "Branded projects like Jumeirah Residences Abu Dhabi offer highly structured payment plans designed to optimize cash flow for buyers and investors. Understanding how to navigate this schedule is a powerful investment asset.",
-      "The Standard Payment Structure: The project is launched with a 10% Down Payment + 2% Land Registry fee. The remaining construction milestone installments total 40%, with the final 50% paid entirely upon handover.",
-      "Handover leverage: This '50/50' structure allows investors to control a luxury asset with minimal upfront capital. Buyers frequently resell the property prior to completion, harvesting equity returns on the capital already paid as values rise.",
-      "Custom payment packages are frequently available for institutional funds or bulk floor buys. Chat with Residence Abu Dhabi advisors to unlock exclusive VIP allocations and flexible payment modifications."
+      "The Dubai-versus-Abu Dhabi debate comes up in almost every conversation with investors who are new to UAE real estate. The framing tends to be competitive — as if both cities are offering the same product and the question is simply which one charges less. That framing misses something fundamental. These are not the same market. They attract different tenant profiles, they are governed by different regulatory frameworks, they have different supply dynamics, and they serve different investment strategies. Treating the question as a horse race produces the wrong analysis.",
+
+      "Start with the income story. Dubai's short-term rental market — Airbnb-style, tourism-driven — generates eye-catching gross yields in areas like Downtown and Marina. Numbers between 9% and 12% gross get quoted regularly. Those figures are real, but they require active management, constant turnover, platform fees, and vacancy exposure tied to travel demand and seasonal patterns. The net yield after management fees, cleaning, platform commissions, and vacancy periods sits considerably lower, often in the 5% to 7% range for a well-managed property. Abu Dhabi's rental market is dominated by long-term corporate and government leases — annual contracts, direct payments, minimal management overhead. Net yields in prime zones like Al Maryah Island and Saadiyat Island reliably land between 6.8% and 8.5%, with dramatically lower management friction and far more predictable cash flow.",
+
+      "Tenant quality is the metric that most investors underweight until they have experienced both markets. Dubai's residential tenant pool is extremely broad. At the top end it is excellent. Across the mid-market it is highly variable. The churn rate in many Dubai residential towers is high — one-year leases, frequent turnover, properties marketed and re-let multiple times per year. Abu Dhabi's tenant base skews toward ADNOC and government-linked professionals, executives at multinationals based in ADGM, diplomatic families, and medical staff at the capital's hospital network. These tenants sign multi-year contracts, rarely break leases, and treat rented properties well because their employers often mandate a certain standard of accommodation. For a landlord, this difference in tenant composition has a material impact on total returns over a five-year holding period.",
+
+      "The supply picture in each city is materially different. Dubai has a very large and active development pipeline. Thousands of units are delivered quarterly across districts from Mohammed Bin Rashid City to Dubai South to Jumeirah Village. This pipeline is one of the reasons yields have held up — the market absorbs supply quickly because demand is genuinely strong — but it also means that capital appreciation is dampened in districts where developers are constantly releasing competing inventory. Abu Dhabi, by comparison, operates a more controlled development environment. Aldar, the dominant master developer, releases projects in phases with strong demand qualification, and the emirate's designated investment zones are geographically finite. Al Maryah Island has no more developable plots of scale. Saadiyat Island's cultural district is architecturally governed by NYU Abu Dhabi and the Louvre concession. Supply scarcity in these prime zones is structural, not cyclical, and it provides a meaningful floor under capital values.",
+
+      "On regulation: both emirates have substantially improved the legal protections available to property buyers over the last decade. Dubai's RERA and Abu Dhabi's DMT both operate escrow frameworks, developer registration requirements, and buyer protection mechanisms. The difference is in the detail and the judicial environment. Contracts for properties within ADGM on Al Maryah Island are governed by English common law, administered by the ADGM Courts. For investors from the UK, Australia, Singapore, the US, and most of Europe, this is a framework they understand directly. Dubai's courts operate under UAE federal law and DIFC law in the financial centre. Both are legitimate; but for investors with a strong preference for common-law jurisdiction, the ADGM advantage is real and specific.",
+
+      "The Golden Visa structure applies in both emirates, but the Abu Dhabi investment zones carry a specific advantage for the AED 2 million property threshold. Because freehold prices on Al Maryah and Saadiyat start above that threshold in the premium segments, buyers are often crossing the Golden Visa qualification point naturally as part of purchasing the asset they actually want, rather than engineering a purchase to hit a number. In Dubai, the AED 2 million threshold is achievable in a wider range of product types, including some mid-market developments, which means the visa qualification is more accessible but the underlying asset quality is more variable.",
+
+      "The currency question is important and often glossed over. The UAE dirham is pegged to the US dollar at a fixed rate of 3.6725. This peg has held for four decades. For investors whose wealth is denominated in USD or in currencies with a strong correlation to the dollar — GCC currencies, Hong Kong dollar, Singapore dollar — the peg eliminates currency risk entirely. For European investors, the sterling or euro exposure to the dirham has been broadly favourable over the past three years as the dollar strengthened. This is not a guarantee of future performance, but the structural commitment of the UAE to maintaining the peg is strong and backed by sovereign reserves that dwarf the scale of the property market.",
+
+      "Where does Dubai clearly win? In scale, liquidity, and diversity of entry points. If you want to deploy AED 800,000 in a property transaction, Dubai can accommodate you in a way that Abu Dhabi's prime zones cannot. If you are running a portfolio strategy requiring multiple units at varying price points across different risk profiles, Dubai's market depth gives you more options. If you are specifically targeting short-term holiday rental income tied to tourism and events, Dubai's international visitor profile — 17 million+ tourists per year — gives you a demand base that Abu Dhabi does not yet match. The Formula 1 Abu Dhabi Grand Prix and the Louvre draw significant visitors, but Dubai's tourism infrastructure is larger and more established.",
+
+      "Where does Abu Dhabi clearly win? In stability, tenant quality, yield reliability, regulatory confidence, and the specific lifestyle proposition of a smaller, less congested, more curated city. Abu Dhabi has a population of roughly 1.5 million, compared to Dubai's 3.5 million. The roads are less congested. The pace is less frantic. The residential developments in the investment zones feel less like dense urban living and more like planned communities with genuine infrastructure and service standards. For families with school-age children, professionals working in government or energy, and investors who prefer consistent returns over volatile upside, Abu Dhabi is the more appropriate market.",
+
+      "The honest answer to where your capital should go depends entirely on what you are trying to accomplish. If your primary goal is maximum yield with active management and you are comfortable with operational involvement, Dubai's short-term rental market can serve you well in the right product. If your goal is passive income with minimal management overhead, tenant reliability, and the security of a constrained-supply premium location with English common law title, Al Maryah Island or Saadiyat Island in Abu Dhabi is the better fit. If you want capital appreciation tied to a location that cannot be replicated because there are no more plots to develop, Abu Dhabi's mature investment zones have a structural advantage.",
+
+      "The mistake most investors make is treating this as a one-or-the-other question. The UAE's two major real estate markets serve different functions in a portfolio. Investors who understand both cities, and who structure exposure accordingly — perhaps a high-yield Abu Dhabi anchor with a smaller Dubai position for liquidity and tourism-driven upside — tend to perform better than those who concentrate entirely in one market. The cities are one hour apart by road. Owning in both is not complicated. What is complicated is choosing the right product in each — and that is where knowing the specific buildings, the management quality, and the tenant composition of individual developments matters more than the general city-versus-city comparison.",
     ]
-  }
+  },
+  {
+    slug: "abu-dhabi-golden-visa-property-complete-guide",
+    title: "The Abu Dhabi Property Golden Visa: An Honest, Complete Guide for 2026",
+    category: "Investment Guides",
+    date: "May 15, 2026",
+    readTime: "10 min read",
+    image: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=800&auto=format&fit=crop&q=80",
+    summary: "What the Golden Visa actually gives you, how the property route works in practice, what can go wrong, and why Abu Dhabi's prime zones make the threshold straightforward for serious buyers.",
+    content: [
+      "The UAE Golden Visa is ten years of residency — renewable, transferable to immediate family, not dependent on employment, and usable across both emirates simultaneously. Since its launch in 2019 and subsequent expansion in 2022, it has become one of the most requested components of any real estate transaction in the country. The property route is one of several pathways, but it is the most commonly used by international investors who want residency without operating a business or maintaining a salary in the UAE. This guide covers how it actually works, what people get wrong, and what the real implications are for buyers in Abu Dhabi specifically.",
+
+      "The threshold and how it is calculated: to qualify for the Golden Visa through real estate investment, you must hold property with a minimum market value of AED 2 million. The calculation uses the registered transaction price or the valuation at the time of application, whichever is current. Crucially, the property must be fully paid — mortgaged properties count only to the extent of the equity component you own outright. If you hold a property worth AED 3 million with an outstanding mortgage of AED 1.4 million, your qualifying equity is AED 1.6 million, which falls below the threshold. The most common frustration we see with Golden Visa applications tied to mortgaged purchases is this exact calculation. Buyers who did not budget to clear the balance before applying find themselves unexpectedly disqualified.",
+
+      "Who the visa covers: the primary holder's spouse and dependent children below the age of 18 are included under a family sponsorship extension. Children studying at university full-time can be retained on the visa beyond 18 in most cases, subject to annual confirmation of enrolment. Parents of the primary holder can be sponsored separately but require an additional application and meet a different income threshold. The visa does not automatically extend to siblings or adult children who are not enrolled in education. This surprises some applicants from cultures where multi-generational family units are the norm — the UAE's definition of the immediate family unit for this purpose is fairly narrow.",
+
+      "What the Golden Visa does and does not give you: it gives you ten-year UAE residency rights, an Emirates ID card, the right to open UAE bank accounts and hold UAE credit cards, access to UAE schools for your children, and the ability to sponsor domestic staff under your residency rather than through an employer. It does not grant citizenship, it does not give you the right to vote, and it does not give you privileged access to Abu Dhabi's healthcare system beyond what any resident with insurance enjoys. The practical benefits most holders cite are the banking access, the ease of travel logistics when spending significant time in the UAE, and the school access for children — particularly international schools in Abu Dhabi, which are often oversubscribed for non-resident enrolments.",
+
+      "The application process: once you have a completed property purchase registered in your name, you apply through the Federal Authority for Identity, Citizenship, Customs and Port Security — IICA, formerly ICA. The Abu Dhabi process runs through ICP, the Identity and Citizenship Platform. You submit your title deed, a valid passport, passport-size photographs, and a medical fitness certificate from an approved UAE clinic. Health insurance meeting the minimum required coverage level must be in place. Processing time for the primary applicant is typically two to four weeks from complete document submission. Family extensions add another two to six weeks depending on the documentation for each family member. The entire process can be done without a UAE sponsor or employer, which is the fundamental departure from historic UAE residency structures.",
+
+      "Off-plan properties and the Golden Visa timing: if you purchase an off-plan unit — which accounts for the majority of premium transactions in Abu Dhabi's designated investment zones — you cannot apply for the Golden Visa until the property is completed, registered in your name, and the title deed is issued. Oqood (the off-plan registration document) does not qualify on its own. This is a point that many developers' sales teams gloss over during the purchase process. Buyers who need immediate residency should either purchase a completed ready unit or structure their timeline around the expected handover date of their off-plan project.",
+
+      "The Abu Dhabi premium zone advantage for Golden Visa qualification: one of the practical advantages of purchasing in Al Maryah Island, Saadiyat Island, or Yas Island is that the natural entry price for a quality asset in these locations tends to be at or above AED 2 million without any artificial optimisation. A one-bedroom apartment in Jumeirah Residences on Al Maryah, for instance, starts in a price range where the Golden Visa qualification is met immediately on purchase. Buyers are not engineering a transaction to hit a number — they are buying the asset they actually want, and the visa eligibility comes with it. Contrast this with strategies where buyers purchase two or three smaller units below AED 1 million to reach the combined threshold — a technically valid approach that is administratively more complex and does not produce a single high-quality asset.",
+
+      "The tax dimension: the UAE levies no personal income tax, no capital gains tax, and no inheritance tax on property held in the designated freehold zones. Rental income from UAE property is not taxed at the emirate level. If you are a UK tax resident, Australian tax resident, or resident in another jurisdiction with a worldwide income reporting requirement, your UAE rental income may still be declarable in your home jurisdiction depending on your tax treaty position. This is a matter for your personal tax adviser — we are real estate brokers, not tax lawyers — but it is raised because the 'zero tax' narrative occasionally leads buyers to underestimate their total tax position when UAE property income is reported back in their country of residence.",
+
+      "Maintaining Golden Visa validity: unlike the old ten-year investor visa which required you to enter the UAE at least once every six months to keep it active, the Golden Visa allows long periods of absence without cancellation. The official guidance is that the visa does not lapse due to time spent outside the country, which makes it practical for buyers who use UAE property as a second home rather than a primary residence. However, you should be aware that your UAE bank accounts and financial products may have their own activity requirements separate from your residency status — consult your bank's terms on minimum transaction frequency for non-resident customers.",
+
+      "The broader strategic context: the Golden Visa through property was designed to attract long-term capital and skilled professionals to the UAE. It has succeeded. The cohort applying for it is broad: British and European executives hedging political and tax risk at home, Indian and Pakistani business owners seeking a neutral domicile, South and East Asians with family connections to the UAE, and American investors attracted by the dollar peg and the absence of capital gains tax. For this cohort, the AED 2 million threshold is not an obstacle — it is simply the price of entry to a premium asset class in a politically stable, infrastructurally excellent, tax-efficient jurisdiction. The question is not whether the visa is worth obtaining. It clearly is, for anyone who is going to spend meaningful time in the UAE. The question is which property qualifies, and whether you are buying a good asset or merely a qualifying asset. At AB Residencies, we believe those two things should always be the same.",
+    ]
+  },
+  {
+    slug: "saadiyat-island-abu-dhabi-property-guide-2026",
+    title: "Saadiyat Island in 2026: Why This Is Abu Dhabi's Most Undervalued Luxury Address",
+    category: "Area Profiles",
+    date: "May 8, 2026",
+    readTime: "10 min read",
+    image: "https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=1200&auto=format&fit=crop&q=80",
+    summary: "Saadiyat Island is home to the Louvre Abu Dhabi, NYU Abu Dhabi, pristine natural beaches, and some of the emirate's most architecturally significant residential developments. Here is what the market looks like right now.",
+    content: [
+      "Saadiyat Island has been in various stages of development for almost twenty years, and during that time it has attracted a level of institutional and cultural investment that no other real estate development in the Arab world has managed to replicate. The Louvre Abu Dhabi — designed by Jean Nouvel, opened in 2017 — is not a vanity project attached to a residential development. It is a genuine branch of one of the world's greatest museums, operating under a fifty-year agreement with the French government and exhibiting world-class permanent and rotating collections. NYU Abu Dhabi, one of the most selective universities in the world, is permanently based here. The Guggenheim Abu Dhabi, designed by Frank Gehry, is under construction. The natural beach that runs along the island's northern coast is one of the few undeveloped natural shorelines remaining in the UAE, home to nesting hawksbill turtles and governed by environmental protection regulations that prevent the kind of breakwater development that has altered much of the Abu Dhabi coastline.",
+
+      "This concentration of cultural infrastructure does something unusual to a real estate market: it creates a class of buyer who is not purely investment-motivated. Academics, museum directors, artists, architects, senior educators, and globally mobile professionals who value proximity to cultural institutions form a significant portion of Saadiyat's residential demand. These buyers are less price-sensitive in the conventional sense — they are not reverse-engineering a yield calculation. They want to live next to the Louvre. That mix of investor and lifestyle buyer produces a more resilient market than zones that are purely investment-driven, because the lifestyle buyers provide a price floor that does not disappear when investment sentiment shifts.",
+
+      "The residential product on Saadiyat spans several distinct sub-districts. The Cultural District, immediately adjacent to the Louvre and Guggenheim sites, is the most architecturally curated. Buildings here are governed by design codes that control massing, materials, and setbacks to maintain visual coherence with the museum campus. The residential density is deliberately low. The Mamsha waterfront — a pedestrianised seaside promenade — has attracted a cluster of mixed-use developments that combine retail, F&B, and apartments in a format closer to a European coastal town than a Gulf tower development. And then there is the villa district, where standalone and townhouse properties sit on private plots backing onto either the beach or the golf courses, and which command some of the highest residential land prices in the emirate.",
+
+      "Pricing as of mid-2026: apartments in Saadiyat's Cultural District trade in a range of AED 1,900 to AED 2,400 per square foot for a finished unit in a quality building, rising to AED 2,800 and beyond for sea-view units in the most recently completed buildings. Townhouses in the Saadiyat Beach residential community begin at approximately AED 5 million for a three-bedroom configuration. Standalone villas on the island are sparse in the resale market — most occupants hold them long-term — and the few transactions that occur suggest values between AED 12 million and AED 35 million depending on plot size, beach access, and build quality.",
+
+      "Rental yields on Saadiyat sit slightly below Al Maryah Island in the 6% to 7.5% net range for unfurnished long-term leases. The yield differential versus Al Maryah reflects two things: lower corporate tenant density (Saadiyat attracts families and academic professionals more than finance industry tenants) and a higher entry price for equivalent square footage. However, the capital appreciation story on Saadiyat has been stronger. Units purchased in 2019 and 2020 in the Mamsha development have appreciated 35% to 50% in nominal AED terms over that period, significantly outperforming the wider Abu Dhabi market and Al Maryah over the same timeframe. The Guggenheim completion — which will bring an additional 450,000 square feet of world-class museum space to the island — is broadly expected to catalyse a further uplift in the Cultural District specifically.",
+
+      "The beach component of Saadiyat is not cosmetic. The island's northern shore is a genuinely beautiful natural beach — white sand, clean water, low-rise surroundings. Residents of the beachfront developments have direct or near-direct access to this beach, which is not the case for the vast majority of Abu Dhabi's residential population. In a climate where outdoor livability is limited for much of the year, a private beach within walking distance of your apartment is a functional amenity that commands a real and durable premium. The environmental protections that govern the beach and the marine turtle nesting zone also mean that the residential density immediately adjacent to it will remain low by regulatory mandate — future supply in the most desirable beachfront corridors is genuinely constrained.",
+
+      "The educational infrastructure on and around Saadiyat has reached a critical mass that family-oriented buyers value enormously. NYU Abu Dhabi's campus is on the island. Cranleigh Abu Dhabi, a premium British-curriculum school, is minutes away. Gems World Academy and several other premium schools are accessible within a short drive. For expatriate families with school-age children, the schooling question is often the deciding factor in where they live. A community where you can walk your child to one of the city's best universities and have multiple elite secondary schools within a ten-minute drive is a material amenity, not a marginal one.",
+
+      "One aspect of Saadiyat that is not discussed enough is the quality of the development authority governance. Abu Dhabi's Tourism and Culture Authority — and more broadly the Abu Dhabi government's direct involvement in Saadiyat's cultural institutions — means that the island is governed with an institutional seriousness that most developer-led master communities cannot match. When the Louvre Abu Dhabi commits to a fifty-year agreement with the French Republic, it sends a signal about the permanence and seriousness of the broader vision that is categorically different from a developer announcing an 'arts district' and installing a few murals. Institutional permanence is reflected in property values over the long term.",
+
+      "The practical purchase process on Saadiyat mirrors the wider Abu Dhabi market. Properties in the designated investment zones are fully available to foreign nationals. The DMT registers the title. Off-plan projects on the island have included significant launches from Aldar — Nudra, Yas Acres, and the newer Saadiyat Lagoons and Grove developments — which have typically sold out quickly, sometimes within days of launch, which is itself a comment on the depth of demand the island commands. Resale inventory is thin compared to Al Reem Island or Yas Island, and when it appears, it moves relatively quickly at current pricing levels.",
+
+      "The undervaluation narrative in the title of this article requires an honest disclaimer: Saadiyat is not cheap by any absolute measure. The prices reflect a premium location with world-class cultural infrastructure and a genuinely scarce natural environment. The 'undervalued' case is relative — relative to what a comparable location would trade at in Singapore, Monaco, or an equivalent world-city with a great museum, a natural beach, and a top-twenty university. By that comparative frame, Saadiyat is genuinely underpriced. Abu Dhabi real estate, even at its most expensive, has not fully priced in the institutional depth and cultural permanence of this particular island. Whether that gap closes depends on how successfully the emirate's tourism strategy develops, whether the Guggenheim completion arrives on schedule, and how broadly the global investing community recognises Abu Dhabi as a first-tier destination city. The trajectory points in one direction.",
+    ]
+  },
+  {
+    slug: "buying-off-plan-abu-dhabi-honest-guide",
+    title: "Buying Off-Plan in Abu Dhabi: What Developers Will Not Tell You",
+    category: "Off Plan",
+    date: "April 30, 2026",
+    readTime: "9 min read",
+    image: "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=1200&auto=format&fit=crop&q=80",
+    summary: "Off-plan property dominates Abu Dhabi's new residential launches. This guide separates the genuine advantages from the frequently overstated claims, and tells you exactly what to check before you sign anything.",
+    content: [
+      "Off-plan property — buying a unit before it is built, based on plans, renders, and a sales suite that is invariably more impressive than any building that will ever actually be constructed — is the dominant mode of transaction in Abu Dhabi's residential market. In 2025, approximately 70% of residential transactions in the emirate's designated investment zones were off-plan. This is not an accident. Off-plan suits developers because it allows them to de-risk construction financing. It suits buyers because it defers capital outlay and — when it works as intended — allows appreciation to accrue before the unit is even handed over. When it works as intended. The purpose of this guide is to be honest about the scenarios where it does not.",
+
+      "The genuine advantages of off-plan come first, because they are real and they matter. The most significant is price. Off-plan units in Abu Dhabi are consistently priced at a discount to projected completion value, typically in the range of 10% to 20% below where comparable ready units are trading at the time of launch. This discount reflects the construction risk you are accepting as a buyer and the time value of money over the construction period, which in Abu Dhabi averages between two and four years for major residential towers. When the market moves favourably during that construction window — which it has done consistently in the capital's prime zones since 2021 — buyers who locked in early capture meaningful capital appreciation before they even receive their keys.",
+
+      "Payment plans are the other major structural advantage. Standard off-plan payment schedules in Abu Dhabi require 10% to 20% on booking, with the balance distributed across construction milestones. Some projects offer a post-handover payment component, where a portion of the price — sometimes 30% to 40% — is paid after the unit is completed and rented, effectively creating a developer-financed instalment structure. For investors who do not wish to deploy the full purchase price upfront, this dramatically changes the capital efficiency of the transaction. You can control an AED 3 million asset with an initial outlay of AED 300,000 to AED 600,000, with the balance paid as the building rises.",
+
+      "Now for what developers do not tell you, or tell you incompletely. The first is that off-plan contracts are not standardised, and the terms vary significantly between projects. Some Sales and Purchase Agreements include robust buyer protections — clear cancellation rights, defined handover timelines with penalties for delay, specific unit specifications that are contractually guaranteed. Others are tilted heavily in the developer's favour, with vague completion language, limited specification guarantees, and broad force majeure clauses that effectively exempt the developer from penalty for delays of any cause. Reading the SPA before signing, not after, is not optional. Having a UAE-qualified lawyer review it is not expensive relative to the transaction value. It is, however, something buyers routinely skip because the sales process creates time pressure and enthusiasm that works against careful review.",
+
+      "Delays are common. This is not a scandal — it is the practical reality of large-scale construction in a climate where summer heat shuts down outdoor work for extended periods, where global supply chains affect material delivery timelines, and where labour scheduling is complex. Most developers in Abu Dhabi build delays into their internal projections and communicate optimistic timelines to buyers. A project launched with a Q4 2026 handover date frequently delivers in mid-2027. This is generally not catastrophic — your investment continues to appreciate during the extended construction window — but it affects your financial planning if you have made commitments contingent on a specific completion date. The Golden Visa application, a mortgage on another property in your home country that you planned to clear from rental income, school enrolment for a child — all of these are practical dependencies that a six-month delay can disrupt.",
+
+      "The specification risk is real but manageable if you know what to look for. Sales suites show you best-in-class finishes from the approved palette. The standard specification that applies to your specific unit may be a step below what you are viewing. Ask for the building specification document — the actual written specification, not the brochure — and have it attached to your SPA as a schedule. If a developer is unwilling to provide this, it is a flag. Reputable developers — Aldar, Gulf Related, Imkan, Modon — will provide detailed specifications and will honour them contractually. Less established developers may not.",
+
+      "The floor plan versus the actual unit is another area requiring attention. Off-plan buyers often purchase based on a stated square footage figure that includes balcony area, mechanical shaft allocations, or proportional common area in ways that are not immediately transparent. The habitable internal floor area of a unit described as 1,200 square feet may be 950 square feet of actual living space plus 250 square feet of balcony and service areas. This matters for rental income calculations, for lifestyle suitability, and for resale value. Request the gross-to-net breakdown of the area measurement from the developer before committing.",
+
+      "Developer track record is the single most important factor in off-plan risk management. Abu Dhabi has two categories of developer. The first includes Aldar Properties — a publicly listed, Abu Dhabi government-linked company with a completed portfolio of major projects across the emirate, transparent financial reporting, and a legitimate track record of delivering what it promises. Projects from developers of this calibre carry materially lower execution risk. The second category includes newer, smaller, or less established developers who may have good intentions and legitimate projects but have not yet demonstrated the ability to deliver at scale. The risk profile of buying from a developer in this second category is not the same as buying from Aldar, and the pricing discount you receive on their product often reflects that risk rather than representing pure value.",
+
+      "Resale during construction — flipping before handover — is legal in Abu Dhabi for off-plan properties, subject to the developer's consent and an Oqood transfer process. In a rising market, early buyers can sell their unit during construction at a premium over their purchase price, crystallising a gain without ever completing. This strategy works when prices are moving upward, and Abu Dhabi's prime zones have supported it in recent years. It requires paying a 2% transfer fee on the transaction price, and the developer typically charges a nominal transfer consent fee. What it does not require is that you complete the original purchase — you can assign the contract rather than the title. The mechanics should be understood at the point of original purchase, not discovered later when you decide to sell.",
+
+      "The balanced conclusion: off-plan property in Abu Dhabi's designated investment zones — when purchased from credible developers with clear contractual protections, realistic timeline expectations, and a sound understanding of the unit specification — is one of the more attractive ways to deploy capital in the regional property market. The payment plan leverage, the price appreciation potential during construction, and the access to brand-new, high-specification stock that is not available in the ready market justify the structure. What it is not is a passive, uncomplicated investment that requires no attention or diligence. The investors who do well from Abu Dhabi off-plan purchases are the ones who spend two hours reading the SPA, another hour verifying the developer's track record, and a final hour making sure their payment timeline is cash-flow realistic. That is not a large ask for a transaction of this scale.",
+    ]
+  },
 ];
 
 export const faqItems = [
   {
-    question: "What is the price of properties in Al Maryah Island Abu Dhabi?",
-    answer: "Properties at Al Maryah Island Abu Dhabi start from AED 3,000,000 for luxury apartments. Penthouses and larger units range from AED 8,000,000 to AED 50,000,000 depending on size and floor level."
+    q: "Can foreigners buy property in Abu Dhabi?",
+    a: "Yes. Foreign nationals can purchase freehold property in Abu Dhabi's designated investment zones, which include Al Maryah Island, Saadiyat Island, Yas Island, Al Reem Island, and Ramhan Island. Ownership is 100% absolute with no local sponsor required, and title is registered with the Abu Dhabi Department of Municipalities and Transport."
   },
   {
-    question: "Can foreigners buy property in Abu Dhabi?",
-    answer: "Yes. Foreign nationals can buy freehold property in designated investment zones in Abu Dhabi including Al Maryah Island. Residence Abu Dhabi guides international buyers through the full process."
+    q: "What is the minimum property price to qualify for the UAE Golden Visa?",
+    a: "AED 2 million. The property must be fully paid (not mortgaged beyond this threshold), registered in your name, and located in a designated freehold investment zone. Qualifying grants a 10-year UAE residency visa for the buyer and their immediate family."
   },
   {
-    question: "What are the best areas to invest in Abu Dhabi in 2026?",
-    answer: "Al Maryah Island, Saadiyat Island, Yas Island, and Al Reem Island are among the top investment areas in Abu Dhabi in 2026. Al Maryah Island offers strong rental yields and capital appreciation driven by its proximity to the financial district."
+    q: "What are the best areas to invest in Abu Dhabi in 2026?",
+    a: "Al Maryah Island offers the highest corporate rental yields (7–8.5% net) with constrained supply. Saadiyat Island delivers strong capital appreciation and lifestyle value near the Louvre and natural beaches. Yas Island suits short-term rental strategies near entertainment infrastructure. For long-term capital preservation with high tenant quality, Al Maryah is our primary recommendation."
   },
   {
-    question: "What payment plans are available for off-plan properties in Abu Dhabi?",
-    answer: "Most off-plan projects in Abu Dhabi offer 40/60 or 50/50 payment plans. Residence Abu Dhabi works with developers including Aldar, Jumeirah Group, and others to offer flexible payment structures for qualified buyers."
+    q: "How does off-plan property work in Abu Dhabi?",
+    a: "You pay a deposit (typically 10–20%) and sign a Sales and Purchase Agreement that locks in your price and payment schedule. Remaining payments are made at construction milestones. Completion typically takes 2–4 years. You cannot apply for a Golden Visa until the Oqood (registration certificate) converts to a full title deed on handover."
   },
   {
-    question: "How do I book a property viewing at Jumeirah Residences Abu Dhabi?",
-    answer: "Contact Residence Abu Dhabi through the enquiry form on this website or call our Abu Dhabi office directly. We arrange private viewings at Jumeirah Residences and all Al Maryah Island properties seven days a week."
+    q: "What fees are involved when buying property in Abu Dhabi?",
+    a: "The primary fees are: 2% Abu Dhabi Land Department transfer fee, 2% real estate agent commission (paid by the buyer in off-plan; sometimes split in secondary market), and approximately AED 1,000–3,000 in registration and title deed issuance fees. Mortgage buyers pay an additional 0.25% mortgage registration fee."
+  },
+  {
+    q: "What is Jumeirah Residences Abu Dhabi?",
+    a: "Jumeirah Residences is a branded residence development on Al Maryah Island, developed in partnership with the Jumeirah Group (operator of Burj Al Arab). It offers 1, 2, and 3-bedroom apartments and penthouses with five-star hotel-standard amenities, direct waterfront access, and Jumeirah-branded hospitality services for residents."
   }
 ];
