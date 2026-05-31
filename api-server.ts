@@ -381,9 +381,9 @@ cron.schedule("0 4 * * *", async () => {
   await generateArticle();
 }, { timezone: "UTC" });
 
-// Serve built frontend in production
-if (process.env.NODE_ENV === "production") {
-  const distDir = path.join(__dirname, "dist");
+// Serve built frontend (always — works in any NODE_ENV)
+const distDir = path.join(__dirname, "dist");
+if (fs.existsSync(distDir)) {
   app.use(express.static(distDir));
   app.get("*", (_req, res) => {
     res.sendFile(path.join(distDir, "index.html"));
@@ -391,7 +391,7 @@ if (process.env.NODE_ENV === "production") {
 }
 
 const PORT = parseInt(process.env.PORT || "3001", 10);
-const HOST = process.env.NODE_ENV === "production" ? "0.0.0.0" : "localhost";
+const HOST = "0.0.0.0";
 
 initDb()
   .then(() => {
