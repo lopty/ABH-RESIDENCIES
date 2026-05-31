@@ -38,7 +38,7 @@ const RECIPIENT_EMAIL = "pranav@residenceabudhabi.com";
 const SITE_URL = "https://residenceabudhabi.com";
 
 const mailer = nodemailer.createTransport({
-  host: process.env.SMTP_HOST || "mail.residenceabudhabi.com",
+  host: process.env.SMTP_HOST || "smtp.hostinger.com",
   port: parseInt(process.env.SMTP_PORT || "465", 10),
   secure: (process.env.SMTP_SECURE || "true") === "true",
   auth: { user: process.env.SMTP_USER || "", pass: process.env.SMTP_PASS || "" },
