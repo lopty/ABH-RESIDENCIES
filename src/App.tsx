@@ -33,6 +33,22 @@ import BlogPage from "./components/BlogPage";
 import JumeirahResidencesPage from "./components/JumeirahResidencesPage";
 import AlMaryahIslandPage from "./components/AlMaryahIslandPage";
 import BuyPage from "./components/BuyPage";
+import AdminPanel from "./components/AdminPanel";
+import InterestPopup from "./components/InterestPopup";
+
+const WHATSAPP_NUMBER = "971554226593";
+
+async function submitLeadToAPI(data: Record<string, any>) {
+  try {
+    await fetch("/api/submit-lead", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(data),
+    });
+  } catch (_) {
+    console.log("[Lead]", data);
+  }
+}
 
 export default function App() {
   // --- CORE SYSTEM ROUTING ---
@@ -342,11 +358,11 @@ export default function App() {
   // WhatsApp helper
   const handleWhatsAppClick = (message = "Hello, I am reviewing properties at Residence Abu Dhabi and wish to speak to an expert.") => {
     const encoded = encodeURIComponent(message);
-    window.open(`https://wa.me/971500000000?text=${encoded}`, "_blank");
+    window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encoded}`, "_blank");
   };
 
   // Lead submission handlers
-  const handleGeneralSubmit = (e: FormEvent) => {
+  const handleGeneralSubmit = async (e: FormEvent) => {
     e.preventDefault();
     const errors: Record<string, boolean> = {};
 
@@ -367,12 +383,9 @@ export default function App() {
 
     setGeneralFormErrors({});
     setIsSubmittingGeneral(true);
-
-    setTimeout(() => {
-      console.log("✏️ GENERAL ADVISORY LEAD CAPTURED:", generalFormData);
-      setIsSubmittingGeneral(false);
-      setIsSubmitGeneralSuccess(true);
-    }, 1500);
+    await submitLeadToAPI({ type: "general_consultation", ...generalFormData });
+    setIsSubmittingGeneral(false);
+    setIsSubmitGeneralSuccess(true);
   };
 
   const handleResetGeneralForm = () => {
@@ -390,7 +403,7 @@ export default function App() {
     setIsSubmitGeneralSuccess(false);
   };
 
-  const handlePropertyInquirySubmit = (e: FormEvent) => {
+  const handlePropertyInquirySubmit = async (e: FormEvent) => {
     e.preventDefault();
     const errors: Record<string, boolean> = {};
 
@@ -407,16 +420,15 @@ export default function App() {
 
     setPropertyFormErrors({});
     setIsSubmittingPropertyLead(true);
-
-    setTimeout(() => {
-      console.log(`✏️ PROPERTY LEAD CAPTURED FOR ${selectedProperty?.name}:`, {
-        ...propertyFormData,
-        targetPropertyId: selectedProperty?.id,
-        targetPropertyName: selectedProperty?.name
-      });
-      setIsSubmittingPropertyLead(false);
-      setIsSubmitPropertyLeadSuccess(true);
-    }, 1200);
+    await submitLeadToAPI({
+      type: "property_inquiry",
+      ...propertyFormData,
+      propertyId: selectedProperty?.id,
+      propertyName: selectedProperty?.name,
+      propertyPrice: selectedProperty?.price,
+    });
+    setIsSubmittingPropertyLead(false);
+    setIsSubmitPropertyLeadSuccess(true);
   };
 
   const handleResetPropertyInquiry = () => {
@@ -429,7 +441,7 @@ export default function App() {
     setIsSubmitPropertyLeadSuccess(false);
   };
 
-  const handleCallbackSubmit = (e: FormEvent) => {
+  const handleCallbackSubmit = async (e: FormEvent) => {
     e.preventDefault();
     if (!callbackNumber.trim() || callbackNumber.length < 7) {
       setCallbackError(true);
@@ -438,7 +450,7 @@ export default function App() {
     }
     
     setCallbackError(false);
-    console.log("✏️ VIP CALLBACK DISPATCHED LINE:", callbackNumber);
+    await submitLeadToAPI({ type: "callback_request", phone: callbackNumber });
     setCallbackSubmitted(true);
     setTimeout(() => {
       setIsCallbackModalOpen(false);
@@ -469,10 +481,10 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-white text-[#1A1A1A] font-sans antialiased selection:bg-[#C9A96E] selection:text-white relative">
-      <div className="h-1 bg-[#C9A96E] w-full z-50 fixed top-0 left-0" />
+      {currentPath !== "/admin" && <div className="h-1 bg-[#C9A96E] w-full z-50 fixed top-0 left-0" />}
 
-      {/* --- TOP HEADER NAVIGATION --- */}
-      <nav 
+      {/* --- TOP HEADER NAVIGATION (hidden on admin) --- */}
+      {currentPath !== "/admin" && <nav 
         className={`fixed top-1 left-0 right-0 z-40 transition-all duration-300 ${
           isHeaderScrolled 
             ? "bg-white/95 backdrop-blur-md border-b border-[#EAE6DF] shadow-md py-3" 
@@ -481,7 +493,7 @@ export default function App() {
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
           
-          <div className="flex items-center space-x-4">
+          <div className="flex items-center space-x-3">
             <button 
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               className="p-1 text-[#1A1A1A] hover:text-[#C9A96E] transition-colors focus:outline-none cursor-pointer"
@@ -491,59 +503,34 @@ export default function App() {
             </button>
             
             <button onClick={() => navigate("/")} className="flex flex-col text-left focus:outline-none cursor-pointer">
-              <span className="font-serif text-lg sm:text-2xl font-bold tracking-[0.1em] text-[#1A1A1A] hover:opacity-90">
-                RESIDENCE ABU DHABI
+              <span className="font-serif text-base sm:text-xl font-bold tracking-[0.08em] text-[#1A1A1A] hover:opacity-90 whitespace-nowrap">
+                AB RESIDENCIES
               </span>
-              <span className="text-[8px] font-sans tracking-[0.25em] text-[#C9A96E] uppercase font-bold leading-none mt-1">
-                Luxury Real Estate Portfolio
+              <span className="text-[7px] font-sans tracking-[0.2em] text-[#C9A96E] uppercase font-bold leading-none mt-0.5 whitespace-nowrap">
+                Luxury Real Estate
               </span>
             </button>
           </div>
 
-          {/* Desktop navigation links */}
-          <div className="hidden lg:flex space-x-6 items-center">
-            <button 
-              onClick={() => navigate("/buy")} 
-              className={`text-[10px] uppercase font-bold tracking-widest cursor-pointer ${currentPath === "/buy" ? "text-[#C9A96E]" : "text-gray-600 hover:text-[#C9A96E]"}`}
-            >
-              Buy Properties
-            </button>
-            <button 
-              onClick={() => navigate("/properties/jumeirah-residences")} 
-              className={`text-[10px] uppercase font-bold tracking-widest cursor-pointer ${currentPath === "/properties/jumeirah-residences" ? "text-[#C9A96E]" : "text-gray-600 hover:text-[#C9A96E]"}`}
-            >
-              Jumeirah Residences
-            </button>
-            <button 
-              onClick={() => navigate("/properties/al-maryah-island")} 
-              className={`text-[10px] uppercase font-bold tracking-widest cursor-pointer ${currentPath === "/properties/al-maryah-island" ? "text-[#C9A96E]" : "text-gray-600 hover:text-[#C9A96E]"}`}
-            >
-              Al Maryah Guide
-            </button>
-            <button 
-              onClick={() => navigate("/blog")} 
-              className={`text-[10px] uppercase font-bold tracking-widest cursor-pointer ${currentPath === "/blog" ? "text-[#C9A96E]" : "text-gray-600 hover:text-[#C9A96E]"}`}
-            >
-              Market Blog
-            </button>
-            <button 
-              onClick={() => navigate("/about")} 
-              className={`text-[10px] uppercase font-bold tracking-widest cursor-pointer ${currentPath === "/about" ? "text-[#C9A96E]" : "text-gray-600 hover:text-[#C9A96E]"}`}
-            >
-              About Story
-            </button>
-            <button 
-              onClick={() => navigate("/contact")} 
-              className={`text-[10px] uppercase font-bold tracking-widest cursor-pointer ${currentPath === "/contact" ? "text-[#C9A96E]" : "text-gray-600 hover:text-[#C9A96E]"}`}
-            >
-              Contact HQ
-            </button>
-            <button 
-              onClick={() => navigate("/faq")} 
-              className={`text-[10px] uppercase font-bold tracking-widest cursor-pointer ${currentPath === "/faq" ? "text-[#C9A96E]" : "text-gray-600 hover:text-[#C9A96E]"}`}
-            >
-              FAQ Desk
-            </button>
+          {/* Desktop navigation links — single line */}
+          <div className="hidden xl:flex items-center" style={{gap: "20px"}}>
+            {[
+              { label: "Buy", path: "/buy" },
+              { label: "Jumeirah", path: "/properties/jumeirah-residences" },
+              { label: "Al Maryah", path: "/properties/al-maryah-island" },
+              { label: "Blog", path: "/blog" },
+              { label: "About", path: "/about" },
+              { label: "Contact", path: "/contact" },
+              { label: "FAQ", path: "/faq" },
+            ].map(({ label, path }) => (
+              <button
+                key={path}
+                onClick={() => navigate(path)}
+                className={`text-[10px] uppercase font-bold tracking-widest cursor-pointer whitespace-nowrap ${currentPath === path ? "text-[#C9A96E]" : "text-gray-600 hover:text-[#C9A96E]"}`}
+              >
+                {label}
+              </button>
+            ))}
           </div>
 
           <div className="flex items-center space-x-3">
@@ -602,11 +589,19 @@ export default function App() {
             </div>
           </div>
         )}
-      </nav>
+      </nav>}
+
+      {/* --- INTEREST POPUP (blog, about, faq pages) --- */}
+      {["/blog", "/about", "/faq"].includes(currentPath) && (
+        <InterestPopup pageName={currentPath.replace("/", "")} />
+      )}
 
       {/* --- CORE PAGE SWITCHER ROUTING --- */}
       <main className="z-10 relative">
-        {currentPath === "/" && (
+        {currentPath === "/admin" && (
+          <AdminPanel onNavigate={navigate} />
+        )}
+        {currentPath !== "/admin" && currentPath === "/" && (
           <div>
             {/* 1. Cinematic Hero */}
             <section className="relative h-screen flex items-center justify-center overflow-hidden">
@@ -1135,8 +1130,8 @@ export default function App() {
         )}
       </main>
 
-      {/* --- ELITE FOOTER --- */}
-      <footer className="bg-[#1A1A1A] text-white pt-20 pb-12 border-t-2 border-[#C9A96E] z-10 relative">
+      {/* --- ELITE FOOTER (hidden on admin) --- */}
+      {currentPath !== "/admin" && <footer className="bg-[#1A1A1A] text-white pt-20 pb-12 border-t-2 border-[#C9A96E] z-10 relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-12 gap-12 pb-16 border-b border-white/10">
             {/* Column 1: Identity */}
@@ -1185,13 +1180,19 @@ export default function App() {
 
           <div className="pt-8 flex flex-col sm:flex-row items-center justify-between text-[10px] text-gray-400 font-light gap-4">
             <p>© 2026 Residence Abu Dhabi. All sovereign registry rights reserved.</p>
-            <div className="flex space-x-6">
-              <span className="hover:text-white cursor-pointer">Terms of Service</span>
+            <div className="flex items-center space-x-6">
+              <a href={`https://wa.me/${WHATSAPP_NUMBER}`} target="_blank" rel="noopener noreferrer" className="hover:text-[#25D366] transition-colors flex items-center space-x-1">
+                <MessageCircle size={12} />
+                <span>WhatsApp</span>
+              </a>
+              <a href="https://www.instagram.com/abresidencies" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Instagram</a>
+              <a href="https://www.facebook.com/abresidencies" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Facebook</a>
               <span className="hover:text-white cursor-pointer">Privacy Policy</span>
             </div>
           </div>
         </div>
-      </footer>
+      </footer>}
+      {/* END FOOTER */}
 
       {/* --- TARGET PROPERTY SPECIFICATION POP-OVER --- */}
       {selectedProperty && (

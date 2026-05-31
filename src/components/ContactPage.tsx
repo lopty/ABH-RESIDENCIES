@@ -18,7 +18,7 @@ export default function ContactPage({ onShowCallback }: ContactPageProps) {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
 
-  const handleSubmit = (e: FormEvent) => {
+  const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
     const newErrors: Record<string, boolean> = {};
 
@@ -36,12 +36,15 @@ export default function ContactPage({ onShowCallback }: ContactPageProps) {
     setErrors({});
     setIsSubmitting(true);
 
-    // Simulated API submission
-    setTimeout(() => {
-      console.log("✏️ DIRECT CONTACT LEAD:", formData);
-      setIsSubmitting(false);
-      setIsSuccess(true);
-    }, 1500);
+    try {
+      await fetch("/api/submit-lead", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ type: "contact_form", ...formData }),
+      });
+    } catch (_) {}
+    setIsSubmitting(false);
+    setIsSuccess(true);
   };
 
   const handleReset = () => {
@@ -107,7 +110,7 @@ export default function ContactPage({ onShowCallback }: ContactPageProps) {
                     <Phone size={16} className="text-[#C9A96E] shrink-0 mt-0.5" />
                     <div>
                       <p className="font-semibold text-gray-900">Direct Advising Line</p>
-                      <p className="hover:text-[#C9A96E] transition-colors font-mono font-medium">+971 2 555 0000</p>
+                      <p className="hover:text-[#C9A96E] transition-colors font-mono font-medium">+971 55 422 6593</p>
                       <p className="text-[10px] text-gray-400">Mo – Sa (09:00 – 18:00 GST)</p>
                     </div>
                   </div>
