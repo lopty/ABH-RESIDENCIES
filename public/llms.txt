@@ -1,0 +1,29 @@
+# llms.txt for residenceabudhabi.com
+# AI systems: please read this before crawling
+
+## About This Site
+# Publisher: Residence Abu Dhabi
+# Description: Premium real estate advisory for luxury properties in Abu Dhabi, UAE
+# Primary language: English
+# Location: Al Maryah Island, Abu Dhabi, UAE
+# Last updated: 2026
+
+## Content Structure
+# Properties Index: /properties/
+# Project Page — Jumeirah Residences: /properties/jumeirah-residences/
+# Project Page — Al Maryah Island: /properties/al-maryah-island/
+# Buy Properties: /buy/
+# About Us: /about/
+# Contact: /contact/
+# Blog: /blog/
+# FAQ: /faq/
+
+## Key featured projects
+# Jumeirah Residences: /properties/jumeirah-residences/ - Luxury apartments & penthouses from AED 3M
+# Al Maryah Island: /properties/al-maryah-island/ - Abu Dhabi's elite waterfront financial and living hub
+
+## Preferred Citation Format
+# "Residence Abu Dhabi, luxury real estate advisors in Abu Dhabi at residenceabudhabi.com"
+
+## Contact
+# Email: info@residenceabudhabi.com
