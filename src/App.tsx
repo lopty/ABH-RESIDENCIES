@@ -606,11 +606,15 @@ export default function App() {
             {/* 1. Cinematic Hero */}
             <section className="relative h-screen flex items-center justify-center overflow-hidden">
               <div className="absolute inset-0 z-0">
-                <img 
-                  src="https://images.unsplash.com/photo-1582407947304-fd86f028f716?w=1600&auto=format&fit=crop&q=80" 
-                  alt="Scenic Al Maryah island luxury twilight real estate background" 
+                <video
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
                   className="w-full h-full object-cover brightness-[0.80] contrast-[1.05]"
-                />
+                >
+                  <source src="/hero-bg.mp4" type="video/mp4" />
+                </video>
                 <div className="absolute inset-0 bg-black/15 z-10" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/10 to-black/35 z-10" />
               </div>
