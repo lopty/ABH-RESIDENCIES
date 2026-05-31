@@ -52,7 +52,7 @@ export default function AlMaryahIslandPage({ onShowConsultation, onNavigate }: A
         </div>
 
         {/* 1. Full-width Hero Banner */}
-        <div className="relative aspect-[21/9] sm:aspect-[16/6] bg-gray-100 overflow-hidden border border-[#EAE6DF] mb-16">
+        <div className="relative aspect-[4/3] sm:aspect-[16/7] lg:aspect-[21/9] bg-gray-100 overflow-hidden border border-[#EAE6DF] mb-16">
           <img 
             src="https://images.unsplash.com/photo-1582407947304-fd86f028f716?w=1600&auto=format&fit=crop&q=80" 
             alt="Al Maryah Island skylines and financial waterfront" 
