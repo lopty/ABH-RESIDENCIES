@@ -911,7 +911,7 @@ export default function App() {
                   <div className="lg:col-span-6 relative">
                     <div className="aspect-[4/5] sm:aspect-[16/10] lg:aspect-[4/5] bg-gray-50 border border-[#EAE6DF] overflow-hidden">
                       <img 
-                        src="https://images.unsplash.com/photo-1620027131802-530c301132de?w=800&auto=format&fit=crop&q=80" 
+                        src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&auto=format&fit=crop&q=80" 
                         alt="Curated elegant Abu Dhabi yacht harbor and luxury pool" 
                         className="w-full h-full object-cover"
                         loading="lazy"
