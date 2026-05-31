@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "concurrently \"tsx watch api-server.ts\" \"vite\"",
-    "build": "vite build",
+    "build": "vite build && npx esbuild api-server.ts --bundle --platform=node --packages=external --format=esm --outfile=server.js",
+    "start": "NODE_ENV=production node server.js",
     "preview": "vite preview",
     "clean": "rm -rf dist server.js",
     "lint": "tsc --noEmit"

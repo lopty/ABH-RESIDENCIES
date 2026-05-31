@@ -3,8 +3,12 @@ import nodemailer from "nodemailer";
 import multer from "multer";
 import path from "path";
 import fs from "fs";
+import { fileURLToPath } from "url";
 import cron from "node-cron";
 import { initDb, sql } from "./db.js";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const app = express();
 app.use(express.json({ limit: "10mb" }));
@@ -374,18 +378,28 @@ cron.schedule("0 4 * * *", async () => {
   await generateArticle();
 }, { timezone: "UTC" });
 
-const PORT = 3001;
+// Serve built frontend in production
+if (process.env.NODE_ENV === "production") {
+  const distDir = path.join(__dirname, "dist");
+  app.use(express.static(distDir));
+  app.get("*", (_req, res) => {
+    res.sendFile(path.join(distDir, "index.html"));
+  });
+}
+
+const PORT = parseInt(process.env.PORT || "3001", 10);
+const HOST = process.env.NODE_ENV === "production" ? "0.0.0.0" : "localhost";
 
 initDb()
   .then(() => {
-    app.listen(PORT, "localhost", () => {
-      console.log(`API server running on http://localhost:${PORT}`);
+    app.listen(PORT, HOST, () => {
+      console.log(`API server running on http://${HOST}:${PORT}`);
       console.log("Daily article cron scheduled at 08:00 GST (04:00 UTC)");
     });
   })
   .catch((e) => {
     console.error("DB init failed:", e);
-    app.listen(PORT, "localhost", () => {
-      console.log(`API server running (DB unavailable): http://localhost:${PORT}`);
+    app.listen(PORT, HOST, () => {
+      console.log(`API server running (DB unavailable): http://${HOST}:${PORT}`);
     });
   });
