@@ -20,8 +20,6 @@ import {
   SlidersHorizontal,
   ThumbsUp,
   Award,
-  Volume2,
-  VolumeX
 } from "lucide-react";
 
 import { propertiesData, statItems, lifestyleItems } from "./data";
@@ -500,9 +498,6 @@ export default function App() {
 
   // Lifestyle horiz slider
   const sliderRef = useRef<HTMLDivElement>(null);
-  const heroVideoRef = useRef<HTMLVideoElement>(null);
-  const [heroMuted, setHeroMuted] = useState(true);
-  const [loopFade, setLoopFade] = useState(false);
   const scrollSlider = (direction: "left" | "right") => {
     if (sliderRef.current) {
       const scrollAmount = 360;
@@ -637,83 +632,28 @@ export default function App() {
         )}
         {currentPath !== "/admin" && currentPath === "/" && (
           <div>
-            {/* 1. Cinematic Hero */}
-            <section className="relative h-screen flex items-center justify-center overflow-hidden">
-              <div className="absolute inset-0 z-0">
-                <video
-                  ref={heroVideoRef}
-                  autoPlay
-                  muted={heroMuted}
-                  playsInline
-                  className="w-full h-full object-cover brightness-[0.80] contrast-[1.05]"
-                  onTimeUpdate={() => {
-                    const v = heroVideoRef.current;
-                    if (!v || !v.duration) return;
-                    const remaining = v.duration - v.currentTime;
-                    if (remaining < 0.6 && !loopFade) {
-                      setLoopFade(true);
-                      setTimeout(() => {
-                        v.currentTime = 0;
-                        v.play();
-                        setTimeout(() => setLoopFade(false), 400);
-                      }, 350);
-                    }
-                  }}
-                >
-                  <source src="/hero-bg.mp4" type="video/mp4" />
-                </video>
-                {/* Dark-blur loop seam mask */}
-                <div
-                  className="absolute inset-0 z-10 backdrop-blur-sm bg-black/70 pointer-events-none"
-                  style={{ opacity: loopFade ? 1 : 0, transition: "opacity 0.35s ease" }}
-                />
-                <div className="absolute inset-0 bg-black/15 z-10" />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/10 to-black/35 z-10" />
-              </div>
+            {/* 1. Hero — full-screen image, no text */}
+            <section className="relative h-screen overflow-hidden">
+              <img
+                src="/jumeirah-hero.png"
+                alt="Jumeirah Residences Al Maryah Island Abu Dhabi"
+                className="absolute inset-0 w-full h-full object-cover object-center"
+              />
+              {/* subtle gradient only at the very bottom for CTA legibility */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
 
-              {/* Sound toggle button */}
-              <button
-                onClick={() => {
-                  const v = heroVideoRef.current;
-                  if (!v) return;
-                  const next = !heroMuted;
-                  setHeroMuted(next);
-                  v.muted = next;
-                  if (!next) v.play();
-                }}
-                className="absolute top-24 right-5 z-30 flex items-center gap-1.5 bg-black/40 hover:bg-black/60 backdrop-blur-sm text-white/80 hover:text-white border border-white/20 px-3 py-2 transition-all cursor-pointer"
-                title={heroMuted ? "Unmute video" : "Mute video"}
-              >
-                {heroMuted ? <VolumeX size={14} /> : <Volume2 size={14} />}
-                <span className="text-[9px] font-bold tracking-widest uppercase">{heroMuted ? "Sound Off" : "Sound On"}</span>
-              </button>
-
-              <div className="relative z-20 max-w-4xl mx-auto text-center px-4 pt-16 flex flex-col items-center">
-                <span className="text-[#C9A96E] text-[10px] sm:text-xs font-semibold tracking-[0.5em] uppercase mb-4 block">
-                  ABU DHABI PORTFOLIO INTAKE 2026
-                </span>
-                <h1 className="font-serif text-4xl sm:text-6xl md:text-7xl text-white font-light tracking-tight leading-none mb-6">
-                  Exclusive Waterfront Living <br />
-                  <span className="italic font-normal text-[#C9A96E]">Redefined.</span>
-                </h1>
-                <div className="w-16 h-[1px] bg-[#C9A96E] mb-6" />
-                <p className="text-white/90 text-[10px] sm:text-xs tracking-[0.25em] uppercase max-w-xl font-light leading-relaxed mb-10 text-center">
-                  Vetted allocations of off-plan duplex penthouses, private canal estates, and ready Saadiyat villas.
-                </p>
-              </div>
-
-              {/* Home Dual CTA buttons */}
-              <div className="absolute bottom-0 left-0 right-0 z-20 bg-gradient-to-t from-black/60 to-transparent pt-12 pb-0">
+              {/* Dual CTA buttons pinned to the bottom */}
+              <div className="absolute bottom-0 left-0 right-0 z-20">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-0 border-t border-white/20">
-                    <button 
+                    <button
                       onClick={() => navigate("/buy")}
                       className="flex items-center justify-between py-6 px-4 sm:px-8 bg-transparent text-white font-semibold text-xs tracking-[0.25em] uppercase hover:bg-white hover:text-gray-900 transition-colors cursor-pointer border-r border-white/10"
                     >
                       <span>DISCOVER HOLDINGS</span>
                       <ChevronRight size={16} />
                     </button>
-                    <button 
+                    <button
                       onClick={() => navigate("/contact")}
                       className="flex items-center justify-between py-6 px-4 sm:px-8 bg-[#1C2B4A]/90 text-white font-semibold text-xs tracking-[0.25em] uppercase hover:bg-[#131E33] transition-colors cursor-pointer"
                     >
@@ -876,6 +816,37 @@ export default function App() {
                     <div className="text-3xl sm:text-5xl font-light font-serif text-[#C9A96E]">12+ Yrs</div>
                     <div className="text-[9px] font-semibold text-gray-300 uppercase tracking-widest font-sans">Accredited Advisory</div>
                   </div>
+                </div>
+              </div>
+            </section>
+
+            {/* 4b. Project Video Section */}
+            <section className="py-20 bg-white border-b border-[#EAE6DF]">
+              <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="text-center mb-10 space-y-3">
+                  <span className="text-xs font-semibold text-[#C9A96E] tracking-[0.4em] uppercase block">EXCLUSIVE DEVELOPMENT PREVIEW</span>
+                  <h2 className="font-serif text-2xl sm:text-4xl font-light text-[#1A1A1A]">Jumeirah Residences — Al Maryah Island</h2>
+                  <p className="text-xs sm:text-sm text-gray-500 font-light max-w-lg mx-auto leading-relaxed">
+                    An aerial and architectural walkthrough of Abu Dhabi's most anticipated branded residence launch.
+                  </p>
+                </div>
+                <div className="border border-[#EAE6DF] overflow-hidden shadow-xl">
+                  <video
+                    controls
+                    playsInline
+                    poster="/jumeirah-hero.png"
+                    className="w-full aspect-video bg-black"
+                  >
+                    <source src="/hero-bg.mp4" type="video/mp4" />
+                  </video>
+                </div>
+                <div className="flex justify-center mt-8">
+                  <button
+                    onClick={() => navigate("/properties/jumeirah-residences")}
+                    className="bg-[#1C2B4A] hover:bg-[#131E33] text-white text-[10px] font-bold tracking-widest uppercase px-8 py-3.5 transition-colors cursor-pointer"
+                  >
+                    VIEW FULL PROJECT DETAILS →
+                  </button>
                 </div>
               </div>
             </section>
