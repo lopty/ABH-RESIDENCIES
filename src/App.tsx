@@ -632,35 +632,33 @@ export default function App() {
         )}
         {currentPath !== "/admin" && currentPath === "/" && (
           <div>
-            {/* 1. Hero — full-screen image, no text */}
-            <section className="relative h-screen overflow-hidden">
-              <img
-                src="/jumeirah-hero.png"
-                alt="Jumeirah Residences Al Maryah Island Abu Dhabi"
-                className="absolute inset-0 w-full h-full object-cover object-center"
-              />
-              {/* subtle gradient only at the very bottom for CTA legibility */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
-
-              {/* Dual CTA buttons pinned to the bottom */}
-              <div className="absolute bottom-0 left-0 right-0 z-20">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-0 border-t border-white/20">
-                    <button
-                      onClick={() => navigate("/buy")}
-                      className="flex items-center justify-between py-6 px-4 sm:px-8 bg-transparent text-white font-semibold text-xs tracking-[0.25em] uppercase hover:bg-white hover:text-gray-900 transition-colors cursor-pointer border-r border-white/10"
-                    >
-                      <span>DISCOVER HOLDINGS</span>
-                      <ChevronRight size={16} />
-                    </button>
-                    <button
-                      onClick={() => navigate("/contact")}
-                      className="flex items-center justify-between py-6 px-4 sm:px-8 bg-[#1C2B4A]/90 text-white font-semibold text-xs tracking-[0.25em] uppercase hover:bg-[#131E33] transition-colors cursor-pointer"
-                    >
-                      <span>VIP SPECIFICATION SUBMIT</span>
-                      <ArrowRight size={16} className="text-[#C9A96E]" />
-                    </button>
-                  </div>
+            {/* 1. Hero — full image visible, no cropping, sky-matched background */}
+            <section className="relative h-screen flex flex-col" style={{ background: "#c9d4dc" }}>
+              {/* Image fills the flex-1 area, contained so nothing is ever cut */}
+              <div className="flex-1 relative overflow-hidden">
+                <img
+                  src="/jumeirah-hero.png"
+                  alt="Jumeirah Residences Al Maryah Island Abu Dhabi"
+                  className="absolute inset-0 w-full h-full object-contain object-top"
+                />
+              </div>
+              {/* CTA bar always visible at the bottom of the screen */}
+              <div className="flex-shrink-0 bg-black/10 border-t border-white/20">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-0">
+                  <button
+                    onClick={() => navigate("/buy")}
+                    className="flex items-center justify-between py-5 px-6 sm:px-10 bg-[#1A1A1A]/80 text-white font-semibold text-xs tracking-[0.25em] uppercase hover:bg-white hover:text-gray-900 transition-colors cursor-pointer border-r border-white/10"
+                  >
+                    <span>DISCOVER HOLDINGS</span>
+                    <ChevronRight size={16} />
+                  </button>
+                  <button
+                    onClick={() => navigate("/contact")}
+                    className="flex items-center justify-between py-5 px-6 sm:px-10 bg-[#1C2B4A] text-white font-semibold text-xs tracking-[0.25em] uppercase hover:bg-[#131E33] transition-colors cursor-pointer"
+                  >
+                    <span>VIP SPECIFICATION SUBMIT</span>
+                    <ArrowRight size={16} className="text-[#C9A96E]" />
+                  </button>
                 </div>
               </div>
             </section>
