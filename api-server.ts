@@ -354,10 +354,13 @@ app.get("/api/sitemap", async (_req, res) => {
       { url: "/buy", priority: "0.9", changefreq: "weekly" },
       { url: "/properties/jumeirah-residences", priority: "0.9", changefreq: "weekly" },
       { url: "/properties/al-maryah-island", priority: "0.9", changefreq: "weekly" },
+      { url: "/golden-visa-property-abu-dhabi", priority: "0.9", changefreq: "monthly" },
+      { url: "/off-plan-properties-abu-dhabi", priority: "0.9", changefreq: "monthly" },
+      { url: "/branded-residences-abu-dhabi", priority: "0.8", changefreq: "monthly" },
       { url: "/blog", priority: "0.8", changefreq: "daily" },
       { url: "/about", priority: "0.7", changefreq: "monthly" },
       { url: "/contact", priority: "0.7", changefreq: "monthly" },
-      { url: "/faq", priority: "0.6", changefreq: "monthly" },
+      { url: "/faq", priority: "0.7", changefreq: "monthly" },
     ];
 
     const today = new Date().toISOString().slice(0, 10);
