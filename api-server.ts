@@ -346,34 +346,45 @@ app.post("/api/generate-article", async (req, res) => {
   res.json(result);
 });
 
+async function buildSitemap(): Promise<string> {
+  const posts = await sql`SELECT slug, created_at FROM blog_posts WHERE status='published' ORDER BY created_at DESC`;
+  const staticPages = [
+    { url: "/", priority: "1.0", changefreq: "weekly" },
+    { url: "/buy", priority: "0.9", changefreq: "weekly" },
+    { url: "/properties/jumeirah-residences", priority: "0.9", changefreq: "weekly" },
+    { url: "/properties/al-maryah-island", priority: "0.9", changefreq: "weekly" },
+    { url: "/golden-visa-property-abu-dhabi", priority: "0.9", changefreq: "monthly" },
+    { url: "/off-plan-properties-abu-dhabi", priority: "0.9", changefreq: "monthly" },
+    { url: "/branded-residences-abu-dhabi", priority: "0.8", changefreq: "monthly" },
+    { url: "/blog", priority: "0.8", changefreq: "daily" },
+    { url: "/about", priority: "0.7", changefreq: "monthly" },
+    { url: "/contact", priority: "0.7", changefreq: "monthly" },
+    { url: "/faq", priority: "0.7", changefreq: "monthly" },
+  ];
+  const today = new Date().toISOString().slice(0, 10);
+  const urls = [
+    ...staticPages.map((p) => `<url><loc>${SITE_URL}${p.url}</loc><lastmod>${today}</lastmod><changefreq>${p.changefreq}</changefreq><priority>${p.priority}</priority></url>`),
+    ...posts.map((p) => {
+      const d = p.created_at ? new Date(p.created_at as string).toISOString().slice(0, 10) : today;
+      return `<url><loc>${SITE_URL}/blog/${p.slug}</loc><lastmod>${d}</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>`;
+    }),
+  ].join("\n  ");
+  return `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n  ${urls}\n</urlset>`;
+}
+
+/* Serve sitemap at both /sitemap.xml (production) and /api/sitemap (dev proxy) */
+app.get("/sitemap.xml", async (_req, res) => {
+  try {
+    res.set("Content-Type", "application/xml");
+    res.set("Cache-Control", "public, max-age=3600");
+    res.send(await buildSitemap());
+  } catch (e) { res.status(500).send("Sitemap error"); }
+});
+
 app.get("/api/sitemap", async (_req, res) => {
   try {
-    const posts = await sql`SELECT slug, created_at FROM blog_posts WHERE status='published' ORDER BY created_at DESC`;
-    const staticPages = [
-      { url: "/", priority: "1.0", changefreq: "weekly" },
-      { url: "/buy", priority: "0.9", changefreq: "weekly" },
-      { url: "/properties/jumeirah-residences", priority: "0.9", changefreq: "weekly" },
-      { url: "/properties/al-maryah-island", priority: "0.9", changefreq: "weekly" },
-      { url: "/golden-visa-property-abu-dhabi", priority: "0.9", changefreq: "monthly" },
-      { url: "/off-plan-properties-abu-dhabi", priority: "0.9", changefreq: "monthly" },
-      { url: "/branded-residences-abu-dhabi", priority: "0.8", changefreq: "monthly" },
-      { url: "/blog", priority: "0.8", changefreq: "daily" },
-      { url: "/about", priority: "0.7", changefreq: "monthly" },
-      { url: "/contact", priority: "0.7", changefreq: "monthly" },
-      { url: "/faq", priority: "0.7", changefreq: "monthly" },
-    ];
-
-    const today = new Date().toISOString().slice(0, 10);
-    const urls = [
-      ...staticPages.map((p) => `<url><loc>${SITE_URL}${p.url}</loc><lastmod>${today}</lastmod><changefreq>${p.changefreq}</changefreq><priority>${p.priority}</priority></url>`),
-      ...posts.map((p) => {
-        const d = p.created_at ? new Date(p.created_at as string).toISOString().slice(0, 10) : today;
-        return `<url><loc>${SITE_URL}/blog/${p.slug}</loc><lastmod>${d}</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>`;
-      }),
-    ].join("\n  ");
-
     res.set("Content-Type", "application/xml");
-    res.send(`<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n  ${urls}\n</urlset>`);
+    res.send(await buildSitemap());
   } catch (e) { res.status(500).send("Error"); }
 });
 
