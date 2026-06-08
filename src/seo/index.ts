@@ -8,6 +8,9 @@ import { lifestylePages } from "./lifestyle";
 import { jumeirahDeepPages } from "./jumeirahDeep";
 import { jumeirahPages } from "./jumeirahPages";
 import { alMaryahPages } from "./alMaryahPages";
+import { pricingPages } from "./pricingPages";
+import { communityPages } from "./communityPages";
+import { brandPages } from "./brandPages";
 import { SeoPageData } from "./types";
 
 export const allSeoPages: SeoPageData[] = [
@@ -21,6 +24,9 @@ export const allSeoPages: SeoPageData[] = [
   ...jumeirahDeepPages,
   ...jumeirahPages,
   ...alMaryahPages,
+  ...pricingPages,
+  ...communityPages,
+  ...brandPages,
 ];
 
 // Fast lookup map: slug → page data

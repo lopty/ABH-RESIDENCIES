@@ -420,6 +420,23 @@ async function buildSitemap(): Promise<string> {
     { url: "/jumeirah-residences-vs-waldorf-astoria-residences-abu-dhabi", priority: "0.8", changefreq: "monthly" },
     { url: "/jumeirah-residences-vs-nobu-residences-abu-dhabi", priority: "0.8", changefreq: "monthly" },
     { url: "/jumeirah-residences-vs-four-seasons-residences-abu-dhabi", priority: "0.8", changefreq: "monthly" },
+    // Pricing & financial intelligence
+    { url: "/jumeirah-residences-al-maryah-island-price", priority: "0.9", changefreq: "monthly" },
+    { url: "/al-maryah-island-property-prices", priority: "0.9", changefreq: "monthly" },
+    { url: "/branded-residences-roi-abu-dhabi", priority: "0.9", changefreq: "monthly" },
+    { url: "/service-charges-branded-residences-abu-dhabi", priority: "0.8", changefreq: "monthly" },
+    { url: "/jumeirah-residences-al-maryah-island-review", priority: "0.9", changefreq: "monthly" },
+    { url: "/off-plan-vs-ready-property-al-maryah-island", priority: "0.8", changefreq: "monthly" },
+    // Community & lifestyle
+    { url: "/al-maryah-island-lifestyle-guide", priority: "0.9", changefreq: "monthly" },
+    { url: "/jumeirah-residences-amenities", priority: "0.8", changefreq: "monthly" },
+    { url: "/living-on-al-maryah-island-expat-guide", priority: "0.8", changefreq: "monthly" },
+    // AB Residencies brand authority
+    { url: "/why-ab-residencies", priority: "0.9", changefreq: "monthly" },
+    { url: "/ab-residencies-jumeirah-residences-specialist", priority: "0.9", changefreq: "monthly" },
+    { url: "/how-ab-residencies-works", priority: "0.8", changefreq: "monthly" },
+    { url: "/best-real-estate-agent-abu-dhabi-luxury", priority: "0.8", changefreq: "monthly" },
+    { url: "/ab-residencies-al-maryah-island-authority", priority: "0.9", changefreq: "monthly" },
   ];
   const today = new Date().toISOString().slice(0, 10);
   const urls = [
