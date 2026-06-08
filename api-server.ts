@@ -400,6 +400,26 @@ async function buildSitemap(): Promise<string> {
     { url: "/jumeirah-residences-investment-case", priority: "0.9", changefreq: "monthly" },
     { url: "/jumeirah-residences-vs-al-reem-island", priority: "0.8", changefreq: "monthly" },
     { url: "/aldar-properties-jumeirah-residences", priority: "0.8", changefreq: "monthly" },
+    // Jumeirah Residences Al Maryah Island deep pages
+    { url: "/jumeirah-residences-al-maryah-island", priority: "1.0", changefreq: "monthly" },
+    { url: "/jumeirah-residences-al-maryah-island-floor-plans", priority: "0.9", changefreq: "monthly" },
+    { url: "/jumeirah-residences-al-maryah-island-payment-plan", priority: "0.9", changefreq: "monthly" },
+    { url: "/jumeirah-residences-al-maryah-island-investment-return", priority: "0.9", changefreq: "monthly" },
+    { url: "/jumeirah-residences-al-maryah-island-golden-visa", priority: "0.9", changefreq: "monthly" },
+    { url: "/jumeirah-residences-al-maryah-island-1-bedroom", priority: "0.8", changefreq: "monthly" },
+    { url: "/jumeirah-residences-al-maryah-island-2-bedroom", priority: "0.8", changefreq: "monthly" },
+    { url: "/jumeirah-residences-al-maryah-island-penthouse", priority: "0.8", changefreq: "monthly" },
+    // Al Maryah Island deep pages
+    { url: "/al-maryah-island-real-estate", priority: "1.0", changefreq: "monthly" },
+    { url: "/al-maryah-island-property-investment", priority: "0.9", changefreq: "monthly" },
+    { url: "/al-maryah-island-apartments", priority: "0.9", changefreq: "monthly" },
+    { url: "/al-maryah-island-vs-saadiyat-island", priority: "0.8", changefreq: "monthly" },
+    { url: "/al-maryah-island-vs-al-reem-island", priority: "0.8", changefreq: "monthly" },
+    { url: "/al-maryah-island-vs-yas-island", priority: "0.8", changefreq: "monthly" },
+    // Branded residence comparisons
+    { url: "/jumeirah-residences-vs-waldorf-astoria-residences-abu-dhabi", priority: "0.8", changefreq: "monthly" },
+    { url: "/jumeirah-residences-vs-nobu-residences-abu-dhabi", priority: "0.8", changefreq: "monthly" },
+    { url: "/jumeirah-residences-vs-four-seasons-residences-abu-dhabi", priority: "0.8", changefreq: "monthly" },
   ];
   const today = new Date().toISOString().slice(0, 10);
   const urls = [

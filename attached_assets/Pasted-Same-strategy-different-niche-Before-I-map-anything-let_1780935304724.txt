@@ -1,0 +1,196 @@
+Same strategy, different niche. Before I map anything, let me audit the site first.Searched the webSearched the webGood. Full picture. Here is the complete strategy.
+
+ResidenceAbuDhabi.com -- Full SEO Strategy
+What the Site Is Right Now
+AB Residencies is a luxury real estate specialist focused on one primary product: Jumeirah Residences Al Maryah Island -- the first Jumeirah-branded residential project in Abu Dhabi. Single developer. Single project. Golden Visa eligible. Off-plan.
+The meta is clean, OG tags are set, canonical is there. That is better than most. But the site has one fatal problem: it is a one-product microsite competing against Bayut, Property Finder, NAS Luxury, OIA Properties, and every major agency in Abu Dhabi that has hundreds of pages of real estate content indexed. It has no authority, no depth, no topical coverage, and no reason for Google or any AI to recommend it over those giants.
+The strategy is the same playbook as QInsights but adapted for real estate. You build depth, entity authority, and programmatic pages around the niche this agency actually owns -- luxury branded residences in Abu Dhabi -- rather than trying to compete broadly against Bayut.
+
+The Niche to Own
+Do not try to rank for "Abu Dhabi real estate." That is Bayut's territory and it is unwinnable without years and millions. Instead, own these specific lanes:
+Branded residences Abu Dhabi -- this is a fast-growing category with real search volume and relatively thin competition in terms of deep content. Most results are either news articles or broad agency pages, not authoritative resource hubs.
+Jumeirah Residences Al Maryah Island -- this is the exact product. Own every keyword variation of this project name before any other agency does.
+Golden Visa property Abu Dhabi -- massive search intent from investors globally. Specific, transactional, high-converting.
+Off-plan investment Abu Dhabi -- investors searching for yield, capital appreciation, payment plans.
+
+Phase 1: Entity and Brand Authority
+The site needs pages that tell Google and AI systems exactly what AB Residencies is, what it sells, and why it exists.
+Pages to build:
+
+/what-is-ab-residencies -- company entity page, who they are, what they specialize in, who their clients are
+/jumeirah-residences-al-maryah-island -- deep project page, 2000 words minimum, full specs, floor plans overview, location analysis, investment case, Golden Visa eligibility, payment plan, developer background
+/ab-residencies-review -- trust page, client profiles, testimonials structured as Review schema
+/ab-residencies-team -- agent authority pages, Person schema for each specialist
+
+JSON-LD schema for homepage:
+json{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "RealEstateAgent",
+      "@id": "https://residenceabudhabi.com/#org",
+      "name": "AB Residencies",
+      "url": "https://residenceabudhabi.com",
+      "description": "Luxury real estate specialist in Abu Dhabi focusing on branded residences and off-plan investment properties.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Abu Dhabi",
+        "addressCountry": "AE"
+      },
+      "areaServed": {
+        "@type": "City",
+        "name": "Abu Dhabi"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://residenceabudhabi.com/#website",
+      "url": "https://residenceabudhabi.com",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://residenceabudhabi.com/search?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+  ]
+}
+Add RealEstateListing schema to the Jumeirah Residences page with price range, number of units, floor sizes, completion date, and developer name.
+
+Phase 2: Programmatic Property and Location Pages
+This is where you build the content depth. Every page targets a specific search intent from a real buyer or investor.
+Project-specific pages (own the Jumeirah Residences name completely):
+
+/jumeirah-residences-al-maryah-island (main project page)
+/jumeirah-residences-al-maryah-island-floor-plans
+/jumeirah-residences-al-maryah-island-payment-plan
+/jumeirah-residences-al-maryah-island-price
+/jumeirah-residences-al-maryah-island-review
+/jumeirah-residences-al-maryah-island-vs-other-branded-residences
+/jumeirah-residences-al-maryah-island-golden-visa
+/jumeirah-residences-al-maryah-island-investment-return
+/jumeirah-residences-al-maryah-island-1-bedroom
+/jumeirah-residences-al-maryah-island-2-bedroom
+/jumeirah-residences-al-maryah-island-penthouse
+
+Location depth pages:
+
+/al-maryah-island-real-estate
+/al-maryah-island-property-investment
+/al-maryah-island-apartments
+/al-maryah-island-vs-saadiyat-island
+/al-maryah-island-vs-yas-island
+/al-maryah-island-vs-al-reem-island
+/al-maryah-island-abu-dhabi-guide
+
+Broader Abu Dhabi property investment pages:
+
+/luxury-apartments-abu-dhabi
+/branded-residences-abu-dhabi
+/off-plan-properties-abu-dhabi
+/off-plan-investment-abu-dhabi
+/buy-apartment-abu-dhabi
+/best-areas-to-invest-abu-dhabi
+/abu-dhabi-property-investment-guide
+/abu-dhabi-real-estate-market-2025
+
+
+Phase 3: Golden Visa Authority -- This Is the Biggest Opportunity
+Luxury apartments in Yas Island and Saadiyat Island saw up to 17 percent price hikes in H1 2025, and investor appetite is strong. But the biggest search driver globally for Abu Dhabi property is the Golden Visa. Indian, British, European, American, Chinese, and African investors are all searching this. UserCall
+Build a Golden Visa content cluster that no other boutique agency has:
+
+/golden-visa-property-abu-dhabi (pillar page, 2000 words)
+/golden-visa-uae-eligibility-requirements
+/golden-visa-real-estate-investment-uae
+/golden-visa-abu-dhabi-vs-dubai
+/how-to-get-uae-golden-visa-through-property
+/golden-visa-2-million-aed-property
+/uae-golden-visa-for-investors
+/golden-visa-abu-dhabi-process
+/jumeirah-residences-golden-visa-eligible
+
+Each page is 1000 words minimum. Real information, real process, real numbers. No fluff. The pillar page alone can rank for dozens of Golden Visa intent keywords if it is the most comprehensive resource in the niche.
+
+Phase 4: Comparison and Competitor Pages
+Same logic as QInsights. Buyers research alternatives before committing. Own those searches.
+Project vs project comparisons:
+
+/jumeirah-residences-vs-waldorf-astoria-residences-abu-dhabi
+/jumeirah-residences-vs-nobu-residences-abu-dhabi
+/jumeirah-residences-vs-four-seasons-residences-abu-dhabi
+/jumeirah-residences-vs-ritz-carlton-residences-abu-dhabi
+/jumeirah-residences-vs-st-regis-residences-abu-dhabi
+/al-maryah-island-vs-saadiyat-island-investment
+/branded-vs-non-branded-residences-abu-dhabi
+/abu-dhabi-vs-dubai-property-investment
+
+Agency comparison pages (careful here -- neutral framing, not attacks):
+These are better framed as "how to choose a real estate agent in Abu Dhabi" or "what to look for in a branded residence specialist" rather than naming competitors directly.
+
+/how-to-choose-luxury-real-estate-agent-abu-dhabi
+/questions-to-ask-before-buying-off-plan-abu-dhabi
+
+
+Phase 5: Buyer Persona Pages
+These target the specific type of buyer. Each has different intent, different objections, different information needs.
+Investor personas:
+
+/abu-dhabi-property-investment-for-indians
+/abu-dhabi-property-investment-for-uk-buyers
+/abu-dhabi-property-investment-for-europeans
+/abu-dhabi-property-investment-for-expats
+/abu-dhabi-property-for-high-net-worth-investors
+/buy-property-abu-dhabi-non-resident
+/foreign-ownership-abu-dhabi-real-estate
+
+Lifestyle personas:
+
+/luxury-living-abu-dhabi
+/branded-residences-abu-dhabi-lifestyle
+/al-maryah-island-lifestyle-guide
+
+
+Phase 6: Geo Depth -- International Buyer Markets
+These are the people searching from outside UAE who want to invest or relocate. They search with their home country context.
+
+/abu-dhabi-real-estate-from-india
+/abu-dhabi-real-estate-from-uk
+/abu-dhabi-real-estate-from-germany
+/abu-dhabi-real-estate-from-france
+/abu-dhabi-real-estate-from-usa
+/abu-dhabi-real-estate-from-nigeria
+/abu-dhabi-real-estate-from-china
+/abu-dhabi-real-estate-from-russia
+/abu-dhabi-real-estate-for-saudi-buyers
+
+Each page addresses: can they own property, what are the rules, what is the Golden Visa threshold, what is the process, what is the ROI. Written for that buyer in their context.
+
+Phase 7: Investment and Market Intelligence Pages
+These pages attract serious investors doing due diligence. They rank for research-phase queries and position AB Residencies as the knowledgeable specialist, not just an agency.
+
+/abu-dhabi-real-estate-market-outlook-2025
+/branded-residences-roi-abu-dhabi
+/off-plan-vs-ready-property-abu-dhabi
+/abu-dhabi-property-price-per-sqft
+/al-maryah-island-property-prices
+/abu-dhabi-rental-yields-2025
+/abu-dhabi-real-estate-laws-foreign-investors
+/freehold-vs-leasehold-abu-dhabi
+/service-charges-abu-dhabi-branded-residences
+/payment-plan-off-plan-abu-dhabi
+/abu-dhabi-property-handover-process
+
+
+Schema Stack for This Site
+Every page type gets a specific schema combination:
+Page typeSchema typesHomepageRealEstateAgent + WebSite + SearchAction + LocalBusinessProject page (Jumeirah Residences)RealEstateListing + Place + FAQPage + AggregateRatingLocation pages (Al Maryah Island)Place + ItemList + FAQPageGolden Visa pagesHowTo + FAQPage + ArticleInvestment guidesArticle + FAQPage + BreadcrumbListComparison pagesFAQPage + ItemList + BreadcrumbListBuyer persona pagesFAQPage + Article + BreadcrumbListAgent/team pagesPerson + RealEstateAgentReview pageReview + AggregateRating + PersonEvery pageBreadcrumbList + canonical
+
+The Key Difference Between This and QInsights
+QInsights needs topical authority across a software category. The content depth is the moat.
+ResidenceAbuDhabi.com needs transactional trust and local authority. The buyer is making a multi-million dirham decision. Before they call, they will have read 10 to 20 pages. The site that has the most complete, honest, specific information about Jumeirah Residences Al Maryah Island and the Abu Dhabi branded residence market is the one that gets the inquiry.
+So every page here must do three things the competitors are not doing:
+
+Give real numbers (price per sqft, service charge estimates, rental yield projections, payment plan structures)
+Give real process (how Golden Visa works step by step, how off-plan purchase works in Abu Dhabi, what happens at handover)
+Give real comparisons (why Al Maryah Island over Saadiyat, why Jumeirah Residences over other branded projects in the same price band)
+
+That depth is what ranks. That depth is what converts.
