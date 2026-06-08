@@ -360,6 +360,46 @@ async function buildSitemap(): Promise<string> {
     { url: "/about", priority: "0.7", changefreq: "monthly" },
     { url: "/contact", priority: "0.7", changefreq: "monthly" },
     { url: "/faq", priority: "0.7", changefreq: "monthly" },
+    // Golden Visa cluster
+    { url: "/golden-visa-abu-dhabi", priority: "0.9", changefreq: "monthly" },
+    { url: "/golden-visa-requirements-uae", priority: "0.9", changefreq: "monthly" },
+    { url: "/golden-visa-vs-investor-visa-uae", priority: "0.8", changefreq: "monthly" },
+    { url: "/golden-visa-family-uae", priority: "0.8", changefreq: "monthly" },
+    { url: "/how-to-get-golden-visa-uae-property", priority: "0.8", changefreq: "monthly" },
+    // Off-Plan cluster
+    { url: "/off-plan-investment-guide-abu-dhabi", priority: "0.9", changefreq: "monthly" },
+    { url: "/off-plan-payment-plans-abu-dhabi", priority: "0.8", changefreq: "monthly" },
+    { url: "/best-off-plan-projects-abu-dhabi-2026", priority: "0.8", changefreq: "monthly" },
+    { url: "/off-plan-vs-ready-property-abu-dhabi", priority: "0.8", changefreq: "monthly" },
+    // Area Guides cluster
+    { url: "/saadiyat-island-property-guide", priority: "0.9", changefreq: "monthly" },
+    { url: "/yas-island-real-estate", priority: "0.8", changefreq: "monthly" },
+    { url: "/al-reem-island-apartments-abu-dhabi", priority: "0.8", changefreq: "monthly" },
+    { url: "/freehold-areas-abu-dhabi", priority: "0.9", changefreq: "monthly" },
+    { url: "/best-investment-areas-abu-dhabi-2026", priority: "0.9", changefreq: "monthly" },
+    // Investment Guides cluster
+    { url: "/abu-dhabi-property-market-2026", priority: "0.9", changefreq: "monthly" },
+    { url: "/abu-dhabi-property-prices-2026", priority: "0.9", changefreq: "monthly" },
+    { url: "/rental-yields-abu-dhabi-2026", priority: "0.9", changefreq: "monthly" },
+    { url: "/abu-dhabi-vs-dubai-property-investment", priority: "0.8", changefreq: "monthly" },
+    { url: "/is-abu-dhabi-real-estate-safe-investment", priority: "0.8", changefreq: "monthly" },
+    // Buyer Guides cluster
+    { url: "/how-to-buy-property-in-abu-dhabi", priority: "0.9", changefreq: "monthly" },
+    { url: "/can-foreigners-buy-property-abu-dhabi", priority: "0.9", changefreq: "monthly" },
+    { url: "/property-buying-fees-abu-dhabi", priority: "0.8", changefreq: "monthly" },
+    { url: "/service-charges-abu-dhabi-property", priority: "0.8", changefreq: "monthly" },
+    // Branded Residences cluster
+    { url: "/what-is-a-branded-residence", priority: "0.8", changefreq: "monthly" },
+    { url: "/best-branded-residences-abu-dhabi-2026", priority: "0.8", changefreq: "monthly" },
+    // Lifestyle cluster
+    { url: "/living-in-abu-dhabi-guide", priority: "0.8", changefreq: "monthly" },
+    { url: "/abu-dhabi-safety-expats", priority: "0.8", changefreq: "monthly" },
+    { url: "/schools-near-al-maryah-island", priority: "0.8", changefreq: "monthly" },
+    { url: "/abu-dhabi-healthcare-expats", priority: "0.8", changefreq: "monthly" },
+    // Jumeirah Deep cluster
+    { url: "/jumeirah-residences-investment-case", priority: "0.9", changefreq: "monthly" },
+    { url: "/jumeirah-residences-vs-al-reem-island", priority: "0.8", changefreq: "monthly" },
+    { url: "/aldar-properties-jumeirah-residences", priority: "0.8", changefreq: "monthly" },
   ];
   const today = new Date().toISOString().slice(0, 10);
   const urls = [

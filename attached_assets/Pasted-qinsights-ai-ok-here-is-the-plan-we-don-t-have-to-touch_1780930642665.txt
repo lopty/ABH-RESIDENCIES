@@ -1,0 +1,684 @@
+qinsights.ai ok here is the plan, we don't have to touch his code, except on our  seo stuffs
+we have to do programmatic seo and build maybe thousands or hundreds of high intents pages and interlink them to the landing page, signup page, and all,  so that this website can have sitelinks, compete with platforms in its niche, rank on high intent keywords, show up on geo. 
+
+maybe you can audit, and let me know what you would do. i am not the developer of this site, i am just coming to build the seo, so i don't want to touch his files... the pages and stuffs we are building and all the api llm.tx and all and the mappings should be because we want to make the site credible. and also we need to take back authority for name qinishights, q-insights, q insights, q insight, qualitative insight, qualitative research, qualitative analysis, and more. there are high ranking intent keywords people use to search on ai and all
+
+also we have to build competitive depths many by comparing it with other tools and all
+we also have to build global depth and all
+
+currently now also most of the site content are in https://qeludra.com/ meaning it makes it difficult for the qinsights to rank because it does not have clear authority, 
+
+structured json marking all entities possible. i mean all entities very well structured. let me get guidance from claude, gpt then i tell you their suggestiuon so we can do right away 
+
+by the way, the pages, articles or whatever, i don't like ai fluff articles, articles not less than 1000 words, no long dashes, clear mapping, clear structure and all 
+
+
+Your instinct is correct.
+
+If I were brought in as the SEO/GEO lead for QInsights and was told:
+
+"Don't touch the application code. Build authority, rankings, GEO visibility, and competitive depth."
+
+I would not start with blog articles.
+
+I would start with entity authority architecture.
+
+Current Problem
+
+From what I can see, QInsights has a good product page and positioning around AI-assisted qualitative research. The issue is not the product. The issue is authority and topical depth.
+
+Right now Google, ChatGPT, Claude and Perplexity need answers to questions like:
+
+What is QInsights?
+Is QInsights a qualitative analysis software?
+Is QInsights a replacement for NVivo?
+Is QInsights better than Atlas.ti?
+Is QInsights a market research tool?
+Is QInsights an interview analysis platform?
+Is QInsights an academic research software?
+Is QInsights trustworthy?
+Who uses QInsights?
+What is the difference between QInsights and ChatGPT?
+
+The website currently doesn't have enough indexed evidence to dominate those conversations.
+
+My SEO Strategy
+
+I would split this into 5 phases.
+
+Phase 1 — Take Ownership of the Brand Entity
+
+This comes first.
+
+Build pages for:
+
+/what-is-qinsights
+/qinsights-review
+/qinsights-software
+/qinsights-platform
+/qinsights-pricing
+/qinsights-vs-chatgpt
+/qinsights-vs-notebooklm
+/qinsights-vs-nvivo
+/qinsights-vs-atlasti
+/qinsights-vs-maxqda
+
+Goal:
+
+When somebody asks AI:
+
+What is QInsights?
+
+or
+
+Is QInsights good?
+
+the model has multiple corroborating documents.
+
+Phase 2 — Programmatic SEO
+
+This is where the scale comes from.
+
+I would build hundreds of pages.
+
+Not blogs.
+
+Landing pages.
+
+Example:
+
+Qualitative Research
+/qualitative-research-software
+/qualitative-analysis-software
+/interview-analysis-software
+/focus-group-analysis-software
+/open-ended-survey-analysis-software
+/thematic-analysis-software
+/discourse-analysis-software
+/content-analysis-software
+/coding-qualitative-data
+
+Each page:
+
+1200-2500 words
+real examples
+screenshots
+use cases
+FAQ
+schema
+
+No fluff.
+
+Phase 3 — Competitor Matrix
+
+This is where GEO becomes powerful.
+
+Build pages:
+
+/qinsights-vs-nvivo
+/qinsights-vs-atlasti
+/qinsights-vs-maxqda
+/qinsights-vs-dedoose
+/qinsights-vs-looppanel
+/qinsights-vs-notebooklm
+/qinsights-vs-chatgpt
+/qinsights-vs-gemini
+
+These are some of the highest commercial-intent keywords in this niche.
+
+Every page should answer:
+
+strengths
+weaknesses
+pricing
+use cases
+researcher control
+evidence traceability
+
+QInsights already differentiates itself on "defensible analysis" and evidence-linked outputs. That positioning appears repeatedly on the site.
+
+Phase 4 — Research Methodology Depth
+
+Most competitors do not own methodology content well.
+
+Create clusters:
+
+/thematic-analysis
+/framework-analysis
+/grounded-theory
+/content-analysis
+/discourse-analysis
+/phenomenological-analysis
+/narrative-analysis
+/ethnographic-analysis
+
+Then:
+
+/thematic-analysis-software
+/framework-analysis-software
+/grounded-theory-software
+
+Then:
+
+/how-to-do-thematic-analysis
+/how-to-analyze-interview-transcripts
+/how-to-analyze-focus-group-data
+
+This creates topical authority.
+
+Phase 5 — GEO Layer
+
+This is where most SEO people fail.
+
+You don't create content for Google.
+
+You create content for AI retrieval.
+
+Every page should contain:
+
+Explicit definitions
+
+Example:
+
+QInsights is an AI-assisted qualitative data analysis software platform designed for researchers, consultants, universities and evaluation teams.
+
+Not marketing copy.
+
+Direct definitions.
+
+Explicit comparisons
+
+Example:
+
+Compared with NVivo, QInsights focuses on conversational analysis workflows and evidence-linked AI assistance.
+
+Explicit category mappings
+
+Example:
+
+QInsights belongs to:
+
+- Qualitative Data Analysis Software
+- QDAS
+- Research Software
+- Interview Analysis Software
+- Focus Group Analysis Software
+- Survey Analysis Software
+
+This helps embeddings.
+
+Biggest SEO Issue I See
+
+You mentioned:
+
+content is currently on qeludra.com
+
+That is a serious problem.
+
+If QInsights content lives elsewhere, authority gets split.
+
+Google may learn:
+
+Qeludra = authority
+QInsights = application
+
+instead of:
+
+QInsights = authority
+QInsights = software
+QInsights = brand
+
+Long-term, most qualitative research content should live under QInsights itself if the goal is making QInsights the recognized entity.
+
+Structured Data
+
+I would go much further than normal SEO agencies.
+
+Every page should have schema.
+
+Examples:
+
+SoftwareApplication
+Product
+Organization
+FAQPage
+BreadcrumbList
+Article
+Review
+HowTo
+Person
+EducationalOrganization (where relevant)
+Dataset (where relevant)
+
+Then connect them all.
+
+Think:
+
+QInsights
+  → software
+  → category
+  → use case
+  → competitor
+  → methodology
+  → customer
+
+Google and LLMs love graph structures.
+
+What I Would Build First
+
+If budget and resources were limited:
+
+Month 1
+
+Build 30 pages:
+
+Brand
+
+What is QInsights
+QInsights Review
+QInsights Pricing
+QInsights Alternatives
+
+Competitors
+
+QInsights vs NVivo
+Atlas.ti
+MAXQDA
+Dedoose
+Looppanel
+ChatGPT
+NotebookLM
+
+Commercial Intent
+
+Qualitative Analysis Software
+Interview Analysis Software
+Focus Group Analysis Software
+Thematic Analysis Software
+Survey Analysis Software
+
+Methodologies
+
+Thematic Analysis
+Framework Analysis
+Grounded Theory
+Content Analysis
+Narrative Analysis
+
+These 30 pages alone could become the foundation of the entire authority graph.
+
+My biggest recommendation is this:
+
+Do not build 1,000 pages immediately.
+
+Build a taxonomy first.
+
+Map:
+
+Brand
+├── Comparisons
+├── Alternatives
+├── Use Cases
+├── Methodologies
+├── Industries
+├── Academic Research
+├── Market Research
+├── Evaluation Research
+└── Qualitative Analysis Concepts
+
+Once the taxonomy is correct, generating 500–5,000 programmatic pages becomes much safer and much more likely to rank. Otherwise you end up with a giant collection of near-duplicate pages that Google and AI systems largely ignore.
+
+Pasted text.txt
+Document
+
+This is actually a good start, but if your goal is:
+
+"Make QInsights become the authority entity for qualitative research AI, qualitative analysis software, and become highly retrievable by Google, ChatGPT, Claude, Perplexity, Gemini, Grok and future AI systems"
+
+then I would tell Claude and GPT to audit the plan against the following checklist.
+
+Current Score
+Brand Entity Coverage
+
+7/10
+
+You have:
+
+what-is-qinsights
+about-qinsights
+qinsights-review
+qinsights-ai
+q-insights-qualitative-research-tool
+
+Good.
+
+But entity takeover is not finished.
+
+You are still missing:
+
+/qinsights
+/q-insights
+/q-insights-review
+/q-insights-pricing
+/qinsights-pricing
+/q-insights-ai
+/qinsights-alternatives
+/qinsights-vs-chatgpt
+/qinsights-vs-gemini
+/qinsights-vs-claude
+/qinsights-vs-perplexity
+
+Remember:
+
+People search brand names wrong.
+
+AI systems encounter variants.
+
+You want ownership of:
+
+QInsights
+Q Insight
+Q Insights
+Q-Insights
+QInsights AI
+Comparison Coverage
+Current
+
+15 comparison pages.
+
+Good.
+
+Target
+
+50+
+
+You should compare against:
+
+Academic
+NVivo
+ATLAS.ti
+MAXQDA
+Dedoose
+Quirkos
+Taguette
+RQDA
+CAQDAS
+AI Research
+Looppanel
+Listen Labs
+Thematic
+Insight7
+Skimle
+Flowres
+AI Models
+ChatGPT
+Claude
+Gemini
+Perplexity
+NotebookLM
+Grok
+Survey Platforms
+Qualtrics
+SurveyMonkey
+Typeform
+
+Each comparison page becomes an AI retrieval source.
+
+Biggest Missing Layer
+
+This is where I would push much harder.
+
+Research Methodology Hub
+
+I don't see enough methodology ownership.
+
+You need pages for:
+
+/thematic-analysis
+/framework-analysis
+/content-analysis
+/discourse-analysis
+/grounded-theory
+/narrative-analysis
+/phenomenological-analysis
+/ethnography-analysis
+
+Then:
+
+/thematic-analysis-software
+/framework-analysis-software
+/content-analysis-software
+
+Then:
+
+/how-to-do-thematic-analysis
+/how-to-code-qualitative-data
+/how-to-analyze-focus-groups
+/how-to-analyze-interviews
+
+This cluster alone can become 100+ pages.
+
+Missing Entity Graph
+
+This is the largest gap.
+
+Current schema:
+
+SoftwareApplication
+Organization
+FAQPage
+Review
+Article
+
+Good.
+
+Not enough.
+
+I would add:
+
+BreadcrumbList
+
+every page
+
+WebSite
+
+homepage
+
+SearchAction
+
+homepage
+
+Product
+
+homepage
+
+pricing
+
+comparison pages
+
+DefinedTerm
+
+glossary entries
+
+not only DefinedTermSet
+
+HowTo
+
+how-to pages
+
+ItemList
+
+comparison hubs
+
+software directories
+
+review hubs
+
+AggregateRating
+
+review hub
+
+Offer
+
+pricing pages
+
+VideoObject
+
+future demo videos
+
+Person
+
+founders
+
+reviewers
+
+authors
+
+Entity Mapping Layer
+
+This is where most SEO agencies fail.
+
+I would explicitly tell Claude/GPT:
+
+Create a master entity map.
+
+Example:
+
+QInsights
+ ├── AI qualitative research software
+ ├── interview analysis software
+ ├── thematic analysis software
+ ├── research coding software
+ ├── qualitative data analysis software
+ ├── focus group analysis software
+ ├── market research software
+ ├── UX research software
+ ├── academic research software
+ ├── evaluation research software
+ └── CAQDAS software
+
+Every page should reinforce one branch.
+
+Geo Layer
+
+Current:
+
+US
+UK
+DE
+NL
+CA
+AU
+ZA
+
+Good.
+
+Not enough.
+
+You should eventually have:
+
+/qualitative-research-software-usa
+/qualitative-research-software-california
+/qualitative-research-software-new-york
+
+/qualitative-research-software-uk
+/qualitative-research-software-london
+
+/qualitative-research-software-canada
+/qualitative-research-software-toronto
+
+/qualitative-research-software-australia
+/qualitative-research-software-sydney
+
+City pages often outperform country pages.
+
+Internal Linking
+
+This is currently the weakest technical area.
+
+The document says:
+
+related links are manual arrays
+
+I would immediately change this.
+
+Build a taxonomy:
+
+Methodology Hub
+ ├── Thematic Analysis
+ ├── Coding
+ ├── Interview Analysis
+ └── Framework Analysis
+
+Software Hub
+ ├── Qualitative Software
+ ├── AI Qualitative Software
+ └── Interview Software
+
+Comparison Hub
+ ├── NVivo
+ ├── Atlas.ti
+ ├── MAXQDA
+ └── ChatGPT
+
+Industry Hub
+ ├── Academia
+ ├── Market Research
+ ├── UX Research
+ └── Nonprofits
+
+Every page should link upward and sideways.
+
+This is what usually creates sitelinks.
+
+Biggest Strategic Issue
+
+This is the thing I would ask Claude and GPT specifically.
+
+You mentioned:
+
+most content is on qeludra.com
+
+This is potentially the largest ranking problem.
+
+Ask them:
+
+Should QInsights continue publishing authority content on Qeludra?
+
+or
+
+Should all future qualitative research authority content live on qinsights.ai?
+
+My answer:
+
+If QInsights is the product you want people and AI to recommend, then eventually:
+
+QInsights.ai
+ = authority
+
+QInsights.ai
+ = product
+
+QInsights.ai
+ = research knowledge base
+
+Otherwise Google keeps learning:
+
+Qeludra = authority
+QInsights = app
+
+which is much harder to reverse later.
+
+What I Would Add Before Building Another 100 Pages
+BreadcrumbList schema.
+Product schema.
+AggregateRating schema.
+DefinedTerm schema per glossary entry.
+Methodology cluster (20-30 pages).
+Brand variant cluster (10-20 pages).
+Competitor expansion to 50+ pages.
+Automated internal-link graph.
+Entity relationship map.
+Move future authority content from Qeludra into QInsights.
+
+If those 10 things are done, then scaling from 100 pages to 500+ pages becomes much safer and much more likely to generate both Google rankings and AI recommendations.

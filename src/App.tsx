@@ -36,6 +36,8 @@ import BuyPage from "./components/BuyPage";
 import AdminPanel from "./components/AdminPanel";
 import InterestPopup from "./components/InterestPopup";
 import LandingPage from "./components/LandingPage";
+import SeoPage from "./components/SeoPage";
+import { seoPageMap } from "./seo/index";
 
 const WHATSAPP_NUMBER = "971554226593";
 
@@ -377,6 +379,31 @@ export default function App() {
       description = "Discover Abu Dhabi's finest branded residences — hotel-managed luxury apartments with five-star amenities. Jumeirah Residences Al Maryah Island is the flagship branded project in the UAE capital.";
       keywords = "branded residences Abu Dhabi, luxury branded apartments UAE, hotel managed residences Abu Dhabi, Jumeirah branded residences, five-star residences Abu Dhabi, best branded properties UAE 2026";
       schemas = [orgSchema, breadcrumb([{ name: "Branded Residences", url: `${SITE}/branded-residences-abu-dhabi` }])];
+    } else {
+      // ── Dynamic SEO pages lookup ─────────────────────────────────────
+      const slug = path.startsWith("/") ? path.slice(1) : path;
+      const seoPage = seoPageMap[slug];
+      if (seoPage) {
+        title = seoPage.title;
+        description = seoPage.description;
+        keywords = seoPage.keywords;
+        const faqSchema = seoPage.faq && seoPage.faq.length > 0
+          ? [{
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              "mainEntity": seoPage.faq.map(f => ({
+                "@type": "Question",
+                "name": f.question,
+                "acceptedAnswer": { "@type": "Answer", "text": f.answer }
+              }))
+            }]
+          : [];
+        schemas = [
+          orgSchema,
+          ...faqSchema,
+          breadcrumb([{ name: seoPage.headline, url: `${SITE}${path}` }])
+        ];
+      }
     }
 
     // ── Apply everything to document.head ────────────────────────────────
@@ -1302,6 +1329,19 @@ export default function App() {
             ]}
           />
         )}
+
+        {/* --- DYNAMIC PROGRAMMATIC SEO PAGES --- */}
+        {(() => {
+          const slug = currentPath.startsWith("/") ? currentPath.slice(1) : currentPath;
+          const seoPage = seoPageMap[slug];
+          if (!seoPage) return null;
+          return (
+            <SeoPage
+              page={seoPage}
+              onCta={() => navigate("/contact")}
+            />
+          );
+        })()}
       </main>
 
       {/* --- ELITE FOOTER (hidden on admin) --- */}
@@ -1309,7 +1349,7 @@ export default function App() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-12 gap-12 pb-16 border-b border-white/10">
             {/* Column 1: Identity */}
-            <div className="md:col-span-4 space-y-4">
+            <div className="md:col-span-3 space-y-4">
               <span className="font-serif text-xl sm:text-2xl font-bold tracking-wider text-white">RESIDENCE ABU DHABI</span>
               <p className="text-[11px] text-gray-400 font-light leading-relaxed max-w-sm">
                 Premium real estate advisory specializing in curated, high-yield off-plan and ready properties across Abu Dhabi's elite designated freehold investment zones.
@@ -1330,18 +1370,34 @@ export default function App() {
               </div>
             </div>
 
-            {/* Column 3: Corporate Info */}
+            {/* Column 3: Guides */}
             <div className="md:col-span-2 space-y-4">
-              <span className="text-[10px] font-bold text-[#C9A96E] uppercase tracking-widest block">Corporate</span>
+              <span className="text-[10px] font-bold text-[#C9A96E] uppercase tracking-widest block">Investor Guides</span>
               <div className="flex flex-col space-y-2 text-xs text-gray-300 font-light">
-                <button onClick={() => navigate("/about")} className="text-left hover:text-[#C9A96E] cursor-pointer">Our Story</button>
-                <button onClick={() => navigate("/contact")} className="text-left hover:text-[#C9A96E] cursor-pointer">Contact Desk</button>
+                <button onClick={() => navigate("/golden-visa-abu-dhabi")} className="text-left hover:text-[#C9A96E] cursor-pointer">UAE Golden Visa</button>
+                <button onClick={() => navigate("/off-plan-investment-guide-abu-dhabi")} className="text-left hover:text-[#C9A96E] cursor-pointer">Off-Plan Guide</button>
+                <button onClick={() => navigate("/abu-dhabi-property-market-2026")} className="text-left hover:text-[#C9A96E] cursor-pointer">Market 2026</button>
+                <button onClick={() => navigate("/rental-yields-abu-dhabi-2026")} className="text-left hover:text-[#C9A96E] cursor-pointer">Rental Yields</button>
+                <button onClick={() => navigate("/how-to-buy-property-in-abu-dhabi")} className="text-left hover:text-[#C9A96E] cursor-pointer">How to Buy</button>
+                <button onClick={() => navigate("/freehold-areas-abu-dhabi")} className="text-left hover:text-[#C9A96E] cursor-pointer">Freehold Zones</button>
+              </div>
+            </div>
+
+            {/* Column 3b: Area Guides */}
+            <div className="md:col-span-2 space-y-4">
+              <span className="text-[10px] font-bold text-[#C9A96E] uppercase tracking-widest block">Area Guides</span>
+              <div className="flex flex-col space-y-2 text-xs text-gray-300 font-light">
+                <button onClick={() => navigate("/saadiyat-island-property-guide")} className="text-left hover:text-[#C9A96E] cursor-pointer">Saadiyat Island</button>
+                <button onClick={() => navigate("/yas-island-real-estate")} className="text-left hover:text-[#C9A96E] cursor-pointer">Yas Island</button>
+                <button onClick={() => navigate("/al-reem-island-apartments-abu-dhabi")} className="text-left hover:text-[#C9A96E] cursor-pointer">Al Reem Island</button>
+                <button onClick={() => navigate("/best-investment-areas-abu-dhabi-2026")} className="text-left hover:text-[#C9A96E] cursor-pointer">Best Areas 2026</button>
+                <button onClick={() => navigate("/about")} className="text-left hover:text-[#C9A96E] cursor-pointer">About Us</button>
                 <button onClick={() => navigate("/faq")} className="text-left hover:text-[#C9A96E] cursor-pointer">FAQ Center</button>
               </div>
             </div>
 
             {/* Column 4: Location */}
-            <div className="md:col-span-4 space-y-4">
+            <div className="md:col-span-3 space-y-4">
               <span className="text-[10px] font-bold text-[#C9A96E] uppercase tracking-widest block">HQ Coordinates</span>
               <div className="text-xs text-gray-300 font-light space-y-2">
                 <p>Level 4, Al Maryah Sentinel Towers</p>

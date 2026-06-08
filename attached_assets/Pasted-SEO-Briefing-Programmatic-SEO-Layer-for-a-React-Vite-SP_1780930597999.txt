@@ -1,0 +1,228 @@
+SEO Briefing: Programmatic SEO Layer for a React/Vite SPA
+This document is a full handoff of what was built and decided across a full working session. Read it top to bottom before starting work on a new project of the same type.
+
+What this project is
+A marketing site (React + Vite SPA) for a B2B SaaS product. The goal was to build a programmatic SEO layer on top of the existing site: structured data, crawlable HTML for all pages, internal link taxonomy, hub pages, and content clusters — without touching the app product or changing the React stack.
+
+The core problem we solved
+React SPAs serve an empty <div id="root"></div> to bots. Googlebot renders JS, so it eventually sees content. But AI crawlers (GPTBot, ClaudeBot, PerplexityBot), social previewers (LinkedIn, Slack, WhatsApp), and lightweight bots receive an empty body — no headings, no copy, no structured data.
+
+The fix: Static prerendering. At build time, every URL is rendered to a complete HTML file using React's renderToString. Bots receive full HTML immediately. Users get the React SPA as normal (React hydrates over the pre-rendered HTML).
+
+Stack
+React + Vite (CSR SPA, no SSR framework)
+pnpm workspaces monorepo
+Content stored in plain .js files (arrays of objects)
+No CMS, no database for content
+Architecture: the prerender system
+Four files make the prerender work:
+
+1. src/entry-server.jsx
+import { renderToString } from 'react-dom/server'
+import { StaticRouter } from 'react-router-dom'
+import App from './App.jsx'
+import { getSeoRoute, seoRoutes } from './seo/routes'
+import { getStructuredData } from './seo/schema'
+export { getSeoRoute, getStructuredData, seoRoutes }
+export function render(url) {
+  return renderToString(
+    <StaticRouter location={url}>
+      <App />
+    </StaticRouter>,
+  )
+}
+
+2. vite.ssr.config.ts
+Builds the SSR bundle (no PORT required, no dev plugins):
+
+export default defineConfig({
+  base: basePath,
+  plugins: [mdx(...), react()],
+  build: {
+    outDir: 'dist/server',
+    ssr: 'src/entry-server.jsx',
+    rollupOptions: { output: { format: 'es' } },
+  },
+})
+
+3. src/seo/routes.js
+The single source of truth for every public URL. Each route object contains: path, title, description, canonical, image, schemaType, breadcrumb, faq, includeSoftware, lastModified. Routes are built from content data files and merged into seoRoutes[].
+
+4. prerender.js
+Runs after both builds. For each route in seoRoutes:
+
+Calls render(url) → gets full HTML string
+Builds the <head> meta block (title, description, canonical, OG, Twitter, JSON-LD)
+Injects both into the index.html template
+Writes to dist/public/{slug}/index.html
+const html = template
+  .replace(/<!--\s*SEO_START\s*-->[\s\S]*?<!--\s*SEO_END\s*-->/m, metaBlock)
+  .replace('<div id="root"></div>', `<div id="root">${appHtml}</div>`)
+
+Build command (in package.json)
+"build": "vite build --config vite.config.ts && vite build --config vite.ssr.config.ts && node prerender.js"
+
+Note: vite.config.ts requires PORT env var. Pass PORT=3000 BASE_PATH=/ pnpm run build locally.
+
+Structured data (JSON-LD)
+All structured data is generated in src/seo/schema.js by a single function getStructuredData(route). It outputs a @graph array and is injected into every pre-rendered page's <head>.
+
+Schemas used across the site:
+
+Page type	Schemas emitted
+Homepage	Organization, WebSite, SoftwareApplication, WebPage, BreadcrumbList, FAQPage
+Feature/landing pages	Organization, WebSite, SoftwareApplication, WebPage, BreadcrumbList, FAQPage
+Methodology guides	Organization, WebSite, Article, WebPage, BreadcrumbList, FAQPage
+Comparison pages	Organization, WebSite, SoftwareApplication, WebPage, BreadcrumbList
+Hub pages	Organization, WebSite, WebPage, BreadcrumbList
+Review pages	Organization, WebSite, AggregateRating, ItemList, WebPage, BreadcrumbList
+Blog articles	Organization, WebSite, Article, WebPage, BreadcrumbList
+Geo pages	Organization, WebSite, SoftwareApplication, WebPage, BreadcrumbList
+The schemaType field on a route object controls which schemas are added. includeSoftware: true adds SoftwareApplication. faq: [...] adds FAQPage.
+
+Content structure
+All content lives in src/content/seo/. Each file exports an array of page objects.
+
+File	What it contains
+features.js	Feature/keyword landing pages (core product pages)
+features-ext.js	Extended feature pages (differentiators, personas, guides)
+methodology.js	12 methodology deep-dives (thematic analysis, grounded theory, etc.)
+comparisons.js	QDAS competitor comparisons (NVivo, ATLAS.ti, etc.)
+comparisons-ext.js	AI tool + emerging platform comparisons (ChatGPT, Claude, Qualtrics, etc.)
+brand.js	Brand entity pages (what-is, about, review)
+reviews.js	Individual reviewer profiles
+geo.js	Country-specific landing pages
+glossary.js	Glossary terms A–Z
+solutions.js	Persona/solution hub content
+linkTaxonomy.js	Internal link clusters + getRelatedLinks() function
+Typical page object shape (feature/methodology page):
+{
+  slug: 'thematic-analysis',
+  title: 'Thematic Analysis: ...',
+  description: '...',
+  eyebrow: 'Research Methodology',
+  hero: 'One-sentence hero statement...',
+  category: 'methodology',
+  schemaType: 'Article',
+  intro: 'Long intro paragraph...',
+  sections: [
+    { heading: 'What it is', body: 'Multi-paragraph body...' },
+    ...
+  ],
+  relatedLinks: [
+    { label: 'Related Page', href: '/related-page' },
+  ],
+  faq: [
+    { question: '...', answer: '...' },
+  ],
+}
+
+Page templates (React components)
+FeaturePage.jsx
+Handles the majority of SEO pages. Reads from featurePages (features.js + features-ext.js). Falls back to methodologyPages if slug not found in features. Reads schemaType to emit HowTo, Article, or default JSON-LD via the per-page SeoJsonLd component.
+
+ComparisonPage.jsx
+Handles two data shapes:
+
+Old format (QDAS tools): tableRows, intro, competitor.company, founded, platform, pricing
+New AI tool format: keyDifferences, summary, competitor.description, bestFor
+Both shapes check via the presence of tableRows to decide which template variant to render.
+
+FeaturePage.jsx schema switching
+schemaType === 'HowTo' → HowTo schema
+schemaType === 'Article' → Article schema
+default → SoftwareApplication schema
+
+Hub pages
+/compare → CompareHubPage.jsx
+/research-methods → ResearchMethodsHubPage.jsx
+/solutions → SolutionsHubPage.jsx
+/resources → ResourcesHubPage.jsx
+Hub pages use CSS classes: .seo-hub-grid, .seo-hub-card, .seo-hub-card--desc, .seo-hub-card__tag (defined in seo-pages.css).
+
+Internal linking
+src/content/seo/linkTaxonomy.js defines 7 clusters. Each cluster has a hub (the hub page URL) plus links[] (related content pages). The hub is always the first link so hub pages automatically receive uplinks from all cluster members.
+
+export function getRelatedLinks(slug, limit = 6) {
+  // finds which cluster the slug belongs to
+  // returns hub + other cluster members, excluding self
+}
+
+Every FeaturePage and methodology page calls getRelatedLinks(slug) to populate its "Related pages" section.
+
+Redirects
+13 redirects live in App.jsx as <Navigate> routes:
+
+Brand variant redirects (6):
+
+/qinsights → /what-is-qinsights
+/q-insights → /q-insights-qualitative-research-tool
+/qinsights-pricing → /pricing
+/q-insights-pricing → /pricing
+/q-insights-review → /qinsights-review
+/q-insights-ai → /qinsights-ai
+Comparison shortlinks (7):
+
+/qinsights-vs-chatgpt → /compare/qinsights-vs-chatgpt
+/qinsights-vs-claude → /compare/qinsights-vs-claude
+(etc. for gemini, perplexity, grok, nvivo, atlas-ti)
+Sitemap
+public/sitemap.xml is manually maintained (not auto-generated). Priority convention:
+
+Hub pages: 0.9
+Content/SEO pages: 0.8
+Static pages (pricing, contact, team): 0.7
+Blog/use cases: 0.6
+index.html — the static fallback
+The index.html has SEO tags baked in between <!-- SEO_START --> and <!-- SEO_END --> markers. The prerender script replaces this block with per-page meta at build time. At runtime, SeoMeta.jsx also overwrites the tags via useEffect+document.head for client-side navigation (no full page load). This means:
+
+Pre-rendered HTML files: correct per-page tags in source
+Client-side navigation: SeoMeta updates tags dynamically
+Social previewers: read from the pre-rendered file — correct tags
+Googlebot/AI bots: read from the pre-rendered file — full content
+What bots see now vs before
+Before (CSR only):
+
+<body>
+  <!-- empty — all content requires JavaScript -->
+</body>
+
+After (pre-rendered):
+
+<title>Thematic Analysis: What It Is, How to Do It...</title>
+<meta name="description" content="..." />
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[...]}</script>
+...
+<body>
+  <h1>Thematic analysis is the most widely used qualitative method...</h1>
+  <h2>What thematic analysis is</h2>
+  <p>Thematic analysis is a method for systematically identifying...</p>
+  <!-- full article, FAQ, related links, CTAs -->
+</body>
+
+Things to watch out for
+PORT env var required for build. vite.config.ts throws if PORT is missing. Pass PORT=3000 BASE_PATH=/ pnpm run build for local builds.
+
+SeoJsonLd must be imported before use. One page (GlossaryPage.jsx) had a dead <SeoJsonLd data={jsonLd} /> call with neither import nor jsonLd defined — caused prerender failure. Remove or wire up properly.
+
+Methodology pages must be in seoRoutes. The prerender only visits routes listed in seoRoutes. If a page exists in App.jsx but not in src/seo/routes.js, it won't be pre-rendered. Methodology and comparisons-ext pages needed to be explicitly imported and added.
+
+Duplicate slugs between files. Methodology slugs like thematic-analysis appear in both methodology.js AND featurePages if care isn't taken. Dedup before adding to seoRoutes or you'll get duplicate HTML files written (harmless but wasteful).
+
+comparisons-ext.js exports as extComparisons, not comparisonsExt. Check actual export names before importing.
+
+Content pages returning 404 on live site = not deployed yet. The prerender output lives in dist/public/. If it hasn't been deployed, the live site still serves the old build.
+
+Replicating this on a new project
+To apply this exact pattern to a different React/Vite SPA:
+
+Add entry-server.jsx — renderToString + StaticRouter wrapping the app's <App />.
+Add vite.ssr.config.ts — SSR build config pointing to entry-server.jsx, no PORT requirement.
+Create src/seo/routes.js — define all public routes with meta fields. One object per URL.
+Create src/seo/schema.js — getStructuredData(route) function that builds the @graph array.
+Add prerender.js — iterates seoRoutes, calls render(url), injects HTML + meta, writes files.
+Update package.json build script — chain the three commands.
+Add <!-- SEO_START --> / <!-- SEO_END --> markers to index.html so the prerender can replace the block.
+Wire SeoMeta component for client-side navigation meta updates via useEffect.
+The content layer (JS data files, hub pages, taxonomy, comparisons) is product-specific — rebuild from scratch for the new client's topic area.
+
