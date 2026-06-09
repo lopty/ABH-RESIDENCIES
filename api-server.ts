@@ -53,7 +53,7 @@ function buildEmailHtml(subject: string, data: Record<string, any>): string {
     ).join("");
   return `<div style="font-family:Arial,sans-serif;max-width:600px;margin:0 auto">
     <div style="background:#1C2B4A;padding:24px;text-align:center">
-      <h2 style="color:#C9A96E;margin:0;font-size:22px;letter-spacing:2px">AB RESIDENCES</h2>
+      <h2 style="color:#C9A96E;margin:0;font-size:22px;letter-spacing:2px">RESIDENCE ABU DHABI</h2>
       <p style="color:#fff;margin:8px 0 0;font-size:13px;opacity:0.8">${subject}</p>
     </div>
     <table style="width:100%;border-collapse:collapse;margin:20px 0">${rows}</table>
@@ -127,7 +127,7 @@ app.post("/api/blog", async (req, res) => {
   try {
     const rows = await sql`
       INSERT INTO blog_posts (slug, title, category, published_date, read_time, image_url, video_url, summary, content, status, source_url, source_name, author)
-      VALUES (${slug}, ${title}, ${category || "Market News"}, ${published_date || new Date().toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}, ${read_time || "5 min read"}, ${image_url || ""}, ${video_url || ""}, ${summary || ""}, ${content || ""}, ${status || "published"}, ${source_url || ""}, ${source_name || ""}, ${author || "AB Residences Editorial"})
+      VALUES (${slug}, ${title}, ${category || "Market News"}, ${published_date || new Date().toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}, ${read_time || "5 min read"}, ${image_url || ""}, ${video_url || ""}, ${summary || ""}, ${content || ""}, ${status || "published"}, ${source_url || ""}, ${source_name || ""}, ${author || "Residence Abu Dhabi Editorial"})
       RETURNING *`;
     res.json(rows[0]);
   } catch (e) { res.status(500).json({ error: String(e) }); }
@@ -137,7 +137,7 @@ app.put("/api/blog/:id", async (req, res) => {
   const { title, category, published_date, read_time, image_url, video_url, summary, content, status, source_url, source_name, author } = req.body;
   try {
     const rows = await sql`
-      UPDATE blog_posts SET title=${title}, category=${category}, published_date=${published_date}, read_time=${read_time || "5 min read"}, image_url=${image_url || ""}, video_url=${video_url || ""}, summary=${summary || ""}, content=${content || ""}, status=${status || "published"}, source_url=${source_url || ""}, source_name=${source_name || ""}, author=${author || "AB Residences Editorial"}
+      UPDATE blog_posts SET title=${title}, category=${category}, published_date=${published_date}, read_time=${read_time || "5 min read"}, image_url=${image_url || ""}, video_url=${video_url || ""}, summary=${summary || ""}, content=${content || ""}, status=${status || "published"}, source_url=${source_url || ""}, source_name=${source_name || ""}, author=${author || "Residence Abu Dhabi Editorial"}
       WHERE id=${req.params.id} RETURNING *`;
     res.json(rows[0]);
   } catch (e) { res.status(500).json({ error: String(e) }); }
@@ -166,7 +166,7 @@ app.post("/api/submit-lead", async (req, res) => {
   try {
     if (process.env.SMTP_USER && process.env.SMTP_PASS) {
       await mailer.sendMail({
-        from: `"AB Residences" <${process.env.SMTP_USER}>`,
+        from: `"Residence Abu Dhabi" <${process.env.SMTP_USER}>`,
         to: RECIPIENT_EMAIL,
         subject: `[Lead] ${subject}`,
         html: buildEmailHtml(subject, data),
@@ -237,7 +237,7 @@ Writing rules (strictly follow all):
 - The article should clearly promote Abu Dhabi real estate investment while feeling genuinely informative`;
 
   const prompts: Record<string, string> = {
-    news_rewrite: `You are writing a 1000+ word editorial article for AB Residences, a luxury real estate agency in Abu Dhabi.
+    news_rewrite: `You are writing a 1000+ word editorial article for Residence Abu Dhabi, a luxury real estate agency in Abu Dhabi.
 
 Rewrite and expand upon this recent news in Abu Dhabi real estate:
 Title: ${newsItems[0]?.title || "Abu Dhabi Real Estate Market Continues Strong Growth in 2026"}
@@ -248,31 +248,31 @@ Transform this into a rich editorial piece. Add context, what it means for inves
 ${rules}
 ${internalLinks}`,
 
-    investment_analysis: `You are writing a 1000+ word investment analysis article for AB Residences, a luxury real estate agency in Abu Dhabi.
+    investment_analysis: `You are writing a 1000+ word investment analysis article for Residence Abu Dhabi, a luxury real estate agency in Abu Dhabi.
 
 Write a compelling deep-dive on why Abu Dhabi real estate offers superior returns compared to other global markets. Cover: tax-free income, capital appreciation data (reference ADREC's AED 94 billion transaction volume in 2025), golden visa eligibility, specific projects like Jumeirah Residences on Al Maryah Island, and the 7-8% net rental yield profile.
 ${rules}
 ${internalLinks}`,
 
-    project_jumeirah: `You are writing a 1000+ word property spotlight article for AB Residences, a luxury real estate agency in Abu Dhabi.
+    project_jumeirah: `You are writing a 1000+ word property spotlight article for Residence Abu Dhabi, a luxury real estate agency in Abu Dhabi.
 
 Write a complete investor and buyer guide to Jumeirah Residences Abu Dhabi on Al Maryah Island. Cover: the Jumeirah brand heritage, what makes this development unique, the 1-3 bedroom layouts and penthouses, payment plan structure (50/50), amenities (infinity pool, concierge, fitness, wellness), the Al Maryah Island address advantage, pricing starting from AED 3,000,000, and rental yield potential. Be specific and detailed.
 ${rules}
 ${internalLinks}`,
 
-    project_almaryah: `You are writing a 1000+ word area guide for AB Residences, a luxury real estate agency in Abu Dhabi.
+    project_almaryah: `You are writing a 1000+ word area guide for Residence Abu Dhabi, a luxury real estate agency in Abu Dhabi.
 
 Write a complete guide to living and investing on Al Maryah Island, Abu Dhabi. Cover: its status as Abu Dhabi's financial district (ADGM), The Galleria Mall luxury retail, Cleveland Clinic Abu Dhabi, dining (Zuma, LPM, Roberto's), connectivity, the freehold zones, residential towers, rental yields, price per sqft compared to Dubai's DIFC, and who this area attracts. Reference data from ADREC and JLL.
 ${rules}
 ${internalLinks}`,
 
-    economy_lifestyle: `You are writing a 1000+ word lifestyle and economy article for AB Residences, a luxury real estate agency in Abu Dhabi.
+    economy_lifestyle: `You are writing a 1000+ word lifestyle and economy article for Residence Abu Dhabi, a luxury real estate agency in Abu Dhabi.
 
 Write about why Abu Dhabi is attracting high-net-worth individuals and families from Europe, Asia, and the broader Middle East. Cover: the UAE's political stability, zero income tax, golden visa program, world-class healthcare and education, F1 Grand Prix and culture (Louvre Abu Dhabi), cost of living vs London or Singapore, quality of life, and how this migration is fueling the real estate market. Use recent context: ${newsItems[1]?.content?.slice(0, 400) || ""}
 ${rules}
 ${internalLinks}`,
 
-    market_opportunity: `You are writing a 1000+ word market opportunity article for AB Residences, a luxury real estate agency in Abu Dhabi.
+    market_opportunity: `You are writing a 1000+ word market opportunity article for Residence Abu Dhabi, a luxury real estate agency in Abu Dhabi.
 
 Write a compelling piece about why right now (mid-2026) is a strategic entry point for property investment in Abu Dhabi. Cover: pre-handover pricing advantage, off-plan payment flexibility, projected capital appreciation, comparison with mature markets like London or Dubai, specific zones (Al Maryah Island, Saadiyat Island), and what our advisory team recommends. Reference real data: transaction volume up 48% YoY, residential prices up 17.8% in Q1 2026.
 ${rules}
@@ -329,7 +329,7 @@ async function generateArticle(forceType?: string): Promise<{ success: boolean; 
 
     await sql`
       INSERT INTO blog_posts (slug, title, category, published_date, read_time, image_url, summary, content, status, ai_generated, source_url, source_name, author)
-      VALUES (${slug}, ${title}, ${category}, ${dateStr}, ${readTime}, ${imageUrl}, ${summary}, ${content}, 'published', true, ${sourceUrl}, ${sourceName}, 'AB Residences Editorial')
+      VALUES (${slug}, ${title}, ${category}, ${dateStr}, ${readTime}, ${imageUrl}, ${summary}, ${content}, 'published', true, ${sourceUrl}, ${sourceName}, 'Residence Abu Dhabi Editorial')
     `;
 
     console.log(`Article published: ${title}`);
@@ -431,7 +431,7 @@ async function buildSitemap(): Promise<string> {
     { url: "/al-maryah-island-lifestyle-guide", priority: "0.9", changefreq: "monthly" },
     { url: "/jumeirah-residences-amenities", priority: "0.8", changefreq: "monthly" },
     { url: "/living-on-al-maryah-island-expat-guide", priority: "0.8", changefreq: "monthly" },
-    // AB Residences brand authority
+    // Residence Abu Dhabi brand authority
     { url: "/why-ab-residences", priority: "0.9", changefreq: "monthly" },
     { url: "/ab-residences-jumeirah-residences-specialist", priority: "0.9", changefreq: "monthly" },
     { url: "/how-ab-residences-works", priority: "0.8", changefreq: "monthly" },

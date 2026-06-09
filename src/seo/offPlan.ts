@@ -24,7 +24,7 @@ export const offPlanPages: SeoPageData[] = [
       },
       {
         heading: "Escrow Protection — Your Money is Legally Safeguarded",
-        body: "Abu Dhabi law requires all off-plan developers to deposit buyer payments into an ADHA-supervised escrow account. Funds in this account can only be released to the developer as construction milestones are independently verified by an ADHA-approved inspection engineer. If a developer defaults or the project is cancelled, funds are returned from the escrow account to buyers.\n\nThis system substantially reduces the risk of developer fraud or misappropriation that has affected off-plan markets in less regulated environments. When purchasing through AB Residences, we confirm escrow registration before any funds are transferred.",
+        body: "Abu Dhabi law requires all off-plan developers to deposit buyer payments into an ADHA-supervised escrow account. Funds in this account can only be released to the developer as construction milestones are independently verified by an ADHA-approved inspection engineer. If a developer defaults or the project is cancelled, funds are returned from the escrow account to buyers.\n\nThis system substantially reduces the risk of developer fraud or misappropriation that has affected off-plan markets in less regulated environments. When purchasing through Residence Abu Dhabi, we confirm escrow registration before any funds are transferred.",
       },
       {
         heading: "Capital Appreciation Potential",
@@ -32,7 +32,7 @@ export const offPlanPages: SeoPageData[] = [
       },
       {
         heading: "Can You Sell Before Completion?",
-        body: "Yes. Off-plan resale (sometimes called 'sub-sale' or 'secondary off-plan') is legal in Abu Dhabi provided you have paid a minimum percentage of the purchase price — typically 30–40% depending on the developer and ADHA rules. The buyer assumes the remaining payment obligations. Sellers in off-plan resales often price in their accrued appreciation, generating a profit before the property is even built.\n\nAB Residences facilitates off-plan resale transactions at Jumeirah Residences for existing buyers who wish to exit before handover.",
+        body: "Yes. Off-plan resale (sometimes called 'sub-sale' or 'secondary off-plan') is legal in Abu Dhabi provided you have paid a minimum percentage of the purchase price — typically 30–40% depending on the developer and ADHA rules. The buyer assumes the remaining payment obligations. Sellers in off-plan resales often price in their accrued appreciation, generating a profit before the property is even built.\n\nResidence Abu Dhabi facilitates off-plan resale transactions at Jumeirah Residences for existing buyers who wish to exit before handover.",
       },
       {
         heading: "Risks to Understand",
@@ -66,11 +66,11 @@ export const offPlanPages: SeoPageData[] = [
       },
       {
         question: "What payment plan is typical at Jumeirah Residences?",
-        answer: "Jumeirah Residences on Al Maryah Island is an Aldar Properties development. Aldar typically offers structured payment plans for off-plan units with a 10–20% deposit and milestone-based instalments. Specific plan details vary by phase and launch. Contact AB Residences for current payment plan availability on specific units.",
+        answer: "Jumeirah Residences on Al Maryah Island is an Aldar Properties development. Aldar typically offers structured payment plans for off-plan units with a 10–20% deposit and milestone-based instalments. Specific plan details vary by phase and launch. Contact Residence Abu Dhabi for current payment plan availability on specific units.",
       },
       {
         question: "How do I verify that a project is ADHA escrow-registered?",
-        answer: "Request the escrow account reference number from the developer. You can verify this with ADHA directly through their developer registration portal. AB Residences confirms escrow registration for every project we recommend before advising any client to proceed with payment.",
+        answer: "Request the escrow account reference number from the developer. You can verify this with ADHA directly through their developer registration portal. Residence Abu Dhabi confirms escrow registration for every project we recommend before advising any client to proceed with payment.",
       },
     ],
     relatedPages: [
@@ -97,7 +97,7 @@ export const offPlanPages: SeoPageData[] = [
       { label: "Max Payment Period", value: "5–7 Years" },
       { label: "Escrow Protection", value: "Mandated" },
     ],
-    intro: "Payment plans are the defining financial mechanism of Abu Dhabi's off-plan market. They allow buyers to acquire high-value property with a manageable upfront deposit and spread the remaining purchase price over construction milestones — and sometimes beyond handover. Understanding the specific plan you are agreeing to before signing is essential: the schedule dictates your cash flow requirements, your Golden Visa eligibility timeline, and your exit options if you choose to sell before completion. AB Residences provides buyers with a full payment schedule analysis and cash flow projection for every off-plan unit.",
+    intro: "Payment plans are the defining financial mechanism of Abu Dhabi's off-plan market. They allow buyers to acquire high-value property with a manageable upfront deposit and spread the remaining purchase price over construction milestones — and sometimes beyond handover. Understanding the specific plan you are agreeing to before signing is essential: the schedule dictates your cash flow requirements, your Golden Visa eligibility timeline, and your exit options if you choose to sell before completion. Residence Abu Dhabi provides buyers with a full payment schedule analysis and cash flow projection for every off-plan unit.",
     sections: [
       {
         heading: "Construction-Linked Payment Plans (The Standard)",
@@ -119,7 +119,7 @@ export const offPlanPages: SeoPageData[] = [
     faq: [
       {
         question: "Can I miss a payment instalment without losing my property?",
-        answer: "SPAs typically include a grace period (15–30 days) for missed payments and notification requirements before any default action. Sustained non-payment (usually 3+ months) can trigger contract termination, with the developer retaining between 30–40% of amounts paid as a cancellation penalty. If you anticipate cash flow issues, notify the developer and AB Residences promptly — rescheduling is often possible for isolated delays.",
+        answer: "SPAs typically include a grace period (15–30 days) for missed payments and notification requirements before any default action. Sustained non-payment (usually 3+ months) can trigger contract termination, with the developer retaining between 30–40% of amounts paid as a cancellation penalty. If you anticipate cash flow issues, notify the developer and Residence Abu Dhabi promptly — rescheduling is often possible for isolated delays.",
       },
       {
         question: "Does a post-handover plan affect Golden Visa eligibility?",
@@ -127,7 +127,7 @@ export const offPlanPages: SeoPageData[] = [
       },
       {
         question: "What happens to my payment plan if I want to resell the off-plan unit?",
-        answer: "The buyer of your off-plan unit assumes the remaining payment obligations. They typically pay you the accrued appreciation (market value at time of resale minus your paid-to-date amount) as their purchase price, then continue the original payment plan. The developer must approve the transfer and collects a transfer fee (typically 2% of the original sale price). AB Residences handles the transfer documentation for Jumeirah Residences resales.",
+        answer: "The buyer of your off-plan unit assumes the remaining payment obligations. They typically pay you the accrued appreciation (market value at time of resale minus your paid-to-date amount) as their purchase price, then continue the original payment plan. The developer must approve the transfer and collects a transfer fee (typically 2% of the original sale price). Residence Abu Dhabi handles the transfer documentation for Jumeirah Residences resales.",
       },
     ],
     relatedPages: [
@@ -142,7 +142,7 @@ export const offPlanPages: SeoPageData[] = [
     slug: "best-off-plan-projects-abu-dhabi-2026",
     cluster: "off-plan",
     title: "Best Off-Plan Projects in Abu Dhabi 2026 | Developer Launches & Investment Picks",
-    description: "The best off-plan property projects in Abu Dhabi for 2026. Ranked by location, developer track record, payment plan, and investment potential. Expert picks from AB Residences.",
+    description: "The best off-plan property projects in Abu Dhabi for 2026. Ranked by location, developer track record, payment plan, and investment potential. Expert picks from Residence Abu Dhabi.",
     keywords: "best off-plan projects Abu Dhabi 2026, top off-plan developments Abu Dhabi, new launches Abu Dhabi 2026, off-plan investment Abu Dhabi best",
     headline: "Best Off-Plan Projects in Abu Dhabi 2026",
     subheadline: "Expert-ranked off-plan developments across Al Maryah Island, Saadiyat, Yas, and Al Reem — evaluated by investment criteria, not marketing.",
@@ -183,7 +183,7 @@ export const offPlanPages: SeoPageData[] = [
       },
       {
         question: "Which Abu Dhabi developer has the best track record?",
-        answer: "Aldar Properties is the clear leader for delivery track record, financial strength (PJSC-listed, AED 26B+ in assets), and project quality. Bloom Holdings, Reportage Properties, and IMKAN are solid secondary-tier developers. For off-plan purchases above AED 5M, AB Residences recommends sticking with Tier 1 developers where delivery risk is lowest.",
+        answer: "Aldar Properties is the clear leader for delivery track record, financial strength (PJSC-listed, AED 26B+ in assets), and project quality. Bloom Holdings, Reportage Properties, and IMKAN are solid secondary-tier developers. For off-plan purchases above AED 5M, Residence Abu Dhabi recommends sticking with Tier 1 developers where delivery risk is lowest.",
       },
     ],
     relatedPages: [
@@ -199,7 +199,7 @@ export const offPlanPages: SeoPageData[] = [
     slug: "off-plan-vs-ready-property-abu-dhabi",
     cluster: "off-plan",
     title: "Off-Plan vs Ready Property Abu Dhabi | Which Should You Buy in 2026?",
-    description: "Off-plan vs ready property in Abu Dhabi — a complete comparison of price, risk, rental income, Golden Visa, and capital appreciation. Expert analysis from AB Residences.",
+    description: "Off-plan vs ready property in Abu Dhabi — a complete comparison of price, risk, rental income, Golden Visa, and capital appreciation. Expert analysis from Residence Abu Dhabi.",
     keywords: "off-plan vs ready property Abu Dhabi, should I buy off-plan or ready Abu Dhabi, off-plan risk Abu Dhabi, ready property benefits Abu Dhabi",
     headline: "Off-Plan vs Ready Property in Abu Dhabi",
     subheadline: "Which is the smarter buy in 2026? A clear-eyed comparison across price, yield, risk, and investment horizon.",
@@ -240,7 +240,7 @@ export const offPlanPages: SeoPageData[] = [
     faq: [
       {
         question: "Can I buy a ready property and then also buy off-plan?",
-        answer: "Yes. Many AB Residences clients hold a portfolio of both: one or two ready units generating current rental yield, and an off-plan position targeting future capital appreciation. This approach balances income now with growth upside. Jumeirah Residences on Al Maryah Island offers both ready and off-plan units depending on the phase.",
+        answer: "Yes. Many Residence Abu Dhabi clients hold a portfolio of both: one or two ready units generating current rental yield, and an off-plan position targeting future capital appreciation. This approach balances income now with growth upside. Jumeirah Residences on Al Maryah Island offers both ready and off-plan units depending on the phase.",
       },
       {
         question: "Is it harder to resell off-plan than ready property?",

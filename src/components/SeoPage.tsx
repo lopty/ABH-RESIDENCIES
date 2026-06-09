@@ -39,7 +39,7 @@ export default function SeoPage({ page, onCta }: SeoPageProps) {
             onClick={onCta}
             className="inline-flex items-center gap-2 bg-[#C9A96E] hover:bg-[#b8955c] text-white text-xs font-bold tracking-[0.2em] uppercase px-8 py-4 transition-colors cursor-pointer"
           >
-            Speak with a Specialist
+            Speak with an Advisor
             <ArrowRight size={14} />
           </button>
         </div>
@@ -162,13 +162,13 @@ export default function SeoPage({ page, onCta }: SeoPageProps) {
         {/* Bottom CTA */}
         <div className="pt-12 border-t border-gray-100 text-center">
           <p className="text-xs text-[#C9A96E] tracking-widest uppercase font-semibold mb-3">
-            AB Residences · Abu Dhabi
+            Residence Abu Dhabi · Abu Dhabi
           </p>
           <h3 className="font-serif text-2xl sm:text-3xl text-[#1C2B4A] font-semibold mb-3">
             Ready to Take the Next Step?
           </h3>
           <p className="text-gray-500 text-sm mb-8 max-w-lg mx-auto">
-            Speak with a specialist in Abu Dhabi luxury property. Private briefings available by appointment.
+            Speak with a Residence Abu Dhabi advisor. Private briefings available by appointment.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <button

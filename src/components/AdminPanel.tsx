@@ -54,7 +54,7 @@ const emptyBlog: Omit<DBBlogPost, "id" | "slug" | "ai_generated"> = {
   published_date: new Date().toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" }),
   read_time: "5 min read", image_url: "", video_url: "", summary: "",
   content: "", status: "published", source_url: "", source_name: "",
-  author: "AB Residences Editorial",
+  author: "Residence Abu Dhabi Editorial",
 };
 
 const ADMIN_PASSWORD = "rad2026admin";
@@ -207,7 +207,7 @@ export default function AdminPanel({ onNavigate }: AdminPanelProps) {
       <div className="bg-[#1C2B4A] text-white px-6 py-4 flex items-center justify-between">
         <div className="flex items-center space-x-4">
           <span className="font-serif text-lg font-bold tracking-widest">ADMIN PANEL</span>
-          <span className="text-[#C9A96E] text-xs font-semibold uppercase tracking-widest">AB Residences</span>
+          <span className="text-[#C9A96E] text-xs font-semibold uppercase tracking-widest">Residence Abu Dhabi</span>
         </div>
         <div className="flex items-center space-x-4">
           <button onClick={() => onNavigate("/")} className="text-xs text-gray-300 hover:text-white uppercase tracking-widest cursor-pointer">View Site</button>

@@ -95,7 +95,7 @@ export const areaGuidePages: SeoPageData[] = [
     faq: [
       {
         question: "Is short-term rental (Airbnb) legal on Yas Island?",
-        answer: "Yes. Abu Dhabi permits short-term rental under the ADHA's licensed holiday home programme. Property owners must register with ADHA and obtain a holiday home permit. This process is well-established for Yas Island owners who target the F1 and events market. AB Residences can connect buyers with licensed holiday home management companies.",
+        answer: "Yes. Abu Dhabi permits short-term rental under the ADHA's licensed holiday home programme. Property owners must register with ADHA and obtain a holiday home permit. This process is well-established for Yas Island owners who target the F1 and events market. Residence Abu Dhabi can connect buyers with licensed holiday home management companies.",
       },
       {
         question: "What is the best time to buy on Yas Island?",
@@ -151,7 +151,7 @@ export const areaGuidePages: SeoPageData[] = [
       },
       {
         question: "Are there new off-plan projects on Al Reem Island?",
-        answer: "Yes, Al Reem continues to receive new off-plan launches, particularly on the northern sections of the island where development land remains. Aldar, Bloom, and several other developers have active or planned launches. Check with AB Residences for current availability as new phases sell out quickly.",
+        answer: "Yes, Al Reem continues to receive new off-plan launches, particularly on the northern sections of the island where development land remains. Aldar, Bloom, and several other developers have active or planned launches. Check with Residence Abu Dhabi for current availability as new phases sell out quickly.",
       },
     ],
     relatedPages: [
@@ -219,7 +219,7 @@ export const areaGuidePages: SeoPageData[] = [
       },
       {
         question: "Is there a difference between freehold and leasehold in Abu Dhabi?",
-        answer: "Yes. Freehold ownership is absolute — you own the property and the land it sits on, permanently, with no expiry. Leasehold (also called musataha or 99-year lease in some contexts) gives you the right to occupy and use the property for a fixed term, after which title reverts to the landowner. For foreigners, only the designated freehold zones provide absolute ownership. AB Residences only advises on designated freehold zone properties.",
+        answer: "Yes. Freehold ownership is absolute — you own the property and the land it sits on, permanently, with no expiry. Leasehold (also called musataha or 99-year lease in some contexts) gives you the right to occupy and use the property for a fixed term, after which title reverts to the landowner. For foreigners, only the designated freehold zones provide absolute ownership. Residence Abu Dhabi only advises on designated freehold zone properties.",
       },
     ],
     relatedPages: [
@@ -235,7 +235,7 @@ export const areaGuidePages: SeoPageData[] = [
     slug: "best-investment-areas-abu-dhabi-2026",
     cluster: "area-guides",
     title: "Best Areas to Invest in Abu Dhabi 2026 | Ranked by Yield, Appreciation & Demand",
-    description: "The best areas to invest in Abu Dhabi in 2026 — ranked by rental yield, capital appreciation, tenant demand, and supply dynamics. Expert picks from AB Residences.",
+    description: "The best areas to invest in Abu Dhabi in 2026 — ranked by rental yield, capital appreciation, tenant demand, and supply dynamics. Expert picks from Residence Abu Dhabi.",
     keywords: "best areas to invest Abu Dhabi 2026, top investment zones Abu Dhabi, highest yield Abu Dhabi property, where to buy property Abu Dhabi",
     headline: "Best Areas to Invest in Abu Dhabi 2026",
     subheadline: "Ranked by what actually drives returns — not marketing. Yield, appreciation, supply, and tenant quality analysed for each zone.",

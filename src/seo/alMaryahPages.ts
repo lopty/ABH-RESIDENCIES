@@ -62,8 +62,8 @@ export const alMaryahPages: SeoPageData[] = [
       { label: "Al Maryah vs Al Reem Island", slug: "al-maryah-island-vs-al-reem-island" },
       { label: "Rental Yields Abu Dhabi 2026", slug: "rental-yields-abu-dhabi-2026" },
     ],
-    ctaHeadline: "Speak With an Al Maryah Island Specialist",
-    ctaBody: "AB Residences is headquartered on Al Maryah Island. Our advisors know every building, every floor, and every corner unit. Book a complimentary consultation.",
+    ctaHeadline: "Speak With an Al Maryah Island Advisor",
+    ctaBody: "Residence Abu Dhabi is headquartered on Al Maryah Island. Our advisors know every building, every floor, and every corner unit. Book a complimentary consultation.",
     ctaLabel: "Book Al Maryah Consultation",
   },
 
@@ -117,7 +117,7 @@ export const alMaryahPages: SeoPageData[] = [
       { label: "Abu Dhabi Property Market 2026", slug: "abu-dhabi-property-market-2026" },
     ],
     ctaHeadline: "Request a Custom Investment Analysis",
-    ctaBody: "Our Al Maryah Island specialists build unit-level return models covering yield, appreciation, mortgage sensitivity, and exit strategies for each budget range.",
+    ctaBody: "Our Al Maryah Island advisors build unit-level return models covering yield, appreciation, mortgage sensitivity, and exit strategies for each budget range.",
     ctaLabel: "Get Investment Analysis",
   },
 
@@ -146,7 +146,7 @@ export const alMaryahPages: SeoPageData[] = [
     faq: [
       { question: "What is the cheapest apartment available on Al Maryah Island?", answer: "Secondary market 1-bedroom units in non-branded towers start from approximately AED 1,800,000. These are ready properties with existing or immediate rental potential." },
       { question: "Which development is best to buy on Al Maryah Island?", answer: "Jumeirah Residences (Aldar × Jumeirah Group) is the clear recommendation for investors — the only branded residence available for private purchase, offering the highest yield-brand premium combination and the strongest capital appreciation trajectory." },
-      { question: "How do I buy an apartment on Al Maryah Island as a foreigner?", answer: "Al Maryah Island is a designated freehold zone — foreign nationals can buy directly with no sponsor required. The process is: engage an authorised agent (AB Residences), select unit, sign SPA with the developer, register Oqood with the Abu Dhabi Department of Municipalities. AB Residences manages the full process." }
+      { question: "How do I buy an apartment on Al Maryah Island as a foreigner?", answer: "Al Maryah Island is a designated freehold zone — foreign nationals can buy directly with no sponsor required. The process is: engage an authorised agent (Residence Abu Dhabi), select unit, sign SPA with the developer, register Oqood with the Abu Dhabi Department of Municipalities. Residence Abu Dhabi manages the full process." }
     ],
     relatedLinks: [
       { label: "Al Maryah Island Area Guide", slug: "al-maryah-island-real-estate" },
@@ -293,7 +293,7 @@ export const alMaryahPages: SeoPageData[] = [
       { heading: "Location Comparison", body: "Jumeirah Residences sits on Al Maryah Island — Abu Dhabi's financial free zone (ADGM), with 1,300+ corporate institutions as the immediate neighbour. This creates structural corporate tenant demand that drives rental yields and vacancy resilience. Waldorf Astoria Residences Abu Dhabi sits near the Saadiyat area of Abu Dhabi — closer to the cultural district (Louvre, Guggenheim), beachfront lifestyle, and NYUAD. The location is lifestyle-premium but more tourism-dependent for tenant demand. The difference: Al Maryah Island tenants are institutional and year-round; Waldorf Astoria tenants include a higher proportion of leisure-oriented residents and short-term visitors." },
       { heading: "Brand Positioning", body: "Both Jumeirah Group and Waldorf Astoria (Hilton Luxury) are genuine ultra-luxury brands. The key differentiation is geographic — the Burj Al Arab (the Jumeirah Group's most recognised property) is the nearest luxury hotel landmark to the UAE, giving Jumeirah exceptional brand recognition across the GCC, Indian subcontinent, and East African markets. Waldorf Astoria's global brand strength is strongest in North American and European markets. For buyers from the Gulf, India, and Asia, the Jumeirah brand typically carries stronger recognition and premium association." },
       { heading: "Yield Comparison", body: "Jumeirah Residences Al Maryah Island: net yield 7–8.5%, driven by ADGM corporate tenants at AED 270,000–550,000+ annual rents. Waldorf Astoria Residences: net yield 5–6.5%, reflecting lower corporate tenancy density and higher leisure/lifestyle demand sensitivity. The yield gap of approximately 1.5–2 percentage points consistently favours Al Maryah Island across market conditions — this is structural, not cyclical, because it reflects the quality of demand, not merely pricing." },
-      { heading: "Investment Verdict", body: "For investors whose primary objective is rental income and corporate tenant quality, Jumeirah Residences Al Maryah Island is the stronger choice — consistently higher net yields, lower vacancy, and more predictable income driven by ADGM institutional demand. For investors primarily seeking a lifestyle-branded asset with leisure use and cultural district appreciation, Waldorf Astoria Residences offers a compelling alternative with Saadiyat's long-term upside. AB Residences can provide unit-level comparison data — specific floor, view, and price comparison — on request." }
+      { heading: "Investment Verdict", body: "For investors whose primary objective is rental income and corporate tenant quality, Jumeirah Residences Al Maryah Island is the stronger choice — consistently higher net yields, lower vacancy, and more predictable income driven by ADGM institutional demand. For investors primarily seeking a lifestyle-branded asset with leisure use and cultural district appreciation, Waldorf Astoria Residences offers a compelling alternative with Saadiyat's long-term upside. Residence Abu Dhabi can provide unit-level comparison data — specific floor, view, and price comparison — on request." }
     ],
     faq: [
       { question: "Which has a higher yield — Jumeirah Residences or Waldorf Astoria Residences Abu Dhabi?", answer: "Jumeirah Residences Al Maryah Island: 7–8.5% net yield. Waldorf Astoria Residences Abu Dhabi: 5–6.5% net yield. The Al Maryah corporate demand advantage drives the yield differential." },
@@ -306,7 +306,7 @@ export const alMaryahPages: SeoPageData[] = [
       { label: "Al Maryah vs Saadiyat Island", slug: "al-maryah-island-vs-saadiyat-island" },
     ],
     ctaHeadline: "Get a Side-by-Side Comparison",
-    ctaBody: "Our specialists produce detailed unit-level comparisons of Abu Dhabi branded residence projects on request — same bedroom count, same floor level, yield vs yield.",
+    ctaBody: "Our advisors produce detailed unit-level comparisons of Abu Dhabi branded residence projects on request — same bedroom count, same floor level, yield vs yield.",
     ctaLabel: "Request Branded Residence Comparison",
   },
 
@@ -368,7 +368,7 @@ export const alMaryahPages: SeoPageData[] = [
     ],
     faq: [
       { question: "Which is better investment — Four Seasons Residences or Jumeirah Residences Abu Dhabi?", answer: "For income investors: Jumeirah Residences Al Maryah Island (7–8.5% net yield vs 5–6% for Four Seasons Saadiyat). For lifestyle-first buyers wanting beach proximity and Four Seasons brand: the Saadiyat positioning offers long-term cultural district appreciation." },
-      { question: "Is the Four Seasons in Abu Dhabi available to buy?", answer: "Four Seasons Private Residences at Saadiyat Island Abu Dhabi has had limited private sale availability. Jumeirah Residences Al Maryah Island (Aldar × Jumeirah Group) is currently available for off-plan purchase through authorised agents including AB Residences." }
+      { question: "Is the Four Seasons in Abu Dhabi available to buy?", answer: "Four Seasons Private Residences at Saadiyat Island Abu Dhabi has had limited private sale availability. Jumeirah Residences Al Maryah Island (Aldar × Jumeirah Group) is currently available for off-plan purchase through authorised agents including Residence Abu Dhabi." }
     ],
     relatedLinks: [
       { label: "Jumeirah Residences Full Guide", slug: "jumeirah-residences-al-maryah-island" },

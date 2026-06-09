@@ -57,7 +57,7 @@ export const communityPages: SeoPageData[] = [
       { label: "Abu Dhabi Healthcare for Expats", slug: "abu-dhabi-healthcare-expats" },
     ],
     ctaHeadline: "Arrange a Personal Island Tour",
-    ctaBody: "AB Residences is headquartered on Al Maryah Island. Our advisors conduct personal island walkthroughs for serious buyers — Galleria, Cleveland Clinic, building common areas, and your shortlisted unit.",
+    ctaBody: "Residence Abu Dhabi is headquartered on Al Maryah Island. Our advisors conduct personal island walkthroughs for serious buyers — Galleria, Cleveland Clinic, building common areas, and your shortlisted unit.",
     ctaLabel: "Book an Island Tour",
   },
 
@@ -115,7 +115,7 @@ export const communityPages: SeoPageData[] = [
       { label: "Service Charges Branded Residences", slug: "service-charges-branded-residences-abu-dhabi" },
     ],
     ctaHeadline: "See the Building in Person",
-    ctaBody: "AB Residences arranges site visits to Al Maryah Island — including viewing show apartments, the amenity areas, and the surrounding lifestyle infrastructure.",
+    ctaBody: "Residence Abu Dhabi arranges site visits to Al Maryah Island — including viewing show apartments, the amenity areas, and the surrounding lifestyle infrastructure.",
     ctaLabel: "Arrange a Site Visit",
   },
 
@@ -150,7 +150,7 @@ export const communityPages: SeoPageData[] = [
       },
       {
         heading: "Relocating to Al Maryah Island: The Practical Steps",
-        body: "For expats relocating to Abu Dhabi for an ADGM role: your employer will typically coordinate housing through their HR department and may have preferred buildings or housing allowance parameters. AB Residences works directly with corporate HR teams at ADGM institutions to match their staff with appropriate units — from short-term furnished rentals during the arrival period to long-term tenancy in Jumeirah Residences or equivalent premium buildings. If you are arriving independently (as an investor-resident or Golden Visa holder), AB Residences can arrange: short-term furnished accommodation during your setup period, introduction to relevant service providers (domestic help, car insurance, banking), and guidance on ADEC (Abu Dhabi Education Council) school registration for children."
+        body: "For expats relocating to Abu Dhabi for an ADGM role: your employer will typically coordinate housing through their HR department and may have preferred buildings or housing allowance parameters. Residence Abu Dhabi works directly with corporate HR teams at ADGM institutions to match their staff with appropriate units — from short-term furnished rentals during the arrival period to long-term tenancy in Jumeirah Residences or equivalent premium buildings. If you are arriving independently (as an investor-resident or Golden Visa holder), Residence Abu Dhabi can arrange: short-term furnished accommodation during your setup period, introduction to relevant service providers (domestic help, car insurance, banking), and guidance on ADEC (Abu Dhabi Education Council) school registration for children."
       }
     ],
     faq: [
@@ -165,7 +165,7 @@ export const communityPages: SeoPageData[] = [
       { label: "Schools Near Al Maryah Island", slug: "schools-near-al-maryah-island" },
     ],
     ctaHeadline: "Relocating to Al Maryah Island?",
-    ctaBody: "AB Residences handles the full relocation process for ADGM-based professionals and investor-residents — from short-term furnished accommodation to permanent residence setup.",
+    ctaBody: "Residence Abu Dhabi handles the full relocation process for ADGM-based professionals and investor-residents — from short-term furnished accommodation to permanent residence setup.",
     ctaLabel: "Start Your Relocation",
   },
 ];
