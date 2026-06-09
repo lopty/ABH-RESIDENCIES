@@ -77,7 +77,7 @@ export const jumeirahDeepPages: SeoPageData[] = [
       { label: "Jumeirah Yield", value: "7–8.5%" },
       { label: "Al Reem Yield", value: "6.5–8%" },
     ],
-    intro: "The decision between Jumeirah Residences on Al Maryah Island and a comparable quality unit on Al Reem Island is one of the most common comparisons AB Residencies works through with clients. Both are outstanding investments. Both offer strong yields. Both are in established freehold zones with active resale markets. The differences lie in price point, prestige positioning, tenant type, and the nature of the appreciation driver. This comparison works through each dimension to help you make the right choice for your specific situation.",
+    intro: "The decision between Jumeirah Residences on Al Maryah Island and a comparable quality unit on Al Reem Island is one of the most common comparisons AB Residences works through with clients. Both are outstanding investments. Both offer strong yields. Both are in established freehold zones with active resale markets. The differences lie in price point, prestige positioning, tenant type, and the nature of the appreciation driver. This comparison works through each dimension to help you make the right choice for your specific situation.",
     sections: [
       {
         heading: "Price Comparison — The Entry Gap",
@@ -103,7 +103,7 @@ export const jumeirahDeepPages: SeoPageData[] = [
     faq: [
       {
         question: "Can I buy one Al Reem unit now and upgrade to Jumeirah Residences later?",
-        answer: "Yes, this is a sensible strategy for buyers who want to establish Abu Dhabi market exposure at a lower entry point and upgrade as capital accumulates through appreciation and rental income. Al Reem Island's resale liquidity makes it easy to exit when ready. AB Residencies has helped several clients execute this two-stage strategy successfully over 3–5 year horizons.",
+        answer: "Yes, this is a sensible strategy for buyers who want to establish Abu Dhabi market exposure at a lower entry point and upgrade as capital accumulates through appreciation and rental income. Al Reem Island's resale liquidity makes it easy to exit when ready. AB Residences has helped several clients execute this two-stage strategy successfully over 3–5 year horizons.",
       },
     ],
     relatedPages: [
@@ -155,7 +155,7 @@ export const jumeirahDeepPages: SeoPageData[] = [
       },
       {
         question: "Has Aldar ever had a project fail or be cancelled?",
-        answer: "There is no documented case of Aldar cancelling a registered off-plan project or defaulting on buyer payments. This track record distinguishes Aldar from many developers in less regulated markets and some UAE peers. It is one of the core reasons AB Residencies recommends Aldar-developed projects as the primary investment recommendation for off-plan buyers in Abu Dhabi.",
+        answer: "There is no documented case of Aldar cancelling a registered off-plan project or defaulting on buyer payments. This track record distinguishes Aldar from many developers in less regulated markets and some UAE peers. It is one of the core reasons AB Residences recommends Aldar-developed projects as the primary investment recommendation for off-plan buyers in Abu Dhabi.",
       },
     ],
     relatedPages: [

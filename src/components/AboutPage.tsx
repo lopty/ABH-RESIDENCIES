@@ -78,7 +78,7 @@ export default function AboutPage({ onShowConsultation }: AboutPageProps) {
             <div className="h-[480px] lg:h-full min-h-[480px] overflow-hidden bg-[#1A1A1A]">
               <img
                 src="/pranav-portrait.png"
-                alt="Pranav Chaudhary — Founder, AB Residencies"
+                alt="Pranav Chaudhary — Founder, AB Residences"
                 className="w-full h-full object-cover object-top opacity-90 mix-blend-luminosity"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#1A1A1A]/80 via-transparent to-transparent" />
@@ -97,7 +97,7 @@ export default function AboutPage({ onShowConsultation }: AboutPageProps) {
               <p>
                 Pranav grew up in the UAE and spent a decade in New York City working in client-facing roles at two of the world's most respected institutions —{" "}
                 <span className="font-semibold text-[#1A1A1A]">PricewaterhouseCoopers</span> and{" "}
-                <span className="font-semibold text-[#1A1A1A]">JP Morgan Chase</span>. Those years sharpened an instinct for precision, discretion, and deep client understanding that defines every engagement at AB Residencies.
+                <span className="font-semibold text-[#1A1A1A]">JP Morgan Chase</span>. Those years sharpened an instinct for precision, discretion, and deep client understanding that defines every engagement at AB Residences.
               </p>
               <p>
                 Returning to the UAE with a global lens, Pranav channels his passion into Abu Dhabi's most compelling luxury developments — with particular expertise in{" "}

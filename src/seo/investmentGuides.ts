@@ -5,7 +5,7 @@ export const investmentGuidePages: SeoPageData[] = [
     slug: "abu-dhabi-property-market-2026",
     cluster: "investment",
     title: "Abu Dhabi Property Market 2026 | Prices, Trends & Investment Outlook",
-    description: "Abu Dhabi property market analysis 2026. Price trends, transaction volumes, rental yields, best-performing zones, and expert investment outlook from AB Residencies.",
+    description: "Abu Dhabi property market analysis 2026. Price trends, transaction volumes, rental yields, best-performing zones, and expert investment outlook from AB Residences.",
     keywords: "Abu Dhabi property market 2026, Abu Dhabi real estate trends, Abu Dhabi property prices 2026, Abu Dhabi housing market outlook",
     headline: "Abu Dhabi Property Market 2026",
     subheadline: "Where the market stands, what is driving it, and where the opportunity lies for buyers entering in 2026.",
@@ -118,7 +118,7 @@ export const investmentGuidePages: SeoPageData[] = [
     faq: [
       {
         question: "Are Abu Dhabi property prices negotiable?",
-        answer: "In the secondary (resale) market, negotiation is standard — sellers typically expect 2–8% negotiation from asking price depending on how motivated they are. Off-plan prices from major developers are generally fixed at launch but become negotiable as projects mature and units remain unsold. AB Residencies negotiates on behalf of buyers in all transactions.",
+        answer: "In the secondary (resale) market, negotiation is standard — sellers typically expect 2–8% negotiation from asking price depending on how motivated they are. Off-plan prices from major developers are generally fixed at launch but become negotiable as projects mature and units remain unsold. AB Residences negotiates on behalf of buyers in all transactions.",
       },
       {
         question: "What additional costs should I budget beyond the purchase price?",
@@ -285,7 +285,7 @@ export const investmentGuidePages: SeoPageData[] = [
       },
       {
         heading: "Developer and Construction Risk",
-        body: "For off-plan property, the primary investment risk is developer default or construction failure. In Abu Dhabi, this risk is mitigated by:\n\n• ADHA escrow accounts: All off-plan buyer funds are held in regulated escrow, only released to developers as verified construction milestones are reached.\n• Major developer financial strength: Aldar Properties (the dominant Abu Dhabi developer) is PJSC-listed, government-backed, and carries AED 26B+ in assets. Financial failure of Aldar would be structurally extraordinary.\n• Smaller developer risk: For developers outside the Aldar/Bloom/Reportage tier, due diligence on financial strength is warranted before committing to off-plan. AB Residencies only recommends escrow-registered projects from established developers.",
+        body: "For off-plan property, the primary investment risk is developer default or construction failure. In Abu Dhabi, this risk is mitigated by:\n\n• ADHA escrow accounts: All off-plan buyer funds are held in regulated escrow, only released to developers as verified construction milestones are reached.\n• Major developer financial strength: Aldar Properties (the dominant Abu Dhabi developer) is PJSC-listed, government-backed, and carries AED 26B+ in assets. Financial failure of Aldar would be structurally extraordinary.\n• Smaller developer risk: For developers outside the Aldar/Bloom/Reportage tier, due diligence on financial strength is warranted before committing to off-plan. AB Residences only recommends escrow-registered projects from established developers.",
       },
       {
         heading: "Market Cycle Risk",

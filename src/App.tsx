@@ -229,7 +229,7 @@ export default function App() {
       "@context": "https://schema.org",
       "@type": "RealEstateAgent",
       "@id": `${SITE}/#organization`,
-      "name": "AB Residencies",
+      "name": "AB Residences",
       "alternateName": "Residence Abu Dhabi",
       "url": SITE,
       "logo": `${SITE}/favicon.svg`,
@@ -252,14 +252,14 @@ export default function App() {
 
     // ── Per-route SEO data ─────────────────────────────────────────────────
     if (path === "/") {
-      title = "AB Residencies | Luxury Real Estate Abu Dhabi – Jumeirah Residences Al Maryah Island";
+      title = "AB Residences | Luxury Real Estate Abu Dhabi – Jumeirah Residences Al Maryah Island";
       description = "Abu Dhabi's premier luxury real estate specialist. Jumeirah Residences Al Maryah Island — branded waterfront residences, Golden Visa–eligible, off-plan investment. Book a private briefing.";
       keywords = "luxury real estate Abu Dhabi, Jumeirah Residences Al Maryah Island, off-plan property Abu Dhabi 2026, Golden Visa property UAE, branded residences Abu Dhabi, buy apartment Abu Dhabi";
       schemas = [{
         "@context": "https://schema.org",
         "@graph": [
           orgSchema,
-          { "@type": "WebSite", "@id": `${SITE}/#website`, "url": SITE, "name": "AB Residencies",
+          { "@type": "WebSite", "@id": `${SITE}/#website`, "url": SITE, "name": "AB Residences",
             "potentialAction": { "@type": "SearchAction", "target": `${SITE}/buy?q={search_term_string}`, "query-input": "required name=search_term_string" }
           }
         ]
@@ -267,7 +267,7 @@ export default function App() {
 
     } else if (path === "/properties/jumeirah-residences") {
       title = "Jumeirah Residences Al Maryah Island Abu Dhabi | Prices, Floors & Availability";
-      description = "Jumeirah Residences Al Maryah Island — ultra-luxury branded apartments & penthouses from AED 3M. Five-star hotel amenities, waterfront views, Golden Visa–eligible. Enquire with AB Residencies.";
+      description = "Jumeirah Residences Al Maryah Island — ultra-luxury branded apartments & penthouses from AED 3M. Five-star hotel amenities, waterfront views, Golden Visa–eligible. Enquire with AB Residences.";
       keywords = "Jumeirah Residences Al Maryah Island, Jumeirah Residences Abu Dhabi price, Jumeirah Residences apartments for sale, buy Jumeirah Residences Abu Dhabi, Jumeirah branded residences UAE, Jumeirah Residences floor plan";
       schemas = [
         orgSchema,
@@ -285,7 +285,7 @@ export default function App() {
 
     } else if (path === "/properties/al-maryah-island") {
       title = "Al Maryah Island Abu Dhabi | Property Guide, Investment & Lifestyle";
-      description = "Al Maryah Island — Abu Dhabi's premier financial and residential district. Luxury apartments, 7–8.5% rental yields, direct waterfront access. Expert guide by AB Residencies.";
+      description = "Al Maryah Island — Abu Dhabi's premier financial and residential district. Luxury apartments, 7–8.5% rental yields, direct waterfront access. Expert guide by AB Residences.";
       keywords = "Al Maryah Island property for sale, buy apartment Al Maryah Island Abu Dhabi, Al Maryah Island real estate, Al Maryah Island rental yield, luxury properties Al Maryah Island, invest Al Maryah Island";
       schemas = [
         orgSchema,
@@ -298,14 +298,14 @@ export default function App() {
       ];
 
     } else if (path === "/buy") {
-      title = "Buy Luxury Property Abu Dhabi | Off-Plan & Ready Apartments | AB Residencies";
-      description = "Browse luxury apartments and penthouses for sale in Abu Dhabi. Off-plan and ready properties across Al Maryah Island & Jumeirah Residences. Speak with an AB Residencies specialist.";
+      title = "Buy Luxury Property Abu Dhabi | Off-Plan & Ready Apartments | AB Residences";
+      description = "Browse luxury apartments and penthouses for sale in Abu Dhabi. Off-plan and ready properties across Al Maryah Island & Jumeirah Residences. Speak with an AB Residences specialist.";
       keywords = "buy luxury property Abu Dhabi, off-plan apartments Abu Dhabi 2026, ready properties Abu Dhabi, apartments for sale Abu Dhabi, luxury penthouses Abu Dhabi, best off-plan investment Abu Dhabi";
       schemas = [orgSchema, breadcrumb([{ name: "Buy Property", url: `${SITE}/buy` }])];
 
     } else if (path === "/faq") {
-      title = "Abu Dhabi Real Estate FAQ | Foreigners, Golden Visa & Off-Plan | AB Residencies";
-      description = "Answers to buying property in Abu Dhabi as a foreigner: freehold zones, Golden Visa eligibility, off-plan payment plans, fees, and Jumeirah Residences. Expert Q&A by AB Residencies.";
+      title = "Abu Dhabi Real Estate FAQ | Foreigners, Golden Visa & Off-Plan | AB Residences";
+      description = "Answers to buying property in Abu Dhabi as a foreigner: freehold zones, Golden Visa eligibility, off-plan payment plans, fees, and Jumeirah Residences. Expert Q&A by AB Residences.";
       keywords = "can foreigners buy property Abu Dhabi, Golden Visa UAE property AED 2 million, off-plan property Abu Dhabi explained, Abu Dhabi property buying fees 2026, freehold investment zones Abu Dhabi, Jumeirah Residences FAQ";
       schemas = [
         orgSchema,
@@ -329,9 +329,9 @@ export default function App() {
       ];
 
     } else if (path === "/about") {
-      title = "About AB Residencies | Abu Dhabi Luxury Real Estate Advisors";
-      description = "Meet the AB Residencies team — Abu Dhabi's specialist luxury property advisors. Experts in Jumeirah Residences, Al Maryah Island, and Golden Visa property investment.";
-      keywords = "AB Residencies about, luxury property advisor Abu Dhabi, Al Maryah Island specialist, Jumeirah Residences agent Abu Dhabi, real estate advisory UAE";
+      title = "About AB Residences | Abu Dhabi Luxury Real Estate Advisors";
+      description = "Meet the AB Residences team — Abu Dhabi's specialist luxury property advisors. Experts in Jumeirah Residences, Al Maryah Island, and Golden Visa property investment.";
+      keywords = "AB Residences about, luxury property advisor Abu Dhabi, Al Maryah Island specialist, Jumeirah Residences agent Abu Dhabi, real estate advisory UAE";
       schemas = [
         orgSchema,
         { "@context": "https://schema.org", "@type": "Person",
@@ -343,19 +343,19 @@ export default function App() {
       ];
 
     } else if (path === "/contact") {
-      title = "Contact AB Residencies | Book a Private Briefing in Abu Dhabi";
-      description = "Get in touch with AB Residencies on Al Maryah Island, Abu Dhabi. Book a private property briefing, arrange a viewing, or receive Golden Visa consultation. WhatsApp, call, or email.";
-      keywords = "contact real estate agent Abu Dhabi, book property viewing Abu Dhabi, Golden Visa consultation Abu Dhabi, AB Residencies contact, WhatsApp real estate Abu Dhabi";
+      title = "Contact AB Residences | Book a Private Briefing in Abu Dhabi";
+      description = "Get in touch with AB Residences on Al Maryah Island, Abu Dhabi. Book a private property briefing, arrange a viewing, or receive Golden Visa consultation. WhatsApp, call, or email.";
+      keywords = "contact real estate agent Abu Dhabi, book property viewing Abu Dhabi, Golden Visa consultation Abu Dhabi, AB Residences contact, WhatsApp real estate Abu Dhabi";
       schemas = [orgSchema, breadcrumb([{ name: "Contact", url: `${SITE}/contact` }])];
 
     } else if (path === "/blog") {
       title = "Abu Dhabi Real Estate Blog | Market Insights & Investment Guides";
-      description = "Expert insights on the Abu Dhabi property market. In-depth investment guides, area profiles, off-plan project news, and market analysis updated daily by AB Residencies.";
+      description = "Expert insights on the Abu Dhabi property market. In-depth investment guides, area profiles, off-plan project news, and market analysis updated daily by AB Residences.";
       keywords = "Abu Dhabi real estate market 2026, off-plan investment Abu Dhabi, Al Maryah Island property news, Jumeirah Residences update, Abu Dhabi property prices 2026, real estate blog Abu Dhabi";
       schemas = [
         orgSchema,
         { "@context": "https://schema.org", "@type": "Blog",
-          "name": "AB Residencies Real Estate Blog", "url": `${SITE}/blog`,
+          "name": "AB Residences Real Estate Blog", "url": `${SITE}/blog`,
           "publisher": { "@id": `${SITE}/#organization` },
           "description": "Daily AI-powered market insights and investment guides for Abu Dhabi real estate."
         },
@@ -363,19 +363,19 @@ export default function App() {
       ];
 
     } else if (path === "/golden-visa-property-abu-dhabi") {
-      title = "Golden Visa Property Abu Dhabi | AED 2M+ Eligible Homes | AB Residencies";
-      description = "Secure a UAE Golden Visa through Abu Dhabi property. AED 2M minimum, 10-year residency, freehold zones. Jumeirah Residences Al Maryah Island qualifies. Expert guidance by AB Residencies.";
+      title = "Golden Visa Property Abu Dhabi | AED 2M+ Eligible Homes | AB Residences";
+      description = "Secure a UAE Golden Visa through Abu Dhabi property. AED 2M minimum, 10-year residency, freehold zones. Jumeirah Residences Al Maryah Island qualifies. Expert guidance by AB Residences.";
       keywords = "Golden Visa property Abu Dhabi, UAE Golden Visa real estate, buy property Golden Visa UAE 2026, AED 2 million Golden Visa, 10 year residency UAE property, Golden Visa Abu Dhabi eligibility, how to get Golden Visa UAE";
       schemas = [orgSchema, breadcrumb([{ name: "Golden Visa Property", url: `${SITE}/golden-visa-property-abu-dhabi` }])];
 
     } else if (path === "/off-plan-properties-abu-dhabi") {
-      title = "Off-Plan Properties Abu Dhabi 2026 | New Launches & Payment Plans | AB Residencies";
+      title = "Off-Plan Properties Abu Dhabi 2026 | New Launches & Payment Plans | AB Residences";
       description = "Invest in Abu Dhabi's top off-plan developments. Flexible payment plans, below-market launch prices, and high ROI. Specialists in Al Maryah Island and Jumeirah Residences off-plan.";
       keywords = "off-plan property Abu Dhabi 2026, new off-plan launches Abu Dhabi, buy off-plan apartment Abu Dhabi, best off-plan projects Abu Dhabi, off-plan payment plan UAE, off-plan investment ROI Abu Dhabi";
       schemas = [orgSchema, breadcrumb([{ name: "Off-Plan Properties", url: `${SITE}/off-plan-properties-abu-dhabi` }])];
 
     } else if (path === "/branded-residences-abu-dhabi") {
-      title = "Branded Residences Abu Dhabi | Jumeirah Five-Star Managed Homes | AB Residencies";
+      title = "Branded Residences Abu Dhabi | Jumeirah Five-Star Managed Homes | AB Residences";
       description = "Discover Abu Dhabi's finest branded residences — hotel-managed luxury apartments with five-star amenities. Jumeirah Residences Al Maryah Island is the flagship branded project in the UAE capital.";
       keywords = "branded residences Abu Dhabi, luxury branded apartments UAE, hotel managed residences Abu Dhabi, Jumeirah branded residences, five-star residences Abu Dhabi, best branded properties UAE 2026";
       schemas = [orgSchema, breadcrumb([{ name: "Branded Residences", url: `${SITE}/branded-residences-abu-dhabi` }])];
@@ -629,7 +629,7 @@ export default function App() {
             
             <button onClick={() => navigate("/")} className="flex flex-col text-left focus:outline-none cursor-pointer">
               <span className="font-serif text-base sm:text-xl font-bold tracking-[0.08em] text-[#1A1A1A] hover:opacity-90 whitespace-nowrap">
-                AB RESIDENCIES
+                AB RESIDENCES
               </span>
               <span className="text-[7px] font-sans tracking-[0.2em] text-[#C9A96E] uppercase font-bold leading-none mt-0.5 whitespace-nowrap">
                 Luxury Real Estate
@@ -1290,7 +1290,7 @@ export default function App() {
               { heading: "What is the UAE Golden Visa?", body: "The UAE Golden Visa is a long-term residency programme granting 10-year renewable residency to property investors who purchase real estate valued at AED 2,000,000 or above in a designated freehold investment zone. The visa covers the buyer, spouse, and dependent children — with no requirement for a local sponsor or employer." },
               { heading: "Does Abu Dhabi Property Qualify?", body: "Yes. Freehold properties purchased in Abu Dhabi's designated investment zones — including Al Maryah Island, Saadiyat Island, Yas Island, Al Reem Island, and Ramhan Island — fully qualify. The property must be registered in your name with the Abu Dhabi Department of Municipalities and Transport and be either fully paid or mortgaged above the AED 2M threshold." },
               { heading: "Jumeirah Residences: A Golden Visa Asset", body: "Jumeirah Residences Al Maryah Island is a flagship Golden Visa–eligible development. Starting prices from AED 3,000,000 exceed the threshold with comfortable margin. As a branded residence managed by Jumeirah Group, it combines investment credibility with five-star lifestyle — making it one of the most sought-after Golden Visa properties in Abu Dhabi in 2026." },
-              { heading: "The Application Process", body: "1. Purchase and register the property (Oqood or Title Deed). 2. Submit documents via the ICA (Federal Authority for Identity and Citizenship) or through an authorised typing centre. 3. Receive visa in 2–4 weeks. AB Residencies can guide you through every step from property selection to visa application." },
+              { heading: "The Application Process", body: "1. Purchase and register the property (Oqood or Title Deed). 2. Submit documents via the ICA (Federal Authority for Identity and Citizenship) or through an authorised typing centre. 3. Receive visa in 2–4 weeks. AB Residences can guide you through every step from property selection to visa application." },
               { heading: "Why Abu Dhabi Over Dubai for Golden Visa?", body: "Abu Dhabi offers superior capital preservation, lower price-per-sqft in comparable luxury assets, stronger corporate tenancy (ADGM, Mubadala, government entities), and a quieter, higher-quality lifestyle. Al Maryah Island specifically delivers 7–8.5% net rental yields — among the highest in the UAE for corporate-grade tenancies." }
             ]}
           />
@@ -1305,9 +1305,9 @@ export default function App() {
             onCta={() => navigate("/buy")}
             sections={[
               { heading: "Why Buy Off-Plan in Abu Dhabi?", body: "Off-plan purchases allow you to secure a property at today's price with a small upfront deposit — typically 10–20% — and pay the remainder across construction milestones. This means you benefit from capital appreciation throughout the build period while your capital outlay remains low. Abu Dhabi's off-plan market has delivered 15–30% price growth from launch to handover on premium projects in recent years." },
-              { heading: "How Off-Plan Payment Plans Work", body: "A typical Abu Dhabi off-plan plan looks like: 10% on booking, 10% on SPA signing, then 40–60% spread across quarterly construction milestones, with 10–20% due on handover. Some developers offer post-handover payment plans extending 1–3 years beyond completion. AB Residencies only recommends projects with escrow-protected payments registered with the Abu Dhabi Department of Municipalities and Transport." },
+              { heading: "How Off-Plan Payment Plans Work", body: "A typical Abu Dhabi off-plan plan looks like: 10% on booking, 10% on SPA signing, then 40–60% spread across quarterly construction milestones, with 10–20% due on handover. Some developers offer post-handover payment plans extending 1–3 years beyond completion. AB Residences only recommends projects with escrow-protected payments registered with the Abu Dhabi Department of Municipalities and Transport." },
               { heading: "Jumeirah Residences: The Premier Off-Plan Opportunity", body: "Jumeirah Residences Al Maryah Island is the most anticipated off-plan branded residence in Abu Dhabi in 2026. Developed by Aldar Properties (the UAE's largest listed developer) in partnership with Jumeirah Group, it offers institutional-grade build quality, a guaranteed hospitality management brand on handover, and a location in the heart of Abu Dhabi's financial and luxury district." },
-              { heading: "Off-Plan vs Ready Properties in Abu Dhabi", body: "Off-plan: lower entry price, higher upside potential, newer specification, flexible payment terms. Ready: immediate rental income, Golden Visa on day one, no construction risk. AB Residencies advises a mixed strategy — off-plan for capital growth, ready for income generation — with Al Maryah Island assets anchoring both positions." },
+              { heading: "Off-Plan vs Ready Properties in Abu Dhabi", body: "Off-plan: lower entry price, higher upside potential, newer specification, flexible payment terms. Ready: immediate rental income, Golden Visa on day one, no construction risk. AB Residences advises a mixed strategy — off-plan for capital growth, ready for income generation — with Al Maryah Island assets anchoring both positions." },
               { heading: "Risks and How We Protect You", body: "All projects we recommend are by ADGM or Abu Dhabi government-backed developers with escrow accounts. We review SPA terms, construction timelines, and developer track record before making any recommendation. Our advisory is buyer-only: we do not act for developers, eliminating conflicts of interest." }
             ]}
           />

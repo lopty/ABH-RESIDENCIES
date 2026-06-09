@@ -162,7 +162,7 @@ export default function SeoPage({ page, onCta }: SeoPageProps) {
         {/* Bottom CTA */}
         <div className="pt-12 border-t border-gray-100 text-center">
           <p className="text-xs text-[#C9A96E] tracking-widest uppercase font-semibold mb-3">
-            AB Residencies · Abu Dhabi
+            AB Residences · Abu Dhabi
           </p>
           <h3 className="font-serif text-2xl sm:text-3xl text-[#1C2B4A] font-semibold mb-3">
             Ready to Take the Next Step?
