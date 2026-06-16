@@ -102,7 +102,7 @@ export default function BlogPage({ onShowConsultation, onNavigate, initialSlug }
             videoUrl: p.video_url || "",
             sourceUrl: p.source_url || "",
             sourceName: p.source_name || "",
-            author: p.author || "Residence Abu Dhabi Editorial",
+            author: p.author || "AB Residences Editorial",
             aiGenerated: p.ai_generated || false,
           }));
         }
@@ -121,7 +121,7 @@ export default function BlogPage({ onShowConsultation, onNavigate, initialSlug }
           summary: p.summary,
           content: p.content.join("\n\n"),
           isFromDB: false,
-          author: "Residence Abu Dhabi Editorial",
+          author: "AB Residences Editorial",
         }));
 
       const merged = [...dbPosts, ...staticNorm];
@@ -149,14 +149,14 @@ export default function BlogPage({ onShowConsultation, onNavigate, initialSlug }
     setActivePost(post);
     window.history.pushState({}, "", `/blog/${post.slug}`);
     window.scrollTo({ top: 0, behavior: "instant" });
-    document.title = `${post.title} | Residence Abu Dhabi`;
+    document.title = `${post.title} | AB Residences`;
   };
 
   const handleBack = () => {
     setActivePost(null);
     window.history.pushState({}, "", "/blog");
     window.scrollTo({ top: 0, behavior: "instant" });
-    document.title = "Abu Dhabi Real Estate Blog | Residence Abu Dhabi";
+    document.title = "Abu Dhabi Real Estate Blog | AB Residences";
   };
 
   const categories = ["All", "Market News", "Investment Guides", "Area Profiles", "Off Plan"];
@@ -195,7 +195,7 @@ export default function BlogPage({ onShowConsultation, onNavigate, initialSlug }
             <span>•</span>
             <span className="flex items-center space-x-1"><Clock size={12} className="text-[#C9A96E]" /><span>{activePost.readTime}</span></span>
             <span>•</span>
-            <span className="flex items-center space-x-1"><User size={12} className="text-[#C9A96E]" /><span>{activePost.author || "Residence Abu Dhabi Editorial"}</span></span>
+            <span className="flex items-center space-x-1"><User size={12} className="text-[#C9A96E]" /><span>{activePost.author || "AB Residences Editorial"}</span></span>
           </div>
 
           {activePost.image && (
@@ -313,7 +313,7 @@ export default function BlogPage({ onShowConsultation, onNavigate, initialSlug }
                     <img src={post.image} alt={post.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
                   ) : (
                     <div className="w-full h-full bg-[#1C2B4A] flex items-center justify-center">
-                      <span className="text-[#C9A96E] font-serif text-lg opacity-50">Residence Abu Dhabi</span>
+                      <span className="text-[#C9A96E] font-serif text-lg opacity-50">AB Residences</span>
                     </div>
                   )}
                   <div className="absolute top-4 left-4 flex items-center gap-1.5">
