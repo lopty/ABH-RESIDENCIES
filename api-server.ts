@@ -347,7 +347,12 @@ app.post("/api/generate-article", async (req, res) => {
 });
 
 async function buildSitemap(): Promise<string> {
-  const posts = await sql`SELECT slug, created_at FROM blog_posts WHERE status='published' ORDER BY created_at DESC`;
+  let posts: { slug: string; created_at: string | null }[] = [];
+  try {
+    posts = await sql`SELECT slug, created_at FROM blog_posts WHERE status='published' ORDER BY created_at DESC`;
+  } catch (_) {
+    // DB unavailable — serve static pages only, never return a 500
+  }
   const staticPages = [
     { url: "/", priority: "1.0", changefreq: "weekly" },
     { url: "/buy", priority: "0.9", changefreq: "weekly" },
