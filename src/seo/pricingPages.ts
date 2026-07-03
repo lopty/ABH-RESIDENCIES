@@ -40,7 +40,7 @@ export const pricingPages: SeoPageData[] = [
       },
       {
         heading: "How to Lock in Current Pricing",
-        body: "Off-plan pricing at Jumeirah Residences is not guaranteed to stay at current levels — as construction milestones are reached and secondary market activity increases, prices typically increase. To secure a unit at today's pricing: contact Residence Abudhabi to confirm current availability and pricing (our data is refreshed daily from Aldar's allocation system); reserve your preferred unit with a deposit of AED 50,000–100,000 while SPA documentation is prepared; sign the SPA within 30 days to lock in the agreed price. From that point, your price is contractually fixed regardless of any subsequent market movements."
+        body: "Off-plan pricing at Jumeirah Residences is not guaranteed to stay at current levels — as construction milestones are reached and secondary market activity increases, prices typically increase. To secure a unit at today's pricing: contact Residence Abu Dhabi to confirm current availability and pricing (our data is refreshed daily from Aldar's allocation system); reserve your preferred unit with a deposit of AED 50,000–100,000 while SPA documentation is prepared; sign the SPA within 30 days to lock in the agreed price. From that point, your price is contractually fixed regardless of any subsequent market movements."
       }
     ],
     faq: [
@@ -166,7 +166,7 @@ export const pricingPages: SeoPageData[] = [
       { label: "Best Branded Residences Abu Dhabi 2026", slug: "best-branded-residences-abu-dhabi-2026" },
     ],
     ctaHeadline: "Build Your Branded Residence ROI Model",
-    ctaBody: "Residence Abudhabi produces unit-specific ROI projections across all Abu Dhabi branded residence projects — covering yield, appreciation, service charges, and exit scenarios.",
+    ctaBody: "Residence Abu Dhabi produces unit-specific ROI projections across all Abu Dhabi branded residence projects — covering yield, appreciation, service charges, and exit scenarios.",
     ctaLabel: "Request ROI Analysis",
   },
 
@@ -222,13 +222,13 @@ export const pricingPages: SeoPageData[] = [
   {
     slug: "jumeirah-residences-al-maryah-island-review",
     title: "Jumeirah Residences Al Maryah Island Review 2026 | Honest Buyer Assessment",
-    description: "An honest, independent review of Jumeirah Residences Al Maryah Island Abu Dhabi — what is excellent, what to watch for, who it is ideal for, and Residence Abudhabi' buyer assessment.",
+    description: "An honest, independent review of Jumeirah Residences Al Maryah Island Abu Dhabi — what is excellent, what to watch for, who it is ideal for, and Residence Abu Dhabi' buyer assessment.",
     keywords: "Jumeirah Residences Al Maryah Island review, Jumeirah Residences Abu Dhabi review, is Jumeirah Residences a good investment, Aldar Jumeirah Residences honest review, Jumeirah Residences pros cons",
     headline: "Jumeirah Residences Al Maryah Island — Honest Review",
     subheadline: "What is outstanding, what to consider carefully, and who this project is genuinely right for.",
     category: "Project Review · Jumeirah Residences",
     heroImage: "/jumeirah-hero.png",
-    intro: "Every project has a developer with incentives to present only the positive. Residence Abudhabi works for buyers — not for Aldar — which means our assessment of Jumeirah Residences Al Maryah Island can be honest about both its exceptional qualities and the factors buyers should consider carefully before committing. This review is written for serious buyers doing final-stage due diligence, not for those looking for marketing reinforcement.\n\nConclusion upfront: Jumeirah Residences Al Maryah Island is the strongest luxury investment product currently available in Abu Dhabi — but it is right for a specific buyer profile. This review explains exactly who that is.",
+    intro: "Every project has a developer with incentives to present only the positive. Residence Abu Dhabi works for buyers — not for Aldar — which means our assessment of Jumeirah Residences Al Maryah Island can be honest about both its exceptional qualities and the factors buyers should consider carefully before committing. This review is written for serious buyers doing final-stage due diligence, not for those looking for marketing reinforcement.\n\nConclusion upfront: Jumeirah Residences Al Maryah Island is the strongest luxury investment product currently available in Abu Dhabi — but it is right for a specific buyer profile. This review explains exactly who that is.",
     stats: [
       { value: "Outstanding", label: "Location Quality" },
       { value: "Excellent", label: "Developer Track Record" },
@@ -253,19 +253,19 @@ export const pricingPages: SeoPageData[] = [
         body: "Jumeirah Residences may not be the right fit for: (1) Buyers with budgets below AED 3,000,000 — the entry price is non-negotiable. (2) Buyers seeking immediate rental income — as an off-plan project, there is a construction wait before the building generates rent. For immediate income, a ready secondary market unit on Al Maryah Island may be better. (3) Buyers who want active short-term letting (holiday rentals, Airbnb) — the Jumeirah management model is designed for long-term corporate tenancies, not short-term holiday management. (4) Buyers who want a villa with garden or private outdoor space — Jumeirah Residences is an apartment building, even with excellent terraces. Villa buyers should look at Saadiyat Island."
       },
       {
-        heading: "Residence Abudhabi' Verdict",
+        heading: "Residence Abu Dhabi' Verdict",
         body: "In our advisory practice, we have assessed every premium residential project currently available in Abu Dhabi. Jumeirah Residences Al Maryah Island is the most complete investment proposition in the luxury residential segment: it combines an irreplaceable location, the UAE's most credible developer, a globally recognised management brand, institutional-grade tenant demand, and genuinely competitive pricing relative to global comparables. The service charges are real, the off-plan wait is real, and the entry price is premium — but all three are justified by the fundamentals. We recommend it without hesitation to buyers who fit the investor profile described above."
       }
     ],
     faq: [
       { question: "Is Jumeirah Residences Al Maryah Island a good investment?", answer: "For income investors seeking 7–8.5% net yield with corporate tenancy, or for Golden Visa buyers wanting a premium asset, yes — it is our top recommendation in Abu Dhabi's luxury residential market." },
       { question: "What are the risks of buying Jumeirah Residences?", answer: "Primary risks: (1) Off-plan construction wait (2–3 years to handover). (2) Service charges at AED 25–35/sqft/year must be factored into net yield. (3) If ADGM's institutional growth stalls, tenant demand could soften. All three risks are manageable and well-understood by serious investors." },
-      { question: "Does Residence Abudhabi work for Aldar or for buyers?", answer: "Residence Abudhabi is a buyer-side advisory — we are compensated by the developer without any cost to buyers, but our advice is given in the buyer's interest. We recommend Jumeirah Residences because the fundamentals are strong, not because Aldar pays us." }
+      { question: "Does Residence Abu Dhabi work for Aldar or for buyers?", answer: "Residence Abu Dhabi is a buyer-side advisory — we are compensated by the developer without any cost to buyers, but our advice is given in the buyer's interest. We recommend Jumeirah Residences because the fundamentals are strong, not because Aldar pays us." }
     ],
     relatedLinks: [
       { label: "Full Project Guide", slug: "jumeirah-residences-al-maryah-island" },
       { label: "Investment Return Analysis", slug: "jumeirah-residences-al-maryah-island-investment-return" },
-      { label: "Why Residence Abudhabi", slug: "why-ab-residences" },
+      { label: "Why Residence Abu Dhabi", slug: "why-ab-residences" },
       { label: "Branded Residences ROI Abu Dhabi", slug: "branded-residences-roi-abu-dhabi" },
     ],
     ctaHeadline: "Book a Due Diligence Consultation",
@@ -303,7 +303,7 @@ export const pricingPages: SeoPageData[] = [
       { label: "Off-Plan Investment Guide Abu Dhabi", slug: "off-plan-investment-guide-abu-dhabi" },
     ],
     ctaHeadline: "Let Us Help You Decide",
-    ctaBody: "Residence Abudhabi advisors discuss your exact situation — budget, timeline, income needs, and hold horizon — and recommend the specific unit type and purchase route that fits best.",
+    ctaBody: "Residence Abu Dhabi advisors discuss your exact situation — budget, timeline, income needs, and hold horizon — and recommend the specific unit type and purchase route that fits best.",
     ctaLabel: "Book a Decision Consultation",
   },
 ];
