@@ -5,7 +5,7 @@ export const goldenVisaPages: SeoPageData[] = [
     slug: "golden-visa-abu-dhabi",
     cluster: "golden-visa",
     title: "UAE Golden Visa Abu Dhabi 2026 | 10-Year Residency Through Property",
-    description: "Complete guide to the UAE Golden Visa for Abu Dhabi property buyers. AED 2M minimum, 10-year renewable residency for you and your family. Expert guidance from AB Residences.",
+    description: "Complete guide to the UAE Golden Visa for Abu Dhabi property buyers. AED 2M minimum, 10-year renewable residency for you and your family. Expert guidance from Residence Abudhabi.",
     keywords: "UAE Golden Visa Abu Dhabi, Golden Visa property requirement, 10 year residency UAE, Golden Visa 2026, Abu Dhabi residency visa property",
     headline: "UAE Golden Visa in Abu Dhabi",
     subheadline: "Secure a 10-year UAE residency through property investment from AED 2 million. Full guide for 2026 buyers.",
@@ -28,7 +28,7 @@ export const goldenVisaPages: SeoPageData[] = [
       },
       {
         heading: "Documents Required for the Golden Visa Application",
-        body: "You will need: a valid passport (minimum 6 months validity), the title deed or ADHA registration certificate showing the property value, a completed Golden Visa application through the ICP (Federal Authority for Identity, Citizenship, Customs and Port Security) portal, an Emirates ID application, a medical fitness certificate from an approved UAE health centre, and health insurance valid in the UAE. AB Residences coordinates the title deed stage and can recommend authorised application centres. Most buyers are through the process within 4–6 weeks from title deed issuance.",
+        body: "You will need: a valid passport (minimum 6 months validity), the title deed or ADHA registration certificate showing the property value, a completed Golden Visa application through the ICP (Federal Authority for Identity, Citizenship, Customs and Port Security) portal, an Emirates ID application, a medical fitness certificate from an approved UAE health centre, and health insurance valid in the UAE. Residence Abudhabi coordinates the title deed stage and can recommend authorised application centres. Most buyers are through the process within 4–6 weeks from title deed issuance.",
       },
       {
         heading: "Golden Visa Benefits Beyond Residency",
@@ -75,7 +75,7 @@ export const goldenVisaPages: SeoPageData[] = [
       },
       {
         question: "How long does the Golden Visa process take?",
-        answer: "Typically 4–6 weeks from the date the title deed is issued. The process involves: title deed registration at ADHA, ICP online application, medical test, biometrics, and Emirates ID collection. AB Residences guides buyers through the title deed stage, after which a PRO or typing centre completes the visa processing.",
+        answer: "Typically 4–6 weeks from the date the title deed is issued. The process involves: title deed registration at ADHA, ICP online application, medical test, biometrics, and Emirates ID collection. Residence Abudhabi guides buyers through the title deed stage, after which a PRO or typing centre completes the visa processing.",
       },
     ],
     relatedPages: [
@@ -92,7 +92,7 @@ export const goldenVisaPages: SeoPageData[] = [
     slug: "golden-visa-requirements-uae",
     cluster: "golden-visa",
     title: "UAE Golden Visa Requirements 2026 | Property, Investment & Eligibility",
-    description: "Full list of UAE Golden Visa requirements for 2026. Property AED 2M+, documents, eligible zones, mortgage rules, and timeline. AB Residences Abu Dhabi.",
+    description: "Full list of UAE Golden Visa requirements for 2026. Property AED 2M+, documents, eligible zones, mortgage rules, and timeline. Residence Abudhabi Abu Dhabi.",
     keywords: "UAE Golden Visa requirements 2026, Golden Visa eligibility UAE, Golden Visa documents needed, property Golden Visa threshold, AED 2 million Golden Visa",
     headline: "UAE Golden Visa Requirements 2026",
     subheadline: "Everything you need to qualify — property value, documents, eligible zones, and step-by-step process.",
@@ -123,7 +123,7 @@ export const goldenVisaPages: SeoPageData[] = [
       },
       {
         heading: "Common Rejection Reasons and How to Avoid Them",
-        body: "The most common causes of Golden Visa rejection or delay are: a title deed that does not clearly show AED 2M value (ensure ADHA registration reflects the full price), an expired passport at time of application, inadequate health insurance (must be comprehensive UAE-valid coverage), and off-plan property submitted before ADHA confirms official registration. Buyers of Jumeirah Residences through AB Residences receive full title deed guidance to ensure the documentation is in order before application submission.",
+        body: "The most common causes of Golden Visa rejection or delay are: a title deed that does not clearly show AED 2M value (ensure ADHA registration reflects the full price), an expired passport at time of application, inadequate health insurance (must be comprehensive UAE-valid coverage), and off-plan property submitted before ADHA confirms official registration. Buyers of Jumeirah Residences through Residence Abudhabi receive full title deed guidance to ensure the documentation is in order before application submission.",
       },
     ],
     faq: [
@@ -300,7 +300,7 @@ export const goldenVisaPages: SeoPageData[] = [
       { label: "Property Minimum", value: "AED 2M" },
       { label: "Visa Term", value: "10 Years" },
     ],
-    intro: "Getting the UAE Golden Visa through property in Abu Dhabi is a well-defined process that thousands of international buyers complete each year. The journey involves selecting and purchasing qualifying freehold property, registering with the Abu Dhabi Housing Authority (ADHA), and submitting your Golden Visa application through the ICP portal. From property signing to holding the visa, most buyers complete the process in 8–14 weeks for ready properties, or at construction handover for off-plan units. AB Residences guides buyers through every stage — from identifying the right unit at Jumeirah Residences through to the ADHA title deed.",
+    intro: "Getting the UAE Golden Visa through property in Abu Dhabi is a well-defined process that thousands of international buyers complete each year. The journey involves selecting and purchasing qualifying freehold property, registering with the Abu Dhabi Housing Authority (ADHA), and submitting your Golden Visa application through the ICP portal. From property signing to holding the visa, most buyers complete the process in 8–14 weeks for ready properties, or at construction handover for off-plan units. Residence Abudhabi guides buyers through every stage — from identifying the right unit at Jumeirah Residences through to the ADHA title deed.",
     sections: [
       {
         heading: "Step 1: Identify a Qualifying Property",
@@ -308,7 +308,7 @@ export const goldenVisaPages: SeoPageData[] = [
       },
       {
         heading: "Step 2: Sign the Sales and Purchase Agreement (SPA)",
-        body: "The SPA is your binding contract with the developer or seller. It specifies the unit, price, payment schedule, and completion date. For off-plan purchases, the SPA also details the construction timeline and handover conditions. Review the SPA carefully — AB Residences recommends engaging a UAE-qualified property lawyer for off-plan purchases over AED 5M.",
+        body: "The SPA is your binding contract with the developer or seller. It specifies the unit, price, payment schedule, and completion date. For off-plan purchases, the SPA also details the construction timeline and handover conditions. Review the SPA carefully — Residence Abudhabi recommends engaging a UAE-qualified property lawyer for off-plan purchases over AED 5M.",
       },
       {
         heading: "Step 3: Pay the Abu Dhabi Land Department Transfer Fee",
@@ -334,11 +334,11 @@ export const goldenVisaPages: SeoPageData[] = [
     faq: [
       {
         question: "Can I do the process remotely or do I need to be in Abu Dhabi?",
-        answer: "The medical test and biometrics must be completed in the UAE in person. Most buyers visit Abu Dhabi to sign the SPA and again for the medical/biometric stages. Some steps — such as the ICP online application — can be prepared remotely. AB Residences can coordinate much of the documentation preparation before your visit to minimise time required on the ground.",
+        answer: "The medical test and biometrics must be completed in the UAE in person. Most buyers visit Abu Dhabi to sign the SPA and again for the medical/biometric stages. Some steps — such as the ICP online application — can be prepared remotely. Residence Abudhabi can coordinate much of the documentation preparation before your visit to minimise time required on the ground.",
       },
       {
         question: "What is the earliest I can apply for the Golden Visa after buying off-plan?",
-        answer: "For off-plan property, the earliest application point is when ADHA issues the title deed at construction handover. You cannot apply during the construction phase based on the SPA alone, though some developers notify ADHA during early registration phases. Confirm with your developer and AB Residences whether early registration is available for your specific project.",
+        answer: "For off-plan property, the earliest application point is when ADHA issues the title deed at construction handover. You cannot apply during the construction phase based on the SPA alone, though some developers notify ADHA during early registration phases. Confirm with your developer and Residence Abudhabi whether early registration is available for your specific project.",
       },
     ],
     relatedPages: [

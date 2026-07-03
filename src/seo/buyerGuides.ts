@@ -5,7 +5,7 @@ export const buyerGuidePages: SeoPageData[] = [
     slug: "how-to-buy-property-in-abu-dhabi",
     cluster: "buyer-guides",
     title: "How to Buy Property in Abu Dhabi 2026 | Complete Step-by-Step Guide",
-    description: "Complete guide to buying property in Abu Dhabi as a foreigner. Step-by-step process, documents, fees, timeline, and expert tips from AB Residences.",
+    description: "Complete guide to buying property in Abu Dhabi as a foreigner. Step-by-step process, documents, fees, timeline, and expert tips from Residence Abudhabi.",
     keywords: "how to buy property in Abu Dhabi, buying property Abu Dhabi guide, property purchase process Abu Dhabi, steps to buy property UAE Abu Dhabi",
     headline: "How to Buy Property in Abu Dhabi",
     subheadline: "The complete step-by-step process — from first enquiry to title deed in hand. What to expect, what it costs, and how long it takes.",
@@ -20,11 +20,11 @@ export const buyerGuidePages: SeoPageData[] = [
     sections: [
       {
         heading: "Step 1: Define Your Search Criteria and Budget",
-        body: "Before contacting agents or visiting properties, establish your criteria clearly:\n\n• Budget: Total budget including purchase price + 4–6% transaction costs\n• Property type: Apartment, villa, penthouse, off-plan or ready\n• Zone: Al Maryah Island, Saadiyat, Yas, Al Reem, or others\n• Purpose: Primary residence, rental investment, or vacation/pieds-à-terre\n• Timeline: Do you need rental income now, or can you wait 2–4 years for off-plan handover?\n• Golden Visa: If residency is a goal, ensure your budget reaches AED 2M in a qualifying zone\n\nAB Residences offers a private briefing — a structured 60-minute session where we map your criteria to the best current options and present a shortlist based on actual availability and investment data.",
+        body: "Before contacting agents or visiting properties, establish your criteria clearly:\n\n• Budget: Total budget including purchase price + 4–6% transaction costs\n• Property type: Apartment, villa, penthouse, off-plan or ready\n• Zone: Al Maryah Island, Saadiyat, Yas, Al Reem, or others\n• Purpose: Primary residence, rental investment, or vacation/pieds-à-terre\n• Timeline: Do you need rental income now, or can you wait 2–4 years for off-plan handover?\n• Golden Visa: If residency is a goal, ensure your budget reaches AED 2M in a qualifying zone\n\nResidence Abudhabi offers a private briefing — a structured 60-minute session where we map your criteria to the best current options and present a shortlist based on actual availability and investment data.",
       },
       {
         heading: "Step 2: Property Selection and Offer",
-        body: "Once you have a shortlist, visit or virtually tour the properties. For ready properties, a physical inspection is strongly recommended — check the fit-out quality, view, floor position, building maintenance standards, and service charge history. For off-plan, review the showroom model, floor plans, and developer's completed project portfolio.\n\nWhen you identify your preferred unit, your agent (AB Residences) makes an offer to the seller or developer. For secondary market (resale) transactions, the seller typically responds within 24–48 hours with acceptance, counter-offer, or rejection. For primary (developer) sales, price is usually fixed but ancillary terms (furniture packages, payment plan flexibility) may be negotiable.",
+        body: "Once you have a shortlist, visit or virtually tour the properties. For ready properties, a physical inspection is strongly recommended — check the fit-out quality, view, floor position, building maintenance standards, and service charge history. For off-plan, review the showroom model, floor plans, and developer's completed project portfolio.\n\nWhen you identify your preferred unit, your agent (Residence Abudhabi) makes an offer to the seller or developer. For secondary market (resale) transactions, the seller typically responds within 24–48 hours with acceptance, counter-offer, or rejection. For primary (developer) sales, price is usually fixed but ancillary terms (furniture packages, payment plan flexibility) may be negotiable.",
       },
       {
         heading: "Step 3: Memorandum of Understanding (MOU) — Secondary Market",
@@ -40,17 +40,17 @@ export const buyerGuidePages: SeoPageData[] = [
       },
       {
         heading: "Step 6: Post-Purchase — Registration and Tenancy",
-        body: "Once the title deed is in your name:\n\n• Apply for UAE Golden Visa if eligible (AED 2M+ paid property)\n• Register with the building management company for access, service charges, and parking\n• Open a UAE bank account (easier as a property owner)\n• If renting: list through AB Residences or a licensed broker, sign a Tawtheeq lease contract, and deposit with ADHA\n\nMost properties in prime zones are rented within 30–60 days of listing at appropriate market rent.",
+        body: "Once the title deed is in your name:\n\n• Apply for UAE Golden Visa if eligible (AED 2M+ paid property)\n• Register with the building management company for access, service charges, and parking\n• Open a UAE bank account (easier as a property owner)\n• If renting: list through Residence Abudhabi or a licensed broker, sign a Tawtheeq lease contract, and deposit with ADHA\n\nMost properties in prime zones are rented within 30–60 days of listing at appropriate market rent.",
       },
     ],
     faq: [
       {
         question: "Do I need to be physically in Abu Dhabi to buy property?",
-        answer: "For secondary market purchases, the ADHA transfer appointment requires either personal attendance or a valid Power of Attorney. Many international buyers sign a POA in their home country (notarised and apostilled), allowing AB Residences to handle the transfer without the buyer needing to fly in. For off-plan purchases, the SPA can be signed remotely in most cases, with the title deed transfer occurring at handover.",
+        answer: "For secondary market purchases, the ADHA transfer appointment requires either personal attendance or a valid Power of Attorney. Many international buyers sign a POA in their home country (notarised and apostilled), allowing Residence Abudhabi to handle the transfer without the buyer needing to fly in. For off-plan purchases, the SPA can be signed remotely in most cases, with the title deed transfer occurring at handover.",
       },
       {
         question: "Can I get a mortgage in Abu Dhabi as a foreigner?",
-        answer: "Yes. Most major UAE banks (ADCB, FAB, Emirates NBD, HSBC UAE, Mashreq) offer residential mortgages to non-UAE national buyers on freehold property. Typical terms: up to 25-year loan, maximum 75% loan-to-value for foreigners (25% minimum deposit), and income verification. Some banks require UAE employment; others accept international income with documentation. AB Residences works with mortgage brokers to connect buyers with the most suitable lenders.",
+        answer: "Yes. Most major UAE banks (ADCB, FAB, Emirates NBD, HSBC UAE, Mashreq) offer residential mortgages to non-UAE national buyers on freehold property. Typical terms: up to 25-year loan, maximum 75% loan-to-value for foreigners (25% minimum deposit), and income verification. Some banks require UAE employment; others accept international income with documentation. Residence Abudhabi works with mortgage brokers to connect buyers with the most suitable lenders.",
       },
       {
         question: "Is a property lawyer required to buy in Abu Dhabi?",
@@ -183,7 +183,7 @@ export const buyerGuidePages: SeoPageData[] = [
     faq: [
       {
         question: "Can I negotiate who pays the agent commission?",
-        answer: "In strong seller's markets (like Abu Dhabi's current market), sellers have less incentive to absorb buyer costs. However, for higher-value transactions (AED 10M+), commission negotiation is possible. For developer (off-plan) purchases, no buyer commission is paid — the developer funds the agent fee. AB Residences is transparent about all commission arrangements upfront.",
+        answer: "In strong seller's markets (like Abu Dhabi's current market), sellers have less incentive to absorb buyer costs. However, for higher-value transactions (AED 10M+), commission negotiation is possible. For developer (off-plan) purchases, no buyer commission is paid — the developer funds the agent fee. Residence Abudhabi is transparent about all commission arrangements upfront.",
       },
       {
         question: "Are there any ongoing annual fees after purchase?",

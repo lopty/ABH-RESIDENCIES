@@ -256,7 +256,7 @@ export default function BuyPage({
         <div className="mt-20 border-t border-[#EAE6DF]/60 pt-16">
           <div className="text-center mb-12 space-y-2">
             <span className="text-xs font-semibold text-[#C9A96E] tracking-[0.4em] uppercase">SECURING TRUST SIGNAL</span>
-            <h3 className="font-serif text-xl sm:text-3xl text-[#1A1A1A] font-light">Why Buy With AB Residences?</h3>
+            <h3 className="font-serif text-xl sm:text-3xl text-[#1A1A1A] font-light">Why Buy With Residence Abudhabi?</h3>
           </div>
           
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">

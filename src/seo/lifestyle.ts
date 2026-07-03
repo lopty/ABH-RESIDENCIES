@@ -136,7 +136,7 @@ export const lifestylePages: SeoPageData[] = [
       },
       {
         heading: "Securing a School Place in Abu Dhabi",
-        body: "Demand for top-rated schools in Abu Dhabi significantly exceeds supply. Waitlists for 'Outstanding' rated schools can extend 6–18 months, particularly for entry-year groups (Foundation Stage 1, Year 7). Key steps for new arrivals:\n\n1. Apply to multiple schools simultaneously — don't depend on a single choice\n2. Apply as early as possible, ideally 12 months before intended enrolment\n3. Contact schools directly — many maintain informal waiting lists beyond their formal process\n4. Consider year-group entry points where spaces are more available (mid-school years rather than Foundation Stage)\n5. AB Residences can introduce buyers to school relocation advisors who know current availability across Abu Dhabi schools",
+        body: "Demand for top-rated schools in Abu Dhabi significantly exceeds supply. Waitlists for 'Outstanding' rated schools can extend 6–18 months, particularly for entry-year groups (Foundation Stage 1, Year 7). Key steps for new arrivals:\n\n1. Apply to multiple schools simultaneously — don't depend on a single choice\n2. Apply as early as possible, ideally 12 months before intended enrolment\n3. Contact schools directly — many maintain informal waiting lists beyond their formal process\n4. Consider year-group entry points where spaces are more available (mid-school years rather than Foundation Stage)\n5. Residence Abudhabi can introduce buyers to school relocation advisors who know current availability across Abu Dhabi schools",
       },
       {
         heading: "School Fees and Annual Cost",
