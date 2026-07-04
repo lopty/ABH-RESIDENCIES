@@ -85,7 +85,7 @@ export default function BlogPostPage({ slug, onNavigate }: Props) {
 
   useEffect(() => {
     if (!post) return;
-    document.title = `${post.title} | Residence Abu Dhabi`;
+    document.title = `${post.title} | AD Residences`;
     const desc = document.querySelector('meta[name="description"]');
     if (desc) desc.setAttribute("content", post.summary);
 
@@ -100,10 +100,10 @@ export default function BlogPostPage({ slug, onNavigate }: Props) {
       headline: post.title,
       description: post.summary,
       image: post.image_url,
-      author: { "@type": "Organization", name: post.author || "Residence Abu Dhabi Editorial" },
+      author: { "@type": "Organization", name: post.author || "AD Residences Editorial" },
       publisher: {
         "@type": "Organization",
-        name: "Residence Abu Dhabi",
+        name: "AD Residences",
         logo: { "@type": "ImageObject", url: "https://residenceabudhabi.com/logo.png" },
       },
       datePublished: post.created_at || post.published_date,
@@ -168,7 +168,7 @@ export default function BlogPostPage({ slug, onNavigate }: Props) {
             <Clock size={12} />
             <span>{post.read_time}</span>
           </span>
-          <span>{post.author || "Residence Abu Dhabi Editorial"}</span>
+          <span>{post.author || "AD Residences Editorial"}</span>
         </div>
 
         {post.image_url && (

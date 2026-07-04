@@ -94,7 +94,7 @@ export default function ContactPage({ onShowCallback }: ContactPageProps) {
               <div className="absolute left-0 top-0 h-full w-1.5 bg-[#C9A96E]" />
               <div className="space-y-6">
                 <span className="text-[10px] font-bold text-gray-400 uppercase tracking-widest block">HQ Coordinates</span>
-                <h3 className="font-serif text-2xl font-normal text-slate-900">Residence Abu Dhabi</h3>
+                <h3 className="font-serif text-2xl font-normal text-slate-900">AD Residences</h3>
                 
                 <div className="space-y-4">
                   <div className="flex items-start space-x-3 text-xs text-gray-700 font-light">
@@ -263,7 +263,7 @@ export default function ContactPage({ onShowCallback }: ContactPageProps) {
                       className="mt-0.5 border-gray-300 rounded-none text-[#1C2B4A] focus:ring-[#C9A96E]"
                     />
                     <span className="text-[9px] text-gray-500 font-light leading-relaxed">
-                      Consent to Residence Abu Dhabi forwarding PDF briefing books, scheduling call backs, and managing my data safely in compliance with international privacy protocols.
+                      Consent to AD Residences forwarding PDF briefing books, scheduling call backs, and managing my data safely in compliance with international privacy protocols.
                     </span>
                   </label>
 

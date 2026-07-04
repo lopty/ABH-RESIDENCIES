@@ -23,7 +23,7 @@ export default function LandingPage({ headline, subheadline, heroImg, ctaLabel, 
         <img src={heroImg} alt={headline} className="absolute inset-0 w-full h-full object-cover object-top" />
         <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/70" />
         <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-6">
-          <p className="text-[#C9A96E] text-[10px] tracking-[0.3em] uppercase font-semibold mb-4">Residence Abu Dhabi · Abu Dhabi</p>
+          <p className="text-[#C9A96E] text-[10px] tracking-[0.3em] uppercase font-semibold mb-4">AD Residences · Abu Dhabi</p>
           <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-white leading-tight max-w-3xl mb-4">
             {headline}
           </h1>
@@ -64,7 +64,7 @@ export default function LandingPage({ headline, subheadline, heroImg, ctaLabel, 
         <div className="mt-16 pt-12 border-t border-gray-100 text-center">
           <p className="text-xs text-[#C9A96E] tracking-widest uppercase font-semibold mb-3">Ready to take the next step?</p>
           <h3 className="font-serif text-2xl sm:text-3xl text-[#1C2B4A] font-semibold mb-6">
-            Speak with a Residence Abu Dhabi Advisor
+            Speak with a AD Residences Advisor
           </h3>
           <button
             onClick={onCta}

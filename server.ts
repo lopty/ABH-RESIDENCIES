@@ -28,7 +28,7 @@ function buildEmailHtml(subject: string, data: Record<string, any>): string {
     .join("");
   return `<div style="font-family:Arial,sans-serif;max-width:600px;margin:0 auto">
     <div style="background:#1C2B4A;padding:24px;text-align:center">
-      <h2 style="color:#C9A96E;margin:0;font-size:20px">Residence Abu Dhabi</h2>
+      <h2 style="color:#C9A96E;margin:0;font-size:20px">AD Residences</h2>
       <p style="color:#fff;margin:8px 0 0;font-size:13px">${subject}</p>
     </div>
     <table style="width:100%;border-collapse:collapse;margin:20px 0">${rows}</table>
@@ -50,7 +50,7 @@ app.post("/api/submit-lead", async (req, res) => {
   try {
     if (process.env.SMTP_USER && process.env.SMTP_PASS) {
       await transporter.sendMail({
-        from: `"Residence Abu Dhabi Website" <${process.env.SMTP_USER}>`,
+        from: `"AD Residences Website" <${process.env.SMTP_USER}>`,
         to: RECIPIENT_EMAIL,
         subject: `[RAD] ${subject}`,
         html: buildEmailHtml(subject, data),
@@ -75,5 +75,5 @@ const vite = await createViteServer({
 app.use(vite.middlewares);
 
 app.listen(PORT, "0.0.0.0", () => {
-  console.log(`✅ Residence Abu Dhabi server running on port ${PORT}`);
+  console.log(`✅ AD Residences server running on port ${PORT}`);
 });

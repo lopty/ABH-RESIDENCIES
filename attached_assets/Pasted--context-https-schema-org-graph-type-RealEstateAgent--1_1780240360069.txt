@@ -4,7 +4,7 @@
     {
       "@type": "RealEstateAgent",
       "@id": "https://residenceabudhabi.com/#organization",
-      "name": "Residence Abu Dhabi",
+      "name": "AD Residences",
       "url": "https://residenceabudhabi.com",
       "logo": "https://residenceabudhabi.com/images/logo.png",
       "description": "Premium real estate advisory specialising in luxury properties in Abu Dhabi, UAE. Experts in Al Maryah Island, Jumeirah Residences, and off-plan investments.",
@@ -41,7 +41,7 @@
       "@type": "WebSite",
       "@id": "https://residenceabudhabi.com/#website",
       "url": "https://residenceabudhabi.com",
-      "name": "Residence Abu Dhabi",
+      "name": "AD Residences",
       "publisher": {
         "@id": "https://residenceabudhabi.com/#organization"
       },

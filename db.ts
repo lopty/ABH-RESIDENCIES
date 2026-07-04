@@ -40,7 +40,7 @@ export async function initDb() {
       ai_generated BOOLEAN DEFAULT FALSE,
       source_url TEXT DEFAULT '',
       source_name TEXT DEFAULT '',
-      author TEXT DEFAULT 'Residence Abu Dhabi Editorial',
+      author TEXT DEFAULT 'AD Residences Editorial',
       created_at TIMESTAMPTZ DEFAULT NOW()
     )
   `;
