@@ -1398,11 +1398,11 @@ export default function App() {
 
             {/* Column 4: Location */}
             <div className="md:col-span-3 space-y-4">
-              <span className="text-[10px] font-bold text-[#C9A96E] uppercase tracking-widest block">HQ Coordinates</span>
+              <span className="text-[10px] font-bold text-[#C9A96E] uppercase tracking-widest block">Address</span>
               <div className="text-xs text-gray-300 font-light space-y-2">
-                <p>Level 4, Al Maryah Sentinel Towers</p>
-                <p>ADGM Square, Al Maryah Island</p>
+                <p>Tamouh Tower, Al Reem Island, Floor 7</p>
                 <p>Abu Dhabi, United Arab Emirates</p>
+                <p>PO BOX 38761</p>
                 <p className="text-[#C9A96E] hover:underline cursor-pointer block pt-1" onClick={() => navigate("/contact")}>Find us on visual maps →</p>
               </div>
             </div>
