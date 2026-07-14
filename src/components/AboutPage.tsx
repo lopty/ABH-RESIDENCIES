@@ -39,6 +39,14 @@ const reviews = [
     badge: "Local Guide · 16 reviews",
     text: "Verified Google reviewer",
   },
+  {
+    name: "Verified Client",
+    rating: 5,
+    time: "New",
+    initials: "★",
+    color: "bg-[#5B3F9E]",
+    text: "I worked with Pranav on a deal. Very positive guy and understood the requirement really well and helped me close a very good deal.",
+  },
 ];
 
 export default function AboutPage({ onShowConsultation }: AboutPageProps) {
