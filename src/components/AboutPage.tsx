@@ -156,7 +156,6 @@ export default function AboutPage({ onShowConsultation }: AboutPageProps) {
                       {r.initials}
                     </div>
                     <div>
-                      <p className="text-[11px] font-semibold text-[#1A1A1A] leading-tight">{r.name}</p>
                       {r.badge && <p className="text-[9px] text-gray-400 mt-0.5">{r.badge}</p>}
                     </div>
                   </div>
