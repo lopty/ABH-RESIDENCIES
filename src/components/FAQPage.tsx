@@ -84,7 +84,7 @@ export default function FAQPage({ onRequestCallback }: FAQPageProps) {
               REQUEST VIP CALLBACK
             </button>
             <a
-              href="https://wa.me/971500000000?text=Hello.%20I%20have%20questions%20regarding%20Abu%20Dhabi%20freehold%20property%20investing."
+              href="https://wa.me/971554226593?text=Hello.%20I%20have%20questions%20regarding%20Abu%20Dhabi%20freehold%20property%20investing."
               target="_blank"
               rel="noreferrer"
               className="bg-[#25D366] hover:bg-[#20ba59] text-white text-[10px] font-bold tracking-widest uppercase px-6 py-3 rounded-none w-full sm:w-auto text-center block"

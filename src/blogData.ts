@@ -1,7 +1,7 @@
 export interface BlogPost {
   slug: string;
   title: string;
-  category: "Market News" | "Investment Guides" | "Area Profiles" | "Off Plan";
+  category: "Market News" | "Investment Guides" | "Area Profiles" | "Off Plan" | "Buyer Guides";
   date: string;
   readTime: string;
   image: string;
@@ -168,27 +168,27 @@ export const blogPosts: BlogPost[] = [
 
 export const faqItems = [
   {
-    q: "Can foreigners buy property in Abu Dhabi?",
-    a: "Yes. Foreign nationals can purchase freehold property in Abu Dhabi's designated investment zones, which include Al Maryah Island, Saadiyat Island, Yas Island, Al Reem Island, and Ramhan Island. Ownership is 100% absolute with no local sponsor required, and title is registered with the Abu Dhabi Department of Municipalities and Transport."
+    question: "Can foreigners buy property in Abu Dhabi?",
+    answer: "Yes. Foreign nationals can purchase freehold property in Abu Dhabi's designated investment zones, which include Al Maryah Island, Saadiyat Island, Yas Island, Al Reem Island, and Ramhan Island. Ownership is 100% absolute with no local sponsor required, and title is registered with the Abu Dhabi Department of Municipalities and Transport."
   },
   {
-    q: "What is the minimum property price to qualify for the UAE Golden Visa?",
-    a: "AED 2 million. The property must be fully paid (not mortgaged beyond this threshold), registered in your name, and located in a designated freehold investment zone. Qualifying grants a 10-year UAE residency visa for the buyer and their immediate family."
+    question: "What is the minimum property price to qualify for the UAE Golden Visa?",
+    answer: "AED 2 million. The property must be fully paid (not mortgaged beyond this threshold), registered in your name, and located in a designated freehold investment zone. Qualifying grants a 10-year UAE residency visa for the buyer and their immediate family."
   },
   {
-    q: "What are the best areas to invest in Abu Dhabi in 2026?",
-    a: "Al Maryah Island offers the highest corporate rental yields (7–8.5% net) with constrained supply. Saadiyat Island delivers strong capital appreciation and lifestyle value near the Louvre and natural beaches. Yas Island suits short-term rental strategies near entertainment infrastructure. For long-term capital preservation with high tenant quality, Al Maryah is our primary recommendation."
+    question: "What are the best areas to invest in Abu Dhabi in 2026?",
+    answer: "Al Maryah Island offers the highest corporate rental yields (7–8.5% net) with constrained supply. Saadiyat Island delivers strong capital appreciation and lifestyle value near the Louvre and natural beaches. Yas Island suits short-term rental strategies near entertainment infrastructure. For long-term capital preservation with high tenant quality, Al Maryah is our primary recommendation."
   },
   {
-    q: "How does off-plan property work in Abu Dhabi?",
-    a: "You pay a deposit (typically 10–20%) and sign a Sales and Purchase Agreement that locks in your price and payment schedule. Remaining payments are made at construction milestones. Completion typically takes 2–4 years. You cannot apply for a Golden Visa until the Oqood (registration certificate) converts to a full title deed on handover."
+    question: "How does off-plan property work in Abu Dhabi?",
+    answer: "You pay a deposit (typically 10–20%) and sign a Sales and Purchase Agreement that locks in your price and payment schedule. Remaining payments are made at construction milestones. Completion typically takes 2–4 years. You cannot apply for a Golden Visa until the Oqood (registration certificate) converts to a full title deed on handover."
   },
   {
-    q: "What fees are involved when buying property in Abu Dhabi?",
-    a: "The primary fees are: 2% Abu Dhabi Land Department transfer fee, 2% real estate agent commission (paid by the buyer in off-plan; sometimes split in secondary market), and approximately AED 1,000–3,000 in registration and title deed issuance fees. Mortgage buyers pay an additional 0.25% mortgage registration fee."
+    question: "What fees are involved when buying property in Abu Dhabi?",
+    answer: "The primary fees are: 2% Abu Dhabi Land Department transfer fee, 2% real estate agent commission (paid by the buyer in off-plan; sometimes split in secondary market), and approximately AED 1,000–3,000 in registration and title deed issuance fees. Mortgage buyers pay an additional 0.25% mortgage registration fee."
   },
   {
-    q: "What is Jumeirah Residences Abu Dhabi?",
-    a: "Jumeirah Residences is a branded residence development on Al Maryah Island, developed in partnership with the Jumeirah Group (operator of Burj Al Arab). It offers 1, 2, and 3-bedroom apartments and penthouses with five-star hotel-standard amenities, direct waterfront access, and Jumeirah-branded hospitality services for residents."
+    question: "What is Jumeirah Residences Abu Dhabi?",
+    answer: "Jumeirah Residences is a branded residence development on Al Maryah Island, developed in partnership with the Jumeirah Group (operator of Burj Al Arab). It offers 1, 2, and 3-bedroom apartments and penthouses with five-star hotel-standard amenities, direct waterfront access, and Jumeirah-branded hospitality services for residents."
   }
 ];

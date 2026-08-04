@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "concurrently \"tsx watch api-server.ts\" \"vite\"",
-    "build": "vite build && npx esbuild api-server.ts --bundle --platform=node --packages=external --format=esm --outfile=server.js",
+    "build": "vite build && tsx scripts/prerender.ts && tsx scripts/generate-seo-files.ts && npx esbuild api-server.ts --bundle --platform=node --packages=external --format=esm --outfile=server.js",
+    "prerender": "tsx scripts/prerender.ts && tsx scripts/generate-seo-files.ts",
     "start": "NODE_ENV=production node server.js",
     "preview": "vite preview",
     "clean": "rm -rf dist server.js",
@@ -40,6 +41,7 @@
     "autoprefixer": "^10.4.21",
     "concurrently": "^9.2.1",
     "esbuild": "^0.25.0",
+    "playwright": "^1.62.1",
     "tailwindcss": "^4.1.14",
     "tsx": "^4.21.0",
     "typescript": "~5.8.2",

@@ -79,7 +79,7 @@ export default function ContactPage({ onShowCallback }: ContactPageProps) {
             Schedule a Private Briefing
           </h1>
           <p className="text-xs sm:text-sm text-gray-500 font-light max-w-xl mx-auto tracking-wide leading-relaxed">
-            Connect directly with our headquarters on Al Maryah Island or assign an accredited advisor to review custom off-market catalogs.
+            Connect directly with Pranav Chaudhary, our lead real estate advisor, at our headquarters on Al Maryah Island to review custom off-market catalogs.
           </p>
         </div>
 
@@ -95,7 +95,8 @@ export default function ContactPage({ onShowCallback }: ContactPageProps) {
               <div className="space-y-6">
                 <span className="text-[10px] font-bold text-gray-400 uppercase tracking-widest block">HQ Coordinates</span>
                 <h3 className="font-serif text-2xl font-normal text-slate-900">AD Residences</h3>
-                
+                <p className="text-[11px] text-gray-500 font-medium -mt-3">Lead Advisor: Pranav Chaudhary</p>
+
                 <div className="space-y-4">
                   <div className="flex items-start space-x-3 text-xs text-gray-700 font-light">
                     <MapPin size={16} className="text-[#C9A96E] shrink-0 mt-0.5" />

@@ -2,7 +2,7 @@
 
 A reference guide for anyone researching real estate in Abu Dhabi, with a focus
 on Al Maryah Island and Jumeirah Residences Al Maryah Island. Built and
-maintained by [AB Residences](https://residenceabudhabi.com/), a real estate
+maintained by [AD Residences](https://residenceabudhabi.com/), a real estate
 advisory focused on branded and waterfront residences in the capital.
 
 ## Why Al Maryah Island

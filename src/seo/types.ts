@@ -27,6 +27,11 @@ export interface RelatedPage {
   href: string;
 }
 
+export interface RelatedLink {
+  label: string;
+  slug: string;
+}
+
 export interface SeoPageData {
   slug: string;
   title: string;
@@ -41,7 +46,13 @@ export interface SeoPageData {
   table?: SeoTable;
   faq?: SeoFaq[];
   relatedPages?: RelatedPage[];
+  relatedLinks?: RelatedLink[];
   schemaType?: string;
   heroImg?: string;
+  heroImage?: string;
+  category?: string;
+  ctaHeadline?: string;
+  ctaBody?: string;
+  ctaLabel?: string;
   cluster?: string;
 }

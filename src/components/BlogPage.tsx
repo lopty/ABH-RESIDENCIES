@@ -121,7 +121,7 @@ export default function BlogPage({ onShowConsultation, onNavigate, initialSlug }
           summary: p.summary,
           content: p.content.join("\n\n"),
           isFromDB: false,
-          author: "AD Residences Editorial",
+          author: "Pranav Chaudhary",
         }));
 
       const merged = [...dbPosts, ...staticNorm];
@@ -145,11 +145,55 @@ export default function BlogPage({ onShowConsultation, onNavigate, initialSlug }
     setActivePost(null);
   }, [initialSlug, allPosts.length]);
 
+  // Per-post title/description/Article schema — runs regardless of how activePost
+  // was set (direct URL load or in-app click), since only handleSelectPost used to
+  // set document.title, leaving direct-loaded post URLs stuck on the generic
+  // /blog title and with no Article schema at all.
+  useEffect(() => {
+    const SITE = "https://residenceabudhabi.com";
+    const schemaId = "blog-post-schema";
+    if (!activePost) {
+      document.getElementById(schemaId)?.remove();
+      return;
+    }
+    document.title = `${activePost.title} | AD Residences`;
+    const desc = document.querySelector('meta[name="description"]');
+    if (desc) desc.setAttribute("content", activePost.summary);
+
+    let el = document.getElementById(schemaId);
+    if (!el) {
+      el = document.createElement("script");
+      el.id = schemaId;
+      el.setAttribute("type", "application/ld+json");
+      document.head.appendChild(el);
+    }
+    el.textContent = JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Article",
+      headline: activePost.title,
+      description: activePost.summary,
+      image: activePost.image,
+      author: {
+        "@type": "Person",
+        name: activePost.author || "Pranav Chaudhary",
+        worksFor: { "@id": `${SITE}/#organization` },
+      },
+      publisher: {
+        "@type": "Organization",
+        name: "AD Residences",
+        logo: { "@type": "ImageObject", url: `${SITE}/favicon.svg` },
+      },
+      datePublished: activePost.date,
+      dateModified: activePost.date,
+      mainEntityOfPage: { "@type": "WebPage", "@id": `${SITE}/blog/${activePost.slug}` },
+    });
+    return () => { document.getElementById(schemaId)?.remove(); };
+  }, [activePost]);
+
   const handleSelectPost = (post: UnifiedPost) => {
     setActivePost(post);
     window.history.pushState({}, "", `/blog/${post.slug}`);
     window.scrollTo({ top: 0, behavior: "instant" });
-    document.title = `${post.title} | AD Residences`;
   };
 
   const handleBack = () => {
@@ -159,7 +203,7 @@ export default function BlogPage({ onShowConsultation, onNavigate, initialSlug }
     document.title = "Abu Dhabi Real Estate Blog | AD Residences";
   };
 
-  const categories = ["All", "Market News", "Investment Guides", "Area Profiles", "Off Plan"];
+  const categories = ["All", "Market News", "Investment Guides", "Area Profiles", "Off Plan", "Buyer Guides"];
   const filteredPosts = allPosts.filter((p) => {
     const catOk = activeCategory === "All" || p.category === activeCategory;
     const q = searchQuery.toLowerCase();

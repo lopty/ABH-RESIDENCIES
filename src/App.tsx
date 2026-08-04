@@ -23,6 +23,7 @@ import {
 } from "lucide-react";
 
 import { propertiesData, statItems, lifestyleItems } from "./data";
+import { faqItems } from "./blogData";
 import { Property, LeadFormData } from "./types";
 
 // Dynamic sub-page modules
@@ -310,32 +311,23 @@ export default function App() {
       schemas = [
         orgSchema,
         { "@context": "https://schema.org", "@type": "FAQPage",
-          "mainEntity": [
-            { "@type": "Question", "name": "Can foreigners buy property in Abu Dhabi?",
-              "acceptedAnswer": { "@type": "Answer", "text": "Yes. Foreign nationals can purchase freehold property in Abu Dhabi's designated investment zones including Al Maryah Island, Saadiyat Island, Yas Island, Al Reem Island, and Ramhan Island. Ownership is 100% absolute with no local sponsor required." }},
-            { "@type": "Question", "name": "What is the minimum property price to qualify for the UAE Golden Visa?",
-              "acceptedAnswer": { "@type": "Answer", "text": "AED 2 million. The property must be fully paid, registered in your name, and in a designated freehold zone. Qualifying grants a 10-year UAE residency visa for the buyer and their immediate family." }},
-            { "@type": "Question", "name": "What are the best areas to invest in Abu Dhabi in 2026?",
-              "acceptedAnswer": { "@type": "Answer", "text": "Al Maryah Island offers the highest corporate rental yields (7–8.5% net) with constrained supply. Saadiyat Island delivers strong capital appreciation. For long-term capital preservation with high tenant quality, Al Maryah is the primary recommendation." }},
-            { "@type": "Question", "name": "How does off-plan property work in Abu Dhabi?",
-              "acceptedAnswer": { "@type": "Answer", "text": "You pay a deposit (typically 10–20%) and sign a Sales and Purchase Agreement locking in your price and payment schedule. Remaining payments are made at construction milestones over 2–4 years." }},
-            { "@type": "Question", "name": "What fees are involved when buying property in Abu Dhabi?",
-              "acceptedAnswer": { "@type": "Answer", "text": "Primary fees: 2% Abu Dhabi Land Department transfer fee, 2% agent commission, and AED 1,000–3,000 in registration fees. Mortgage buyers pay an additional 0.25% mortgage registration fee." }},
-            { "@type": "Question", "name": "What is Jumeirah Residences Abu Dhabi?",
-              "acceptedAnswer": { "@type": "Answer", "text": "Jumeirah Residences is a branded residence development on Al Maryah Island developed in partnership with the Jumeirah Group (Burj Al Arab operator). It offers 1–3 bedroom apartments and penthouses with five-star hotel amenities." }}
-          ]
+          // Single source of truth shared with FAQPage.tsx — see src/blogData.ts's faqItems.
+          "mainEntity": faqItems.map((item) => ({
+            "@type": "Question", "name": item.question,
+            "acceptedAnswer": { "@type": "Answer", "text": item.answer }
+          }))
         },
         breadcrumb([{ name: "FAQ", url: `${SITE}/faq` }])
       ];
 
     } else if (path === "/about") {
       title = "About AD Residences | Abu Dhabi Luxury Real Estate Advisors";
-      description = "Meet the AD Residences team — Abu Dhabi's premier luxury real estate agency. Experts in Jumeirah Residences, Al Maryah Island, and Golden Visa property investment.";
-      keywords = "AD Residences about, luxury real estate agency Abu Dhabi, Al Maryah Island property agency, Jumeirah Residences agent Abu Dhabi, real estate advisory UAE";
+      description = "Meet Pranav Chaudhary, AD Residences' lead advisor — Abu Dhabi's premier luxury real estate agency. Expert in Jumeirah Residences, Al Maryah Island, and Golden Visa property investment.";
+      keywords = "Pranav Chaudhary real estate Abu Dhabi, AD Residences about, luxury real estate agency Abu Dhabi, Al Maryah Island property agency, Jumeirah Residences agent Abu Dhabi, real estate advisory UAE";
       schemas = [
         orgSchema,
         { "@context": "https://schema.org", "@type": "Person",
-          "name": "Pranav", "jobTitle": "Luxury Real Estate Advisor",
+          "name": "Pranav Chaudhary", "jobTitle": "Real Estate Advisor",
           "worksFor": { "@id": `${SITE}/#organization` },
           "url": `${SITE}/about`, "image": `${SITE}/pranav-portrait.png`
         },

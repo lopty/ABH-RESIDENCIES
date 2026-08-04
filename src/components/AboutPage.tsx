@@ -31,15 +31,6 @@ const reviews = [
     text: "Pranav was exceptional to deal with. He helped me purchase a property on Al Marjan Island and was very professional and patient with me throughout the process and continues to be. I can't recommend highly enough!",
   },
   {
-    name: "Shafeek M K",
-    rating: 5,
-    time: "3 months ago",
-    initials: "S",
-    color: "bg-[#E65100]",
-    badge: "Local Guide · 16 reviews",
-    text: "Verified Google reviewer",
-  },
-  {
     name: "Verified Client",
     rating: 5,
     time: "New",
@@ -103,7 +94,7 @@ export default function AboutPage({ onShowConsultation }: AboutPageProps) {
 
             <div className="space-y-5 text-sm text-gray-600 font-light leading-relaxed">
               <p>
-                Pranav grew up in the UAE and spent a decade in New York City working in client-facing roles at two of the world's most respected institutions —{" "}
+                Pranav Chaudhary grew up in the UAE and spent a decade in New York City working in client-facing roles at two of the world's most respected institutions —{" "}
                 <span className="font-semibold text-[#1A1A1A]">PricewaterhouseCoopers</span> and{" "}
                 <span className="font-semibold text-[#1A1A1A]">JP Morgan Chase</span>. Those years sharpened an instinct for precision, discretion, and deep client understanding that defines every engagement at AD Residences.
               </p>
@@ -163,9 +154,6 @@ export default function AboutPage({ onShowConsultation }: AboutPageProps) {
                     <div className={`${r.color} w-9 h-9 rounded-full flex items-center justify-center text-white text-xs font-bold flex-shrink-0`}>
                       {r.initials}
                     </div>
-                    <div>
-                      {r.badge && <p className="text-[9px] text-gray-400 mt-0.5">{r.badge}</p>}
-                    </div>
                   </div>
                   {/* Stars */}
                   <div className="flex items-center gap-0.5">
@@ -178,9 +166,7 @@ export default function AboutPage({ onShowConsultation }: AboutPageProps) {
 
                 {/* Review text */}
                 <p className="text-[11px] text-gray-600 leading-relaxed font-light flex-1">
-                  {r.text !== "Verified Google reviewer" ? `"${r.text}"` : (
-                    <span className="italic text-gray-400">5-star verified Google review</span>
-                  )}
+                  "{r.text}"
                 </p>
 
                 {/* Google badge */}

@@ -6,6 +6,7 @@ import fs from "fs";
 import { fileURLToPath } from "url";
 import cron from "node-cron";
 import { initDb, sql } from "./db.js";
+import { getAllRoutes } from "./scripts/routes.js";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -347,110 +348,15 @@ app.post("/api/generate-article", async (req, res) => {
 });
 
 async function buildSitemap(): Promise<string> {
-  let posts: { slug: string; created_at: string | null }[] = [];
-  try {
-    posts = await sql`SELECT slug, created_at FROM blog_posts WHERE status='published' ORDER BY created_at DESC`;
-  } catch (_) {
-    // DB unavailable — serve static pages only, never return a 500
-  }
-  const staticPages = [
-    { url: "/", priority: "1.0", changefreq: "weekly" },
-    { url: "/buy", priority: "0.9", changefreq: "weekly" },
-    { url: "/properties/jumeirah-residences", priority: "0.9", changefreq: "weekly" },
-    { url: "/properties/al-maryah-island", priority: "0.9", changefreq: "weekly" },
-    { url: "/golden-visa-property-abu-dhabi", priority: "0.9", changefreq: "monthly" },
-    { url: "/off-plan-properties-abu-dhabi", priority: "0.9", changefreq: "monthly" },
-    { url: "/branded-residences-abu-dhabi", priority: "0.8", changefreq: "monthly" },
-    { url: "/blog", priority: "0.8", changefreq: "daily" },
-    { url: "/about", priority: "0.7", changefreq: "monthly" },
-    { url: "/contact", priority: "0.7", changefreq: "monthly" },
-    { url: "/faq", priority: "0.7", changefreq: "monthly" },
-    // Golden Visa cluster
-    { url: "/golden-visa-abu-dhabi", priority: "0.9", changefreq: "monthly" },
-    { url: "/golden-visa-requirements-uae", priority: "0.9", changefreq: "monthly" },
-    { url: "/golden-visa-vs-investor-visa-uae", priority: "0.8", changefreq: "monthly" },
-    { url: "/golden-visa-family-uae", priority: "0.8", changefreq: "monthly" },
-    { url: "/how-to-get-golden-visa-uae-property", priority: "0.8", changefreq: "monthly" },
-    // Off-Plan cluster
-    { url: "/off-plan-investment-guide-abu-dhabi", priority: "0.9", changefreq: "monthly" },
-    { url: "/off-plan-payment-plans-abu-dhabi", priority: "0.8", changefreq: "monthly" },
-    { url: "/best-off-plan-projects-abu-dhabi-2026", priority: "0.8", changefreq: "monthly" },
-    { url: "/off-plan-vs-ready-property-abu-dhabi", priority: "0.8", changefreq: "monthly" },
-    // Area Guides cluster
-    { url: "/saadiyat-island-property-guide", priority: "0.9", changefreq: "monthly" },
-    { url: "/yas-island-real-estate", priority: "0.8", changefreq: "monthly" },
-    { url: "/al-reem-island-apartments-abu-dhabi", priority: "0.8", changefreq: "monthly" },
-    { url: "/freehold-areas-abu-dhabi", priority: "0.9", changefreq: "monthly" },
-    { url: "/best-investment-areas-abu-dhabi-2026", priority: "0.9", changefreq: "monthly" },
-    // Investment Guides cluster
-    { url: "/abu-dhabi-property-market-2026", priority: "0.9", changefreq: "monthly" },
-    { url: "/abu-dhabi-property-prices-2026", priority: "0.9", changefreq: "monthly" },
-    { url: "/rental-yields-abu-dhabi-2026", priority: "0.9", changefreq: "monthly" },
-    { url: "/abu-dhabi-vs-dubai-property-investment", priority: "0.8", changefreq: "monthly" },
-    { url: "/is-abu-dhabi-real-estate-safe-investment", priority: "0.8", changefreq: "monthly" },
-    // Buyer Guides cluster
-    { url: "/how-to-buy-property-in-abu-dhabi", priority: "0.9", changefreq: "monthly" },
-    { url: "/can-foreigners-buy-property-abu-dhabi", priority: "0.9", changefreq: "monthly" },
-    { url: "/property-buying-fees-abu-dhabi", priority: "0.8", changefreq: "monthly" },
-    { url: "/service-charges-abu-dhabi-property", priority: "0.8", changefreq: "monthly" },
-    // Branded Residences cluster
-    { url: "/what-is-a-branded-residence", priority: "0.8", changefreq: "monthly" },
-    { url: "/best-branded-residences-abu-dhabi-2026", priority: "0.8", changefreq: "monthly" },
-    // Lifestyle cluster
-    { url: "/living-in-abu-dhabi-guide", priority: "0.8", changefreq: "monthly" },
-    { url: "/abu-dhabi-safety-expats", priority: "0.8", changefreq: "monthly" },
-    { url: "/schools-near-al-maryah-island", priority: "0.8", changefreq: "monthly" },
-    { url: "/abu-dhabi-healthcare-expats", priority: "0.8", changefreq: "monthly" },
-    // Jumeirah Deep cluster
-    { url: "/jumeirah-residences-investment-case", priority: "0.9", changefreq: "monthly" },
-    { url: "/jumeirah-residences-vs-al-reem-island", priority: "0.8", changefreq: "monthly" },
-    { url: "/aldar-properties-jumeirah-residences", priority: "0.8", changefreq: "monthly" },
-    // Jumeirah Residences Al Maryah Island deep pages
-    { url: "/jumeirah-residences-al-maryah-island", priority: "1.0", changefreq: "monthly" },
-    { url: "/jumeirah-residences-al-maryah-island-floor-plans", priority: "0.9", changefreq: "monthly" },
-    { url: "/jumeirah-residences-al-maryah-island-payment-plan", priority: "0.9", changefreq: "monthly" },
-    { url: "/jumeirah-residences-al-maryah-island-investment-return", priority: "0.9", changefreq: "monthly" },
-    { url: "/jumeirah-residences-al-maryah-island-golden-visa", priority: "0.9", changefreq: "monthly" },
-    { url: "/jumeirah-residences-al-maryah-island-1-bedroom", priority: "0.8", changefreq: "monthly" },
-    { url: "/jumeirah-residences-al-maryah-island-2-bedroom", priority: "0.8", changefreq: "monthly" },
-    { url: "/jumeirah-residences-al-maryah-island-penthouse", priority: "0.8", changefreq: "monthly" },
-    // Al Maryah Island deep pages
-    { url: "/al-maryah-island-real-estate", priority: "1.0", changefreq: "monthly" },
-    { url: "/al-maryah-island-property-investment", priority: "0.9", changefreq: "monthly" },
-    { url: "/al-maryah-island-apartments", priority: "0.9", changefreq: "monthly" },
-    { url: "/al-maryah-island-vs-saadiyat-island", priority: "0.8", changefreq: "monthly" },
-    { url: "/al-maryah-island-vs-al-reem-island", priority: "0.8", changefreq: "monthly" },
-    { url: "/al-maryah-island-vs-yas-island", priority: "0.8", changefreq: "monthly" },
-    // Branded residence comparisons
-    { url: "/jumeirah-residences-vs-waldorf-astoria-residences-abu-dhabi", priority: "0.8", changefreq: "monthly" },
-    { url: "/jumeirah-residences-vs-nobu-residences-abu-dhabi", priority: "0.8", changefreq: "monthly" },
-    { url: "/jumeirah-residences-vs-four-seasons-residences-abu-dhabi", priority: "0.8", changefreq: "monthly" },
-    // Pricing & financial intelligence
-    { url: "/jumeirah-residences-al-maryah-island-price", priority: "0.9", changefreq: "monthly" },
-    { url: "/al-maryah-island-property-prices", priority: "0.9", changefreq: "monthly" },
-    { url: "/branded-residences-roi-abu-dhabi", priority: "0.9", changefreq: "monthly" },
-    { url: "/service-charges-branded-residences-abu-dhabi", priority: "0.8", changefreq: "monthly" },
-    { url: "/jumeirah-residences-al-maryah-island-review", priority: "0.9", changefreq: "monthly" },
-    { url: "/off-plan-vs-ready-property-al-maryah-island", priority: "0.8", changefreq: "monthly" },
-    // Community & lifestyle
-    { url: "/al-maryah-island-lifestyle-guide", priority: "0.9", changefreq: "monthly" },
-    { url: "/jumeirah-residences-amenities", priority: "0.8", changefreq: "monthly" },
-    { url: "/living-on-al-maryah-island-expat-guide", priority: "0.8", changefreq: "monthly" },
-    // AD Residences brand authority
-    { url: "/why-ab-residences", priority: "0.9", changefreq: "monthly" },
-    { url: "/ab-residences-jumeirah-residences-specialist", priority: "0.9", changefreq: "monthly" },
-    { url: "/how-ab-residences-works", priority: "0.8", changefreq: "monthly" },
-    { url: "/best-real-estate-agent-abu-dhabi-luxury", priority: "0.8", changefreq: "monthly" },
-    { url: "/ab-residences-al-maryah-island-authority", priority: "0.9", changefreq: "monthly" },
-  ];
+  // Single source of truth shared with the build-time prerender/sitemap
+  // generator (scripts/routes.ts) — covers core routes, all seo/index.ts
+  // pages, and blog posts (static + DB), so this can't drift out of sync
+  // with what actually gets shipped the way the old hardcoded list here did.
+  const routes = await getAllRoutes();
   const today = new Date().toISOString().slice(0, 10);
-  const urls = [
-    ...staticPages.map((p) => `<url><loc>${SITE_URL}${p.url}</loc><lastmod>${today}</lastmod><changefreq>${p.changefreq}</changefreq><priority>${p.priority}</priority></url>`),
-    ...posts.map((p) => {
-      const d = p.created_at ? new Date(p.created_at as string).toISOString().slice(0, 10) : today;
-      return `<url><loc>${SITE_URL}/blog/${p.slug}</loc><lastmod>${d}</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>`;
-    }),
-  ].join("\n  ");
+  const urls = routes
+    .map((r) => `<url><loc>${SITE_URL}${r.path}</loc><lastmod>${today}</lastmod><changefreq>${r.changefreq}</changefreq><priority>${r.priority}</priority></url>`)
+    .join("\n  ");
   return `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n  ${urls}\n</urlset>`;
 }
 
