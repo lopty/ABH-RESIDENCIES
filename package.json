@@ -4,6 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "postinstall": "playwright install chromium",
     "dev": "concurrently \"tsx watch api-server.ts\" \"vite\"",
     "build": "vite build && tsx scripts/prerender.ts && tsx scripts/generate-seo-files.ts && npx esbuild api-server.ts --bundle --platform=node --packages=external --format=esm --outfile=server.js",
     "prerender": "tsx scripts/prerender.ts && tsx scripts/generate-seo-files.ts",
