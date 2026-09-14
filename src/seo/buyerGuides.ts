@@ -2,6 +2,70 @@ import { SeoPageData } from "./types";
 
 export const buyerGuidePages: SeoPageData[] = [
   {
+    slug: "buy-property-abu-dhabi",
+    cluster: "buyer-guides",
+    title: "Buy Property in Abu Dhabi 2026 | Off-Plan, Secondary & Every Freehold Zone",
+    description: "Buy property in Abu Dhabi with confidence: off-plan and secondary market explained, every freehold zone compared by price and yield, financing, and the Golden Visa route. The complete 2026 buyer's hub.",
+    keywords: "buy property abu dhabi, buy properties in abudhabi, buy property abu dhabi off plan, buy secondary property abu dhabi, abu dhabi freehold property, abu dhabi property for sale",
+    headline: "Buy Property in Abu Dhabi — The Complete 2026 Guide",
+    subheadline: "Off-plan or secondary, waterfront island or city-adjacent community. This is the one page that ties every Abu Dhabi buying decision together.",
+    eyebrow: "Buyer Guide · Abu Dhabi",
+    heroImage: "/jumeirah-hero.png",
+    stats: [
+      { label: "Freehold Zones", value: "9" },
+      { label: "Golden Visa Threshold", value: "AED 2M" },
+      { label: "Foreign Ownership", value: "100%" },
+      { label: "Typical Process", value: "3–8 Weeks" },
+    ],
+    intro: "Buying property in Abu Dhabi comes down to three decisions most buyers get to only after wasting weeks on the wrong one: off-plan or secondary, which freehold zone, and how you are financing it. This page exists to walk through all three in one place, honestly, before you commit capital or your advisor's time to a direction that does not fit what you actually want.\n\nAbu Dhabi opened its freehold market to foreign buyers in 2019. Since then nine designated investment zones have absorbed the overwhelming majority of expat and international demand: Al Maryah Island, Al Reem Island, Saadiyat Island, Yas Island, Al Raha Beach, Al Ghadeer, Masdar City, and a handful of smaller pockets. Each behaves like a different market with its own price band, yield profile, and buyer type. Treating Abu Dhabi as one undifferentiated market is the single most common mistake first-time buyers make here.",
+    sections: [
+      {
+        heading: "Off-Plan or Secondary: The Real Trade-off",
+        body: "Off-plan buys you a lower entry price, a staged payment plan that spreads cost over construction, and first pick of unit and floor. It also buys you construction risk: developer track record matters more than the brochure, and completion dates move more often than sales teams admit. Secondary (resale) buys you a property you can inspect, finance with a standard mortgage immediately, and rent out the same month you close. It costs more upfront and the pool of available units in Abu Dhabi's better buildings is genuinely thin compared to Dubai's resale market. Neither is the correct answer in general. Off-plan suits buyers with a 3 to 5 year horizon who are comfortable with construction timelines moving. Secondary suits buyers who want income or occupancy now and are willing to pay for certainty."
+      },
+      {
+        heading: "Every Freehold Zone, Briefly",
+        body: "Al Maryah Island: Abu Dhabi's financial district under ADGM jurisdiction, high-rise only, highest rental yields in the emirate (7 to 9%), prices from AED 1.8M for a 1-bedroom. Al Reem Island: the largest and most liquid market, broadest price range (AED 700K to AED 5M+), strong 6.5 to 8% yields, the easiest zone to buy and exit. Saadiyat Island: cultural and leisure district, Louvre Abu Dhabi and NYU Abu Dhabi anchor it, lower yields (5 to 6.5%) but the strongest long-term lifestyle appreciation story. Yas Island: entertainment-led (Ferrari World, Yas Marina Circuit, Yas Mall), popular with families, yields sit in the 6 to 7% range with some seasonality. Al Raha Beach: established waterfront community, family-oriented, moderate pricing. Masdar City: sustainability-focused development, smaller but growing supply, attracts a specific tenant profile working in clean energy and research. Each of these has its own dedicated guide linked below if you want the full breakdown."
+      },
+      {
+        heading: "Financing a Purchase",
+        body: "UAE banks lend to expats at 75 to 80% loan-to-value for a first property under AED 5M, dropping for higher-value purchases and for a second or third property. Mortgage pricing is structured as EIBOR plus a bank margin, typically 1.5 to 2.5 percentage points. Off-plan mortgages are more restrictive: most banks only start releasing finance once a project reaches a certain construction milestone, so early-stage off-plan purchases are usually paid in cash or via the developer's own payment plan until that point. Pre-approval before you start viewing is not optional if you are financing. It tells you your real budget and it materially strengthens your negotiating position on secondary purchases where sellers want certainty."
+      },
+      {
+        heading: "The Golden Visa Route",
+        body: "Any property purchase of AED 2,000,000 or more, across any of Abu Dhabi's freehold zones, qualifies the buyer and immediate family for a 10-year UAE Golden Visa. The property can be off-plan or ready, financed or cash, held individually or jointly between spouses provided each contributes the qualifying amount. This is frequently the deciding factor for international buyers who are otherwise indifferent between two similarly priced zones: the visa outcome is identical regardless of which one they choose, so the decision comes back to yield, lifestyle, and horizon."
+      },
+      {
+        heading: "GCC Nationals vs Other Foreign Buyers",
+        body: "Citizens of GCC states (Saudi Arabia, Kuwait, Qatar, Bahrain, Oman) benefit from simplified ownership rules in many Abu Dhabi zones and in some cases near-parity with UAE nationals, including access to areas and structures not always open to other foreign nationals. Other foreign expats and international buyers purchase through the standard freehold framework in the nine designated zones, with full 100% ownership rights, no local sponsor requirement, and no restriction on the number of units held."
+      },
+    ],
+    faq: [
+      { question: "Can foreigners buy property in Abu Dhabi?", answer: "Yes. Since 2019, foreign nationals of any country can buy 100% freehold property in Abu Dhabi's nine designated investment zones, including Al Maryah Island, Al Reem Island, Saadiyat Island, and Yas Island." },
+      { question: "Is it better to buy off-plan or secondary in Abu Dhabi?", answer: "Off-plan suits buyers with a longer horizon who want a lower entry price and are comfortable with construction timelines moving. Secondary suits buyers who want a property they can finance, inspect, and rent out immediately. Most serious portfolios in Abu Dhabi hold both." },
+      { question: "How much do I need to buy property in Abu Dhabi for a Golden Visa?", answer: "AED 2,000,000 or more, in any freehold zone, off-plan or ready, cash or mortgaged. This qualifies the buyer and immediate family for a 10-year UAE Golden Visa." },
+      { question: "What is the difference between Abu Dhabi's freehold zones?", answer: "Each zone has a different price band and yield profile. Al Maryah Island delivers the highest yields via its ADGM corporate tenant base. Al Reem Island offers the broadest price range and highest liquidity. Saadiyat and Yas trade lower yield for lifestyle and long-term appreciation." },
+      { question: "How long does buying property in Abu Dhabi take?", answer: "A secondary purchase typically completes in 3 to 8 weeks from offer to title deed, assuming financing is pre-approved. Off-plan purchases are faster to reserve but the completion date is tied to construction, which can run from 18 months to several years depending on the project." },
+    ],
+    relatedPages: [
+      { label: "How to Buy Property in Abu Dhabi: Step-by-Step", href: "/how-to-buy-property-in-abu-dhabi" },
+      { label: "Can Foreigners Buy Property in Abu Dhabi?", href: "/can-foreigners-buy-property-abu-dhabi" },
+      { label: "Off-Plan Investment Guide Abu Dhabi", href: "/off-plan-investment-guide-abu-dhabi" },
+      { label: "UAE Golden Visa Through Property", href: "/golden-visa-abu-dhabi" },
+      { label: "Al Maryah Island Real Estate", href: "/al-maryah-island-real-estate" },
+      { label: "Al Reem Island Apartments", href: "/al-reem-island-apartments-abu-dhabi" },
+      { label: "Buy Property in ADGM", href: "/buy-property-adgm-abu-dhabi" },
+      { label: "The Secondary Resale Market in Abu Dhabi 2026", href: "/blog/secondary-resale-market-abu-dhabi-2026" },
+      { label: "Best Areas to Buy by Budget", href: "/blog/best-areas-buy-property-abu-dhabi-by-budget" },
+      { label: "Mortgage Pre-Approval Checklist", href: "/blog/mortgage-pre-approval-checklist-abu-dhabi" },
+      { label: "GCC National vs Foreign Expat Buying Rules", href: "/blog/gcc-national-vs-foreign-expat-buying-abu-dhabi" },
+      { label: "Ten Buying Mistakes to Avoid", href: "/blog/abu-dhabi-property-buying-mistakes-2026" },
+    ],
+    ctaHeadline: "Speak With an Abu Dhabi Buying Advisor",
+    ctaBody: "Whether you're weighing off-plan against secondary or choosing between freehold zones, AD Residences advisors will map the decision to your actual goals before you commit capital.",
+    ctaLabel: "Book a Buying Consultation",
+  },
+  {
     slug: "how-to-buy-property-in-abu-dhabi",
     cluster: "buyer-guides",
     title: "How to Buy Property in Abu Dhabi 2026 | Complete Step-by-Step Guide",

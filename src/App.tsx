@@ -619,14 +619,14 @@ export default function App() {
               {isMobileMenuOpen ? <X size={22} /> : <Menu size={22} />}
             </button>
             
-            <button onClick={() => navigate("/")} className="flex flex-col text-left focus:outline-none cursor-pointer">
+            <a href="/" onClick={(e) => { e.preventDefault(); navigate("/"); }} className="flex flex-col text-left focus:outline-none cursor-pointer">
               <span className="font-serif text-base sm:text-xl font-bold tracking-[0.08em] text-[#1A1A1A] hover:opacity-90 whitespace-nowrap">
                 AD Residences
               </span>
               <span className="text-[7px] font-sans tracking-[0.2em] text-[#C9A96E] uppercase font-bold leading-none mt-0.5 whitespace-nowrap">
                 Luxury Real Estate
               </span>
-            </button>
+            </a>
           </div>
 
           {/* Desktop navigation links — single line */}
@@ -640,13 +640,14 @@ export default function App() {
               { label: "Contact", path: "/contact" },
               { label: "FAQ", path: "/faq" },
             ].map(({ label, path }) => (
-              <button
+              <a
                 key={path}
-                onClick={() => navigate(path)}
+                href={path}
+                onClick={(e) => { e.preventDefault(); navigate(path); }}
                 className={`text-[10px] uppercase font-bold tracking-widest cursor-pointer whitespace-nowrap ${currentPath === path ? "text-[#C9A96E]" : "text-gray-600 hover:text-[#C9A96E]"}`}
               >
                 {label}
-              </button>
+              </a>
             ))}
           </div>
 
@@ -680,14 +681,14 @@ export default function App() {
                 </div>
 
                 <div className="flex flex-col space-y-3.5 text-xs font-semibold uppercase tracking-widest">
-                  <button onClick={() => navigate("/")} className="text-left hover:text-[#C9A96E] py-1">Home Portal</button>
-                  <button onClick={() => navigate("/buy")} className="text-left hover:text-[#C9A96E] py-1">Buy Collection</button>
-                  <button onClick={() => navigate("/properties/jumeirah-residences")} className="text-left hover:text-[#C9A96E] py-1">Jumeirah Residences</button>
-                  <button onClick={() => navigate("/properties/al-maryah-island")} className="text-left hover:text-[#C9A96E] py-1">Al Maryah Guide</button>
-                  <button onClick={() => navigate("/blog")} className="text-left hover:text-[#C9A96E] py-1">Advisor Blogs</button>
-                  <button onClick={() => navigate("/about")} className="text-left hover:text-[#C9A96E] py-1">Our Story</button>
-                  <button onClick={() => navigate("/contact")} className="text-left hover:text-[#C9A96E] py-1">Contact Headquarters</button>
-                  <button onClick={() => navigate("/faq")} className="text-left hover:text-[#C9A96E] py-1">FAQ Matrix</button>
+                  <a href="/" onClick={(e) => { e.preventDefault(); navigate("/"); }} className="text-left hover:text-[#C9A96E] py-1">Home Portal</a>
+                  <a href="/buy" onClick={(e) => { e.preventDefault(); navigate("/buy"); }} className="text-left hover:text-[#C9A96E] py-1">Buy Collection</a>
+                  <a href="/properties/jumeirah-residences" onClick={(e) => { e.preventDefault(); navigate("/properties/jumeirah-residences"); }} className="text-left hover:text-[#C9A96E] py-1">Jumeirah Residences</a>
+                  <a href="/properties/al-maryah-island" onClick={(e) => { e.preventDefault(); navigate("/properties/al-maryah-island"); }} className="text-left hover:text-[#C9A96E] py-1">Al Maryah Guide</a>
+                  <a href="/blog" onClick={(e) => { e.preventDefault(); navigate("/blog"); }} className="text-left hover:text-[#C9A96E] py-1">Advisor Blogs</a>
+                  <a href="/about" onClick={(e) => { e.preventDefault(); navigate("/about"); }} className="text-left hover:text-[#C9A96E] py-1">Our Story</a>
+                  <a href="/contact" onClick={(e) => { e.preventDefault(); navigate("/contact"); }} className="text-left hover:text-[#C9A96E] py-1">Contact Headquarters</a>
+                  <a href="/faq" onClick={(e) => { e.preventDefault(); navigate("/faq"); }} className="text-left hover:text-[#C9A96E] py-1">FAQ Matrix</a>
                 </div>
               </div>
 
@@ -1355,10 +1356,11 @@ export default function App() {
             <div className="md:col-span-2 space-y-4">
               <span className="text-[10px] font-bold text-[#C9A96E] uppercase tracking-widest block">Portfolio</span>
               <div className="flex flex-col space-y-2 text-xs text-gray-300 font-light">
-                <button onClick={() => navigate("/buy")} className="text-left hover:text-[#C9A96E] cursor-pointer">Buy Properties</button>
-                <button onClick={() => navigate("/properties/jumeirah-residences")} className="text-left hover:text-[#C9A96E] cursor-pointer">Jumeirah Residences</button>
-                <button onClick={() => navigate("/properties/al-maryah-island")} className="text-left hover:text-[#C9A96E] cursor-pointer">Al Maryah Guide</button>
-                <button onClick={() => navigate("/blog")} className="text-left hover:text-[#C9A96E] cursor-pointer">Market Blog</button>
+                <a href="/buy" onClick={(e) => { e.preventDefault(); navigate("/buy"); }} className="text-left hover:text-[#C9A96E] cursor-pointer">Buy Properties</a>
+                <a href="/buy-property-abu-dhabi" onClick={(e) => { e.preventDefault(); navigate("/buy-property-abu-dhabi"); }} className="text-left hover:text-[#C9A96E] cursor-pointer">Buy Property in Abu Dhabi</a>
+                <a href="/properties/jumeirah-residences" onClick={(e) => { e.preventDefault(); navigate("/properties/jumeirah-residences"); }} className="text-left hover:text-[#C9A96E] cursor-pointer">Jumeirah Residences</a>
+                <a href="/properties/al-maryah-island" onClick={(e) => { e.preventDefault(); navigate("/properties/al-maryah-island"); }} className="text-left hover:text-[#C9A96E] cursor-pointer">Al Maryah Guide</a>
+                <a href="/blog" onClick={(e) => { e.preventDefault(); navigate("/blog"); }} className="text-left hover:text-[#C9A96E] cursor-pointer">Market Blog</a>
               </div>
             </div>
 
@@ -1366,12 +1368,12 @@ export default function App() {
             <div className="md:col-span-2 space-y-4">
               <span className="text-[10px] font-bold text-[#C9A96E] uppercase tracking-widest block">Investor Guides</span>
               <div className="flex flex-col space-y-2 text-xs text-gray-300 font-light">
-                <button onClick={() => navigate("/golden-visa-abu-dhabi")} className="text-left hover:text-[#C9A96E] cursor-pointer">UAE Golden Visa</button>
-                <button onClick={() => navigate("/off-plan-investment-guide-abu-dhabi")} className="text-left hover:text-[#C9A96E] cursor-pointer">Off-Plan Guide</button>
-                <button onClick={() => navigate("/abu-dhabi-property-market-2026")} className="text-left hover:text-[#C9A96E] cursor-pointer">Market 2026</button>
-                <button onClick={() => navigate("/rental-yields-abu-dhabi-2026")} className="text-left hover:text-[#C9A96E] cursor-pointer">Rental Yields</button>
-                <button onClick={() => navigate("/how-to-buy-property-in-abu-dhabi")} className="text-left hover:text-[#C9A96E] cursor-pointer">How to Buy</button>
-                <button onClick={() => navigate("/freehold-areas-abu-dhabi")} className="text-left hover:text-[#C9A96E] cursor-pointer">Freehold Zones</button>
+                <a href="/golden-visa-abu-dhabi" onClick={(e) => { e.preventDefault(); navigate("/golden-visa-abu-dhabi"); }} className="text-left hover:text-[#C9A96E] cursor-pointer">UAE Golden Visa</a>
+                <a href="/off-plan-investment-guide-abu-dhabi" onClick={(e) => { e.preventDefault(); navigate("/off-plan-investment-guide-abu-dhabi"); }} className="text-left hover:text-[#C9A96E] cursor-pointer">Off-Plan Guide</a>
+                <a href="/abu-dhabi-property-market-2026" onClick={(e) => { e.preventDefault(); navigate("/abu-dhabi-property-market-2026"); }} className="text-left hover:text-[#C9A96E] cursor-pointer">Market 2026</a>
+                <a href="/rental-yields-abu-dhabi-2026" onClick={(e) => { e.preventDefault(); navigate("/rental-yields-abu-dhabi-2026"); }} className="text-left hover:text-[#C9A96E] cursor-pointer">Rental Yields</a>
+                <a href="/how-to-buy-property-in-abu-dhabi" onClick={(e) => { e.preventDefault(); navigate("/how-to-buy-property-in-abu-dhabi"); }} className="text-left hover:text-[#C9A96E] cursor-pointer">How to Buy</a>
+                <a href="/freehold-areas-abu-dhabi" onClick={(e) => { e.preventDefault(); navigate("/freehold-areas-abu-dhabi"); }} className="text-left hover:text-[#C9A96E] cursor-pointer">Freehold Zones</a>
               </div>
             </div>
 
@@ -1379,12 +1381,14 @@ export default function App() {
             <div className="md:col-span-2 space-y-4">
               <span className="text-[10px] font-bold text-[#C9A96E] uppercase tracking-widest block">Area Guides</span>
               <div className="flex flex-col space-y-2 text-xs text-gray-300 font-light">
-                <button onClick={() => navigate("/saadiyat-island-property-guide")} className="text-left hover:text-[#C9A96E] cursor-pointer">Saadiyat Island</button>
-                <button onClick={() => navigate("/yas-island-real-estate")} className="text-left hover:text-[#C9A96E] cursor-pointer">Yas Island</button>
-                <button onClick={() => navigate("/al-reem-island-apartments-abu-dhabi")} className="text-left hover:text-[#C9A96E] cursor-pointer">Al Reem Island</button>
-                <button onClick={() => navigate("/best-investment-areas-abu-dhabi-2026")} className="text-left hover:text-[#C9A96E] cursor-pointer">Best Areas 2026</button>
-                <button onClick={() => navigate("/about")} className="text-left hover:text-[#C9A96E] cursor-pointer">About Us</button>
-                <button onClick={() => navigate("/faq")} className="text-left hover:text-[#C9A96E] cursor-pointer">FAQ Center</button>
+                <a href="/al-maryah-island-real-estate" onClick={(e) => { e.preventDefault(); navigate("/al-maryah-island-real-estate"); }} className="text-left hover:text-[#C9A96E] cursor-pointer">Al Maryah Island</a>
+                <a href="/buy-property-adgm-abu-dhabi" onClick={(e) => { e.preventDefault(); navigate("/buy-property-adgm-abu-dhabi"); }} className="text-left hover:text-[#C9A96E] cursor-pointer">ADGM Property</a>
+                <a href="/saadiyat-island-property-guide" onClick={(e) => { e.preventDefault(); navigate("/saadiyat-island-property-guide"); }} className="text-left hover:text-[#C9A96E] cursor-pointer">Saadiyat Island</a>
+                <a href="/yas-island-real-estate" onClick={(e) => { e.preventDefault(); navigate("/yas-island-real-estate"); }} className="text-left hover:text-[#C9A96E] cursor-pointer">Yas Island</a>
+                <a href="/al-reem-island-apartments-abu-dhabi" onClick={(e) => { e.preventDefault(); navigate("/al-reem-island-apartments-abu-dhabi"); }} className="text-left hover:text-[#C9A96E] cursor-pointer">Al Reem Island</a>
+                <a href="/best-investment-areas-abu-dhabi-2026" onClick={(e) => { e.preventDefault(); navigate("/best-investment-areas-abu-dhabi-2026"); }} className="text-left hover:text-[#C9A96E] cursor-pointer">Best Areas 2026</a>
+                <a href="/about" onClick={(e) => { e.preventDefault(); navigate("/about"); }} className="text-left hover:text-[#C9A96E] cursor-pointer">About Us</a>
+                <a href="/faq" onClick={(e) => { e.preventDefault(); navigate("/faq"); }} className="text-left hover:text-[#C9A96E] cursor-pointer">FAQ Center</a>
               </div>
             </div>
 
@@ -1395,7 +1399,7 @@ export default function App() {
                 <p>Tamouh Tower, Al Reem Island, Floor 7</p>
                 <p>Abu Dhabi, United Arab Emirates</p>
                 <p>PO BOX 38761</p>
-                <p className="text-[#C9A96E] hover:underline cursor-pointer block pt-1" onClick={() => navigate("/contact")}>Find us on visual maps →</p>
+                <a href="/contact" onClick={(e) => { e.preventDefault(); navigate("/contact"); }} className="text-[#C9A96E] hover:underline cursor-pointer block pt-1">Find us on visual maps →</a>
               </div>
             </div>
           </div>

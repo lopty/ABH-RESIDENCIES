@@ -23,6 +23,7 @@ interface UnifiedPost {
   sourceName?: string;
   author?: string;
   aiGenerated?: boolean;
+  relatedLinks?: { label: string; href: string }[];
 }
 
 const WHATSAPP = "971554226593";
@@ -122,6 +123,7 @@ export default function BlogPage({ onShowConsultation, onNavigate, initialSlug }
           content: p.content.join("\n\n"),
           isFromDB: false,
           author: "Pranav Chaudhary",
+          relatedLinks: p.relatedLinks || [],
         }));
 
       const merged = [...dbPosts, ...staticNorm];
@@ -215,11 +217,11 @@ export default function BlogPage({ onShowConsultation, onNavigate, initialSlug }
     return (
       <div className="min-h-screen pt-24 pb-20 bg-white">
         <div className="max-w-3xl mx-auto px-4 sm:px-6">
-          <button onClick={handleBack}
+          <a href="/blog" onClick={(e) => { e.preventDefault(); handleBack(); }}
             className="group flex items-center space-x-2 text-xs uppercase tracking-widest font-bold text-gray-500 hover:text-[#C9A96E] transition-colors mb-10 focus:outline-none cursor-pointer">
             <ArrowLeft size={14} className="transform group-hover:-translate-x-1 transition-transform" />
             <span>Back to Blog</span>
-          </button>
+          </a>
 
           <div className="mb-4 flex items-center gap-2 flex-wrap">
             <span className="bg-[#C9A96E] text-white text-[9px] font-bold uppercase tracking-widest py-1 px-2.5">{activePost.category}</span>
@@ -294,14 +296,22 @@ export default function BlogPage({ onShowConsultation, onNavigate, initialSlug }
           <div className="space-y-4">
             <h4 className="font-serif text-xl font-normal text-gray-950 border-b border-gray-100 pb-3">Further Reading</h4>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              {allPosts.filter((p) => p.slug !== activePost.slug).slice(0, 2).map((post) => (
-                <article key={post.slug} onClick={() => handleSelectPost(post)}
-                  className="p-5 border border-[#EAE6DF] hover:border-[#C9A96E] bg-white text-left transition-all cursor-pointer space-y-2">
-                  <span className="text-[9px] font-bold uppercase tracking-widest text-[#C9A96E]">{post.category}</span>
-                  <h5 className="font-serif text-base font-normal text-gray-900 line-clamp-2 leading-snug">{post.title}</h5>
-                  <span className="text-[10px] font-bold text-[#1C2B4A] uppercase tracking-widest block pt-1">READ ARTICLE →</span>
-                </article>
-              ))}
+              {activePost.relatedLinks && activePost.relatedLinks.length > 0
+                ? activePost.relatedLinks.map((link) => (
+                    <a key={link.href} href={link.href} onClick={(e) => { e.preventDefault(); onNavigate(link.href); }}
+                      className="p-5 border border-[#EAE6DF] hover:border-[#C9A96E] bg-white text-left transition-all cursor-pointer space-y-2 block">
+                      <h5 className="font-serif text-base font-normal text-gray-900 line-clamp-2 leading-snug">{link.label}</h5>
+                      <span className="text-[10px] font-bold text-[#1C2B4A] uppercase tracking-widest block pt-1">READ MORE →</span>
+                    </a>
+                  ))
+                : allPosts.filter((p) => p.slug !== activePost.slug).slice(0, 2).map((post) => (
+                    <a key={post.slug} href={`/blog/${post.slug}`} onClick={(e) => { e.preventDefault(); handleSelectPost(post); }}
+                      className="p-5 border border-[#EAE6DF] hover:border-[#C9A96E] bg-white text-left transition-all cursor-pointer space-y-2 block">
+                      <span className="text-[9px] font-bold uppercase tracking-widest text-[#C9A96E]">{post.category}</span>
+                      <h5 className="font-serif text-base font-normal text-gray-900 line-clamp-2 leading-snug">{post.title}</h5>
+                      <span className="text-[10px] font-bold text-[#1C2B4A] uppercase tracking-widest block pt-1">READ ARTICLE →</span>
+                    </a>
+                  ))}
             </div>
           </div>
         </div>
@@ -350,7 +360,7 @@ export default function BlogPage({ onShowConsultation, onNavigate, initialSlug }
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredPosts.map((post) => (
-              <article key={post.slug} onClick={() => handleSelectPost(post)}
+              <a key={post.slug} href={`/blog/${post.slug}`} onClick={(e) => { e.preventDefault(); handleSelectPost(post); }}
                 className="group bg-white border border-[#EAE6DF] overflow-hidden hover:shadow-xl transition-all duration-300 cursor-pointer flex flex-col">
                 <div className="relative overflow-hidden aspect-[16/10] bg-gray-50">
                   {post.image ? (
@@ -378,7 +388,7 @@ export default function BlogPage({ onShowConsultation, onNavigate, initialSlug }
                     <ChevronRight size={14} className="text-[#1C2B4A] group-hover:translate-x-1 transition-transform" />
                   </div>
                 </div>
-              </article>
+              </a>
             ))}
           </div>
         )}

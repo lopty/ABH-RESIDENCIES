@@ -17,6 +17,13 @@ export default function SeoPage({ page, onCta }: SeoPageProps) {
     window.scrollTo({ top: 0, behavior: "instant" });
   };
 
+  // Some pages define relatedLinks (slug-based) instead of relatedPages
+  // (href-based) — normalize both into one list so neither is silently dropped.
+  const relatedItems = [
+    ...(page.relatedPages || []),
+    ...((page.relatedLinks || []).map((l) => ({ label: l.label, href: `/${l.slug}` }))),
+  ];
+
   return (
     <div className="bg-white">
       {/* Hero */}
@@ -141,19 +148,20 @@ export default function SeoPage({ page, onCta }: SeoPageProps) {
         )}
 
         {/* Related Pages */}
-        {page.relatedPages && page.relatedPages.length > 0 && (
+        {relatedItems.length > 0 && (
           <div className="mb-16 p-6 bg-gray-50 border border-gray-100 rounded-sm">
             <h3 className="text-xs text-[#C9A96E] tracking-widest uppercase font-semibold mb-4">Related Guides</h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-              {page.relatedPages.map((link, i) => (
-                <button
+              {relatedItems.map((link, i) => (
+                <a
                   key={i}
-                  onClick={() => navigate(link.href)}
+                  href={link.href}
+                  onClick={(e) => { e.preventDefault(); navigate(link.href); }}
                   className="flex items-center gap-2 text-sm text-[#1C2B4A] hover:text-[#C9A96E] transition-colors text-left cursor-pointer"
                 >
                   <ExternalLink size={12} className="flex-shrink-0 text-[#C9A96E]" />
                   {link.label}
-                </button>
+                </a>
               ))}
             </div>
           </div>

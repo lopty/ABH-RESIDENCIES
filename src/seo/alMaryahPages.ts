@@ -2,6 +2,64 @@ import { SeoPageData } from "./types";
 
 export const alMaryahPages: SeoPageData[] = [
   {
+    slug: "buy-property-adgm-abu-dhabi",
+    title: "Buy Property in ADGM Abu Dhabi 2026 | Al Maryah Island's Financial Free Zone",
+    description: "Buy property in ADGM, Abu Dhabi's English common law financial free zone on Al Maryah Island. Ownership structures, off-plan vs secondary, Golden Visa eligibility, and how ADGM compares to DIFC.",
+    keywords: "buy property adgm, adgm real estate, adgm property abu dhabi, buy properties in adgm, adgm al maryah island property, adgm property investment",
+    headline: "Buy Property in ADGM — Abu Dhabi's Financial Free Zone",
+    subheadline: "ADGM is a jurisdiction, not just an address. Here is what that means for anyone buying property within it.",
+    eyebrow: "Buyer Guide · ADGM",
+    heroImage: "/jumeirah-hero.png",
+    stats: [
+      { value: "English Common Law", label: "Legal Framework" },
+      { value: "1,300+", label: "Licensed Institutions" },
+      { value: "7–9%", label: "Typical Net Yield" },
+      { value: "AED 2M", label: "Golden Visa Threshold" },
+    ],
+    intro: "ADGM, Abu Dhabi Global Market, is often described as a place when it is really a jurisdiction. Its physical footprint is Al Maryah Island, but what actually matters for a property buyer is the legal and regulatory system ADGM operates under: English common law, independent courts, and a registration framework built for institutional-grade certainty. That is the real reason 1,300-plus financial institutions, and the senior professionals who work for them, are anchored here, and it is the real reason property in this zone behaves differently from the rest of Abu Dhabi's freehold market.\n\nFor a buyer, 'buying property in ADGM' in practice means buying residential property on Al Maryah Island, since that is where ADGM's residential stock sits. This page covers the parts of that decision that are specific to ADGM as a jurisdiction: ownership structures, the legal framework, the Golden Visa route, and how it stacks up against Dubai's equivalent, DIFC.",
+    sections: [
+      {
+        heading: "What Buying 'In ADGM' Actually Means",
+        body: "ADGM has its own Land Registry, separate from the wider Abu Dhabi Department of Municipalities and Transport system used elsewhere in the emirate. Property transactions on Al Maryah Island are registered through this ADGM framework, and disputes are heard by ADGM Courts under English common law rather than UAE civil law. For international buyers, particularly those from common law jurisdictions like the UK, Singapore, or Hong Kong, this is a genuinely different and more familiar legal environment than a standard mainland Abu Dhabi purchase."
+      },
+      {
+        heading: "Ownership Structures: Individual vs Institutional",
+        body: "Most buyers purchase individually, which is the simplest route and the only one relevant for a straightforward Golden Visa qualification. Family offices, high-net-worth individuals, and investors holding property alongside other assets sometimes use an ADGM Special Purpose Vehicle or Foundation instead, which can offer succession planning and structuring benefits at the cost of additional setup and ongoing compliance. For a first ADGM property purchase intended as a home or straightforward investment, individual ownership is almost always the right starting point."
+      },
+      {
+        heading: "Off-Plan vs Secondary in ADGM",
+        body: "Jumeirah Residences is currently the flagship off-plan option, a branded development with prices from AED 3,000,000 for a one-bedroom. Secondary stock exists in older, non-branded Al Maryah towers, typically at a meaningful discount to new branded product but with more variation in building and management quality. The trade-off mirrors the rest of Abu Dhabi: off-plan for a longer horizon and lower entry price, secondary for immediate financing, inspection, and rental income."
+      },
+      {
+        heading: "The Golden Visa Route Through ADGM Property",
+        body: "A purchase of AED 2,000,000 or more on Al Maryah Island qualifies the buyer and immediate family for the 10-year UAE Golden Visa, the same threshold that applies across Abu Dhabi's other freehold zones. Off-plan purchases qualify once the required equity has been paid, not necessarily the full price, which is worth clarifying with your advisor and the developer before assuming eligibility."
+      },
+      {
+        heading: "ADGM vs DIFC",
+        body: "DIFC is Dubai's equivalent financial free zone, also operating under English common law, also property-linked to Golden Visa eligibility. The two are frequently compared by investors weighing Abu Dhabi against Dubai. ADGM generally offers lower entry prices and higher rental yields, reflecting Abu Dhabi's earlier stage of market maturity in this segment. DIFC offers a larger, more liquid secondary market and a longer operating history. Neither is objectively better; the choice tends to come down to where the buyer's own professional and lifestyle ties sit."
+      },
+    ],
+    faq: [
+      { question: "Is ADGM a place or a company registration zone?", answer: "Both. ADGM is Abu Dhabi's financial free zone, physically located on Al Maryah Island, operating as an independent jurisdiction under English common law with its own courts, regulator, and Land Registry." },
+      { question: "Can foreigners buy property in ADGM?", answer: "Yes. Al Maryah Island, where ADGM's residential stock sits, is a designated freehold zone open to foreign nationals of any country with full 100% ownership rights." },
+      { question: "Does buying property in ADGM qualify for the Golden Visa?", answer: "Yes, a purchase of AED 2,000,000 or more on Al Maryah Island qualifies the buyer and immediate family for a 10-year UAE Golden Visa, the same threshold as elsewhere in Abu Dhabi." },
+      { question: "What is the difference between ADGM and DIFC for property investors?", answer: "Both operate under English common law and both offer Golden Visa eligibility through property. ADGM (Abu Dhabi) currently offers lower entry prices and higher yields; DIFC (Dubai) offers a larger, more established secondary market." },
+    ],
+    relatedPages: [
+      { label: "Al Maryah Island Real Estate: Complete Guide", href: "/al-maryah-island-real-estate" },
+      { label: "UAE Golden Visa Through Property", href: "/golden-visa-abu-dhabi" },
+      { label: "Buy Property in Abu Dhabi", href: "/buy-property-abu-dhabi" },
+      { label: "Buying Property in ADGM: Ownership Structures", href: "/blog/buying-property-adgm-ownership-structures" },
+      { label: "ADGM Off-Plan vs Secondary", href: "/blog/adgm-off-plan-vs-secondary-property" },
+      { label: "ADGM Golden Visa Route", href: "/blog/adgm-golden-visa-property-route" },
+      { label: "Why ADGM Uses English Common Law", href: "/blog/adgm-common-law-property-buyers" },
+      { label: "ADGM vs DIFC Ownership Compared", href: "/blog/adgm-vs-difc-property-ownership" },
+    ],
+    ctaHeadline: "Speak With an ADGM Property Advisor",
+    ctaBody: "AD Residences is headquartered on Al Maryah Island, inside ADGM. Our advisors handle the legal, financing, and structuring questions specific to this jurisdiction daily.",
+    ctaLabel: "Book an ADGM Consultation",
+  },
+  {
     slug: "al-maryah-island-real-estate",
     title: "Al Maryah Island Real Estate Abu Dhabi | Complete Property Guide 2026",
     description: "Complete guide to Al Maryah Island real estate in Abu Dhabi — property prices, investment yields, freehold ownership rules, ADGM location advantage, and best developments to buy in 2026.",
@@ -61,6 +119,15 @@ export const alMaryahPages: SeoPageData[] = [
       { label: "Al Maryah vs Saadiyat Island", slug: "al-maryah-island-vs-saadiyat-island" },
       { label: "Al Maryah vs Al Reem Island", slug: "al-maryah-island-vs-al-reem-island" },
       { label: "Rental Yields Abu Dhabi 2026", slug: "rental-yields-abu-dhabi-2026" },
+      { label: "Buy Property in ADGM", slug: "buy-property-adgm-abu-dhabi" },
+      { label: "Buy Property in Abu Dhabi", slug: "buy-property-abu-dhabi" },
+    ],
+    relatedPages: [
+      { label: "The Secondary Market on Al Maryah Island", href: "/blog/al-maryah-island-secondary-market-resale" },
+      { label: "Studios and 1-Bedrooms: Entry-Level Guide", href: "/blog/al-maryah-island-studio-1-bedroom-guide" },
+      { label: "Does Al Maryah Island Have Villas?", href: "/blog/al-maryah-island-villas-townhouses-reality" },
+      { label: "Financing a Purchase on Al Maryah Island", href: "/blog/financing-purchase-al-maryah-island" },
+      { label: "Ownership Rules for GCC Nationals", href: "/blog/al-maryah-island-gcc-nationals-ownership" },
     ],
     ctaHeadline: "Speak With an Al Maryah Island Advisor",
     ctaBody: "AD Residences is headquartered on Al Maryah Island. Our advisors know every building, every floor, and every corner unit. Book a complimentary consultation.",

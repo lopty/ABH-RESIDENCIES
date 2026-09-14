@@ -159,6 +159,12 @@ export const areaGuidePages: SeoPageData[] = [
       { label: "Saadiyat Island Property Guide", href: "/saadiyat-island-property-guide" },
       { label: "Abu Dhabi Property Prices 2026", href: "/abu-dhabi-property-prices-2026" },
       { label: "Rental Yields Abu Dhabi 2026", href: "/rental-yields-abu-dhabi-2026" },
+      { label: "Buy Property in Abu Dhabi", href: "/buy-property-abu-dhabi" },
+      { label: "Al Reem Island Property Prices 2026", href: "/blog/al-reem-island-property-prices-2026" },
+      { label: "The Best Towers to Buy on Al Reem Island", href: "/blog/best-towers-to-buy-al-reem-island" },
+      { label: "Al Reem Island Rental Yields 2026", href: "/blog/al-reem-island-rental-yields-2026" },
+      { label: "Off-Plan vs Ready on Al Reem Island", href: "/blog/off-plan-vs-ready-al-reem-island" },
+      { label: "Living on Al Reem Island: Lifestyle Guide", href: "/blog/living-on-al-reem-island-guide" },
     ],
   },
 
