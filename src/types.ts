@@ -4,14 +4,21 @@ export interface Property {
   location: string;
   price: string;
   priceNumeric: number; // For search/filter
-  type: "Apartment" | "Penthouse" | "Villa" | "Mansion";
-  area: "Saadiyat Island" | "Yas Island" | "Al Reem Island" | "Ramhan Island" | "Al Maryah Island" | "Al Raha Beach";
+  type: string;
+  area: string;
   badge: "Off-Plan" | "Ready";
   image: string;
   bedrooms: number;
   bathrooms: number;
   sizeSqFt: number;
   description: string;
+  // Catalogue fields (optional so older data still type-checks)
+  href?: string;
+  developer?: string;
+  bedsLabel?: string;
+  sizeLabel?: string;
+  unitTypes?: string[];
+  branded?: boolean;
 }
 
 export interface StatItem {

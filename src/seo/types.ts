@@ -32,6 +32,25 @@ export interface RelatedLink {
   slug: string;
 }
 
+export interface CatalogCard {
+  title: string;
+  href: string;
+  image?: string;
+  location: string;
+  developer: string;
+  badge: string;
+  priceLabel: string;
+  facts: string[];
+}
+
+export interface UnitRow {
+  label: string;
+  size?: string;
+  price?: string;
+  baths?: string;
+  href?: string;
+}
+
 export interface SeoPageData {
   slug: string;
   title: string;
@@ -47,6 +66,10 @@ export interface SeoPageData {
   faq?: SeoFaq[];
   relatedPages?: RelatedPage[];
   relatedLinks?: RelatedLink[];
+  linkGroups?: { heading: string; links: RelatedPage[] }[];
+  cards?: CatalogCard[];
+  gallery?: string[];
+  unitRows?: UnitRow[];
   schemaType?: string;
   heroImg?: string;
   heroImage?: string;

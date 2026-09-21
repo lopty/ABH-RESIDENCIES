@@ -55,6 +55,12 @@ export const buyerGuidePages: SeoPageData[] = [
       { label: "Al Maryah Island Real Estate", href: "/al-maryah-island-real-estate" },
       { label: "Al Reem Island Apartments", href: "/al-reem-island-apartments-abu-dhabi" },
       { label: "Buy Property in ADGM", href: "/buy-property-adgm-abu-dhabi" },
+      { label: "Abu Dhabi Property Projects Directory", href: "/projects" },
+      { label: "Off-Plan Projects", href: "/projects/off-plan" },
+      { label: "Ready and Secondary Projects", href: "/projects/secondary" },
+      { label: "Branded Residences", href: "/projects/branded" },
+      { label: "Property Payment Plans in Abu Dhabi", href: "/property-payment-plans-abu-dhabi" },
+      { label: "Golden Visa Property in Abu Dhabi", href: "/golden-visa-eligible-property-abu-dhabi" },
       { label: "The Secondary Resale Market in Abu Dhabi 2026", href: "/blog/secondary-resale-market-abu-dhabi-2026" },
       { label: "Best Areas to Buy by Budget", href: "/blog/best-areas-buy-property-abu-dhabi-by-budget" },
       { label: "Mortgage Pre-Approval Checklist", href: "/blog/mortgage-pre-approval-checklist-abu-dhabi" },
@@ -277,7 +283,7 @@ export const buyerGuidePages: SeoPageData[] = [
       { label: "Al Reem Island", value: "AED 12–20/sqft" },
       { label: "Regulated By", value: "ADHA" },
     ],
-    intro: "Service charges are annual fees paid by property owners in Abu Dhabi to cover the cost of maintaining, securing, and running the shared infrastructure of their building or community. They are non-optional, enforced by ADHA, and can have a meaningful impact on net rental yields if not factored into your investment calculations. Service charges vary significantly between buildings — from AED 12/sqft per year in standard Al Reem Island towers to AED 35/sqft per year or more in ultra-luxury hotel-managed buildings like Jumeirah Residences on Al Maryah Island. Understanding what you are paying for and what the rate means for your investment return is essential before committing to a purchase.",
+    intro: "Service charges are annual fees paid by property owners in Abu Dhabi to cover the cost of maintaining, securing, and running the shared infrastructure of their building or community. They are non-optional, enforced by ADHA, and can have a meaningful impact on net rental yields if not factored into your investment calculations. Understanding what you are paying for and what the rate means for your investment return is essential before committing to a purchase.",
     sections: [
       {
         heading: "What Service Charges Cover",
@@ -285,7 +291,7 @@ export const buyerGuidePages: SeoPageData[] = [
       },
       {
         heading: "Service Charges by Zone and Building Type",
-        body: "Ultra-luxury branded (Jumeirah Residences, Four Seasons Residences): AED 25–40/sqft per year\nLuxury non-branded (Gate Towers, Sky Tower, Al Maryah towers): AED 18–28/sqft per year\nMid-luxury established (most Al Reem Island towers): AED 12–20/sqft per year\nVilla communities (Saadiyat, Yas Acres): AED 4–12/sqft per year (lower due to limited shared facilities)\n\nFor a 1,200 sqft Al Maryah Island unit at AED 28/sqft: AED 33,600/year in service charges\nFor a 1,200 sqft Al Reem Island unit at AED 15/sqft: AED 18,000/year in service charges",
+        body: "\nLuxury non-branded (Gate Towers, Sky Tower, Al Maryah towers): AED 18–28/sqft per year\nMid-luxury established (most Al Reem Island towers): AED 12–20/sqft per year\nVilla communities (Saadiyat, Yas Acres): AED 4–12/sqft per year (lower due to limited shared facilities)\n\nFor a 1,200 sqft Al Maryah Island unit at AED 28/sqft: AED 33,600/year in service charges\nFor a 1,200 sqft Al Reem Island unit at AED 15/sqft: AED 18,000/year in service charges",
       },
       {
         heading: "How Service Charges Are Calculated and Set",

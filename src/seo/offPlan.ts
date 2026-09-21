@@ -66,7 +66,7 @@ export const offPlanPages: SeoPageData[] = [
       },
       {
         question: "What payment plan is typical at Jumeirah Residences?",
-        answer: "Jumeirah Residences on Al Maryah Island is an Aldar Properties development. Aldar typically offers structured payment plans for off-plan units with a 10–20% deposit and milestone-based instalments. Specific plan details vary by phase and launch. Contact AD Residences for current payment plan availability on specific units.",
+        answer: "Jumeirah Residences on Al Maryah Island is an Emirates Developments development with Jumeirah as the brand partner. Emirates Developments has not published a payment plan for the project, so the deposit and instalment schedule need to be requested for each unit. Contact AD Residences for current payment plan availability on specific units.",
       },
       {
         question: "How do I verify that a project is ADHA escrow-registered?",
@@ -138,62 +138,6 @@ export const offPlanPages: SeoPageData[] = [
     ],
   },
 
-  {
-    slug: "best-off-plan-projects-abu-dhabi-2026",
-    cluster: "off-plan",
-    title: "Best Off-Plan Projects in Abu Dhabi 2026 | Developer Launches & Investment Picks",
-    description: "The best off-plan property projects in Abu Dhabi for 2026. Ranked by location, developer track record, payment plan, and investment potential. Expert picks from AD Residences.",
-    keywords: "best off-plan projects Abu Dhabi 2026, top off-plan developments Abu Dhabi, new launches Abu Dhabi 2026, off-plan investment Abu Dhabi best",
-    headline: "Best Off-Plan Projects in Abu Dhabi 2026",
-    subheadline: "Expert-ranked off-plan developments across Al Maryah Island, Saadiyat, Yas, and Al Reem — evaluated by investment criteria, not marketing.",
-    eyebrow: "Off-Plan · 2026 Project Ranking",
-    stats: [
-      { label: "Active Projects", value: "40+" },
-      { label: "Best Yields Zone", value: "Al Maryah" },
-      { label: "Top Developer", value: "Aldar" },
-      { label: "Launch Price Savings", value: "15–30%" },
-    ],
-    intro: "Abu Dhabi launched more than 40 new off-plan residential projects in 2025–2026, spanning luxury branded residences, mid-market apartment towers, and villa communities. Not all projects are equal. Investment quality depends on the developer's delivery track record, the location's supply-demand dynamics, the specific unit mix, and the payment plan structure. This guide ranks Abu Dhabi's leading off-plan options by investment merit — assessed independently, not based on marketing relationships.",
-    sections: [
-      {
-        heading: "1. Jumeirah Residences, Al Maryah Island (Aldar Properties)",
-        body: "Category: Ultra-luxury branded residences\nDeveloper: Aldar Properties (government-backed, PJSC listed)\nLocation: Al Maryah Island — Abu Dhabi's premier financial district\nUnit Types: 1–3 bedroom apartments, penthouses\nPrice Range: AED 2.8M – AED 25M+\n\nWhy it ranks first: Al Maryah Island has the highest constrained supply of any prime Abu Dhabi zone — there is minimal remaining development land, which creates a structural scarcity premium. Jumeirah Group hotel service integration means buyers access five-star amenities without separate hotel memberships. Rental yields on Al Maryah have consistently tracked 7–8.5% net. Aldar's delivery track record across Abu Dhabi is the strongest of any developer in the emirate.",
-      },
-      {
-        heading: "2. Saadiyat Grove, Saadiyat Island (Aldar Properties)",
-        body: "Category: Mixed-use cultural district living\nDeveloper: Aldar Properties\nLocation: Saadiyat Island — home to Louvre Abu Dhabi, Guggenheim (under development), NYU\nUnit Types: 1–4 bedroom apartments, townhouses\nPrice Range: AED 1.8M – AED 12M\n\nWhy it ranks: Saadiyat Island is Abu Dhabi's cultural epicentre. As the Guggenheim Abu Dhabi opens and the district matures, demand from international arts and academia communities drives long-term appreciation. Saadiyat has delivered consistent 18–22% capital gains per 3-year cycle since 2018.",
-      },
-      {
-        heading: "3. Yas Yas Yas / Yas Acres II, Yas Island (Aldar Properties)",
-        body: "Category: Lifestyle community, villas and townhouses\nDeveloper: Aldar Properties\nLocation: Yas Island — Abu Dhabi's entertainment and motorsport hub\nUnit Types: 3–5 bedroom villas and townhouses\nPrice Range: AED 3M – AED 9M\n\nWhy it ranks: Yas Island's entertainment infrastructure (Ferrari World, Yas Waterworld, Yas Marina Circuit) drives strong short-term rental potential. The Formula 1 Abu Dhabi Grand Prix generates peak occupancy premium of 400–600% for the event week. For investors targeting both capital appreciation and short-term rental yields, Yas Island villas outperform apartment alternatives.",
-      },
-      {
-        heading: "4. Reem Hills, Al Reem Island (Q Properties)",
-        body: "Category: Mid-luxury apartment and villa community\nDeveloper: Q Properties\nLocation: Al Reem Island — established residential hub\nUnit Types: 1–4 bedrooms, villas\nPrice Range: AED 1.2M – AED 7M\n\nWhy it ranks: Al Reem Island is Abu Dhabi's most established mid-luxury residential destination with deep rental liquidity. Reem Hills adds a landscaped hill feature unusual for Abu Dhabi flat terrain, commanding premium pricing. For investors seeking strong rental yields with a shorter holding horizon, Al Reem Island offers the deepest tenant pool.",
-      },
-      {
-        heading: "Key Criteria for Evaluating Any Off-Plan Project",
-        body: "Before committing to any off-plan project, evaluate:\n\n1. Developer track record: Has this developer delivered projects on time? Check their previous completions.\n2. Location supply dynamics: How much more development can occur in this zone? Less future supply = stronger appreciation.\n3. Escrow registration: Confirm ADHA escrow account is registered before paying.\n4. Payment plan terms: Are milestone payments tied to verifiable construction progress?\n5. Unit position: Lower floors and units facing east (morning sun) are typically priced lower but have lower resale demand than high-floor, waterfront-facing units.\n6. Service charge estimates: Request the developer's projected annual service charge per square foot.",
-      },
-    ],
-    faq: [
-      {
-        question: "Is now a good time to buy off-plan in Abu Dhabi?",
-        answer: "Abu Dhabi's residential property market has seen consistent price growth since 2021, driven by Golden Visa demand, a low-supply premium-zone environment, and UAE's safe-haven status. Al Maryah Island and Saadiyat in particular are structurally supply-constrained. While no market guarantees appreciation, the fundamental drivers — government stability, strong GDP growth, population growth from Golden Visa inflows — remain positive through 2026–2028.",
-      },
-      {
-        question: "Which Abu Dhabi developer has the best track record?",
-        answer: "Aldar Properties is the clear leader for delivery track record, financial strength (PJSC-listed, AED 26B+ in assets), and project quality. Bloom Holdings, Reportage Properties, and IMKAN are solid secondary-tier developers. For off-plan purchases above AED 5M, AD Residences recommends sticking with Tier 1 developers where delivery risk is lowest.",
-      },
-    ],
-    relatedPages: [
-      { label: "Off-Plan Investment Guide Abu Dhabi", href: "/off-plan-investment-guide-abu-dhabi" },
-      { label: "Off-Plan Payment Plans Abu Dhabi", href: "/off-plan-payment-plans-abu-dhabi" },
-      { label: "Off-Plan vs Ready Property Abu Dhabi", href: "/off-plan-vs-ready-property-abu-dhabi" },
-      { label: "Jumeirah Residences — Project Details", href: "/properties/jumeirah-residences" },
-      { label: "Abu Dhabi Property Market 2026", href: "/abu-dhabi-property-market-2026" },
-    ],
-  },
 
   {
     slug: "off-plan-vs-ready-property-abu-dhabi",
@@ -214,7 +158,7 @@ export const offPlanPages: SeoPageData[] = [
     sections: [
       {
         heading: "Price: Off-Plan Has the Entry Advantage",
-        body: "Off-plan launch prices are set by developers below expected completion market value to attract early buyers and generate cash flow for construction. The discount typically ranges from 15–30% for well-located premium projects. At Al Maryah Island, buyers who purchased Jumeirah Residences at launch paid significantly less per square foot than comparable units sold in the secondary ready market today.\n\nReady property is priced at current market — you pay exactly what the market determines the unit is worth today. There is no discount for timing, though negotiation is possible in slower market periods.",
+        body: "Off-plan launch prices are set by developers below expected completion market value to attract early buyers and generate cash flow for construction. The discount typically ranges from 15–30% for well-located premium projects.\n\nReady property is priced at current market — you pay exactly what the market determines the unit is worth today. There is no discount for timing, though negotiation is possible in slower market periods.",
       },
       {
         heading: "Rental Income: Ready Property Wins",

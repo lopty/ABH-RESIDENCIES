@@ -36,7 +36,7 @@ export const investmentGuidePages: SeoPageData[] = [
       },
       {
         heading: "Is Abu Dhabi Property Overpriced in 2026?",
-        body: "By global comparison metrics, Abu Dhabi prime property remains significantly underpriced relative to equivalent-quality assets in comparable gateway cities. Price-per-square-foot comparisons:\n\nJumeirah Residences, Abu Dhabi: AED 2,800–4,500/sqft (USD 760–1,220)\nComparable branded residences in London: USD 3,000–8,000/sqft\nComparable branded residences in Singapore: USD 2,500–6,000/sqft\nComparable branded residences in Miami: USD 1,800–4,500/sqft\n\nThe gap reflects Abu Dhabi's developing profile as a global gateway city — a profile that is closing rapidly.",
+        body: "By global comparison metrics, Abu Dhabi prime property remains significantly underpriced relative to equivalent-quality assets in comparable gateway cities. Price-per-square-foot comparisons:\n\\nComparable branded residences in London: USD 3,000–8,000/sqft\nComparable branded residences in Singapore: USD 2,500–6,000/sqft\nComparable branded residences in Miami: USD 1,800–4,500/sqft\n\nThe gap reflects Abu Dhabi's developing profile as a global gateway city — a profile that is closing rapidly.",
       },
     ],
     table: {
@@ -83,11 +83,11 @@ export const investmentGuidePages: SeoPageData[] = [
       { label: "Saadiyat Villa", value: "AED 8M+" },
       { label: "Price Growth 2025", value: "+11.4%" },
     ],
-    intro: "Abu Dhabi property prices in 2026 vary dramatically by zone, quality tier, and property type — from AED 700,000 for a 1-bedroom apartment in an established Al Reem Island tower to AED 50M+ for a Saadiyat beachfront villa or a Jumeirah Residences penthouse on Al Maryah Island. Understanding the pricing landscape across zones is the first step in identifying where your investment budget best aligns with your income and appreciation objectives. This guide provides current market pricing, broken down by zone and type, based on 2025 transaction data and 2026 Q1 market indicators.",
+    intro: " Understanding the pricing landscape across zones is the first step in identifying where your investment budget best aligns with your income and appreciation objectives. This guide provides current market pricing, broken down by zone and type, based on 2025 transaction data and 2026 Q1 market indicators.",
     sections: [
       {
         heading: "Al Maryah Island — Ultra-Luxury Pricing",
-        body: "1-bedroom apartments: AED 2,800,000 – AED 4,500,000\n2-bedroom apartments: AED 4,500,000 – AED 8,000,000\n3-bedroom apartments: AED 7,000,000 – AED 14,000,000\nPenthouses: AED 12,000,000 – AED 50,000,000+\n\nPrice per square foot: AED 2,800 – AED 4,500 for Jumeirah Residences.\n\nAl Maryah Island commands the highest per-square-foot pricing in Abu Dhabi's residential market, driven by extreme supply scarcity, Jumeirah Group branded service management, and the financial district location. All units here qualify for the Golden Visa.",
+        body: "1-bedroom apartments: AED 2,800,000 – AED 4,500,000\n2-bedroom apartments: AED 4,500,000 – AED 8,000,000\n3-bedroom apartments: AED 7,000,000 – AED 14,000,000\nPenthouses: AED 12,000,000 – AED 50,000,000+\n\\n\nAl Maryah Island commands the highest per-square-foot pricing in Abu Dhabi's residential market, driven by extreme supply scarcity, Jumeirah Group branded service management, and the financial district location. All units here qualify for the Golden Visa.",
       },
       {
         heading: "Saadiyat Island — Premium Cultural District Pricing",
@@ -216,7 +216,7 @@ export const investmentGuidePages: SeoPageData[] = [
       },
       {
         heading: "Rental Yields — Abu Dhabi Has the Edge in Prime Zones",
-        body: "Abu Dhabi prime zones (Al Maryah Island, parts of Al Reem): 7–8.5% gross\nDubai prime zones (Downtown Dubai, Dubai Marina, Palm Jumeirah): 4–6% gross\nDubai mid-market (Business Bay, JVC): 6–8% gross\n\nAbu Dhabi's higher yields in its prime zones reflect the fact that property prices remain below Dubai equivalent-quality pricing while rents are competitive. As Abu Dhabi property prices converge toward Dubai's, yields will likely compress — which is another argument for entering Abu Dhabi prime property now rather than after full convergence.",
+        body: "Abu Dhabi prime zones (Al Maryah Island, parts of Al Reem): 7–8.5% gross\\nDubai mid-market (Business Bay, JVC): 6–8% gross\n\nAbu Dhabi's higher yields in its prime zones reflect the fact that property prices remain below Dubai equivalent-quality pricing while rents are competitive. As Abu Dhabi property prices converge toward Dubai's, yields will likely compress — which is another argument for entering Abu Dhabi prime property now rather than after full convergence.",
       },
       {
         heading: "Regulation Quality — Abu Dhabi is More Protective",

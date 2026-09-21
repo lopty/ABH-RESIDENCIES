@@ -10,23 +10,23 @@ export default function AlMaryahIslandPage({ onShowConsultation, onNavigate }: A
   const [openFaq, setOpenFaq] = useState<number | null>(null);
 
   const stats = [
-    { title: "Average Rental Yield", value: "7.5% – 8.2% Net", label: "highest corporate yields in Abu Dhabi" },
-    { title: "Avg Price per Sq Ft", value: "AED 2,100 – 2,400", label: "strong capital appreciation trends" },
-    { title: "Commercial Density", value: "ADGM Corporate Hub", label: "home to 500+ global sovereign funds" },
-    { title: "Infrastructure Score", value: "9.9 / 10 Tier", label: "underground paths, world-class clinics" }
+    { title: "Jurisdiction", value: "ADGM", label: "Abu Dhabi Global Market is on the island" },
+    { title: "Ownership", value: "Freehold", label: "open to buyers of any nationality" },
+    { title: "Branded Projects", value: "2", label: "Jumeirah Residences and W Residences" },
+    { title: "Ready Building", value: "Al Maryah Vista", label: "described by its developer as ready to move" }
   ];
 
   const landmarks = [
-    { name: "The Galleria Luxury Mall", desc: "A luxury shopping destination containing Chanel, Hermes, Zuma, and LPM." },
-    { name: "Cleveland Clinic Abu Dhabi", desc: "A world-renowned medical diagnostic facility fully integrated into the island's map." },
-    { name: "ADGM Office Square", desc: "Abu Dhabi's award-winning International financial freezone hosting global trust funds." },
-    { name: "Four Seasons & Rosewood Resorts", desc: "Ultra-premium five star hotels located on Al Maryah's continuous waterfront boardwalk." }
+    { name: "The Galleria Luxury Mall", desc: "The island's shopping and dining destination." },
+    { name: "Cleveland Clinic Abu Dhabi", desc: "A hospital and medical centre on the island." },
+    { name: "ADGM Office Square", desc: "Abu Dhabi's international financial free zone." },
+    { name: "Hotels on the Island", desc: "Hotels on the island, alongside the branded residences." }
   ];
 
   const islandsFaq = [
     {
       q: "Why is Al Maryah Island considered a premium zone?",
-      a: "As Abu Dhabi's designated Central Business District and legal financial freezone (ADGM), Al Maryah maintains a unique legal system, high employee density, and extremely premium master development laws, guaranteeing high demand."
+      a: "Al Maryah Island is the home of ADGM, Abu Dhabi's financial free zone, and sits beside The Galleria and Cleveland Clinic Abu Dhabi. Demand depends on the market at the time, so no outcome is guaranteed."
     },
     {
       q: "Are the apartments on Al Maryah freehold for foreigners?",
@@ -34,7 +34,7 @@ export default function AlMaryahIslandPage({ onShowConsultation, onNavigate }: A
     },
     {
       q: "What is the capital appreciation trend on the island?",
-      a: "Because Al Maryah is fully developed with extremely scarce remaining plots, property values have experienced sharp upward trajectories (averaging 12-15% annual gains) as major towers finish."
+      a: "Prices depend on the building, floor and view, and they move with the market. AD Residences can share recent asking prices for the buildings currently on sale."
     }
   ];
 
@@ -77,13 +77,13 @@ export default function AlMaryahIslandPage({ onShowConsultation, onNavigate }: A
           <div className="lg:col-span-7 space-y-6">
             <div className="w-16 h-1 bg-[#C9A96E]" />
             <h2 className="font-serif text-2xl sm:text-4xl font-light text-[#1A1A1A] leading-tight tracking-tight">
-              The Sovereign Center of Abu Dhabi's Financial Power & Luxury.
+              Abu Dhabi's Financial Island
             </h2>
             <p className="text-xs sm:text-sm text-gray-700 leading-relaxed font-light">
-              Managed as a prestigious independent freezone with a direct English Common Law court structure, Al Maryah Island stands as Abu Dhabi’s global gateway. Beyond its skyscrapers, it boasts the capital's highest concentration of fine dining, luxury hospitality, and high-performance medical infrastructure.
+              Al Maryah Island is home to Abu Dhabi Global Market, the financial free zone whose courts apply English common law. The island also holds The Galleria Al Maryah Island, Cleveland Clinic Abu Dhabi and several hotels.
             </p>
             <p className="text-xs sm:text-sm text-gray-700 leading-relaxed font-light">
-              With a continuous 5.4 km landscaped waterfront promenade and absolute underground pedestrian climate links connecting the retail towers, Al Maryah provides residents an uninterrupted premium living experience protected from the elements.
+              It is one of the smallest freehold islands in Abu Dhabi and its residential stock is almost entirely high-rise, so the number of homes for sale at any time is limited.
             </p>
 
             <div className="pt-6 border-t border-[#F8F6F2] space-y-4">
@@ -104,7 +104,7 @@ export default function AlMaryahIslandPage({ onShowConsultation, onNavigate }: A
             <div className="absolute top-0 right-0 h-1.5 w-full bg-[#1C2B4A]" />
             <div className="space-y-6">
               <h3 className="font-serif text-xl font-normal text-slate-900 pb-3 border-b border-[#EAE6DF]">
-                Al Maryah Key Investment Stats
+                Al Maryah at a Glance
               </h3>
               
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-6">
@@ -142,7 +142,7 @@ export default function AlMaryahIslandPage({ onShowConsultation, onNavigate }: A
                 Jumeirah Residences on Al Maryah Island
               </h3>
               <p className="text-xs text-gray-650 leading-relaxed font-light">
-                Discover the island's flagship residential masterwork. Absolute waterfront luxury apartments and duplex penthouses starting from AED 3,000,000. Under Jumeirah hospitality management.
+                Branded apartments and penthouses by Emirates Developments in partnership with Jumeirah. Prices have not been published, so availability is requested unit by unit.
               </p>
               
               <button 
@@ -168,7 +168,7 @@ export default function AlMaryahIslandPage({ onShowConsultation, onNavigate }: A
         {/* 4. Al Maryah FAQ Expanders */}
         <div className="max-w-3xl mx-auto">
           <div className="text-center mb-12 space-y-2">
-            <span className="text-xs font-semibold text-[#C9A96E] tracking-[0.4em] uppercase">DISTRICT LEGAL MATRIX</span>
+            <span className="text-xs font-semibold text-[#C9A96E] tracking-[0.4em] uppercase">BUYING FAQS</span>
             <h3 className="font-serif text-2xl sm:text-3xl text-[#1A1A1A] font-light">Al Maryah Island Buying FAQs</h3>
           </div>
 

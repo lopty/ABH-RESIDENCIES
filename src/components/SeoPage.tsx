@@ -73,6 +73,80 @@ export default function SeoPage({ page, onCta }: SeoPageProps) {
           {page.intro}
         </p>
 
+        {/* Gallery */}
+        {page.gallery && page.gallery.length > 0 && (
+          <div className="mb-14 grid grid-cols-2 sm:grid-cols-3 gap-3">
+            {page.gallery.map((src, i) => (
+              <img key={i} src={src} alt={`${page.headline} image ${i + 1}`} loading="lazy" className="w-full aspect-[4/3] object-cover" />
+            ))}
+          </div>
+        )}
+
+        {/* Project catalogue cards */}
+        {page.cards && page.cards.length > 0 && (
+          <div className="mb-16">
+            <h2 className="font-serif text-2xl sm:text-3xl font-semibold text-[#1C2B4A] mb-8">Projects</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              {page.cards.map((c) => (
+                <a
+                  key={c.href}
+                  href={c.href}
+                  onClick={(e) => { e.preventDefault(); navigate(c.href); }}
+                  className="group flex flex-col border border-gray-200 bg-white hover:shadow-xl transition-all duration-300 cursor-pointer overflow-hidden"
+                >
+                  <div className="relative aspect-[16/10] bg-[#1C2B4A] overflow-hidden">
+                    {c.image ? (
+                      <img src={c.image} alt={c.title} loading="lazy" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                    ) : (
+                      <div className="w-full h-full flex flex-col items-center justify-center text-center px-6 bg-gradient-to-br from-[#1C2B4A] to-[#2d4373]">
+                        <span className="text-[#C9A96E] font-serif text-xl leading-snug">{c.title}</span>
+                        <span className="text-white/60 text-[10px] tracking-[0.25em] uppercase mt-2">{c.location}</span>
+                      </div>
+                    )}
+                    <span className="absolute top-3 left-3 bg-[#C9A96E] text-white text-[9px] font-bold uppercase tracking-widest py-1 px-2">{c.badge}</span>
+                  </div>
+                  <div className="p-5 flex flex-col gap-1.5 flex-1">
+                    <h3 className="font-serif text-lg text-[#1C2B4A] leading-snug">{c.title}</h3>
+                    <p className="text-xs text-gray-500">{c.location} · {c.developer}</p>
+                    <p className="text-sm font-semibold text-[#1C2B4A] pt-1">{c.priceLabel}</p>
+                    <p className="text-xs text-gray-500">{c.facts.join(" · ")}</p>
+                    <span className="mt-auto pt-3 text-[10px] font-bold uppercase tracking-widest text-[#C9A96E]">View project →</span>
+                  </div>
+                </a>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {/* Available layouts */}
+        {page.unitRows && page.unitRows.length > 0 && (
+          <div className="mb-16 overflow-x-auto">
+            <h2 className="font-serif text-xl sm:text-2xl font-semibold text-[#1C2B4A] mb-4">Available Layouts</h2>
+            <table className="w-full text-sm border-collapse">
+              <thead>
+                <tr className="bg-[#1C2B4A] text-white">
+                  <th className="text-left px-4 py-3 font-semibold">Layout</th>
+                  <th className="text-left px-4 py-3 font-semibold">Size</th>
+                  <th className="text-left px-4 py-3 font-semibold">Starting price</th>
+                </tr>
+              </thead>
+              <tbody>
+                {page.unitRows.map((r, i) => (
+                  <tr key={i} className={i % 2 === 0 ? "bg-gray-50" : "bg-white"}>
+                    <td className="px-4 py-3 text-gray-700 border-b border-gray-100">
+                      {r.href ? (
+                        <a href={r.href} onClick={(e) => { e.preventDefault(); navigate(r.href!); }} className="text-[#1C2B4A] hover:text-[#C9A96E] font-semibold">{r.label}</a>
+                      ) : r.label}
+                    </td>
+                    <td className="px-4 py-3 text-gray-700 border-b border-gray-100">{r.size || "On request"}</td>
+                    <td className="px-4 py-3 text-gray-700 border-b border-gray-100">{r.price || "On request"}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        )}
+
         {/* Content Sections */}
         <div className="space-y-12 mb-16">
           {page.sections.map((section, i) => (
@@ -146,6 +220,28 @@ export default function SeoPage({ page, onCta }: SeoPageProps) {
             </div>
           </div>
         )}
+
+        {/* Link groups (projects, browse-by-type) */}
+        {page.linkGroups && page.linkGroups.map((group, gi) => (
+          group.links.length > 0 && (
+            <div key={gi} className="mb-10 p-6 bg-white border border-gray-200 rounded-sm">
+              <h3 className="text-xs text-[#C9A96E] tracking-widest uppercase font-semibold mb-4">{group.heading}</h3>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                {group.links.map((link, i) => (
+                  <a
+                    key={i}
+                    href={link.href}
+                    onClick={(e) => { e.preventDefault(); navigate(link.href); }}
+                    className="flex items-center gap-2 text-sm text-[#1C2B4A] hover:text-[#C9A96E] transition-colors text-left cursor-pointer"
+                  >
+                    <ArrowRight size={12} className="flex-shrink-0 text-[#C9A96E]" />
+                    {link.label}
+                  </a>
+                ))}
+              </div>
+            </div>
+          )
+        ))}
 
         {/* Related Pages */}
         {relatedItems.length > 0 && (

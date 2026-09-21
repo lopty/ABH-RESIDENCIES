@@ -16,7 +16,7 @@ export const goldenVisaPages: SeoPageData[] = [
       { label: "Processing Time", value: "4–6 Weeks" },
       { label: "Family Included", value: "Yes" },
     ],
-    intro: "The UAE Golden Visa is a long-term residency programme that allows foreign nationals to live, work, and study in the UAE without requiring a local sponsor. For property investors in Abu Dhabi, the threshold is AED 2 million of completed, registered, fully-paid freehold property. The Golden Visa is renewable indefinitely every ten years, covers your spouse and dependent children of any age, and grants full access to UAE banking, business licensing, and healthcare without the traditional 30-day exit requirement. Abu Dhabi's freehold zones — including Al Maryah Island, Saadiyat Island, Yas Island, Al Reem Island, and Ramhan Island — all qualify. For buyers of Jumeirah Residences on Al Maryah Island, the starting price of AED 3 million comfortably exceeds the threshold with a single unit.",
+    intro: "The UAE Golden Visa is a long-term residency programme that allows foreign nationals to live, work, and study in the UAE without requiring a local sponsor. For property investors in Abu Dhabi, the threshold is AED 2 million of completed, registered, fully-paid freehold property. The Golden Visa is renewable indefinitely every ten years, covers your spouse and dependent children of any age, and grants full access to UAE banking, business licensing, and healthcare without the traditional 30-day exit requirement. Abu Dhabi's freehold zones — including Al Maryah Island, Saadiyat Island, Yas Island, Al Reem Island, and Ramhan Island — all qualify.",
     sections: [
       {
         heading: "Who Qualifies for the Golden Visa Through Property?",
@@ -24,7 +24,7 @@ export const goldenVisaPages: SeoPageData[] = [
       },
       {
         heading: "What the AED 2 Million Threshold Actually Means",
-        body: "AED 2 million translates to approximately USD 545,000 or GBP 425,000 at 2026 rates. In Abu Dhabi's premier developments, a 1-bedroom apartment on Al Maryah Island starts from AED 2.8M–3.2M. A 2-bedroom unit at Jumeirah Residences typically falls between AED 5M–8M. This means virtually any unit in the Jumeirah Residences development triggers Golden Visa eligibility from day one of registration — there is no need to purchase a larger unit specifically for visa purposes.",
+        body: "AED 2 million translates to approximately USD 545,000 or GBP 425,000 at 2026 rates. In Abu Dhabi's premier developments, a 1-bedroom apartment on Al Maryah Island starts from AED 2.8M–3.2M. This means virtually any unit in the Jumeirah Residences development triggers Golden Visa eligibility from day one of registration — there is no need to purchase a larger unit specifically for visa purposes.",
       },
       {
         heading: "Documents Required for the Golden Visa Application",
@@ -84,7 +84,7 @@ export const goldenVisaPages: SeoPageData[] = [
       { label: "Can Foreigners Buy Property in Abu Dhabi?", href: "/can-foreigners-buy-property-abu-dhabi" },
       { label: "Jumeirah Residences — Golden Visa Eligible", href: "/properties/jumeirah-residences" },
       { label: "Golden Visa vs Investor Visa UAE", href: "/golden-visa-vs-investor-visa-uae" },
-      { label: "Buying Property in Abu Dhabi as a Foreigner", href: "/buying-property-abu-dhabi-foreigner" },
+      { label: "Buying Property in Abu Dhabi as a Foreigner", href: "/buy-property-abu-dhabi" },
     ],
   },
 
@@ -304,7 +304,7 @@ export const goldenVisaPages: SeoPageData[] = [
     sections: [
       {
         heading: "Step 1: Identify a Qualifying Property",
-        body: "The property must be in an Abu Dhabi freehold investment zone and worth at least AED 2 million. For buyers looking at Jumeirah Residences on Al Maryah Island, every unit exceeds this threshold — 1-bedroom apartments start from AED 2.8M and 2-bedrooms from AED 5M. Request the property's ADHA pre-registration confirmation from the developer or agent to verify the zone and title eligibility before proceeding.",
+        body: "The property must be in an Abu Dhabi freehold investment zone and worth at least AED 2 million. Request the property's ADHA pre-registration confirmation from the developer or agent to verify the zone and title eligibility before proceeding.",
       },
       {
         heading: "Step 2: Sign the Sales and Purchase Agreement (SPA)",

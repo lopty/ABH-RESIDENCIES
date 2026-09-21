@@ -81,7 +81,7 @@ export const brandedResidencePages: SeoPageData[] = [
     sections: [
       {
         heading: "1. Jumeirah Residences Al Maryah Island — #1 Overall",
-        body: "Brand: Jumeirah Group (operator of Burj Al Arab, Jumeirah Beach Hotel, 30+ global properties)\nLocation: Al Maryah Island — Abu Dhabi's premier financial and residential district\nUnit Types: 1–3 bedroom apartments, penthouses\nPrice Range: AED 2.8M – AED 30M+\nService Level: Full Jumeirah hotel-standard management\n\nWhy it ranks first: The combination of the most supply-constrained prime location in Abu Dhabi with the most internationally recognised Arab luxury hotel brand is unmatched in the emirate. Al Maryah Island cannot expand — the Jumeirah Residences inventory is finite and premium demand from ADGM corporate community sustains rental yield at 7–8.5% net. Capital appreciation has been 12–18% year-on-year in recent cycles.",
+        body: "Brand: Jumeirah Group (operator of Burj Al Arab, Jumeirah Beach Hotel, 30+ global properties)\nLocation: Al Maryah Island — Abu Dhabi's premier financial and residential district\nUnit Types: 1–3 bedroom apartments, penthouses\nPrice Range: AED 2.8M – AED 30M+\nService Level: Full Jumeirah hotel-standard management\n\nWhy it ranks first: The combination of the most supply-constrained prime location in Abu Dhabi with the most internationally recognised Arab luxury hotel brand is unmatched in the emirate. Capital appreciation has been 12–18% year-on-year in recent cycles.",
       },
       {
         heading: "2. St. Regis Residences Saadiyat Island",
@@ -99,7 +99,7 @@ export const brandedResidencePages: SeoPageData[] = [
     faq: [
       {
         question: "Is a Jumeirah-branded residence better value than St. Regis?",
-        answer: "They are different rather than one being universally better. Jumeirah Residences on Al Maryah Island offers higher net rental yield (7–8.5% vs 6–7% for St. Regis Saadiyat) due to the financial district corporate tenant base. St. Regis Saadiyat offers beachfront lifestyle, butler service, and stronger lifestyle amenity. Investment-focused buyers typically prefer Jumeirah Residences; lifestyle and UHNW buyers often prefer St. Regis for the beach access.",
+        answer: "They are different rather than one being universally better. Regis Saadiyat) due to the financial district corporate tenant base. St. Regis Saadiyat offers beachfront lifestyle, butler service, and stronger lifestyle amenity. Investment-focused buyers typically prefer Jumeirah Residences; lifestyle and UHNW buyers often prefer St. Regis for the beach access.",
       },
       {
         question: "Do branded residence prices hold up if the hotel brand changes?",

@@ -1,66 +1,6 @@
 import { SeoPageData } from "./types";
 
 export const pricingPages: SeoPageData[] = [
-  {
-    slug: "jumeirah-residences-al-maryah-island-price",
-    title: "Jumeirah Residences Al Maryah Island Price Guide 2026 | All Unit Prices",
-    description: "Complete price guide for Jumeirah Residences Al Maryah Island Abu Dhabi — 1-bed from AED 3M, 2-bed from AED 4.5M, penthouses from AED 15M. Price per sqft, floor premiums, and value analysis.",
-    keywords: "Jumeirah Residences price 2026, Jumeirah Residences Al Maryah Island cost, how much Jumeirah Residences Abu Dhabi, Jumeirah Residences price per sqft, Aldar Jumeirah Residences price list",
-    headline: "Jumeirah Residences Al Maryah Island — Complete Price Guide 2026",
-    subheadline: "Every unit type, every floor premium, and how Jumeirah Residences prices compare to the rest of the Abu Dhabi luxury market.",
-    category: "Price Guide · Jumeirah Residences",
-    heroImage: "/jumeirah-hero.png",
-    intro: "Pricing at Jumeirah Residences Al Maryah Island is structured across three variables: unit configuration (1-bed, 2-bed, 3-bed, penthouse), floor level (lower, mid, upper), and view orientation (Gulf-facing, skyline-facing, city-facing). Understanding how these variables interact — and which combinations deliver the strongest investment return relative to cost — is the difference between a good purchase and a great one.\n\nThis guide presents the complete 2026 price framework for Jumeirah Residences, compares price-per-sqft against the Abu Dhabi luxury market, and explains which floor level and view orientation deliver the optimal investment proposition at each budget tier.",
-    stats: [
-      { value: "AED 3M+", label: "1-Bed From" },
-      { value: "AED 4.5M+", label: "2-Bed From" },
-      { value: "AED 7M+", label: "3-Bed From" },
-      { value: "AED 15M+", label: "Penthouse From" },
-    ],
-    sections: [
-      {
-        heading: "Price by Configuration: Full 2026 Guide",
-        body: "1-Bedroom (900–1,200 sqft): AED 3,000,000–3,500,000 depending on floor and view. Entry units on lower floors (1–15) begin at AED 3,000,000. Upper-floor Gulf-facing 1-beds approach AED 3,400,000–3,500,000. Price-per-sqft: approximately AED 2,800–3,200/sqft. 2-Bedroom (1,400–1,800 sqft): AED 4,500,000–6,500,000. Lower-floor 2-beds begin at AED 4,500,000. Corner upper-floor units with Gulf and Marina views reach AED 6,000,000–6,500,000. Price-per-sqft: approximately AED 3,000–3,600/sqft. 3-Bedroom (2,200–3,000 sqft): AED 7,000,000–10,000,000. Standard 3-bed configurations begin at AED 7,000,000. Premium upper-floor 3-beds with full Gulf views approach AED 9,500,000–10,000,000. Price-per-sqft: approximately AED 3,200–3,700/sqft. Penthouse (4,500+ sqft): AED 15,000,000–25,000,000+. Full-floor penthouses with private pools and panoramic views begin at AED 15,000,000 for entry configurations, with custom full-floor options exceeding AED 25,000,000."
-      },
-      {
-        heading: "Floor Premium: How Much Does Height Cost?",
-        body: "At Jumeirah Residences, floor level carries a meaningful price premium because the building is tall enough that upper floors achieve genuinely superior views over the Gulf horizon — not partial Gulf glimpses, but unobstructed panoramas. The premium structure works approximately as follows: floors 1–10 (ground-area and lower mid-rise): base price. Floors 11–20 (mid-rise, partial Gulf views): +8–12% premium over base. Floors 21–30 (high-rise, full Gulf views from north-facing units): +15–20% premium. Floors 31+ (upper tier, panoramic views, premium positioning): +20–30% premium. The key inflection point is typically around floors 21–25, where Gulf views become unobstructed and the price premium becomes highly recoverable in rental pricing — high-floor units command 15–20% higher annual rents than equivalent lower-floor configurations."
-      },
-      {
-        heading: "View Premium: Gulf vs Skyline vs City",
-        body: "Within each floor band, view orientation creates a further pricing differential. Gulf-facing (north/west-facing units): highest premium — AED 150,000–400,000 above same-floor skyline-facing units. These units command the strongest rental premium (15–20% higher annual rents) and the fastest re-let velocity. Skyline-facing (south/east, views of Abu Dhabi mainland): mid-premium — dramatically attractive at night (city lights and the Abu Dhabi skyline), popular with buyers who spend evenings at home rather than work days. City/internal-facing (units without direct Gulf or skyline views): lowest price band — best value-per-sqft in the building, ideal for buyers primarily seeking the Jumeirah management standard and Golden Visa eligibility without prioritising views."
-      },
-      {
-        heading: "Price-Per-Sqft vs the Abu Dhabi Market",
-        body: "Contextualising Jumeirah Residences pricing against the Abu Dhabi market: Non-branded luxury Al Maryah Island apartments: AED 2,200–2,700/sqft. Branded Jumeirah Residences: AED 2,800–3,700/sqft (25–40% brand premium). Saadiyat Island branded luxury: AED 2,500–4,000/sqft (mixed range across projects). Al Reem Island premium towers: AED 1,500–2,200/sqft. Comparable branded residences in Dubai (DIFC, Downtown): AED 3,500–5,500/sqft. London equivalent (Mayfair branded residence): GBP 3,000–8,000/sqft (AED 14,000–37,000/sqft). Singapore equivalent (Orchard branded): SGD 4,000–8,000/sqft (AED 11,000–22,000/sqft). On this global comparison, Jumeirah Residences at AED 2,800–3,700/sqft represents extraordinary value for a Jumeirah-branded, ADGM-located product delivering 7–8.5% net yield."
-      },
-      {
-        heading: "Is the Price Likely to Rise Before Handover?",
-        body: "Secondary market pricing for Jumeirah Residences has already moved 15–20% above launch pricing while the project is under construction — meaning buyers who entered at launch have already seen significant paper gains. The pattern is consistent with how Aldar projects have behaved historically: Aldar launches a project at below-expected-completion-value pricing to drive early sales velocity, then the secondary market re-prices toward completion value as construction advances. For buyers entering at current pricing (which is already above launch but below projected handover value), the next 12–24 months of construction progress are likely to produce further secondary market appreciation. The Jumeirah brand premium — currently embedded in the price — is expected to expand post-handover as the building's management track record is established."
-      },
-      {
-        heading: "How to Lock in Current Pricing",
-        body: "Off-plan pricing at Jumeirah Residences is not guaranteed to stay at current levels — as construction milestones are reached and secondary market activity increases, prices typically increase. To secure a unit at today's pricing: contact AD Residences to confirm current availability and pricing (our data is refreshed daily from Aldar's allocation system); reserve your preferred unit with a deposit of AED 50,000–100,000 while SPA documentation is prepared; sign the SPA within 30 days to lock in the agreed price. From that point, your price is contractually fixed regardless of any subsequent market movements."
-      }
-    ],
-    faq: [
-      { question: "What is the cheapest unit at Jumeirah Residences Al Maryah Island?", answer: "The entry price is AED 3,000,000 for a 1-bedroom unit on the lower floors. All units are Golden Visa eligible as they exceed the AED 2,000,000 threshold." },
-      { question: "How much does a 2-bedroom cost at Jumeirah Residences?", answer: "AED 4,500,000 to AED 6,500,000, depending on floor level and view orientation. Upper-floor Gulf-facing 2-bedroom corner units reach the top of this range." },
-      { question: "What is the price per sqft at Jumeirah Residences?", answer: "AED 2,800–3,700/sqft depending on unit size and floor level. This represents a 25–40% brand premium over non-branded Al Maryah Island stock, justified by Jumeirah management quality and superior rental premiums." },
-      { question: "Will prices go up before handover?", answer: "Secondary market pricing has already moved 15–20% above launch pricing. Historically, Aldar projects see further price appreciation as construction advances toward completion, particularly for brand-new Jumeirah-managed product with no comparable alternative in the pipeline." },
-      { question: "How do Jumeirah Residences prices compare to Dubai?", answer: "Jumeirah Residences Abu Dhabi trades at AED 2,800–3,700/sqft vs AED 3,500–5,500/sqft for comparable branded residences in Dubai DIFC or Downtown — meaning Abu Dhabi is 20–40% cheaper for the same brand quality tier, with higher rental yields." }
-    ],
-    relatedLinks: [
-      { label: "Full Project Guide", slug: "jumeirah-residences-al-maryah-island" },
-      { label: "Al Maryah Island Property Prices", slug: "al-maryah-island-property-prices" },
-      { label: "Investment Return Analysis", slug: "jumeirah-residences-al-maryah-island-investment-return" },
-      { label: "Payment Plan Guide", slug: "jumeirah-residences-al-maryah-island-payment-plan" },
-      { label: "Abu Dhabi Property Prices 2026", slug: "abu-dhabi-property-prices-2026" },
-    ],
-    ctaHeadline: "Get the Current Price List",
-    ctaBody: "Pricing changes as construction progresses and allocations sell. Our advisors update pricing daily from Aldar's system and can confirm exact availability and current costs within hours.",
-    ctaLabel: "Request Live Price List",
-  },
 
   {
     slug: "al-maryah-island-property-prices",
@@ -81,7 +21,7 @@ export const pricingPages: SeoPageData[] = [
     sections: [
       {
         heading: "Current Price Benchmarks by Development",
-        body: "Al Maryah Island has a small number of residential developments available for private purchase. Gate Towers (ADGM-adjacent, established secondary market): 1-bedroom units AED 1,800,000–2,500,000; 2-bedroom AED 2,800,000–4,200,000; 3-bedroom AED 4,200,000–6,000,000. Price-per-sqft range: AED 2,200–2,700/sqft. These are ready properties — occupancy is immediate, and some have existing tenants generating income. Jumeirah Residences (Aldar × Jumeirah Group, off-plan): 1-bedroom AED 3,000,000–3,500,000; 2-bedroom AED 4,500,000–6,500,000; 3-bedroom AED 7,000,000–10,000,000; penthouse AED 15,000,000+. Price-per-sqft: AED 2,800–3,700/sqft (reflecting the Jumeirah brand premium and Aldar quality standard). The pricing differential between Gate Towers and Jumeirah Residences represents the branded residence premium — typically 25–40% for equivalent floor levels and view orientations."
+        body: "Al Maryah Island has a small number of residential developments available for private purchase. Gate Towers (ADGM-adjacent, established secondary market): 1-bedroom units AED 1,800,000–2,500,000; 2-bedroom AED 2,800,000–4,200,000; 3-bedroom AED 4,200,000–6,000,000. Price-per-sqft range: AED 2,200–2,700/sqft. These are ready properties — occupancy is immediate, and some have existing tenants generating income. Jumeirah Residences (Emirates Developments × Jumeirah, off-plan): 1-bedroom AED 3,000,000–3,500,000; 2-bedroom AED 4,500,000–6,500,000; 3-bedroom AED 7,000,000–10,000,000; penthouse AED 15,000,000+. Price-per-sqft: AED 2,800–3,700/sqft (reflecting the Jumeirah brand premium and Emirates Developments quality standard). The pricing differential between Gate Towers and Jumeirah Residences represents the branded residence premium — typically 25–40% for equivalent floor levels and view orientations."
       },
       {
         heading: "Al Maryah Island vs Other Abu Dhabi Districts: Price Comparison",
@@ -112,7 +52,7 @@ export const pricingPages: SeoPageData[] = [
       { label: "Al Maryah vs Saadiyat Island", slug: "al-maryah-island-vs-saadiyat-island" },
     ],
     ctaHeadline: "Get Current Al Maryah Island Pricing",
-    ctaBody: "Our advisors maintain live pricing across all Al Maryah Island developments — Jumeirah Residences off-plan and secondary market. Updated daily from Aldar's allocation system.",
+    ctaBody: "AD Residences can request current pricing and availability for the projects on Al Maryah Island, off-plan and ready, from the developers and sellers on your behalf.",
     ctaLabel: "Get Live Pricing",
   },
 
@@ -197,7 +137,7 @@ export const pricingPages: SeoPageData[] = [
       },
       {
         heading: "How Service Charges Are Set and Can They Change?",
-        body: "Under Abu Dhabi law, service charges for privately owned developments must be approved by the Abu Dhabi Department of Municipalities and Transport (DMT). The developer (Aldar) submits a service charge budget to the DMT for approval before the building opens. Once established, charges can be reviewed annually, but increases must be justified by actual cost increases and approved by the owners' association. For Jumeirah Residences specifically, the management agreement between Aldar and Jumeirah Group will set the parameters for service charge calculation — five-star management has a defined cost base that is higher than standard property management but more transparent and auditable than many smaller developers' service charge models."
+        body: "Under Abu Dhabi law, service charges for privately owned developments must be approved by the Abu Dhabi Department of Municipalities and Transport (DMT). The developer (Aldar) submits a service charge budget to the DMT for approval before the building opens. Once established, charges can be reviewed annually, but increases must be justified by actual cost increases and approved by the owners' association. For Jumeirah Residences specifically, the management agreement between Emirates Developments and Jumeirah Group will set the parameters for service charge calculation — five-star management has a defined cost base that is higher than standard property management but more transparent and auditable than many smaller developers' service charge models."
       },
       {
         heading: "Calculating Net Yield After Service Charges",
@@ -219,59 +159,6 @@ export const pricingPages: SeoPageData[] = [
     ctaLabel: "Request Yield Calculation",
   },
 
-  {
-    slug: "jumeirah-residences-al-maryah-island-review",
-    title: "Jumeirah Residences Al Maryah Island Review 2026 | Honest Buyer Assessment",
-    description: "An honest, independent review of Jumeirah Residences Al Maryah Island Abu Dhabi — what is excellent, what to watch for, who it is ideal for, and AD Residences' buyer assessment.",
-    keywords: "Jumeirah Residences Al Maryah Island review, Jumeirah Residences Abu Dhabi review, is Jumeirah Residences a good investment, Aldar Jumeirah Residences honest review, Jumeirah Residences pros cons",
-    headline: "Jumeirah Residences Al Maryah Island — Honest Review",
-    subheadline: "What is outstanding, what to consider carefully, and who this project is genuinely right for.",
-    category: "Project Review · Jumeirah Residences",
-    heroImage: "/jumeirah-hero.png",
-    intro: "Every project has a developer with incentives to present only the positive. AD Residences works for buyers — not for Aldar — which means our assessment of Jumeirah Residences Al Maryah Island can be honest about both its exceptional qualities and the factors buyers should consider carefully before committing. This review is written for serious buyers doing final-stage due diligence, not for those looking for marketing reinforcement.\n\nConclusion upfront: Jumeirah Residences Al Maryah Island is the strongest luxury investment product currently available in Abu Dhabi — but it is right for a specific buyer profile. This review explains exactly who that is.",
-    stats: [
-      { value: "Outstanding", label: "Location Quality" },
-      { value: "Excellent", label: "Developer Track Record" },
-      { value: "Consider", label: "Service Charge Level" },
-      { value: "Strong", label: "Exit Liquidity" },
-    ],
-    sections: [
-      {
-        heading: "What Is Outstanding",
-        body: "Location is irreplaceable: the ADGM financial free zone position on Al Maryah Island cannot be built elsewhere. No future project can recreate this combination of financial district proximity, waterfront setting, and luxury retail adjacency. It is a genuinely scarce address. Developer credibility is the highest in Abu Dhabi: Aldar Properties is Abu Dhabi's sovereign-backed developer with a zero-failure record. The quality of their construction, the transparency of their escrow process, and the reliability of their handover timelines are industry-leading. Brand partner is genuinely premium: the Jumeirah Group is not licensing its brand for a fee — it is managing the building operationally. This matters because the management quality is the core of the yield premium. Investment fundamentals are compelling: 7–8.5% net yield, sub-2% vacancy, and a structural demand floor from ADGM make the income case one of the most credible in Abu Dhabi real estate."
-      },
-      {
-        heading: "What to Consider Carefully",
-        body: "Service charges are real costs: at AED 25–35/sqft/year, the annual service charge on a 2-bedroom unit is AED 40,000–56,000. This is the cost of operating a building to Jumeirah hotel standard and it is justified by the rental premium — but buyers must factor it into their net yield calculation honestly. Off-plan construction risk exists: although Aldar has never failed to complete a project, buyers are committing capital before the building is complete. This is a genuine risk, albeit a very low one. Price premium requires understanding: buyers who compare the Jumeirah Residences price-per-sqft to Al Reem Island and feel it is expensive are not comparing equivalent products — the relevant comparison is to other branded residences in Abu Dhabi and globally, where the price is actually competitive. This is a long-term hold for maximum return: buyers seeking quick flips of 6–12 months may not capture the full brand premium expansion that occurs post-handover when the Jumeirah management track record is established."
-      },
-      {
-        heading: "Who Jumeirah Residences Is Right For",
-        body: "This project is the ideal fit for: (1) International investors seeking Abu Dhabi's Golden Visa through property — every unit qualifies, and the yield funds the holding cost. (2) Income investors wanting 7–8.5% net yield from institutional-grade corporate tenants without active property management. (3) ADGM-based professionals who want to own their own residence within walking distance of their offices in a building managed to their employer's accommodation standards. (4) Portfolio investors seeking a buy-and-hold asset with credible 5–10 year appreciation driven by supply scarcity and brand premium expansion. (5) International buyers from India, the UK, Europe, and East Africa who recognise the Jumeirah brand and want a UAE asset with strong rental backing."
-      },
-      {
-        heading: "Who Should Look Elsewhere",
-        body: "Jumeirah Residences may not be the right fit for: (1) Buyers with budgets below AED 3,000,000 — the entry price is non-negotiable. (2) Buyers seeking immediate rental income — as an off-plan project, there is a construction wait before the building generates rent. For immediate income, a ready secondary market unit on Al Maryah Island may be better. (3) Buyers who want active short-term letting (holiday rentals, Airbnb) — the Jumeirah management model is designed for long-term corporate tenancies, not short-term holiday management. (4) Buyers who want a villa with garden or private outdoor space — Jumeirah Residences is an apartment building, even with excellent terraces. Villa buyers should look at Saadiyat Island."
-      },
-      {
-        heading: "AD Residences' Verdict",
-        body: "In our advisory practice, we have assessed every premium residential project currently available in Abu Dhabi. Jumeirah Residences Al Maryah Island is the most complete investment proposition in the luxury residential segment: it combines an irreplaceable location, the UAE's most credible developer, a globally recognised management brand, institutional-grade tenant demand, and genuinely competitive pricing relative to global comparables. The service charges are real, the off-plan wait is real, and the entry price is premium — but all three are justified by the fundamentals. We recommend it without hesitation to buyers who fit the investor profile described above."
-      }
-    ],
-    faq: [
-      { question: "Is Jumeirah Residences Al Maryah Island a good investment?", answer: "For income investors seeking 7–8.5% net yield with corporate tenancy, or for Golden Visa buyers wanting a premium asset, yes — it is our top recommendation in Abu Dhabi's luxury residential market." },
-      { question: "What are the risks of buying Jumeirah Residences?", answer: "Primary risks: (1) Off-plan construction wait (2–3 years to handover). (2) Service charges at AED 25–35/sqft/year must be factored into net yield. (3) If ADGM's institutional growth stalls, tenant demand could soften. All three risks are manageable and well-understood by serious investors." },
-      { question: "Does AD Residences work for Aldar or for buyers?", answer: "AD Residences is a buyer-side advisory — we are compensated by the developer without any cost to buyers, but our advice is given in the buyer's interest. We recommend Jumeirah Residences because the fundamentals are strong, not because Aldar pays us." }
-    ],
-    relatedLinks: [
-      { label: "Full Project Guide", slug: "jumeirah-residences-al-maryah-island" },
-      { label: "Investment Return Analysis", slug: "jumeirah-residences-al-maryah-island-investment-return" },
-      { label: "Why AD Residences", slug: "why-ab-residences" },
-      { label: "Branded Residences ROI Abu Dhabi", slug: "branded-residences-roi-abu-dhabi" },
-    ],
-    ctaHeadline: "Book a Due Diligence Consultation",
-    ctaBody: "Our advisors walk through every aspect of Jumeirah Residences with serious buyers — floor-by-floor, unit-by-unit, with honest answers to every question.",
-    ctaLabel: "Book Due Diligence Session",
-  },
 
   {
     slug: "off-plan-vs-ready-property-al-maryah-island",

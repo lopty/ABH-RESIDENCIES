@@ -13,32 +13,31 @@ export default function JumeirahResidencesPage({
   onSelectPropertyById 
 }: JumeirahResidencesPageProps) {
 
-  // Unit types specs array
+  // Home types as listed by Emirates Developments. Sizes and prices are not published, so none are shown.
   const unitTypes = [
-    { name: "1 Bedroom Luxury Suite", size: "1,140 – 1,320 sq ft", price: "AED 3,000,000", layout: "Dual Balcony + Dressing Room" },
-    { name: "2 Bedroom Waterfront Suite", size: "1,850 – 2,100 sq ft", price: "AED 4,900,000", layout: "Powder Room+ Maid's Quarters" },
-    { name: "3 Bedroom Premium Residence", size: "2,900 – 3,250 sq ft", price: "AED 7,200,000", layout: "Triple View Wrap Terrace" },
-    { name: "Waterfront Duplex Penthouse", size: "4,200 – 5,800 sq ft", price: "From AED 14,500,000", layout: "Private Overhang Pool + Lift" }
+    { name: "1 Bedroom Apartment", href: "/jumeirah-residences-al-maryah-island-1-bedroom" },
+    { name: "2 Bedroom Apartment", href: "/jumeirah-residences-al-maryah-island-2-bedroom" },
+    { name: "3 and 4 Bedroom Apartments", href: "/jumeirah-residences-al-maryah-island-floor-plans" },
+    { name: "5 Bedroom Penthouse", href: "/jumeirah-residences-al-maryah-island-penthouse" }
   ];
 
+  // Amenities as listed by Emirates Developments on its project page
   const amenities = [
-    { title: "Sunset Infinity Pool", desc: "Overlooking Al Maryah Island canal" },
-    { title: "Athletic Wellness Center", desc: "Fully equipped with techno-gym suites" },
-    { title: "24/7 Private Concierge", desc: "Legendary Jumeirah branded hospitality keys" },
-    { title: "Steam, Sauna & Hammam", desc: "Private thermal paths for residents" },
-    { title: "Resident Club & Lounge", desc: "Bespoke fine-dining cigar cellars" },
-    { title: "Elite Private Cinema", desc: "12-seat bespoke state-of-the-art cinema" },
-    { title: "Secure Guarded Portals", desc: "Biometric security and VIP visitor management" },
-    { title: "Private Berth Valet", desc: "Direct access to waterfront yacht anchorages" }
+    { title: "Wellness", desc: "Personalised wellness experiences" },
+    { title: "Private Dining", desc: "Private dining offered to residents" },
+    { title: "Concierge", desc: "Concierge services from the Jumeirah brand" },
+    { title: "Floating Terraces", desc: "Terraces set into the building" },
+    { title: "Sky-High Gardens", desc: "Landscaped gardens high in the tower" },
+    { title: "Elevated Pool", desc: "A pool raised above the island" },
+    { title: "Luxury Retail", desc: "Retail within the development" },
+    { title: "Fine Dining and Leisure", desc: "Restaurants and leisure experiences" }
   ];
 
   const landmarks = [
-    { name: "Cleveland Clinic Abu Dhabi", distance: "2 mins walk" },
-    { name: "The Galleria Luxury Mall", distance: "3 mins walk (Direct connected pathway)" },
-    { name: "Abu Dhabi Global Market (ADGM)", distance: "4 mins walk (Underground corridor)" },
-    { name: "Zuma and LPM Restaurants", distance: "5 mins walk (Waterfront boardwalk tour)" },
-    { name: "Saadiyat Cultural Hub (Louvre)", distance: "12 mins drive" },
-    { name: "Abu Dhabi International Airport", distance: "22 mins drive" }
+    { name: "Cleveland Clinic Abu Dhabi", distance: "On Al Maryah Island" },
+    { name: "The Galleria Al Maryah Island", distance: "On Al Maryah Island" },
+    { name: "Abu Dhabi Global Market (ADGM)", distance: "On Al Maryah Island" },
+    { name: "Al Reem Island", distance: "Across the water" }
   ];
 
   return (
@@ -75,9 +74,9 @@ export default function JumeirahResidencesPage({
             </div>
 
             <div className="bg-white/10 backdrop-blur-md p-4 border border-white/20 text-left shrink-0 max-w-sm">
-              <span className="text-[9px] uppercase tracking-wider text-white/80 block">INVESTMENT ENTRY TIER</span>
-              <span className="font-serif text-xl sm:text-2xl text-white font-medium block">Starting AED 3,000,000</span>
-              <span className="text-[9px] text-[#C9A96E] uppercase tracking-widest block mt-0.5">50/50 Handover Payment Plan</span>
+              <span className="text-[9px] uppercase tracking-wider text-white/80 block">DEVELOPER</span>
+              <span className="font-serif text-xl sm:text-2xl text-white font-medium block">Emirates Developments</span>
+              <span className="text-[9px] text-[#C9A96E] uppercase tracking-widest block mt-0.5">With Jumeirah as brand partner</span>
             </div>
           </div>
         </div>
@@ -94,15 +93,15 @@ export default function JumeirahResidencesPage({
               A Waterfront Sanctuary <span className="italic font-normal">Sovereignly</span> Managed by Jumeirah hospitality keys.
             </h2>
             <p className="text-xs sm:text-sm text-gray-700 leading-relaxed font-light">
-              Designed as a crystalline beacon slicing Al Maryah's skyline, Jumeirah Residences fuses world-record corporate centrality with secure resort hospitality. Developed in elite synchronization with leading master-minds, each residence ensures uninterrupted canal corridors and absolute off-market exclusivity.
+              Jumeirah Residences Al Maryah Island is a branded residential project by Emirates Developments in partnership with Jumeirah. It offers one to four bedroom apartments and five bedroom penthouses on the island that is home to ADGM. The design is credited to Killa Design.
             </p>
             <p className="text-xs sm:text-sm text-gray-700 leading-relaxed font-light">
-              Residents hold immediate integration keys to Cleveland Clinic, VIP subterranean pathways to The Galleria Mall fine-dining cells, and preferential reservations across the entire Michelin-starred Zuma/LPM corridors flanking the island's boardwalks.
+              Al Maryah Island is also where The Galleria Al Maryah Island and Cleveland Clinic Abu Dhabi are located. Emirates Developments has not yet published prices, sizes or a payment plan, so those are requested unit by unit through AD Residences.
             </p>
 
             {/* Landmarks listing */}
             <div className="pt-6 border-t border-[#F8F6F2] space-y-4">
-              <h4 className="font-serif text-lg font-normal text-gray-900">Adjacent Connectivity & Landmarks</h4>
+              <h4 className="font-serif text-lg font-normal text-gray-900">On the Island</h4>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {landmarks.map((m, idx) => (
                   <div key={idx} className="flex justify-between items-center text-xs border-b border-[#F8F6F2] pb-2 text-gray-700">
@@ -123,7 +122,7 @@ export default function JumeirahResidencesPage({
                 <span className="text-[10px] font-bold text-gray-400 uppercase tracking-widest block">Accredited Allocation Registry</span>
                 <h4 className="font-serif text-xl font-normal text-slate-900 leading-tight">Securing the Finest Units</h4>
                 <p className="text-[10px] text-gray-500 leading-relaxed max-w-sm mx-auto font-sans font-light">
-                  Our private client advisory handles global priority portfolios, tax optimization structures, and direct builder handshakes for qualified citizens.
+                  AD Residences requests current availability, layouts and pricing from the developer on your behalf and arranges a briefing.
                 </p>
               </div>
 
@@ -138,7 +137,7 @@ export default function JumeirahResidencesPage({
                 </div>
                 <div className="flex items-center space-x-2">
                   <span className="h-1.5 w-1.5 bg-[#C9A96E] shrink-0" />
-                  <span>Guaranteed high corporate occupancy indices</span>
+                  <span>Off-plan: handover date to be confirmed with the developer</span>
                 </div>
               </div>
 
@@ -166,34 +165,32 @@ export default function JumeirahResidencesPage({
       <div className="bg-[#F8F6F2]/30 py-20 border-t border-b border-[#EAE6DF]/60 mb-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-xl mx-auto mb-16 space-y-3">
-            <span className="text-xs font-semibold text-[#C9A96E] tracking-[0.4em] uppercase">AVAILABILITY & PRICING</span>
-            <h2 className="font-serif text-2xl sm:text-4xl font-light text-[#1A1A1A]">Curated Sizing Matrices</h2>
+            <span className="text-xs font-semibold text-[#C9A96E] tracking-[0.4em] uppercase">HOME TYPES</span>
+            <h2 className="font-serif text-2xl sm:text-4xl font-light text-[#1A1A1A]">Homes at Jumeirah Residences</h2>
           </div>
 
           <div className="bg-white border border-[#EAE6DF] shadow-md overflow-x-auto rounded-none">
             <table className="w-full text-left border-collapse min-w-[700px]">
               <thead>
                 <tr className="bg-[#1C2B4A] text-white uppercase text-[9px] font-semibold tracking-widest border-b border-slate-700">
-                  <th className="py-4 px-6">Unit Configuration</th>
-                  <th className="py-4 px-6">Average Sizing (Sq Ft)</th>
-                  <th className="py-4 px-6">Luxury Layout Attributes</th>
-                  <th className="py-4 px-6 text-right">Exclusive Guide Price</th>
-                  <th className="py-4 px-6 text-center">Inquiry Link</th>
+                  <th className="py-4 px-6">Home Type</th>
+                  <th className="py-4 px-6">Details</th>
+                  <th className="py-4 px-6 text-center">Enquire</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-[#F8F6F2] text-xs text-slate-800">
                 {unitTypes.map((unit, idx) => (
                   <tr key={idx} className="hover:bg-[#F8F6F2]/30 transition-colors">
                     <td className="py-4 px-6 font-serif font-medium text-sm text-gray-950">{unit.name}</td>
-                    <td className="py-4 px-6 font-mono text-gray-500 font-light">{unit.size}</td>
-                    <td className="py-4 px-6 font-light text-gray-500">{unit.layout}</td>
-                    <td className="py-4 px-6 text-right font-serif font-medium text-[#C9A96E] text-sm">{unit.price}</td>
+                    <td className="py-4 px-6 font-light text-gray-500">
+                      <a href={unit.href} className="underline hover:text-[#C9A96E]">Read about this layout</a>
+                    </td>
                     <td className="py-4 px-6 text-center">
                       <button
-                        onClick={() => onSelectPropertyById("prop-5")}
+                        onClick={() => onSelectPropertyById("jumeirah-residences-al-maryah-island")}
                         className="text-[9px] font-bold uppercase tracking-wider text-[#1C2B4A] hover:text-[#C8A261] border border-[#EAE6DF] hover:border-[#C9A96E] px-3 py-1.5 transition-all text-center rounded-none select-none"
                       >
-                        BOOK PORTFOLIO
+                        REQUEST AVAILABILITY
                       </button>
                     </td>
                   </tr>
@@ -207,8 +204,8 @@ export default function JumeirahResidencesPage({
       {/* 4. Amenities Grid */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-xl mx-auto mb-16 space-y-3">
-          <span className="text-xs font-semibold text-[#C9A96E] tracking-[0.4em] uppercase">FIVE STAR LIVING CAPABILITY</span>
-          <h2 className="font-serif text-2xl sm:text-4xl font-light text-[#1A1A1A]">Elite Amenities Stream</h2>
+          <span className="text-xs font-semibold text-[#C9A96E] tracking-[0.4em] uppercase">WHAT THE DEVELOPER LISTS</span>
+          <h2 className="font-serif text-2xl sm:text-4xl font-light text-[#1A1A1A]">Amenities</h2>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">

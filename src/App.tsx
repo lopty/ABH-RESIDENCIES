@@ -22,7 +22,8 @@ import {
   Award,
 } from "lucide-react";
 
-import { propertiesData, statItems, lifestyleItems } from "./data";
+import { statItems, lifestyleItems } from "./data";
+import { catalogueProperties } from "./seo/projects/catalogue";
 import { faqItems } from "./blogData";
 import { Property, LeadFormData } from "./types";
 
@@ -152,43 +153,12 @@ export default function App() {
   // Search logic state (passed to BuyPage)
   const [searchType, setSearchType] = useState<string>("");
   const [searchLocation, setSearchLocation] = useState<string>("");
-  const [searchBudget, setSearchBudget] = useState<string>("");
-  const [allProperties, setAllProperties] = useState<Property[]>(propertiesData);
-  const allPropertiesRef = useRef<Property[]>(propertiesData);
-  const [filteredProperties, setFilteredProperties] = useState<Property[]>(propertiesData);
+  const [searchStatus, setSearchStatus] = useState<string>("");
+  // The catalogue is generated from the verified project data (src/seo/projects), so every card has its own page.
+  const allProperties: Property[] = catalogueProperties;
+  const allPropertiesRef = useRef<Property[]>(catalogueProperties);
+  const [filteredProperties, setFilteredProperties] = useState<Property[]>(catalogueProperties);
   const [activeTab, setActiveTab] = useState<string>("All");
-
-  // Fetch properties from DB on mount; fall back to static if DB is empty
-  useEffect(() => {
-    (async () => {
-      try {
-        const r = await fetch("/api/properties");
-        if (r.ok) {
-          const data = await r.json();
-          if (Array.isArray(data) && data.length > 0) {
-            const mapped: Property[] = data.map((p: any) => ({
-              id: p.id,
-              name: p.name,
-              location: p.location,
-              price: p.price,
-              priceNumeric: p.price_numeric || 0,
-              type: p.type,
-              area: p.area,
-              badge: p.badge,
-              image: p.image_url || "",
-              bedrooms: p.bedrooms || 1,
-              bathrooms: p.bathrooms || 1,
-              sizeSqFt: p.size_sqft || 0,
-              description: p.description || "",
-            }));
-            allPropertiesRef.current = mapped;
-            setAllProperties(mapped);
-            setFilteredProperties(mapped);
-          }
-        }
-      } catch (_) {}
-    })();
-  }, []);
 
   // Comprehensive SEO — per-route meta, OG/Twitter, JSON-LD structured data
   useEffect(() => {
@@ -237,7 +207,6 @@ export default function App() {
       "image": heroImg,
       "telephone": "+971554226593",
       "email": "pranav@residenceabudhabi.com",
-      "priceRange": "AED 3,000,000+",
       "address": { "@type": "PostalAddress", "streetAddress": "Al Maryah Island", "addressLocality": "Abu Dhabi", "addressCountry": "AE" },
       "areaServed": { "@type": "City", "name": "Abu Dhabi" },
       "openingHours": "Mo-Sa 09:00-19:00"
@@ -267,27 +236,26 @@ export default function App() {
       }];
 
     } else if (path === "/properties/jumeirah-residences") {
-      title = "Jumeirah Residences Al Maryah Island Abu Dhabi | Prices, Floors & Availability";
-      description = "Jumeirah Residences Al Maryah Island — ultra-luxury branded apartments & penthouses from AED 3M. Five-star hotel amenities, waterfront views, Golden Visa–eligible. Enquire with AD Residences.";
+      title = "Jumeirah Residences Al Maryah Island Abu Dhabi | Homes & Availability";
+      description = "Jumeirah Residences Al Maryah Island by Emirates Developments with Jumeirah: one to four bedroom apartments and five bedroom penthouses. Request availability with AD Residences.";
       keywords = "Jumeirah Residences Al Maryah Island, Jumeirah Residences Abu Dhabi price, Jumeirah Residences apartments for sale, buy Jumeirah Residences Abu Dhabi, Jumeirah branded residences UAE, Jumeirah Residences floor plan";
       schemas = [
         orgSchema,
         { "@context": "https://schema.org", "@type": "Apartment",
           "name": "Jumeirah Residences Al Maryah Island",
-          "description": "Ultra-luxury branded residences on Al Maryah Island, Abu Dhabi, by Aldar Properties in partnership with Jumeirah Group. 1–4 bedroom apartments and penthouses.",
+          "description": "Ultra-luxury branded residences on Al Maryah Island, Abu Dhabi, by Emirates Developments in partnership with Jumeirah. 1–4 bedroom apartments and penthouses.",
           "url": `${SITE}/properties/jumeirah-residences`,
           "image": heroImg,
           "address": { "@type": "PostalAddress", "streetAddress": "Al Maryah Island", "addressLocality": "Abu Dhabi", "addressCountry": "AE" },
-          "geo": { "@type": "GeoCoordinates", "latitude": "24.4967", "longitude": "54.3779" },
-          "offers": { "@type": "Offer", "priceCurrency": "AED", "price": "3000000", "availability": "https://schema.org/InStock" }
+          "geo": { "@type": "GeoCoordinates", "latitude": "24.4967", "longitude": "54.3779" }
         },
         breadcrumb([{ name: "Jumeirah Residences", url: `${SITE}/properties/jumeirah-residences` }])
       ];
 
     } else if (path === "/properties/al-maryah-island") {
       title = "Al Maryah Island Abu Dhabi | Property Guide, Investment & Lifestyle";
-      description = "Al Maryah Island — Abu Dhabi's premier financial and residential district. Luxury apartments, 7–8.5% rental yields, direct waterfront access. Expert guide by AD Residences.";
-      keywords = "Al Maryah Island property for sale, buy apartment Al Maryah Island Abu Dhabi, Al Maryah Island real estate, Al Maryah Island rental yield, luxury properties Al Maryah Island, invest Al Maryah Island";
+      description = "Al Maryah Island — Abu Dhabi's premier financial and residential district. Branded and non-branded apartments, ADGM, freehold ownership. Area guide by AD Residences.";
+      keywords = "Al Maryah Island property for sale, buy apartment Al Maryah Island Abu Dhabi, Al Maryah Island real estate, luxury properties Al Maryah Island, invest Al Maryah Island";
       schemas = [
         orgSchema,
         { "@context": "https://schema.org", "@type": "Place",
@@ -356,7 +324,7 @@ export default function App() {
 
     } else if (path === "/golden-visa-property-abu-dhabi") {
       title = "Golden Visa Property Abu Dhabi | AED 2M+ Eligible Homes | AD Residences";
-      description = "Secure a UAE Golden Visa through Abu Dhabi property. AED 2M minimum, 10-year residency, freehold zones. Jumeirah Residences Al Maryah Island qualifies. Expert guidance by AD Residences.";
+      description = "Secure a UAE Golden Visa through Abu Dhabi property. AED 2M minimum, 10-year residency, freehold zones. Homes priced at AED 2M or more qualify. Expert guidance by AD Residences.";
       keywords = "Golden Visa property Abu Dhabi, UAE Golden Visa real estate, buy property Golden Visa UAE 2026, AED 2 million Golden Visa, 10 year residency UAE property, Golden Visa Abu Dhabi eligibility, how to get Golden Visa UAE";
       schemas = [orgSchema, breadcrumb([{ name: "Golden Visa Property", url: `${SITE}/golden-visa-property-abu-dhabi` }])];
 
@@ -434,20 +402,16 @@ export default function App() {
   useEffect(() => {
     let result = allPropertiesRef.current;
     if (searchType) {
-      result = result.filter(p => p.type.toLowerCase() === searchType.toLowerCase());
+      result = result.filter(p => (p.unitTypes && p.unitTypes.length ? p.unitTypes : [p.type]).some(t => t.toLowerCase() === searchType.toLowerCase()));
     }
     if (searchLocation) {
       result = result.filter(p => p.area.toLowerCase() === searchLocation.toLowerCase());
     }
-    if (searchBudget === "Under AED 5M") {
-      result = result.filter(p => p.priceNumeric < 5000000);
-    } else if (searchBudget === "AED 5M - 10M") {
-      result = result.filter(p => p.priceNumeric >= 5000000 && p.priceNumeric <= 10000000);
-    } else if (searchBudget === "Over AED 10M") {
-      result = result.filter(p => p.priceNumeric > 10000000);
+    if (searchStatus) {
+      result = result.filter(p => p.badge === searchStatus);
     }
     setFilteredProperties(result);
-  }, [searchType, searchLocation, searchBudget]);
+  }, [searchType, searchLocation, searchStatus]);
 
   const handleCatalogSearch = (e: FormEvent) => {
     e.preventDefault();
@@ -457,13 +421,13 @@ export default function App() {
   const handleResetSearch = () => {
     setSearchType("");
     setSearchLocation("");
-    setSearchBudget("");
+    setSearchStatus("");
     setActiveTab("All");
   };
 
   // Keep tab highlight in sync when type dropdown changes directly
   useEffect(() => {
-    const valid = ["Apartment", "Penthouse", "Villa", "Mansion"];
+    const valid = ["Apartment", "Penthouse", "Villa", "Townhouse", "Studio"];
     setActiveTab(valid.includes(searchType) ? searchType : "All");
   }, [searchType]);
 
@@ -633,6 +597,7 @@ export default function App() {
           <div className="hidden xl:flex items-center" style={{gap: "20px"}}>
             {[
               { label: "Buy", path: "/buy" },
+              { label: "Projects", path: "/projects" },
               { label: "Jumeirah", path: "/properties/jumeirah-residences" },
               { label: "Al Maryah", path: "/properties/al-maryah-island" },
               { label: "Blog", path: "/blog" },
@@ -683,6 +648,7 @@ export default function App() {
                 <div className="flex flex-col space-y-3.5 text-xs font-semibold uppercase tracking-widest">
                   <a href="/" onClick={(e) => { e.preventDefault(); navigate("/"); }} className="text-left hover:text-[#C9A96E] py-1">Home Portal</a>
                   <a href="/buy" onClick={(e) => { e.preventDefault(); navigate("/buy"); }} className="text-left hover:text-[#C9A96E] py-1">Buy Collection</a>
+                  <a href="/projects" onClick={(e) => { e.preventDefault(); navigate("/projects"); }} className="text-left hover:text-[#C9A96E] py-1">Projects</a>
                   <a href="/properties/jumeirah-residences" onClick={(e) => { e.preventDefault(); navigate("/properties/jumeirah-residences"); }} className="text-left hover:text-[#C9A96E] py-1">Jumeirah Residences</a>
                   <a href="/properties/al-maryah-island" onClick={(e) => { e.preventDefault(); navigate("/properties/al-maryah-island"); }} className="text-left hover:text-[#C9A96E] py-1">Al Maryah Guide</a>
                   <a href="/blog" onClick={(e) => { e.preventDefault(); navigate("/blog"); }} className="text-left hover:text-[#C9A96E] py-1">Advisor Blogs</a>
@@ -778,7 +744,8 @@ export default function App() {
                       <option value="Apartment">Apartment</option>
                       <option value="Penthouse">Penthouse</option>
                       <option value="Villa">Villa</option>
-                      <option value="Mansion">Mansion</option>
+                      <option value="Townhouse">Townhouse</option>
+                      <option value="Studio">Studio</option>
                     </select>
                   </div>
 
@@ -790,26 +757,24 @@ export default function App() {
                       className="w-full bg-[#F8F6F2] text-xs font-semibold py-2.5 px-3 border border-[#EAE6DF] focus:border-[#C9A96E] focus:outline-none appearance-none rounded-none text-slate-900 cursor-pointer"
                     >
                       <option value="">All Territories</option>
+                      <option value="Al Maryah Island">Al Maryah Island</option>
+                      <option value="Al Reem Island">Al Reem Island</option>
                       <option value="Saadiyat Island">Saadiyat Island</option>
                       <option value="Yas Island">Yas Island</option>
-                      <option value="Al Reem Island">Al Reem Island</option>
-                      <option value="Ramhan Island">Ramhan Island</option>
-                      <option value="Al Maryah Island">Al Maryah Island</option>
                       <option value="Al Raha Beach">Al Raha Beach</option>
                     </select>
                   </div>
 
                   <div className="space-y-1.5">
-                    <span className="text-[9px] font-bold text-gray-400 uppercase tracking-widest block">Investment Pricing</span>
-                    <select 
-                      value={searchBudget} 
-                      onChange={(e) => setSearchBudget(e.target.value)}
+                    <span className="text-[9px] font-bold text-gray-400 uppercase tracking-widest block">Status</span>
+                    <select
+                      value={searchStatus}
+                      onChange={(e) => setSearchStatus(e.target.value)}
                       className="w-full bg-[#F8F6F2] text-xs font-semibold py-2.5 px-3 border border-[#EAE6DF] focus:border-[#C9A96E] focus:outline-none appearance-none rounded-none text-slate-900 cursor-pointer"
                     >
-                      <option value="">Any Budget</option>
-                      <option value="Under AED 5M">Under AED 5,000,000</option>
-                      <option value="AED 5M - 10M">AED 5,000,000 – AED 10,000,000</option>
-                      <option value="Over AED 10M">Over AED 10,000,000</option>
+                      <option value="">Off-Plan and Ready</option>
+                      <option value="Off-Plan">Off-Plan</option>
+                      <option value="Ready">Ready (Secondary)</option>
                     </select>
                   </div>
 
@@ -851,7 +816,7 @@ export default function App() {
                     <div className="p-6 sm:p-8 space-y-4">
                       <h3 className="font-serif text-2xl font-light text-slate-900 leading-tight">Jumeirah Residences Abu Dhabi</h3>
                       <p className="text-xs leading-relaxed text-gray-650 font-light font-sans">
-                        Luxury waterfront apartments and triplex penthouses on Al Maryah Island under absolute Jumeirah branded management. Starting from AED 3,000,000.
+                        Luxury waterfront apartments and triplex penthouses on Al Maryah Island under absolute Jumeirah branded management. Request current availability.
                       </p>
                       <button 
                         onClick={() => navigate("/properties/jumeirah-residences")}
@@ -1261,14 +1226,14 @@ export default function App() {
             setSearchType={setSearchType}
             searchLocation={searchLocation}
             setSearchLocation={setSearchLocation}
-            searchBudget={searchBudget}
-            setSearchBudget={setSearchBudget}
+            searchStatus={searchStatus}
+            setSearchStatus={setSearchStatus}
             filteredProperties={filteredProperties}
             activeTab={activeTab}
             onTabChange={handleTabChange}
             onSearch={handleCatalogSearch}
             onReset={handleResetSearch}
-            onSelectProperty={(p) => { setSelectedProperty(p); handleResetPropertyInquiry(); }}
+            onNavigate={(path) => navigate(path)}
           />
         )}
         {currentPath === "/golden-visa-property-abu-dhabi" && (
@@ -1282,9 +1247,9 @@ export default function App() {
             sections={[
               { heading: "What is the UAE Golden Visa?", body: "The UAE Golden Visa is a long-term residency programme granting 10-year renewable residency to property investors who purchase real estate valued at AED 2,000,000 or above in a designated freehold investment zone. The visa covers the buyer, spouse, and dependent children — with no requirement for a local sponsor or employer." },
               { heading: "Does Abu Dhabi Property Qualify?", body: "Yes. Freehold properties purchased in Abu Dhabi's designated investment zones — including Al Maryah Island, Saadiyat Island, Yas Island, Al Reem Island, and Ramhan Island — fully qualify. The property must be registered in your name with the Abu Dhabi Department of Municipalities and Transport and be either fully paid or mortgaged above the AED 2M threshold." },
-              { heading: "Jumeirah Residences: A Golden Visa Asset", body: "Jumeirah Residences Al Maryah Island is a flagship Golden Visa–eligible development. Starting prices from AED 3,000,000 exceed the threshold with comfortable margin. As a branded residence managed by Jumeirah Group, it combines investment credibility with five-star lifestyle — making it one of the most sought-after Golden Visa properties in Abu Dhabi in 2026." },
+              { heading: "Jumeirah Residences: A Golden Visa Asset", body: "Jumeirah Residences Al Maryah Island is an off-plan branded project by Emirates Developments. Whether a particular home qualifies depends on its price, which the developer has not published, so confirm the exact price of the unit before assuming Golden Visa eligibility." },
               { heading: "The Application Process", body: "1. Purchase and register the property (Oqood or Title Deed). 2. Submit documents via the ICA (Federal Authority for Identity and Citizenship) or through an authorised typing centre. 3. Receive visa in 2–4 weeks. AD Residences can guide you through every step from property selection to visa application." },
-              { heading: "Why Abu Dhabi Over Dubai for Golden Visa?", body: "Abu Dhabi offers superior capital preservation, lower price-per-sqft in comparable luxury assets, stronger corporate tenancy (ADGM, Mubadala, government entities), and a quieter, higher-quality lifestyle. Al Maryah Island specifically delivers 7–8.5% net rental yields — among the highest in the UAE for corporate-grade tenancies." }
+              { heading: "Why Abu Dhabi Over Dubai for Golden Visa?", body: "Abu Dhabi offers superior capital preservation, lower price-per-sqft in comparable luxury assets, stronger corporate tenancy (ADGM, Mubadala, government entities), and a quieter, higher-quality lifestyle. Al Maryah Island is also home to ADGM, which supports demand from corporate tenants." }
             ]}
           />
         )}
@@ -1299,7 +1264,7 @@ export default function App() {
             sections={[
               { heading: "Why Buy Off-Plan in Abu Dhabi?", body: "Off-plan purchases allow you to secure a property at today's price with a small upfront deposit — typically 10–20% — and pay the remainder across construction milestones. This means you benefit from capital appreciation throughout the build period while your capital outlay remains low. Abu Dhabi's off-plan market has delivered 15–30% price growth from launch to handover on premium projects in recent years." },
               { heading: "How Off-Plan Payment Plans Work", body: "A typical Abu Dhabi off-plan plan looks like: 10% on booking, 10% on SPA signing, then 40–60% spread across quarterly construction milestones, with 10–20% due on handover. Some developers offer post-handover payment plans extending 1–3 years beyond completion. AD Residences only recommends projects with escrow-protected payments registered with the Abu Dhabi Department of Municipalities and Transport." },
-              { heading: "Jumeirah Residences: The Premier Off-Plan Opportunity", body: "Jumeirah Residences Al Maryah Island is the most anticipated off-plan branded residence in Abu Dhabi in 2026. Developed by Aldar Properties (the UAE's largest listed developer) in partnership with Jumeirah Group, it offers institutional-grade build quality, a guaranteed hospitality management brand on handover, and a location in the heart of Abu Dhabi's financial and luxury district." },
+              { heading: "Jumeirah Residences: The Premier Off-Plan Opportunity", body: "Jumeirah Residences Al Maryah Island is the most anticipated off-plan branded residence in Abu Dhabi in 2026. Developed by Emirates Developments in partnership with Jumeirah, it brings the Jumeirah hospitality brand to the heart of Abu Dhabi's financial and luxury district." },
               { heading: "Off-Plan vs Ready Properties in Abu Dhabi", body: "Off-plan: lower entry price, higher upside potential, newer specification, flexible payment terms. Ready: immediate rental income, Golden Visa on day one, no construction risk. AD Residences advises a mixed strategy — off-plan for capital growth, ready for income generation — with Al Maryah Island assets anchoring both positions." },
               { heading: "Risks and How We Protect You", body: "All projects we recommend are by ADGM or Abu Dhabi government-backed developers with escrow accounts. We review SPA terms, construction timelines, and developer track record before making any recommendation. Our advisory is buyer-only: we do not act for developers, eliminating conflicts of interest." }
             ]}
@@ -1318,7 +1283,7 @@ export default function App() {
               { heading: "Why Branded Residences Command a Premium", body: "Global data shows branded residences command a 30–40% price premium over comparable non-branded assets in the same location. The brand provides quality assurance, ongoing maintenance standards, and a globally recognised identity that attracts premium tenants and resale buyers. In Abu Dhabi's market, this premium is reinforced by constrained supply: there are very few branded residence developments on the island." },
               { heading: "Jumeirah Residences: Abu Dhabi's Flagship Branded Project", body: "Jumeirah Residences Al Maryah Island is the only Jumeirah-branded residence in Abu Dhabi. The Jumeirah Group — operator of the iconic Burj Al Arab — brings its ultra-luxury service standards directly to residential living. Residents enjoy five-star concierge, access to hotel facilities, and the assurance of the Jumeirah brand maintaining the building to the highest international standard." },
               { heading: "Branded Residences as Investment Assets", body: "For investors, branded residences offer a premium tenant profile (senior executives, diplomats, high-net-worth individuals), stronger capital preservation, and easier resale liquidity. Al Maryah Island's corporate tenancy base — anchored by ADGM, major banks, and government entities — underpins the demand for premium branded accommodation." },
-              { heading: "Comparing Branded Residence Projects in Abu Dhabi", body: "Abu Dhabi's branded residence landscape in 2026 includes Jumeirah Residences Al Maryah Island, Four Seasons Private Residences Jumeirah at Saadiyat Island, and a small number of Rosewood-affiliated units. Of these, Jumeirah Residences Al Maryah Island offers the strongest combination of financial district proximity, rental yield potential, and brand recognition." }
+              { heading: "Comparing Branded Residence Projects in Abu Dhabi", body: "Abu Dhabi's branded residence landscape in 2026 includes Jumeirah Residences Al Maryah Island, W Residences on Al Maryah Island, Nobu, Mandarin Oriental and Four Seasons on Saadiyat Island, Waldorf Astoria and Elie Saab on Yas Island, and Hilton at Al Raha. Of these, Jumeirah Residences Al Maryah Island offers the strongest combination of financial district proximity, rental yield potential, and brand recognition." }
             ]}
           />
         )}
@@ -1358,6 +1323,13 @@ export default function App() {
               <div className="flex flex-col space-y-2 text-xs text-gray-300 font-light">
                 <a href="/buy" onClick={(e) => { e.preventDefault(); navigate("/buy"); }} className="text-left hover:text-[#C9A96E] cursor-pointer">Buy Properties</a>
                 <a href="/buy-property-abu-dhabi" onClick={(e) => { e.preventDefault(); navigate("/buy-property-abu-dhabi"); }} className="text-left hover:text-[#C9A96E] cursor-pointer">Buy Property in Abu Dhabi</a>
+                <a href="/projects" onClick={(e) => { e.preventDefault(); navigate("/projects"); }} className="text-left hover:text-[#C9A96E] cursor-pointer">Property Projects</a>
+                <a href="/buy-property-al-maryah-island" onClick={(e) => { e.preventDefault(); navigate("/buy-property-al-maryah-island"); }} className="text-left hover:text-[#C9A96E] cursor-pointer">Buy in Al Maryah Island</a>
+                <a href="/buy-property-al-reem-island" onClick={(e) => { e.preventDefault(); navigate("/buy-property-al-reem-island"); }} className="text-left hover:text-[#C9A96E] cursor-pointer">Buy in Al Reem Island</a>
+                <a href="/buy-home-abu-dhabi" onClick={(e) => { e.preventDefault(); navigate("/buy-home-abu-dhabi"); }} className="text-left hover:text-[#C9A96E] cursor-pointer">Buy a Home in Abu Dhabi</a>
+                <a href="/guides" onClick={(e) => { e.preventDefault(); navigate("/guides"); }} className="text-left hover:text-[#C9A96E] cursor-pointer">Buying Guides</a>
+                <a href="/projects/off-plan" onClick={(e) => { e.preventDefault(); navigate("/projects/off-plan"); }} className="text-left hover:text-[#C9A96E] cursor-pointer">Off-Plan Projects</a>
+                <a href="/projects/branded" onClick={(e) => { e.preventDefault(); navigate("/projects/branded"); }} className="text-left hover:text-[#C9A96E] cursor-pointer">Branded Residences</a>
                 <a href="/properties/jumeirah-residences" onClick={(e) => { e.preventDefault(); navigate("/properties/jumeirah-residences"); }} className="text-left hover:text-[#C9A96E] cursor-pointer">Jumeirah Residences</a>
                 <a href="/properties/al-maryah-island" onClick={(e) => { e.preventDefault(); navigate("/properties/al-maryah-island"); }} className="text-left hover:text-[#C9A96E] cursor-pointer">Al Maryah Guide</a>
                 <a href="/blog" onClick={(e) => { e.preventDefault(); navigate("/blog"); }} className="text-left hover:text-[#C9A96E] cursor-pointer">Market Blog</a>
@@ -1456,23 +1428,23 @@ export default function App() {
                 <div className="grid grid-cols-3 gap-2 text-center pt-2">
                   <div className="bg-white py-3 border border-[#EAE6DF] space-y-1">
                     <Bed size={14} className="text-[#C9A96E] mx-auto" />
-                    <span className="text-[9px] uppercase text-gray-400 block font-bold">Suites</span>
-                    <span className="text-xs font-bold text-gray-950">{selectedProperty.bedrooms} Beds</span>
+                    <span className="text-[9px] uppercase text-gray-400 block font-bold">Bedrooms</span>
+                    <span className="text-xs font-bold text-gray-950">{selectedProperty.bedsLabel ?? `${selectedProperty.bedrooms} Beds`}</span>
                   </div>
                   <div className="bg-white py-3 border border-[#EAE6DF] space-y-1">
                     <Bath size={14} className="text-[#C9A96E] mx-auto" />
-                    <span className="text-[9px] uppercase text-gray-400 block font-bold">Baths</span>
-                    <span className="text-xs font-bold text-gray-950">{selectedProperty.bathrooms} Baths</span>
+                    <span className="text-[9px] uppercase text-gray-400 block font-bold">Home types</span>
+                    <span className="text-xs font-bold text-gray-950">{selectedProperty.unitTypes ? selectedProperty.unitTypes.slice(0, 2).join(", ") : `${selectedProperty.bathrooms} Baths`}</span>
                   </div>
                   <div className="bg-white py-3 border border-[#EAE6DF] space-y-1">
                     <Maximize2 size={14} className="text-[#C9A96E] mx-auto" />
-                    <span className="text-[9px] uppercase text-gray-400 block font-bold font-sans">Area Sizing</span>
-                    <span className="text-xs font-bold text-gray-950">{selectedProperty.sizeSqFt.toLocaleString()} sqft</span>
+                    <span className="text-[9px] uppercase text-gray-400 block font-bold font-sans">Size</span>
+                    <span className="text-xs font-bold text-gray-950">{selectedProperty.sizeLabel ?? `${selectedProperty.sizeSqFt.toLocaleString()} sqft`}</span>
                   </div>
                 </div>
 
                 <div className="pt-4 border-t border-[#EAE6DF] text-right font-sans">
-                  <span className="text-[9px] text-gray-400 uppercase tracking-wider block font-bold">Exclusive Premium starting from</span>
+                  <span className="text-[9px] text-gray-400 uppercase tracking-wider block font-bold">Price</span>
                   <span className="text-xl font-serif text-[#C9A96E] font-medium block">{selectedProperty.price}</span>
                 </div>
               </div>

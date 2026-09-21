@@ -57,7 +57,7 @@ export const communityPages: SeoPageData[] = [
       { label: "Abu Dhabi Healthcare for Expats", slug: "abu-dhabi-healthcare-expats" },
     ],
     ctaHeadline: "Arrange a Personal Island Tour",
-    ctaBody: "AD Residences is headquartered on Al Maryah Island. Our advisors conduct personal island walkthroughs for serious buyers — Galleria, Cleveland Clinic, building common areas, and your shortlisted unit.",
+    ctaBody: "AD Residences can arrange a walk around the island for serious buyers, covering the Galleria, Cleveland Clinic, building common areas and your shortlisted unit.",
     ctaLabel: "Book an Island Tour",
   },
 

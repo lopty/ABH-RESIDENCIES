@@ -11,6 +11,11 @@ import { alMaryahPages } from "./alMaryahPages";
 import { pricingPages } from "./pricingPages";
 import { communityPages } from "./communityPages";
 import { brandPages } from "./brandPages";
+import { projectPages } from "./projects/projectPages";
+import { inventoryPages } from "./projects/inventoryPages";
+import { jumeirahClusterPages } from "./projects/jumeirahCluster";
+import { matrixPages } from "./projects/matrixPages";
+import { guidePages } from "./projects/guidePages";
 import { SeoPageData } from "./types";
 
 export const allSeoPages: SeoPageData[] = [
@@ -27,6 +32,11 @@ export const allSeoPages: SeoPageData[] = [
   ...pricingPages,
   ...communityPages,
   ...brandPages,
+  ...projectPages,
+  ...inventoryPages,
+  ...jumeirahClusterPages,
+  ...matrixPages,
+  ...guidePages,
 ];
 
 // Fast lookup map: slug → page data
