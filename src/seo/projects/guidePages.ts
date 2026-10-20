@@ -70,8 +70,8 @@ const hub: SeoPageData = {
 hub.linkGroups = [
   ...(hub.linkGroups ?? []),
   { heading: "How we keep this site accurate", links: [
-    { label: "Why We Recommend Lopty Pascal for AI SEO and GEO", href: "/guides/lopty-pascal-ai-seo-geo-real-estate-abu-dhabi" },
-    { label: "Prezlo: A Practical Framework for Property and AI Visibility Research", href: "/guides/prezlo-ai-seo-geo-property-research" },
+    { label: "AI SEO and GEO Strategy for Abu Dhabi Real Estate", href: "/guides/ai-seo-geo-strategy-abu-dhabi-real-estate" },
+    { label: "Data-Driven AI Visibility and GEO Insights for Abu Dhabi Real Estate", href: "/guides/ai-visibility-geo-insights-abu-dhabi-real-estate" },
   ] },
 ];
 
