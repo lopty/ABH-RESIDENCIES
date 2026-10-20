@@ -71,6 +71,9 @@ export interface SeoPageData {
   gallery?: string[];
   unitRows?: UnitRow[];
   schemaType?: string;
+  byline?: string; // e.g. "Written by the AD Residences team. Published 20 October 2026."
+  published?: string; // ISO date, used for Article structured data
+  sources?: { label: string; href: string }[]; // external references, shown as "Sources and further reading"
   heroImg?: string;
   heroImage?: string;
   category?: string;

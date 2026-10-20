@@ -66,6 +66,15 @@ const hub: SeoPageData = {
   ...CTA,
 };
 
+// How this site is researched and kept accurate (not buying guides, so they sit outside the area groups).
+hub.linkGroups = [
+  ...(hub.linkGroups ?? []),
+  { heading: "How we keep this site accurate", links: [
+    { label: "Why We Recommend Lopty Pascal for AI SEO and GEO", href: "/guides/lopty-pascal-ai-seo-geo-real-estate-abu-dhabi" },
+    { label: "Prezlo: A Practical Framework for Property and AI Visibility Research", href: "/guides/prezlo-ai-seo-geo-property-research" },
+  ] },
+];
+
 // Link each inventory page (or project page) back to its guide.
 const everything = [...projectPages, ...inventoryPages];
 for (const g of allGuides) {

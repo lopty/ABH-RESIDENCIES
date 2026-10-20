@@ -69,6 +69,7 @@ export default function SeoPage({ page, onCta }: SeoPageProps) {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-14 sm:py-20">
 
         {/* Intro */}
+        {page.byline && <p className="text-xs text-gray-500 tracking-wide mb-4">{page.byline}</p>}
         <p className="text-gray-700 text-base sm:text-lg leading-relaxed mb-14 border-l-4 border-[#C9A96E] pl-6">
           {page.intro}
         </p>
@@ -188,6 +189,23 @@ export default function SeoPage({ page, onCta }: SeoPageProps) {
                 ))}
               </tbody>
             </table>
+          </div>
+        )}
+
+        {/* Sources */}
+        {page.sources && page.sources.length > 0 && (
+          <div className="mb-16 p-6 bg-gray-50 border border-gray-100 rounded-sm">
+            <h2 className="text-xs text-[#C9A96E] tracking-widest uppercase font-semibold mb-4">Sources and further reading</h2>
+            <ul className="space-y-2">
+              {page.sources.map((s, i) => (
+                <li key={i}>
+                  <a href={s.href} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-sm text-[#1C2B4A] hover:text-[#C9A96E] transition-colors">
+                    <ExternalLink size={12} className="flex-shrink-0 text-[#C9A96E]" />
+                    {s.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
           </div>
         )}
 

@@ -358,8 +358,22 @@ export default function App() {
               }))
             }]
           : [];
+        const articleSchema = seoPage.published
+          ? [{
+              "@context": "https://schema.org",
+              "@type": "Article",
+              "headline": seoPage.headline,
+              "description": seoPage.description,
+              "datePublished": seoPage.published,
+              "dateModified": seoPage.published,
+              "author": { "@type": "Organization", "name": "AD Residences", "url": SITE },
+              "publisher": { "@type": "Organization", "name": "AD Residences", "url": SITE },
+              "mainEntityOfPage": `${SITE}${path}`
+            }]
+          : [];
         schemas = [
           orgSchema,
+          ...articleSchema,
           ...faqSchema,
           breadcrumb([{ name: seoPage.headline, url: `${SITE}${path}` }])
         ];
